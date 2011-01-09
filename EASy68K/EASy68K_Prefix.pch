@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'EASy68K' target in the 'EASy68K' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
