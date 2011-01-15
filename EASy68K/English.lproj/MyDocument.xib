@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="6"/>
+			<integer value="5"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -33,7 +33,7 @@
 			<object class="NSWindowTemplate" id="275939982">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{33, 772}, {641, 364}}</string>
+				<string key="NSWindowRect">{{33, 794}, {557, 342}}</string>
 				<int key="NSWTFlags">1881669632</int>
 				<string key="NSWindowTitle">untitled.x68</string>
 				<string key="NSWindowClass">NSWindow</string>
@@ -469,7 +469,7 @@
 													<string>public.url</string>
 												</object>
 											</object>
-											<string key="NSFrameSize">{641, 243}</string>
+											<string key="NSFrameSize">{557, 228}</string>
 											<reference key="NSSuperview" ref="709021571"/>
 											<object class="NSTextContainer" key="NSTextContainer" id="307004170">
 												<object class="NSLayoutManager" key="NSLayoutManager">
@@ -551,7 +551,7 @@ bmdzCgoKCglFTkQJU1RBUlQJCTsgbGFzdCBsaW5lIG9mIHNvdXJjZQ</bytes>
 													<nil key="NSDelegate"/>
 												</object>
 												<reference key="NSTextView" ref="511751953"/>
-												<double key="NSWidth">641</double>
+												<double key="NSWidth">557</double>
 												<int key="NSTCFlags">1</int>
 											</object>
 											<object class="NSTextViewSharedData" key="NSSharedData">
@@ -619,7 +619,7 @@ bmdzCgoKCglFTkQJU1RBUlQJCTsgbGFzdCBsaW5lIG9mIHNvdXJjZQ</bytes>
 											</object>
 										</object>
 									</object>
-									<string key="NSFrameSize">{641, 332}</string>
+									<string key="NSFrameSize">{557, 310}</string>
 									<reference key="NSSuperview" ref="973377471"/>
 									<reference key="NSNextKeyView" ref="511751953"/>
 									<reference key="NSDocView" ref="511751953"/>
@@ -651,7 +651,7 @@ bmdzCgoKCglFTkQJU1RBUlQJCTsgbGFzdCBsaW5lIG9mIHNvdXJjZQ</bytes>
 									<double key="NSPercent">0.94565218687057495</double>
 								</object>
 							</object>
-							<string key="NSFrame">{{0, 32}, {641, 332}}</string>
+							<string key="NSFrame">{{0, 32}, {557, 310}}</string>
 							<reference key="NSSuperview" ref="568628114"/>
 							<reference key="NSNextKeyView" ref="709021571"/>
 							<int key="NSsFlags">560</int>
@@ -687,7 +687,7 @@ bmdzCgoKCglFTkQJU1RBUlQJCTsgbGFzdCBsaW5lIG9mIHNvdXJjZQ</bytes>
 						<object class="NSTextField" id="109654918">
 							<reference key="NSNextResponder" ref="568628114"/>
 							<int key="NSvFlags">294</int>
-							<string key="NSFrame">{{105, 10}, {523, 14}}</string>
+							<string key="NSFrame">{{105, 10}, {441, 14}}</string>
 							<reference key="NSSuperview" ref="568628114"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="812183981">
@@ -701,7 +701,7 @@ bmdzCgoKCglFTkQJU1RBUlQJCTsgbGFzdCBsaW5lIG9mIHNvdXJjZQ</bytes>
 							</object>
 						</object>
 					</object>
-					<string key="NSFrameSize">{641, 364}</string>
+					<string key="NSFrameSize">{557, 342}</string>
 					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
@@ -1007,9 +1007,9 @@ bmdzCgoKCglFTkQJU1RBUlQJCTsgbGFzdCBsaW5lIG9mIHNvdXJjZQ</bytes>
 						<bytes key="NSTransformStruct">P4AAAL+AAABDTQAAwbAAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{441, 688}, {641, 364}}</string>
+					<string>{{441, 710}, {557, 342}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{441, 688}, {641, 364}}</string>
+					<string>{{441, 710}, {557, 342}}</string>
 					<integer value="1"/>
 					<string>{{201, 387}, {507, 413}}</string>
 					<boolean value="NO"/>
