@@ -9,10 +9,10 @@
 		<dict>
 			<key>CFBundleTypeExtensions</key>
 			<array>
-				<string>????</string>
+				<string>x68</string>
 			</array>
 			<key>CFBundleTypeName</key>
-			<string>DocumentType</string>
+			<string>68K Assembly</string>
 			<key>CFBundleTypeOSTypes</key>
 			<array>
 				<string>????</string>

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14291E8E12E25565009769CB /* indent_decrease.png in Resources */ = {isa = PBXBuildFile; fileRef = 14291E8C12E25565009769CB /* indent_decrease.png */; };
+		14291E8F12E25565009769CB /* indent_increase.png in Resources */ = {isa = PBXBuildFile; fileRef = 14291E8D12E25565009769CB /* indent_increase.png */; };
+		14295E1112E4EBE9008BF6B5 /* indent_decrease-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 14295E0F12E4EBE9008BF6B5 /* indent_decrease-small.png */; };
+		14295E1212E4EBE9008BF6B5 /* indent_increase-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 14295E1012E4EBE9008BF6B5 /* indent_increase-small.png */; };
+		14295E1512E4ECF8008BF6B5 /* playback_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 14295E1412E4ECF8008BF6B5 /* playback_play.png */; };
+		14295E1712E4ED05008BF6B5 /* playback_play-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 14295E1612E4ED05008BF6B5 /* playback_play-small.png */; };
 		1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* MyDocument.xib */; };
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
@@ -37,6 +43,12 @@
 		14085DB312DA76120084F11C /* OPPARSE.CPP */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OPPARSE.CPP; path = edit68k/OPPARSE.CPP; sourceTree = "<group>"; };
 		14085DB412DA76120084F11C /* STRUCTURED.CPP */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STRUCTURED.CPP; path = edit68k/STRUCTURED.CPP; sourceTree = "<group>"; };
 		14085DB512DA76120084F11C /* SYMBOL.CPP */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SYMBOL.CPP; path = edit68k/SYMBOL.CPP; sourceTree = "<group>"; };
+		14291E8C12E25565009769CB /* indent_decrease.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indent_decrease.png; sourceTree = "<group>"; };
+		14291E8D12E25565009769CB /* indent_increase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indent_increase.png; sourceTree = "<group>"; };
+		14295E0F12E4EBE9008BF6B5 /* indent_decrease-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "indent_decrease-small.png"; sourceTree = "<group>"; };
+		14295E1012E4EBE9008BF6B5 /* indent_increase-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "indent_increase-small.png"; sourceTree = "<group>"; };
+		14295E1412E4ECF8008BF6B5 /* playback_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playback_play.png; sourceTree = "<group>"; };
+		14295E1612E4ED05008BF6B5 /* playback_play-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playback_play-small.png"; sourceTree = "<group>"; };
 		1DDD58290DA1D0D100B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MyDocument.xib; sourceTree = "<group>"; };
 		1DDD582B0DA1D0D100B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2564AD2C0F5327BB00F57823 /* EASy68K_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EASy68K_Prefix.pch; sourceTree = "<group>"; };
@@ -146,6 +158,12 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				14295E1612E4ED05008BF6B5 /* playback_play-small.png */,
+				14295E1412E4ECF8008BF6B5 /* playback_play.png */,
+				14295E0F12E4EBE9008BF6B5 /* indent_decrease-small.png */,
+				14295E1012E4EBE9008BF6B5 /* indent_increase-small.png */,
+				14291E8C12E25565009769CB /* indent_decrease.png */,
+				14291E8D12E25565009769CB /* indent_increase.png */,
 				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
 				8D15AC360486D014006FF6A4 /* EASy68K-Info.plist */,
 				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
@@ -167,9 +185,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D15AC270486D014006FF6A4 /* EASy68K */ = {
+		8D15AC270486D014006FF6A4 /* Edit68K */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "EASy68K" */;
+			buildConfigurationList = C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "Edit68K" */;
 			buildPhases = (
 				8D15AC2B0486D014006FF6A4 /* Resources */,
 				8D15AC300486D014006FF6A4 /* Sources */,
@@ -179,7 +197,7 @@
 			);
 			dependencies = (
 			);
-			name = EASy68K;
+			name = Edit68K;
 			productInstallPath = "$(HOME)/Applications";
 			productName = EASy68K;
 			productReference = 8D15AC370486D014006FF6A4 /* EASy68K.app */;
@@ -192,7 +210,6 @@
 			isa = PBXProject;
 			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "EASy68K" */;
 			compatibilityVersion = "Xcode 3.1";
-			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -204,7 +221,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D15AC270486D014006FF6A4 /* EASy68K */,
+				8D15AC270486D014006FF6A4 /* Edit68K */,
 			);
 		};
 /* End PBXProject section */
@@ -218,6 +235,12 @@
 				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
 				1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */,
 				1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */,
+				14291E8E12E25565009769CB /* indent_decrease.png in Resources */,
+				14291E8F12E25565009769CB /* indent_increase.png in Resources */,
+				14295E1112E4EBE9008BF6B5 /* indent_decrease-small.png in Resources */,
+				14295E1212E4EBE9008BF6B5 /* indent_increase-small.png in Resources */,
+				14295E1512E4ECF8008BF6B5 /* playback_play.png in Resources */,
+				14295E1712E4ED05008BF6B5 /* playback_play-small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +354,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "EASy68K" */ = {
+		C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "Edit68K" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C05733C808A9546B00998B17 /* Debug */,

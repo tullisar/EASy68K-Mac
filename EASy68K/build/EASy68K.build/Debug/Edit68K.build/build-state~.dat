@@ -1,0 +1,329 @@
+TEdit68K
+v7
+r0
+t316993676.056293
+cCheck dependencies
+cProcessInfoPlistFile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Info.plist EASy68K-Info.plist
+cCpResource build/Debug/EASy68K.app/Contents/Resources/English.lproj/Credits.rtf English.lproj/Credits.rtf
+cCopyStringsFile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+cCompileXIB /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib
+cCompileXIB /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib
+cCpResource build/Debug/EASy68K.app/Contents/Resources/indent_decrease.png indent_decrease.png
+cCpResource build/Debug/EASy68K.app/Contents/Resources/indent_increase.png indent_increase.png
+cCpResource build/Debug/EASy68K.app/Contents/Resources/indent_decrease-small.png indent_decrease-small.png
+cCpResource build/Debug/EASy68K.app/Contents/Resources/indent_increase-small.png indent_increase-small.png
+cCpResource build/Debug/EASy68K.app/Contents/Resources/playback_play.png playback_play.png
+cCpResource build/Debug/EASy68K.app/Contents/Resources/playback_play-small.png playback_play-small.png
+cProcessPCH /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-dlqhicudmzkrbqgbkjgbnuyellhv/EASy68K_Prefix.pch.gch EASy68K_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/EASy68K.build/Debug/Edit68K.build/Objects-normal/x86_64/MyDocument.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/EASy68K.build/Debug/Edit68K.build/Objects-normal/x86_64/main.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/MacOS/EASy68K normal x86_64
+cTouch /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004ABBF0FD00000000000000EE
+t1253830909
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/EASy68K_Prefix.pch
+c000000004D2A338A0000000000000091
+t1294611338
+s145
+i<Cocoa/Cocoa.h>
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/Credits.rtf
+c000000004D2A338A00000000000001B4
+t1294611338
+s436
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/InfoPlist.strings
+c000000004D2A338A000000000000002D
+t1294611338
+s45
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib
+c000000004D34B85900000000000268D7
+t1295300697
+s157911
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib
+c000000004D321FD80000000000010BAF
+t1295130584
+s68527
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.h
+c000000004D2A338A00000000000000DC
+t1294611338
+s220
+i<Cocoa/Cocoa.h>
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.m
+c000000004D2A338A00000000000009F6
+t1294611338
+s2550
+i"MyDocument.h"
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app
+t1295300876
+s102
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Info.plist
+t1295129343
+s1310
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/MacOS/EASy68K
+t1295300876
+s10920
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/PkgInfo
+t1295129343
+s8
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/Credits.rtf
+t1295129343
+s436
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/InfoPlist.strings
+t1295129343
+s92
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/MainMenu.nib
+t1295300868
+s29201
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/MyDocument.nib
+t1295300868
+s14917
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/indent_decrease-small.png
+t1295300868
+s3192
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/indent_decrease.png
+t1295300868
+s5746
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/indent_increase-small.png
+t1295300868
+s3196
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/indent_increase.png
+t1295300868
+s5758
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/playback_play-small.png
+t1295300868
+s3209
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/playback_play.png
+t1295300868
+s5874
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/Objects-normal/x86_64/EASy68K.LinkFileList
+c000000004D34B90400000000000000EA
+t1295300868
+s234
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/Objects-normal/x86_64/MyDocument.o
+t1295300875
+s19348
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/Objects-normal/x86_64/main.o
+t1295300875
+s5008
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_decrease-small.png
+c000000004B417D980000000000000C78
+t1262583192
+s3192
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_decrease.png
+c000000004B417DB60000000000001672
+t1262583222
+s5746
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_increase-small.png
+c000000004B417D980000000000000C7C
+t1262583192
+s3196
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_increase.png
+c000000004B417DB6000000000000167E
+t1262583222
+s5758
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m
+c000000004D2A338A0000000000000108
+t1294611338
+s264
+i<Cocoa/Cocoa.h>
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/playback_play-small.png
+c000000004B417D980000000000000C89
+t1262583192
+s3209
+
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/playback_play.png
+c000000004B417DB600000000000016F2
+t1262583222
+s5874
+
+N/var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-dlqhicudmzkrbqgbkjgbnuyellhv/EASy68K_Prefix.pch.gch
+t1295300874
+s54212368
+
+NEASy68K-Info.plist
+c000000004D2A338A00000000000005CA
+t1294611338
+s1482
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies316993668#316993668#0(0"0(0#1#0"7947009927035180032#0"0#
+
+CCompileC build/EASy68K.build/Debug/Edit68K.build/Objects-normal/x86_64/MyDocument.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s316993674.986141
+e316993675.229939
+r1
+xCompileC
+xbuild/EASy68K.build/Debug/Edit68K.build/Objects-normal/x86_64/MyDocument.o
+x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@65"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.m316993674#316993675#0(0"0(0#0#57"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.m4300885448#1528"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/EASy68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/EASy68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/EASy68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/EASy68K-project-headers.hmap -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-dlqhicudmzkrbqgbkjgbnuyellhv/EASy68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.m -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/Objects-normal/x86_64/MyDocument.o0#
+
+CCompileC build/EASy68K.build/Debug/Edit68K.build/Objects-normal/x86_64/main.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s316993675.002299
+e316993675.216442
+r1
+xCompileC
+xbuild/EASy68K.build/Debug/Edit68K.build/Objects-normal/x86_64/main.o
+x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@59"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m316993675#316993675#0(0"0(0#0#51"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m4300885448#1516"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/EASy68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/EASy68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/EASy68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/EASy68K-project-headers.hmap -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-dlqhicudmzkrbqgbkjgbnuyellhv/EASy68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/Objects-normal/x86_64/main.o0#
+
+CCompileXIB /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib
+s316993668.524541
+e316993668.912324
+r1
+xCompileXIB
+x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib
+lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib316993668#316993668#0(0"0(0#0#71"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib4300885448#345"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/MainMenu.nib /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib0#
+
+CCompileXIB /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib
+s316993668.495698
+e316993668.884428
+r1
+xCompileXIB
+x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib
+lSLF07#2@39"CompileXIB English.lproj/MyDocument.xib316993668#316993668#0(0"0(0#0#73"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib13229813538029684#349"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/MyDocument.nib /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib0#
+
+CCopyStringsFile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+r0
+
+CCpResource build/Debug/EASy68K.app/Contents/Resources/English.lproj/Credits.rtf English.lproj/Credits.rtf
+r0
+
+CCpResource build/Debug/EASy68K.app/Contents/Resources/indent_decrease-small.png indent_decrease-small.png
+s316993668.526696
+e316993668.563044
+r1
+xCpResource
+xbuild/Debug/EASy68K.app/Contents/Resources/indent_decrease-small.png
+xindent_decrease-small.png
+lSLF07#2@30"Copy indent_decrease-small.png316993668#316993668#0(0"0(0#0#70"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_decrease-small.png4300885448#359"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_decrease-small.png /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources0#
+
+CCpResource build/Debug/EASy68K.app/Contents/Resources/indent_decrease.png indent_decrease.png
+s316993668.525334
+e316993668.551752
+r1
+xCpResource
+xbuild/Debug/EASy68K.app/Contents/Resources/indent_decrease.png
+xindent_decrease.png
+lSLF07#2@24"Copy indent_decrease.png316993668#316993668#0(0"0(0#0#64"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_decrease.png4300885448#353"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_decrease.png /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources0#
+
+CCpResource build/Debug/EASy68K.app/Contents/Resources/indent_increase-small.png indent_increase-small.png
+s316993668.527250
+e316993668.563924
+r1
+xCpResource
+xbuild/Debug/EASy68K.app/Contents/Resources/indent_increase-small.png
+xindent_increase-small.png
+lSLF07#2@30"Copy indent_increase-small.png316993668#316993668#0(0"0(0#0#70"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_increase-small.png4300885448#359"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_increase-small.png /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources0#
+
+CCpResource build/Debug/EASy68K.app/Contents/Resources/indent_increase.png indent_increase.png
+s316993668.526082
+e316993668.551908
+r1
+xCpResource
+xbuild/Debug/EASy68K.app/Contents/Resources/indent_increase.png
+xindent_increase.png
+lSLF07#2@24"Copy indent_increase.png316993668#316993668#0(0"0(0#0#64"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_increase.png4300885448#353"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_increase.png /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources0#
+
+CCpResource build/Debug/EASy68K.app/Contents/Resources/playback_play-small.png playback_play-small.png
+s316993668.528291
+e316993668.551424
+r1
+xCpResource
+xbuild/Debug/EASy68K.app/Contents/Resources/playback_play-small.png
+xplayback_play-small.png
+lSLF07#2@28"Copy playback_play-small.png316993668#316993668#0(0"0(0#0#68"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/playback_play-small.png4300885448#357"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/playback_play-small.png /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources0#
+
+CCpResource build/Debug/EASy68K.app/Contents/Resources/playback_play.png playback_play.png
+s316993668.527766
+e316993668.552200
+r1
+xCpResource
+xbuild/Debug/EASy68K.app/Contents/Resources/playback_play.png
+xplayback_play.png
+lSLF07#2@22"Copy playback_play.png316993668#316993668#0(0"0(0#0#62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/playback_play.png4300885448#351"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/playback_play.png /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources0#
+
+CLd /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/MacOS/EASy68K normal x86_64
+s316993675.230070
+e316993676.030704
+r1
+xLd
+x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/MacOS/EASy68K
+xnormal
+xx86_64
+lSLF07#2@96"Link /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/MacOS/EASy68K316993675#316993676#0(0"0(0#0#0"4300885448#572"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -filelist /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/Objects-normal/x86_64/EASy68K.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/MacOS/EASy68K0#
+
+CProcessInfoPlistFile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Info.plist EASy68K-Info.plist
+r0
+
+CProcessPCH /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-dlqhicudmzkrbqgbkjgbnuyellhv/EASy68K_Prefix.pch.gch EASy68K_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s316993668.912742
+e316993674.986002
+r1
+xProcessPCH
+x/var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-dlqhicudmzkrbqgbkjgbnuyellhv/EASy68K_Prefix.pch.gch
+xEASy68K_Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile EASy68K_Prefix.pch316993668#316993674#0(0"0(0#0#63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/EASy68K_Prefix.pch4300885448#1416"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/EASy68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/EASy68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/EASy68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/EASy68K-project-headers.hmap -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/Edit68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/EASy68K_Prefix.pch -o /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-dlqhicudmzkrbqgbkjgbnuyellhv/EASy68K_Prefix.pch.gch0#
+
+CTouch /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app
+s316993676.030815
+e316993676.056223
+r1
+xTouch
+x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app
+lSLF07#2@74"Touch /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app316993676#316993676#0(0"0(0#0#0"4300885448#143"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /usr/bin/touch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app0#
+
