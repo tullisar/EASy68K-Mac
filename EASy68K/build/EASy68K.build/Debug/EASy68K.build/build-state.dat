@@ -1,14 +1,20 @@
 TEASy68K
 v7
 r0
-t316584462.211404
+t317086300.837668
 cCheck dependencies
 cProcessInfoPlistFile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Info.plist EASy68K-Info.plist
 cCpResource build/Debug/EASy68K.app/Contents/Resources/English.lproj/Credits.rtf English.lproj/Credits.rtf
 cCopyStringsFile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
 cCompileXIB /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib
 cCompileXIB /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib
-cProcessPCH /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-fzpaeizxkpzsjnagrevzpevhdqyy/EASy68K_Prefix.pch.gch EASy68K_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCpResource build/Debug/EASy68K.app/Contents/Resources/indent_decrease.png indent_decrease.png
+cCpResource build/Debug/EASy68K.app/Contents/Resources/indent_increase.png indent_increase.png
+cCpResource build/Debug/EASy68K.app/Contents/Resources/indent_decrease-small.png indent_decrease-small.png
+cCpResource build/Debug/EASy68K.app/Contents/Resources/indent_increase-small.png indent_increase-small.png
+cCpResource build/Debug/EASy68K.app/Contents/Resources/playback_play.png playback_play.png
+cCpResource build/Debug/EASy68K.app/Contents/Resources/playback_play-small.png playback_play-small.png
+cProcessPCH /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-dlqhicudmzkrbqgbkjgbnuyellhv/EASy68K_Prefix.pch.gch EASy68K_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/MyDocument.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/main.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
 cLd /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/MacOS/EASy68K normal x86_64
@@ -45,98 +51,98 @@ t1243557219
 s42464
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/EASy68K_Prefix.pch
-c000000004D2A338A0000000000000091
-t1294611338
+c000000004D3622990000000000000091
+t1295393433
 s145
 i<Cocoa/Cocoa.h>
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/Credits.rtf
-c000000004D2A338A00000000000001B4
-t1294611338
+c000000004D36229900000000000001B4
+t1295393433
 s436
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/InfoPlist.strings
-c000000004D2A338A000000000000002D
-t1294611338
+c000000004D362299000000000000002D
+t1295393433
 s45
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib
-c000000004D34B0E3000000000002ADD2
-t1295298787
-s175570
+c000000004D3622990000000000037184
+t1295393433
+s225668
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib
-c000000004D321FD80000000000010BAF
-t1295130584
-s68527
+c000000004D36229900000000000128C1
+t1295393433
+s75969
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.h
-c000000004D2A338A00000000000000DC
-t1294611338
+c000000004D36229900000000000000DC
+t1295393433
 s220
 i<Cocoa/Cocoa.h>
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.m
-c000000004D2A338A00000000000009F6
-t1294611338
+c000000004D36229900000000000009F6
+t1295393433
 s2550
 i"MyDocument.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app
-t1295129343
+t1295393500
 s102
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Info.plist
-t1295129343
-s1310
+t1295393496
+s1309
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/MacOS/EASy68K
-t1295129343
+t1295393500
 s10920
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/PkgInfo
-t1295129343
+t1295393496
 s8
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/Credits.rtf
-t1295129343
+t1295393496
 s436
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/InfoPlist.strings
-t1295129343
+t1295393496
 s92
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/MainMenu.nib
-t1295129343
-s33271
+t1295393497
+s48065
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/MyDocument.nib
-t1295129343
-s16144
+t1295393496
+s16627
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/indent_decrease-small.png
-t2
-s0
+t1295393496
+s3192
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/indent_decrease.png
-t2
-s0
+t1295393496
+s5746
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/indent_increase-small.png
-t2
-s0
+t1295393496
+s3196
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/indent_increase.png
-t2
-s0
+t1295393496
+s5758
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/playback_play-small.png
-t2
-s0
+t1295393496
+s3209
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/playback_play.png
-t2
-s0
+t1295393496
+s5874
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/ASSEMBLE.o
 t2
@@ -159,8 +165,8 @@ t2
 s0
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/EASy68K.LinkFileList
-c000000004D321AFF00000000000000EA
-t1295129343
+c000000004D3622D800000000000000EA
+t1295393496
 s234
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/ERROR.o
@@ -196,8 +202,8 @@ t2
 s0
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/MyDocument.o
-t1295129343
-s19340
+t1295393500
+s19348
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/OBJECT.o
 t2
@@ -216,8 +222,8 @@ t2
 s0
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/main.o
-t1295129343
-s5000
+t1295393500
+s5008
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/ASSEMBLE.CPP
 c000000004D2B9E4A0000000000007750
@@ -376,39 +382,39 @@ i"textS.h"
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_decrease-small.png
-c000000004B417D980000000000000C78
-t1262583192
+c000000004D36229A0000000000000C78
+t1295393434
 s3192
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_decrease.png
-c000000004B417DB60000000000001672
-t1262583222
+c000000004D36229A0000000000001672
+t1295393434
 s5746
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_increase-small.png
-c000000004B417D980000000000000C7C
-t1262583192
+c000000004D36229A0000000000000C7C
+t1295393434
 s3196
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_increase.png
-c000000004B417DB6000000000000167E
-t1262583222
+c000000004D36229A000000000000167E
+t1295393434
 s5758
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m
-c000000004D2A338A0000000000000108
-t1294611338
+c000000004D36229A0000000000000108
+t1295393434
 s264
 i<Cocoa/Cocoa.h>
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/playback_play-small.png
-c000000004B417D980000000000000C89
-t1262583192
+c000000004D36229A0000000000000C89
+t1295393434
 s3209
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/playback_play.png
-c000000004B417DB600000000000016F2
-t1262583222
+c000000004D36229A00000000000016F2
+t1295393434
 s5874
 
 N/var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-beawauvdayesejgqxktepjchlzha/EASy68K_Prefix.pch.gch
@@ -420,17 +426,17 @@ t1294890116
 s54265616
 
 N/var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-dlqhicudmzkrbqgbkjgbnuyellhv/EASy68K_Prefix.pch.gch
-t2
-s0
+t1295393500
+s54212368
 
 NEASy68K-Info.plist
-c000000004D2A338A00000000000005CA
-t1294611338
-s1482
+c000000004D36229900000000000005C9
+t1295393433
+s1481
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies316584461#316584462#0(0"0(0#1#0"3343187568374212096#0"0#
+lSLF07#2@18"Check dependencies317086296#317086296#0(0"0(0#1#0"4300885448#0"0#
 
 CCompileC build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/ASSEMBLE.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/ASSEMBLE.CPP normal x86_64 c++ com.apple.compilers.gcc.4_2
 s316582916.944837
@@ -2200,8 +2206,8 @@ o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:373: error: stra
 lSLF07#2@70"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316582917#316582917#0(13002"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:50:17: error: asm.h: No such file or directory/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP: In function 'int movem(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:73: error: 'opDescriptor' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:73: error: expected `;' before 'memOp'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:80: error: 'listLoc' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:84: error: 'WORD_SIZE' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:86: error: 'LONG_SIZE' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:90: error: 'INV_SIZE_CODE' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:90: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:95: error: 'define' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:98: error: 'OK' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:100: error: 'evalList' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:103: error: 'skipSpace' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:105: error: 'COMMA_EXPECTED' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:105: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:106: error: 'NORMAL' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:111: error: 'memOp' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:111: error: 'opParse' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:112: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:113: error: 'ERRORN' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:115: error: 'AnInd' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:115: error: 'AnIndDisp' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:115: error: 'AnIndIndex' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:115: error: 'AbsShort' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:115: error: 'AbsLong' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:115: error: 'AnIndPre' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:118: error: 'effAddr' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:118: error: 'WORD_SIZE' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:118: error: 'output' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:138: error: 'extWords' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:139: error: 'NORMAL' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:142: error: 'INV_ADDR_MODE' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:143: error: 'NORMAL' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:151: error: 'memOp' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:151: error: 'opParse' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:152: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:153: error: 'ERRORN' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:155: error: 'skipSpace' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:157: error: 'COMMA_EXPECTED' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:158: error: 'NORMAL' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:164: error: 'AnInd' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:164: error: 'AnIndDisp' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:164: error: 'AnIndIndex' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:164: error: 'AbsShort' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:164: error: 'AbsLong' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:164: error: 'AnIndPost' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:164: error: 'PCDisp' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:164: error: 'PCIndex' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:172: error: 'effAddr' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:172: error: 'WORD_SIZE' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:172: error: 'output' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:179: error: 'extWords' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:180: error: 'NORMAL' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:184: error: 'INV_ADDR_MODE' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:185: error: 'NORMAL' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:194: error: 'EXCEPTION' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:194: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:199: error: 'NORMAL' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP: In function 'int reg(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:207: error: 'symbolDef' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:207: error: 'symbol' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:212: error: 'INV_SIZE_CODE' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:212: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:214: error: 'SYNTAX' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:214: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:215: error: 'NORMAL' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:217: error: 'evalList' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:218: error: 'SEVERE' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:220: error: 'LABEL_REQUIRED' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:220: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:223: error: 'OK' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:224: error: 'define' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:225: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:226: error: 'ERRORN' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:227: error: 'REG_LIST_SYM' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:232: error: 'EXCEPTION' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:232: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:237: error: 'NORMAL' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP: In function 'char* evalList(char*, short unsigned int*, int*)':/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:245: error: 'SIGCHARS' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:247: error: 'symbolDef' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:247: error: 'symbol' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:254: error: 'isRegNum' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:254: error: 'isTerm' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:270: error: 'SYNTAX' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:270: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:294: error: 'SYNTAX' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:294: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:308: error: 'SYNTAX' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:308: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:317: error: 'SYNTAX' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:317: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:325: error: 'symName' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:330: error: 'SYNTAX' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:330: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:333: error: 'symName' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:336: error: 'OK' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:337: error: 'lookup' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:338: error: 'SEVERE' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:341: error: 'UNDEFINED' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:342: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:344: error: 'BACKREF' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:345: error: 'REG_LIST_UNDEF' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:345: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:348: error: 'REG_LIST_SYM' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:351: error: 'NOT_REG_LIST' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:351: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:356: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:364: error: 'EXCEPTION' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:364: error: 'NEWERROR' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP: At global scope:/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP:373: error: stray '\32' in program109(4@32"Asm.h: No such file or directory316582917#0#110#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#50#0#50#0#28"*: No such file or directory0(4@45"'opDescriptor' was not declared in this scope316582917#224#120#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#73#0#73#0#34"'*' was not declared in this scope0(4@27"Expected `;' before 'memOp'316582917#344#102#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#73#0#73#0#19"expected * before *0(4@40"'listLoc' was not declared in this scope316582917#446#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#80#0#80#0#34"'*' was not declared in this scope0(4@42"'WORD_SIZE' was not declared in this scope316582917#561#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#84#0#84#0#34"'*' was not declared in this scope0(4@42"'LONG_SIZE' was not declared in this scope316582917#678#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#86#0#86#0#34"'*' was not declared in this scope0(4@46"'INV_SIZE_CODE' was not declared in this scope316582917#795#121#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#90#0#90#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#916#116#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#90#0#90#0#34"'*' was not declared in this scope0(4@39"'define' was not declared in this scope316582917#1032#114#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#95#0#95#0#34"'*' was not declared in this scope0(4@35"'OK' was not declared in this scope316582917#1146#110#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#98#0#98#0#34"'*' was not declared in this scope0(4@41"'evalList' was not declared in this scope316582917#1256#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#100#0#100#0#34"'*' was not declared in this scope0(4@42"'skipSpace' was not declared in this scope316582917#1373#118#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#103#0#103#0#34"'*' was not declared in this scope0(4@47"'COMMA_EXPECTED' was not declared in this scope316582917#1491#123#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#105#0#105#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#1614#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#105#0#105#0#34"'*' was not declared in this scope0(4@39"'NORMAL' was not declared in this scope316582917#1731#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#106#0#106#0#34"'*' was not declared in this scope0(4@38"'memOp' was not declared in this scope316582917#1846#114#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#111#0#111#0#34"'*' was not declared in this scope0(4@40"'opParse' was not declared in this scope316582917#1960#116#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#111#0#111#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#2076#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#112#0#112#0#34"'*' was not declared in this scope0(4@39"'ERRORN' was not declared in this scope316582917#2193#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#113#0#113#0#34"'*' was not declared in this scope0(4@38"'AnInd' was not declared in this scope316582917#2308#114#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#115#0#115#0#34"'*' was not declared in this scope0(4@42"'AnIndDisp' was not declared in this scope316582917#2422#118#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#115#0#115#0#34"'*' was not declared in this scope0(4@43"'AnIndIndex' was not declared in this scope316582917#2540#119#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#115#0#115#0#34"'*' was not declared in this scope0(4@41"'AbsShort' was not declared in this scope316582917#2659#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#115#0#115#0#34"'*' was not declared in this scope0(4@40"'AbsLong' was not declared in this scope316582917#2776#116#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#115#0#115#0#34"'*' was not declared in this scope0(4@41"'AnIndPre' was not declared in this scope316582917#2892#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#115#0#115#0#34"'*' was not declared in this scope0(4@40"'effAddr' was not declared in this scope316582917#3009#116#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#118#0#118#0#34"'*' was not declared in this scope0(4@42"'WORD_SIZE' was not declared in this scope316582917#3125#118#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#118#0#118#0#34"'*' was not declared in this scope0(4@39"'output' was not declared in this scope316582917#3243#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#118#0#118#0#34"'*' was not declared in this scope0(4@41"'extWords' was not declared in this scope316582917#3358#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#138#0#138#0#34"'*' was not declared in this scope0(4@39"'NORMAL' was not declared in this scope316582917#3475#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#139#0#139#0#34"'*' was not declared in this scope0(4@46"'INV_ADDR_MODE' was not declared in this scope316582917#3590#122#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#142#0#142#0#34"'*' was not declared in this scope0(4@39"'NORMAL' was not declared in this scope316582917#3712#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#143#0#143#0#34"'*' was not declared in this scope0(4@38"'memOp' was not declared in this scope316582917#3827#114#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#151#0#151#0#34"'*' was not declared in this scope0(4@40"'opParse' was not declared in this scope316582917#3941#116#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#151#0#151#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#4057#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#152#0#152#0#34"'*' was not declared in this scope0(4@39"'ERRORN' was not declared in this scope316582917#4174#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#153#0#153#0#34"'*' was not declared in this scope0(4@42"'skipSpace' was not declared in this scope316582917#4289#118#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#155#0#155#0#34"'*' was not declared in this scope0(4@47"'COMMA_EXPECTED' was not declared in this scope316582917#4407#123#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#157#0#157#0#34"'*' was not declared in this scope0(4@39"'NORMAL' was not declared in this scope316582917#4530#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#158#0#158#0#34"'*' was not declared in this scope0(4@38"'AnInd' was not declared in this scope316582917#4645#114#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#164#0#164#0#34"'*' was not declared in this scope0(4@42"'AnIndDisp' was not declared in this scope316582917#4759#118#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#164#0#164#0#34"'*' was not declared in this scope0(4@43"'AnIndIndex' was not declared in this scope316582917#4877#119#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#164#0#164#0#34"'*' was not declared in this scope0(4@41"'AbsShort' was not declared in this scope316582917#4996#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#164#0#164#0#34"'*' was not declared in this scope0(4@40"'AbsLong' was not declared in this scope316582917#5113#116#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#164#0#164#0#34"'*' was not declared in this scope0(4@42"'AnIndPost' was not declared in this scope316582917#5229#118#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#164#0#164#0#34"'*' was not declared in this scope0(4@39"'PCDisp' was not declared in this scope316582917#5347#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#164#0#164#0#34"'*' was not declared in this scope0(4@40"'PCIndex' was not declared in this scope316582917#5462#116#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#164#0#164#0#34"'*' was not declared in this scope0(4@40"'effAddr' was not declared in this scope316582917#5578#116#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#172#0#172#0#34"'*' was not declared in this scope0(4@42"'WORD_SIZE' was not declared in this scope316582917#5694#118#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#172#0#172#0#34"'*' was not declared in this scope0(4@39"'output' was not declared in this scope316582917#5812#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#172#0#172#0#34"'*' was not declared in this scope0(4@41"'extWords' was not declared in this scope316582917#5927#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#179#0#179#0#34"'*' was not declared in this scope0(4@39"'NORMAL' was not declared in this scope316582917#6044#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#180#0#180#0#34"'*' was not declared in this scope0(4@46"'INV_ADDR_MODE' was not declared in this scope316582917#6159#122#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#184#0#184#0#34"'*' was not declared in this scope0(4@39"'NORMAL' was not declared in this scope316582917#6281#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#185#0#185#0#34"'*' was not declared in this scope0(4@42"'EXCEPTION' was not declared in this scope316582917#6396#118#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#194#0#194#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#6514#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#194#0#194#0#34"'*' was not declared in this scope0(4@39"'NORMAL' was not declared in this scope316582917#6631#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#199#0#199#0#34"'*' was not declared in this scope0(4@42"'symbolDef' was not declared in this scope316582917#6858#118#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#207#0#207#0#34"'*' was not declared in this scope0(4@39"'symbol' was not declared in this scope316582917#6976#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#207#0#207#0#34"'*' was not declared in this scope0(4@46"'INV_SIZE_CODE' was not declared in this scope316582917#7091#122#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#212#0#212#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#7213#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#212#0#212#0#34"'*' was not declared in this scope0(4@39"'SYNTAX' was not declared in this scope316582917#7330#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#214#0#214#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#7445#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#214#0#214#0#34"'*' was not declared in this scope0(4@39"'NORMAL' was not declared in this scope316582917#7562#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#215#0#215#0#34"'*' was not declared in this scope0(4@41"'evalList' was not declared in this scope316582917#7677#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#217#0#217#0#34"'*' was not declared in this scope0(4@39"'SEVERE' was not declared in this scope316582917#7794#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#218#0#218#0#34"'*' was not declared in this scope0(4@47"'LABEL_REQUIRED' was not declared in this scope316582917#7909#123#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#220#0#220#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#8032#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#220#0#220#0#34"'*' was not declared in this scope0(4@35"'OK' was not declared in this scope316582917#8149#111#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#223#0#223#0#34"'*' was not declared in this scope0(4@39"'define' was not declared in this scope316582917#8260#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#224#0#224#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#8375#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#225#0#225#0#34"'*' was not declared in this scope0(4@39"'ERRORN' was not declared in this scope316582917#8492#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#226#0#226#0#34"'*' was not declared in this scope0(4@45"'REG_LIST_SYM' was not declared in this scope316582917#8607#121#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#227#0#227#0#34"'*' was not declared in this scope0(4@42"'EXCEPTION' was not declared in this scope316582917#8728#118#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#232#0#232#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#8846#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#232#0#232#0#34"'*' was not declared in this scope0(4@39"'NORMAL' was not declared in this scope316582917#8963#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#237#0#237#0#34"'*' was not declared in this scope0(4@41"'SIGCHARS' was not declared in this scope316582917#9206#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#245#0#245#0#34"'*' was not declared in this scope0(4@42"'symbolDef' was not declared in this scope316582917#9323#118#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#247#0#247#0#34"'*' was not declared in this scope0(4@39"'symbol' was not declared in this scope316582917#9441#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#247#0#247#0#34"'*' was not declared in this scope0(4@41"'isRegNum' was not declared in this scope316582917#9556#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#254#0#254#0#34"'*' was not declared in this scope0(4@39"'isTerm' was not declared in this scope316582917#9673#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#254#0#254#0#34"'*' was not declared in this scope0(4@39"'SYNTAX' was not declared in this scope316582917#9788#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#270#0#270#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#9903#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#270#0#270#0#34"'*' was not declared in this scope0(4@39"'SYNTAX' was not declared in this scope316582917#10020#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#294#0#294#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#10135#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#294#0#294#0#34"'*' was not declared in this scope0(4@39"'SYNTAX' was not declared in this scope316582917#10252#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#308#0#308#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#10367#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#308#0#308#0#34"'*' was not declared in this scope0(4@39"'SYNTAX' was not declared in this scope316582917#10484#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#317#0#317#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#10599#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#317#0#317#0#34"'*' was not declared in this scope0(4@40"'symName' was not declared in this scope316582917#10716#116#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#325#0#325#0#34"'*' was not declared in this scope0(4@39"'SYNTAX' was not declared in this scope316582917#10832#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#330#0#330#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#10947#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#330#0#330#0#34"'*' was not declared in this scope0(4@40"'symName' was not declared in this scope316582917#11064#116#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#333#0#333#0#34"'*' was not declared in this scope0(4@35"'OK' was not declared in this scope316582917#11180#111#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#336#0#336#0#34"'*' was not declared in this scope0(4@39"'lookup' was not declared in this scope316582917#11291#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#337#0#337#0#34"'*' was not declared in this scope0(4@39"'SEVERE' was not declared in this scope316582917#11406#115#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#338#0#338#0#34"'*' was not declared in this scope0(4@42"'UNDEFINED' was not declared in this scope316582917#11521#118#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#341#0#341#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#11639#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#342#0#342#0#34"'*' was not declared in this scope0(4@40"'BACKREF' was not declared in this scope316582917#11756#116#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#344#0#344#0#34"'*' was not declared in this scope0(4@47"'REG_LIST_UNDEF' was not declared in this scope316582917#11872#123#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#345#0#345#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#11995#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#345#0#345#0#34"'*' was not declared in this scope0(4@45"'REG_LIST_SYM' was not declared in this scope316582917#12112#121#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#348#0#348#0#34"'*' was not declared in this scope0(4@45"'NOT_REG_LIST' was not declared in this scope316582917#12233#121#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#351#0#351#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#12354#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#351#0#351#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#12471#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#356#0#356#0#34"'*' was not declared in this scope0(4@42"'EXCEPTION' was not declared in this scope316582917#12588#118#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#364#0#364#0#34"'*' was not declared in this scope0(4@41"'NEWERROR' was not declared in this scope316582917#12706#117#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#364#0#364#0#34"'*' was not declared in this scope0(23@16"At global scope:316582917#12823#81#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#0#0#0#0#0"0(4@22"Stray '\32' in program316582917#12904#98#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP316397002#373#0#373#0#20"stray '*' in program0(0#0#62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP8619270624#1537"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-project-headers.hmap -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-beawauvdayesejgqxktepjchlzha/EASy68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/MOVEM.CPP -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/MOVEM.o1#
 
 CCompileC build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/MyDocument.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s316582916.485208
-e316582916.964549
+s317086300.593101
+e317086300.797600
 r1
 xCompileC
 xbuild/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/MyDocument.o
@@ -2210,7 +2216,7 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@65"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.m316582916#316582916#0(0"0(0#0#57"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.m8618570144#1528"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-project-headers.hmap -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-fzpaeizxkpzsjnagrevzpevhdqyy/EASy68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.m -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/MyDocument.o0#
+lSLF07#2@65"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.m317086300#317086300#0(0"0(0#0#57"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.m4300885448#1528"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-project-headers.hmap -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-dlqhicudmzkrbqgbkjgbnuyellhv/EASy68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/MyDocument.m -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/MyDocument.o0#
 
 CCompileC build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/OBJECT.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/OBJECT.CPP normal x86_64 c++ com.apple.compilers.gcc.4_2
 s316582917.784271
@@ -2772,8 +2778,8 @@ o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP:270: error: str
 lSLF07#2@71"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP316582917#316582917#0(1858"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP:21:19: error: mainS.h: No such file or directory/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP:22:19: error: textS.h: No such file or directory/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP:23:17: error: asm.h: No such file or directory/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP:28: error: 'SIGCHARS' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP:36: error: expected constructor, destructor, or type conversion before '*' token/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP: In function 'void clearSymbols()':/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP:43: error: 'symbolDef' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP:43: error: 'last' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP:43: error: 's' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP:47: error: 'htable' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP:53: error: type '<type error>' argument given to 'delete', expected pointer/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP:61: error: 'EXCEPTION' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP:61: error: 'printError' was not declared in this scope/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP: At global scope:/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP:91: error: expected constructor, destructor, or type conversion before '*' token/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP:270: error: stray '\32' in program15(4@34"MainS.h: No such file or directory316582917#0#113#0(6@63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP316397002#21#0#21#0#28"*: No such file or directory0(4@34"TextS.h: No such file or directory316582917#113#113#0(6@63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP316397002#22#0#22#0#28"*: No such file or directory0(4@32"Asm.h: No such file or directory316582917#226#111#0(6@63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP316397002#23#0#23#0#28"*: No such file or directory0(4@41"'SIGCHARS' was not declared in this scope316582917#337#117#0(6@63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP316397002#28#0#28#0#34"'*' was not declared in this scope0(4@69"Expected constructor, destructor, or type conversion before '*' token316582917#454#145#0(6@63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP316397002#36#0#36#0#19"expected * before *0(4@42"'symbolDef' was not declared in this scope316582917#699#118#0(6@63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP316397002#43#0#43#0#34"'*' was not declared in this scope0(4@37"'last' was not declared in this scope316582917#817#113#0(6@63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP316397002#43#0#43#0#34"'*' was not declared in this scope0(4@34"'s' was not declared in this scope316582917#930#110#0(6@63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP316397002#43#0#43#0#34"'*' was not declared in this scope0(4@39"'htable' was not declared in this scope316582917#1040#115#0(6@63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP316397002#47#0#47#0#34"'*' was not declared in this scope0(4@64"Type '<type error>' argument given to 'delete', expected pointer316582917#1155#140#0(6@63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP316397002#53#0#53#0#0"0(4@42"'EXCEPTION' was not declared in this scope316582917#1295#118#0(6@63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP316397002#61#0#61#0#34"'*' was not declared in this scope0(4@43"'printError' was not declared in this scope316582917#1413#119#0(6@63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP316397002#61#0#61#0#34"'*' was not declared in this scope0(23@16"At global scope:316582917#1532#82#0(6@63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP316397002#0#0#0#0#0"0(4@69"Expected constructor, destructor, or type conversion before '*' token316582917#1614#145#0(6@63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP316397002#91#0#91#0#19"expected * before *0(4@22"Stray '\32' in program316582917#1759#99#0(6@63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP316397002#270#0#270#0#20"stray '*' in program0(0#0#63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP8612416320#1539"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-project-headers.hmap -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-beawauvdayesejgqxktepjchlzha/EASy68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/SYMBOL.CPP -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/SYMBOL.o1#
 
 CCompileC build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/main.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s316582916.486047
-e316582916.944746
+s317086300.612763
+e317086300.779205
 r1
 xCompileC
 xbuild/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/main.o
@@ -2782,78 +2788,118 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@59"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m316582916#316582916#0(0"0(0#0#51"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m8618361472#1516"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-project-headers.hmap -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-fzpaeizxkpzsjnagrevzpevhdqyy/EASy68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/main.o0#
+lSLF07#2@59"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m317086300#317086300#0(0"0(0#0#51"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m4300885448#1516"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-project-headers.hmap -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-dlqhicudmzkrbqgbkjgbnuyellhv/EASy68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/main.o0#
 
 CCompileXIB /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib
-s316582889.197766
-e316582889.843236
+s317086296.430996
+e317086297.234311
 r1
 xCompileXIB
 x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib
-lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib316582889#316582889#0(0"0(0#0#71"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib8622318272#382"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/MainMenu.nib /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib --sdk /Developer/SDKs/MacOSX10.6.sdk0#
+lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib317086296#317086297#0(0"0(0#0#71"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib4300885448#345"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/MainMenu.nib /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib0#
 
 CCompileXIB /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib
-s316582888.664186
-e316582890.214350
+s317086296.430447
+e317086297.026417
 r1
 xCompileXIB
 x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib
-lSLF07#2@39"CompileXIB English.lproj/MyDocument.xib316582888#316582890#0(0"0(0#0#73"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib8621644736#386"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/MyDocument.nib /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib --sdk /Developer/SDKs/MacOSX10.6.sdk0#
+o/* com.apple.ibtool.document.notices */
+o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib:100067: note: This view is clipping its content.
+o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib:100074: note: This view is clipping its content.
+o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib:100071: note: This view is clipping its content.
+lSLF07#2@39"CompileXIB English.lproj/MyDocument.xib317086296#317086297#0(409"/* com.apple.ibtool.document.notices *//Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib:100067: note: This view is clipping its content./Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib:100074: note: This view is clipping its content./Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib:100071: note: This view is clipping its content.3(13@34"This view is clipping its content.317086297#18446744073709551615#0#0(6@73"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib317086233#100067#0#100067#0#0"0(13@34"This view is clipping its content.317086297#18446744073709551615#0#0(6@73"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib317086233#100074#0#100074#0#0"0(13@34"This view is clipping its content.317086297#18446744073709551615#0#0(6@73"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib317086233#100071#0#100071#0#0"0(0#0#73"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib4300885448#349"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/MyDocument.nib /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib0#
 
 CCopyStringsFile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
-s316582888.558755
-e316582889.197681
+s317086296.429812
+e317086296.883701
 r1
 xCopyStringsFile
 x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj/InfoPlist.strings
 xEnglish.lproj/InfoPlist.strings
-lSLF07#2@36"Copy English.lproj/InfoPlist.strings316582888#316582889#0(0"0(0#0#76"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/InfoPlist.strings8622075232#377"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj0#
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings317086296#317086296#0(0"0(0#0#76"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/InfoPlist.strings4300885448#377"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj0#
 
 CCpResource build/Debug/EASy68K.app/Contents/Resources/English.lproj/Credits.rtf English.lproj/Credits.rtf
-s316582888.558158
-e316582888.664104
+s317086296.429002
+e317086296.478816
 r1
 xCpResource
 xbuild/Debug/EASy68K.app/Contents/Resources/English.lproj/Credits.rtf
 xEnglish.lproj/Credits.rtf
-lSLF07#2@30"Copy English.lproj/Credits.rtf316582888#316582888#0(0"0(0#0#70"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/Credits.rtf8622113856#373"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/Credits.rtf /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj0#
+lSLF07#2@30"Copy English.lproj/Credits.rtf317086296#317086296#0(0"0(0#0#70"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/Credits.rtf4300885448#373"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/Credits.rtf /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources/English.lproj0#
 
 CCpResource build/Debug/EASy68K.app/Contents/Resources/indent_decrease-small.png indent_decrease-small.png
-r0
+s317086296.482025
+e317086296.489394
+r1
+xCpResource
+xbuild/Debug/EASy68K.app/Contents/Resources/indent_decrease-small.png
+xindent_decrease-small.png
+lSLF07#2@30"Copy indent_decrease-small.png317086296#317086296#0(0"0(0#0#70"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_decrease-small.png4300885448#359"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_decrease-small.png /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources0#
 
 CCpResource build/Debug/EASy68K.app/Contents/Resources/indent_decrease.png indent_decrease.png
-r0
+s317086296.478948
+e317086296.487698
+r1
+xCpResource
+xbuild/Debug/EASy68K.app/Contents/Resources/indent_decrease.png
+xindent_decrease.png
+lSLF07#2@24"Copy indent_decrease.png317086296#317086296#0(0"0(0#0#64"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_decrease.png4300885448#353"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_decrease.png /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources0#
 
 CCpResource build/Debug/EASy68K.app/Contents/Resources/indent_increase-small.png indent_increase-small.png
-r0
+s317086296.482697
+e317086296.492187
+r1
+xCpResource
+xbuild/Debug/EASy68K.app/Contents/Resources/indent_increase-small.png
+xindent_increase-small.png
+lSLF07#2@30"Copy indent_increase-small.png317086296#317086296#0(0"0(0#0#70"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_increase-small.png4300885448#359"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_increase-small.png /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources0#
 
 CCpResource build/Debug/EASy68K.app/Contents/Resources/indent_increase.png indent_increase.png
-r0
+s317086296.480078
+e317086296.486874
+r1
+xCpResource
+xbuild/Debug/EASy68K.app/Contents/Resources/indent_increase.png
+xindent_increase.png
+lSLF07#2@24"Copy indent_increase.png317086296#317086296#0(0"0(0#0#64"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_increase.png4300885448#353"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_increase.png /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources0#
 
 CCpResource build/Debug/EASy68K.app/Contents/Resources/playback_play-small.png playback_play-small.png
-r0
+s317086296.483856
+e317086296.492423
+r1
+xCpResource
+xbuild/Debug/EASy68K.app/Contents/Resources/playback_play-small.png
+xplayback_play-small.png
+lSLF07#2@28"Copy playback_play-small.png317086296#317086296#0(0"0(0#0#68"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/playback_play-small.png4300885448#357"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/playback_play-small.png /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources0#
 
 CCpResource build/Debug/EASy68K.app/Contents/Resources/playback_play.png playback_play.png
-r0
+s317086296.483307
+e317086296.489172
+r1
+xCpResource
+xbuild/Debug/EASy68K.app/Contents/Resources/playback_play.png
+xplayback_play.png
+lSLF07#2@22"Copy playback_play.png317086296#317086296#0(0"0(0#0#62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/playback_play.png4300885448#351"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/playback_play.png /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Resources0#
 
 CLd /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/MacOS/EASy68K normal x86_64
-s316582949.962362
-e316582950.719457
+s317086300.797685
+e317086300.833972
 r1
 xLd
 x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/MacOS/EASy68K
 xnormal
 xx86_64
-lSLF07#2@96"Link /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/MacOS/EASy68K316582949#316582950#0(0"0(0#0#0"8622961920#572"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -filelist /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/EASy68K.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/MacOS/EASy68K0#
+lSLF07#2@96"Link /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/MacOS/EASy68K317086300#317086300#0(0"0(0#0#0"4300885448#572"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -filelist /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/Objects-normal/x86_64/EASy68K.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/MacOS/EASy68K0#
 
 CProcessInfoPlistFile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Info.plist EASy68K-Info.plist
-s316582888.542388
-e316582888.558092
+s317086296.424947
+e317086296.428905
 r1
 xProcessInfoPlistFile
 x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Info.plist
 xEASy68K-Info.plist
-lSLF07#2@26"Process EASy68K-Info.plist316582888#316582888#0(0"0(0#0#63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/EASy68K-Info.plist8622430208#328"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    builtin-infoPlistUtility EASy68K-Info.plist -genpkginfo /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Info.plist0#
+lSLF07#2@26"Process EASy68K-Info.plist317086296#317086296#0(0"0(0#0#63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/EASy68K-Info.plist4300885448#328"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    builtin-infoPlistUtility EASy68K-Info.plist -genpkginfo /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app/Contents/Info.plist0#
 
 CProcessPCH /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-fzpaeizxkpzsjnagrevzpevhdqyy/EASy68K_Prefix.pch.gch EASy68K_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
 s316582890.214525
@@ -2869,7 +2915,17 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@29"Precompile EASy68K_Prefix.pch316582890#316582916#0(0"0(0#0#63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/EASy68K_Prefix.pch8621503072#1416"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-project-headers.hmap -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/EASy68K_Prefix.pch -o /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-fzpaeizxkpzsjnagrevzpevhdqyy/EASy68K_Prefix.pch.gch0#
 
 CProcessPCH /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-dlqhicudmzkrbqgbkjgbnuyellhv/EASy68K_Prefix.pch.gch EASy68K_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
-r0
+s317086297.234450
+e317086300.592873
+r1
+xProcessPCH
+x/var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-dlqhicudmzkrbqgbkjgbnuyellhv/EASy68K_Prefix.pch.gch
+xEASy68K_Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile EASy68K_Prefix.pch317086297#317086300#0(0"0(0#0#63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/EASy68K_Prefix.pch4300885448#1416"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-project-headers.hmap -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/EASy68K_Prefix.pch -o /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-dlqhicudmzkrbqgbkjgbnuyellhv/EASy68K_Prefix.pch.gch0#
 
 CProcessPCH++ /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-beawauvdayesejgqxktepjchlzha/EASy68K_Prefix.pch.gch EASy68K_Prefix.pch normal x86_64 c++ com.apple.compilers.gcc.4_2
 s316582890.215240
@@ -2885,10 +2941,10 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@29"Precompile EASy68K_Prefix.pch316582890#316582891#0(0"0(0#0#63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/EASy68K_Prefix.pch8622607200#1425"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++-header -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/EASy68K-project-headers.hmap -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/EASy68K.build/Debug/EASy68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/EASy68K_Prefix.pch -o /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EASy68K_Prefix-beawauvdayesejgqxktepjchlzha/EASy68K_Prefix.pch.gch0#
 
 CTouch /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app
-s316582950.719546
-e316582950.745917
+s317086300.834066
+e317086300.837618
 r1
 xTouch
 x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app
-lSLF07#2@74"Touch /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app316582950#316582950#0(0"0(0#0#0"8595058176#143"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /usr/bin/touch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app0#
+lSLF07#2@74"Touch /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app317086300#317086300#0(0"0(0#0#0"4300885448#143"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /usr/bin/touch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/EASy68K.app0#
 

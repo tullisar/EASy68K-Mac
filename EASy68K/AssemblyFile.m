@@ -6,9 +6,9 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "MyDocument.h"
+#import "AssemblyFile.h"
 
-@implementation MyDocument
+@implementation AssemblyFile
 
 - (id)init
 {
@@ -26,7 +26,7 @@
 {
     // Override returning the nib file name of the document
     // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
-    return @"MyDocument";
+    return @"AssemblyFile";
 }
 
 - (void)windowControllerDidLoadNib:(NSWindowController *) aController
