@@ -9,7 +9,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AssemblyFile : NSDocument
-{
+@interface AssemblyFile : NSDocument {
+    
+    NSTextStorage *textStorage;
+    
 }
+
+@property (readwrite, retain) NSTextStorage *textStorage;
+
 @end

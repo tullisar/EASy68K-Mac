@@ -10,16 +10,34 @@
 
 @implementation AssemblyFile
 
+@synthesize textStorage;
+
 - (id)init
 {
     self = [super init];
     if (self) {
     
-        // Add your subclass-specific initialization here.
-        // If an error occurs here, send a [self release] message and return nil.
+        [self initTextStorage];
     
     }
     return self;
+}
+
+
+/* Initializes the textStorage which will be loaded with the template file */
+- (void)initTextStorage {
+    NSError *error;
+    // For now, the template is stored in a file, may move it into memory.
+    textStorage = [[NSTextStorage alloc] initWithURL:[[NSBundle mainBundle] URLForResource:@"template" withExtension:@"x68"] 
+                                             options:nil 
+                                  documentAttributes:NULL 
+                                               error:&error];
+    
+    // For the moment, terminate if there's an error and the file is not loaded.
+    if (!textStorage) {
+        [NSApp presentError:error];
+        [NSApp terminate:self];
+    }    
 }
 
 - (NSString *)windowNibName
@@ -61,6 +79,11 @@
 		*outError = [NSError errorWithDomain:NSOSStatusErrorDomain code:unimpErr userInfo:NULL];
 	}
     return YES;
+}
+
+- (void)dealloc {
+    [textStorage release];
+    [super dealloc];
 }
 
 @end
