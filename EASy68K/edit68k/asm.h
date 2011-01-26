@@ -11,11 +11,17 @@
  *    Modified: Chuck Kelly
  *              Monroe County Community College
  *              http://www.monroeccc.edu/ckelly
+ *          
+ *    Modified: 2011-01-25 by Robert Bartlett-Schneider
+ *              Commented out references not relevant to Mac OS X Port
+ *              BYTE_SIZE definition is already defined vm_param.h as part
+ *              of the virtual memory management headers for Mac OS X.
+ *              Changed BYTE_SIZE to BYTE_SIZE_M, other files will need
+ *              to be modified to match.
  *
  ************************************************************************/
 #ifndef asmH
 #define asmH
-
 
 /* include system header files for prototype checking */
 #include <stdio.h>
@@ -42,16 +48,16 @@ const char TITLE[] = "EASy68K Editor/Assembler v5.6.1";
 const int OK                    = 0x00;
 
 /* Severe errors */
-const int SEVERE	        = 0x400;
-const int SYNTAX	        = 0x401;
-const int INV_OPCODE	        = 0x402;
-const int INV_ADDR_MODE	        = 0x403;
-const int LABEL_REQUIRED	= 0x404;
+const int SEVERE                = 0x400;
+const int SYNTAX                = 0x401;
+const int INV_OPCODE            = 0x402;
+const int INV_ADDR_MODE         = 0x403;
+const int LABEL_REQUIRED        = 0x404;
 const int NO_ENDM               = 0x405;
 const int TOO_MANY_ARGS         = 0x406;
 const int INVALID_ARG           = 0x407;
 const int COMMA_EXPECTED        = 0x408;
-const int PHASE_ERROR	        = 0x409;
+const int PHASE_ERROR           = 0x409;
 const int FILE_ERROR            = 0x40A;
 const int MACRO_NEST            = 0x40B;
 const int NO_IF                 = 0x40C;
@@ -71,39 +77,39 @@ const int EXCEPTION             = 0x999;
 
 
 /* Errors */
-const int ERRORN	        = 0x300;
-const int UNDEFINED	        = 0x301;
-const int DIV_BY_ZERO	        = 0x302;
-const int MULTIPLE_DEFS	        = 0x303;
-const int REG_MULT_DEFS	        = 0x304;
-const int REG_LIST_UNDEF	= 0x305;
-const int INV_FORWARD_REF	= 0x306;
-const int INV_LENGTH	        = 0x307;
+const int ERRORN                = 0x300;
+const int UNDEFINED             = 0x301;
+const int DIV_BY_ZERO           = 0x302;
+const int MULTIPLE_DEFS         = 0x303;
+const int REG_MULT_DEFS         = 0x304;
+const int REG_LIST_UNDEF        = 0x305;
+const int INV_FORWARD_REF       = 0x306;
+const int INV_LENGTH            = 0x307;
 
 /* Minor errors */
-const int MINOR		        = 0x200;
-const int INV_SIZE_CODE	        = 0x201;
-const int INV_QUICK_CONST	= 0x202;
+const int MINOR                 = 0x200;
+const int INV_SIZE_CODE         = 0x201;
+const int INV_QUICK_CONST       = 0x202;
 const int INV_MOVE_QUICK_CONST  = 0x203;
-const int INV_VECTOR_NUM	= 0x204;
+const int INV_VECTOR_NUM        = 0x204;
 const int INV_BRANCH_DISP       = 0x205;
-const int INV_DISP	        = 0x206;
-const int INV_ABS_ADDRESS	= 0x207;
-const int INV_8_BIT_DATA	= 0x208;
-const int INV_16_BIT_DATA	= 0x209;
-const int NOT_REG_LIST	        = 0x20A;
-const int REG_LIST_SPEC	        = 0x20B;
-const int INV_SHIFT_COUNT	= 0x20C;
+const int INV_DISP              = 0x206;
+const int INV_ABS_ADDRESS       = 0x207;
+const int INV_8_BIT_DATA        = 0x208;
+const int INV_16_BIT_DATA       = 0x209;
+const int NOT_REG_LIST          = 0x20A;
+const int REG_LIST_SPEC         = 0x20B;
+const int INV_SHIFT_COUNT       = 0x20C;
 const int INV_OPERATOR          = 0x20D;
 const int FAIL_ERROR            = 0x20E;        // user defined
 
 /* Warnings */
-const int WARNING		= 0x100;
-const int ASCII_TOO_BIG	        = 0x101;
-const int NUMBER_TOO_BIG	= 0x102;
-const int INCOMPLETE	        = 0x103;
+const int WARNING               = 0x100;
+const int ASCII_TOO_BIG         = 0x101;
+const int NUMBER_TOO_BIG        = 0x102;
+const int INCOMPLETE            = 0x103;
 const int FORCING_SHORT         = 0x104;
-const int ODD_ADDRESS	        = 0x105;
+const int ODD_ADDRESS           = 0x105;
 const int END_MISSING           = 0x106;
 const int ADDRESS_MISSING       = 0x107;
 const int THEN_EXPECTED         = 0x108;
@@ -111,8 +117,7 @@ const int DO_EXPECTED           = 0x109;
 const int FORWARD_REF           = 0x10A;
 const int LABEL_TOO_LONG        = 0x10B;
 
-
-const int SEVERITY	        = 0xF00;
+const int SEVERITY              = 0xF00;
 
 /* The NEWERROR macros updates the error variable var only if the
    new error code is more severe than all previous errors.  Throughout
@@ -132,33 +137,33 @@ const int ARG_SIZE = 256;       // maximum size of each argument
 /* Structure for operand descriptors */
 struct opDescriptor
 {
-  int  mode;	// Mode number (see below)
-  int  data;	// IMMEDIATE value, displacement, or absolute address
+  int  mode;    // Mode number (see below)
+  int  data;    // IMMEDIATE value, displacement, or absolute address
   int  field;   // for bitField instructions
-  char reg;	// Principal register number (0-7)
-  char index;	// Index register number (0-7 = D0-D7, 8-15 = A0-A7)
-  char size;	// Size of index register (WORD or LONG, see below)
+  char reg;     // Principal register number (0-7)
+  char index;   // Index register number (0-7 = D0-D7, 8-15 = A0-A7)
+  char size;    // Size of index register (WORD or LONG, see below)
                 // or forced size of IMMEDIATE instruction
                 // BYTE_SIZE, WORD_SIZE, LONG_SIZE
                 // Also used to prevent MOVEQ, ADDQ & SUBQ optimizations (see OPPARSE.CPP)
-  bool backRef;	// True if data field is known on first pass
+  bool backRef; // True if data field is known on first pass
 };
 
 
 /* Structure for a symbol table entry */
 typedef struct symbolEntry {
-	int value;			/* 32-bit value of the symbol */
-	struct symbolEntry *next;	/* Pointer to next symbol in linked list */
-	char flags;			/* Flags (see below) */
-	char name[SIGCHARS+1];		/* Name */
-	} symbolDef;
+	int value;                  /* 32-bit value of the symbol */
+	struct symbolEntry *next;   /* Pointer to next symbol in linked list */
+	char flags;                 /* Flags (see below) */
+	char name[SIGCHARS+1];      /* Name */
+} symbolDef;
 
 /* Flag values for the "flags" field of a symbol */
-const int BACKREF	= 0x01;	/* Set when the symbol is defined on the 2nd pass */
-const int REDEFINABLE	= 0x02;	/* Set for symbols defined by the SET directive */
-const int REG_LIST_SYM	= 0x04;	/* Set for symbols defined by the REG directive */
-const int MACRO_SYM     = 0x08;    // Set for macros
-const int DS_SYM        = 0x10;    // Set for labels defined with DS directive
+const int BACKREF       = 0x01;     /* Set when the symbol is defined on the 2nd pass */
+const int REDEFINABLE   = 0x02;     /* Set for symbols defined by the SET directive */
+const int REG_LIST_SYM  = 0x04;     /* Set for symbols defined by the REG directive */
+const int MACRO_SYM     = 0x08;     // Set for macros
+const int DS_SYM        = 0x10;     // Set for labels defined with DS directive
 
 /* Instruction table definitions */
 
@@ -175,7 +180,6 @@ typedef struct {
 		  longmask;	/*  and long sizes of the instruction	        */
 	} flavor;
 
-
 /* Structure for the instruction table */
 typedef struct {
 	char *mnemonic;		/* Mnemonic */
@@ -189,24 +193,24 @@ typedef struct {
 
 /* Addressing mode codes/bitmasks */
 
-const int DnDirect		= 0x00001;
-const int AnDirect		= 0x00002;
-const int AnInd			= 0x00004;
-const int AnIndPost		= 0x00008;
-const int AnIndPre		= 0x00010;
-const int AnIndDisp		= 0x00020;
-const int AnIndIndex		= 0x00040;
-const int AbsShort		= 0x00080;
-const int AbsLong		= 0x00100;
-const int PCDisp		= 0x00200;
-const int PCIndex		= 0x00400;
-const int IMMEDIATE		= 0x00800;
-const int SRDirect		= 0x01000;
-const int CCRDirect		= 0x02000;
-const int USPDirect		= 0x04000;
-const int SFCDirect		= 0x08000;
-const int DFCDirect		= 0x10000;
-const int VBRDirect		= 0x20000;
+const int DnDirect      = 0x00001;
+const int AnDirect      = 0x00002;
+const int AnInd         = 0x00004;
+const int AnIndPost     = 0x00008;
+const int AnIndPre      = 0x00010;
+const int AnIndDisp     = 0x00020;
+const int AnIndIndex    = 0x00040;
+const int AbsShort      = 0x00080;
+const int AbsLong       = 0x00100;
+const int PCDisp        = 0x00200;
+const int PCIndex       = 0x00400;
+const int IMMEDIATE     = 0x00800;
+const int SRDirect      = 0x01000;
+const int CCRDirect     = 0x02000;
+const int USPDirect     = 0x04000;
+const int SFCDirect     = 0x08000;
+const int DFCDirect     = 0x10000;
+const int VBRDirect     = 0x20000;
 
 
 /* Register and operation size codes/bitmasks */
@@ -216,10 +220,11 @@ const int VBRDirect		= 0x20000;
 //const int LONG	((int) 4)
 //const int SHORT	((int) 8)
 
-const int BYTE_SIZE  = 1;
-const int WORD_SIZE  = 2;
-const int LONG_SIZE  = 4;
-const int SHORT_SIZE = 8;
+// const int BYTE_SIZE  = 1;
+const int BYTE_SIZE_M = 1
+const int WORD_SIZE   = 2;
+const int LONG_SIZE   = 4;
+const int SHORT_SIZE  = 8;
 
 // upper limit of 68000 memory
 const int MEM_SIZE = 0x00FFFFFF;
@@ -238,6 +243,10 @@ const int TAB3 = 44;
 
 const int MACRO_NEST_LIMIT = 256;  // nesting level limit
 
+// This syntax coloring method will need to be updated to use NSColor, for
+// now I'm commenting them out.
+
+/*
 // syntax highlight
 typedef struct
 {
@@ -255,9 +264,9 @@ const TColor DEFAULT_LABEL_COLOR = clPurple;
 const TColor DEFAULT_STRUCTURE_COLOR = clMaroon;
 const TColor DEFAULT_ERROR_COLOR = clRed;
 const TColor DEFAULT_TEXT_COLOR = clTeal;
+*/
 
 // function prototype definitions
 #include "proto.h"
 
 #endif
-

@@ -43,39 +43,41 @@
  *              Monroe County Community College
  *              http://www.monroeccc.edu/ckelly
  *
+ *    Modified: 2011-01-25
+ *              Robert Bartlett-Schneider
+ *              Modified files such that
+ *
  ************************************************************************/
 
-#include <vcl.h>
 #include <stdio.h>
 #include <ctype.h>
 #include "asm.h"
-#include "assembleS.h"
-#include "mainS.h"
-#include "textS.h"
-#include "editorOptions.h"
+//#include "assembleS.h"       // Not a part of Mac OS X Port
+//#include "mainS.h"
+//#include "textS.h"
+//#include "editorOptions.h"
+// #include <vcl.h>
 
-
-
-extern int loc;		// The assembler's location counter
-extern int sectionLoc[16];     // section locations
+extern int loc;                 // The assembler's location counter
+extern int sectionLoc[16];      // section locations
 extern int  sectI;              // current section
-extern int offsetMode;         // True when processing Offset directive
+extern int offsetMode;          // True when processing Offset directive
 extern bool showEqual;          // true to display equal after address in listing
-extern char pass;		// pass counter
-extern bool pass2;		// Flag set during second pass
-extern bool endFlag;		// Flag set when the END directive is encountered
-extern bool continuation;	// TRUE if the listing line is a continuation
+extern char pass;               // pass counter
+extern bool pass2;              // Flag set during second pass
+extern bool endFlag;            // Flag set when the END directive is encountered
+extern bool continuation;       // TRUE if the listing line is a continuation
 extern char empty[];            // used in conditional assembly
 
 extern int lineNum;
 extern int lineNumL68;
 extern int errorCount, warningCount;
 
-extern char line[256];		// Source line
-extern FILE *inFile;		// Input file
-extern FILE *listFile;		// Listing file
-extern FILE *objFile;	        // Object file
-extern FILE *errFile;		// error message file
+extern char line[256];          // Source line
+extern FILE *inFile;            // Input file
+extern FILE *listFile;          // Listing file
+extern FILE *objFile;           // Object file
+extern FILE *errFile;           // error message file
 extern FILE *tmpFile;           // temp file
 
 extern int labelNum;            // macro label \@ number
@@ -87,15 +89,15 @@ extern bool BITflag;            // True to assemble bitfield instructions
 extern char lineIdent[];        // "mmm" used to identify macro in listing
 //extern char arguments[MAX_ARGS][ARG_SIZE+1];    // macro arguments
 
-extern bool CREflag, MEXflag, SEXflag;   // assembler directive flags
-//extern bool endmFlag;           // ENDM opcode assembled
-extern int macroNestLevel;      // count nested macro calls
-extern char buffer[256];  //ck used to form messages for display in windows
+extern bool CREflag, MEXflag, SEXflag;  // assembler directive flags
+//extern bool endmFlag;                 // ENDM opcode assembled
+extern int macroNestLevel;              // count nested macro calls
+extern char buffer[256];                //ck used to form messages for display in windows
 extern char numBuf[20];
 extern char globalLabel[SIGCHARS+1];
-extern int includeNestLevel;    // count nested include directives
-extern char includeFile[256];  // name of current include file
-extern bool includedFileError; // true if include error message displayed
+extern int includeNestLevel;            // count nested include directives
+extern char includeFile[256];           // name of current include file
+extern bool includedFileError;          // true if include error message displayed
 
 extern unsigned int stcLabelI;  // structured if label number
 extern unsigned int stcLabelW;  // structured while label number
@@ -120,41 +122,43 @@ extern bool mapRead;
 extern bool mapProtected;
 extern bool mapInvalid;
 
-extern stack<int,vector<int> > stcStack;
-extern stack<char, vector<char> > dbStack;
-extern stack<String, vector<String> > forStack;
+//extern stack<int,vector<int> > stcStack;
+//extern stack<char, vector<char> > dbStack;
+//extern stack<String, vector<String> > forStack;
 
 //------------------------------------------------------------
 // Assemble source file
-int assembleFile(char fileName[], char tempName[], AnsiString workName)
+int assembleFile(char fileName[], char tempName[], char workName[])
 {
-  AnsiString outName;
+  //char outName[];
   int i;
 
   try {
     tmpFile = fopen(tempName, "w+");
+      
+    // Initial opening of file  
     if (!tmpFile) {
       sprintf(buffer,"Error creating temp file.");
-      Application->MessageBox(buffer, "Error", MB_OK);
+//      Application->MessageBox(buffer, "Error", MB_OK);
       return SEVERE;
     }
 
     inFile = fopen(fileName, "r");
     if (!inFile) {
-      Application->MessageBox("Error reading source file.", "Error", MB_OK);
+//      Application->MessageBox("Error reading source file.", "Error", MB_OK);
       return SEVERE;
     }
 
     // if generate listing is checked then create .L68 file
-    if (Options->chkGenList->Checked) {
-      outName = ChangeFileExt(workName, ".L68");
-      initList(outName.c_str());                // initialize list file
+    if (listFlag) {
+//      outName = ChangeFileExt(workName, ".L68");
+//      initList(outName.c_str());                // initialize list file
     }
 
     // if Object file flag then create .S68 file (S-Record)
     if (objFlag) {
-      outName = ChangeFileExt(workName, ".S68");
-      if(initObj(outName.c_str()) != NORMAL)     // if error initializing object file
+//      outName = ChangeFileExt(workName, ".S68");
+//      if(initObj(outName.c_str()) != NORMAL)     // if error initializing object file
         objFlag = false;                        // disable object file creation
     }
 
