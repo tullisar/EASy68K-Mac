@@ -48,6 +48,7 @@
 		14085DB312DA76120084F11C /* OPPARSE.CPP */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OPPARSE.CPP; path = edit68k/OPPARSE.CPP; sourceTree = "<group>"; };
 		14085DB412DA76120084F11C /* STRUCTURED.CPP */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STRUCTURED.CPP; path = edit68k/STRUCTURED.CPP; sourceTree = "<group>"; };
 		14085DB512DA76120084F11C /* SYMBOL.CPP */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SYMBOL.CPP; path = edit68k/SYMBOL.CPP; sourceTree = "<group>"; };
+		142260FB12EE6CE300B9E087 /* asm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = asm.h; path = edit68k/asm.h; sourceTree = "<group>"; };
 		14291E8C12E25565009769CB /* indent_decrease.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indent_decrease.png; sourceTree = "<group>"; };
 		14291E8D12E25565009769CB /* indent_increase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indent_increase.png; sourceTree = "<group>"; };
 		14295E0F12E4EBE9008BF6B5 /* indent_decrease-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "indent_decrease-small.png"; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		14085DA112DA75A40084F11C /* Edit68K Source */ = {
 			isa = PBXGroup;
 			children = (
+				142260FB12EE6CE300B9E087 /* asm.h */,
 				14085DA512DA76120084F11C /* ASSEMBLE.CPP */,
 				14085DA612DA76120084F11C /* BINFILE.CPP */,
 				14085DA712DA76120084F11C /* BUILD.CPP */,

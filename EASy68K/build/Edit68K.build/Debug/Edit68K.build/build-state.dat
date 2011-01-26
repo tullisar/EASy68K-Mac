@@ -1,7 +1,7 @@
 TEdit68K
 v7
 r0
-t317178198.442395
+t317614550.577274
 cCheck dependencies
 cProcessInfoPlistFile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Info.plist Edit68K-Info.plist
 cCpResource build/Debug/Edit68K.app/Contents/Resources/English.lproj/Credits.rtf English.lproj/Credits.rtf
@@ -18,6 +18,7 @@ cCpResource build/Debug/Edit68K.app/Contents/Resources/print-small.png print-sma
 cCpResource build/Debug/Edit68K.app/Contents/Resources/print.png print.png
 cCpResource build/Debug/Edit68K.app/Contents/Resources/list_num.png list_num.png
 cCpResource build/Debug/Edit68K.app/Contents/Resources/list_num-small.png list_num-small.png
+cCpResource build/Debug/Edit68K.app/Contents/Resources/template.x68 template.x68
 cProcessPCH /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-fzpaeizxkpzsjnagrevzpevhdqyy/Edit68K_Prefix.pch.gch Edit68K_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/AssemblyFile.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/main.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
@@ -45,15 +46,15 @@ t1262583222
 s5900
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.h
-c000000004D374B4600000000000000DE
-t1295469382
-s222
+c000000004D3799600000000000000144
+t1295489376
+s324
 i<Cocoa/Cocoa.h>
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m
-c000000004D374B4600000000000009FC
-t1295469382
-s2556
+c000000004D37A12C0000000000000CA6
+t1295491372
+s3238
 i"AssemblyFile.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFlie.h
@@ -75,9 +76,9 @@ s145
 i<Cocoa/Cocoa.h>
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib
-c000000004D3787250000000000014AC9
-t1295484709
-s84681
+c000000004D3E32290000000000014BCC
+t1295921705
+s84940
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/Credits.rtf
 c000000004D374B4600000000000001B4
@@ -137,7 +138,7 @@ s5872
 i"TextViewAspect.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app
-t1295485398
+t1295921750
 s102
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Info.plist
@@ -145,16 +146,16 @@ t1295469405
 s1311
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/MacOS/Edit68K
-t1295469411
-s10960
+t1295921349
+s16128
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/PkgInfo
 t1295469405
 s8
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/English.lproj/AssemblyFile.nib
-t1295485398
-s17933
+t1295921709
+s18247
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/English.lproj/Credits.rtf
 t1295469382
@@ -212,9 +213,13 @@ N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/R
 t1295485398
 s5900
 
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/template.x68
+t1295921750
+s452
+
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/AssemblyFile.o
-t1295469409
-s19396
+t1295921348
+s24852
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/AssemblyFlie.o
 t1295393693
@@ -297,6 +302,11 @@ c000000004B417DB6000000000000170C
 t1262583222
 s5900
 
+N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/template.x68
+c000000004D3E325300000000000001C4
+t1295921747
+s452
+
 N/var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-fzpaeizxkpzsjnagrevzpevhdqyy/Edit68K_Prefix.pch.gch
 t1295469409
 s54265616
@@ -312,11 +322,11 @@ s1483
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies317178198#317178198#0(0"0(0#1#0"3343187568374212096#0"0#
+lSLF07#2@18"Check dependencies317614550#317614550#0(0"0(0#1#0"8614487968#0"0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/AssemblyFile.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s317162209.476888
-e317162209.653670
+s317614145.488329
+e317614148.021209
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/AssemblyFile.o
@@ -325,7 +335,12 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@67"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m317162209#317162209#0(0"0(0#0#59"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m8603049696#1532"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-fzpaeizxkpzsjnagrevzpevhdqyy/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/AssemblyFile.o0#
+o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m: In function '-[AssemblyFile init]':
+o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m:20: warning: 'AssemblyFile' may not respond to '-initTextStorage'
+o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m:20: warning: (Messages without a matching method signature
+o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m:20: warning: will be assumed to return 'id' and accept
+o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m:20: warning: '...' as arguments.)
+lSLF07#2@67"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m317614145#317614148#0(551"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m: In function '-[AssemblyFile init]':/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m:20: warning: 'AssemblyFile' may not respond to '-initTextStorage'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m:20: warning: (Messages without a matching method signature/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m:20: warning: will be assumed to return 'id' and accept/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m:20: warning: '...' as arguments.)2(22@52"'AssemblyFile' may not respond to '-initTextStorage'317614147#97#126#0(6@59"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m317184172#20#0#20#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)317614147#223#119#0(6@59"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m317184172#20#0#20#0#0"0(0#0#59"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m8602285920#1532"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-fzpaeizxkpzsjnagrevzpevhdqyy/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/AssemblyFile.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/AssemblyFlie.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFlie.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
 s317086493.675307
@@ -373,12 +388,13 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@59"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m317162209#317162209#0(0"0(0#0#51"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m8602995040#1516"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-fzpaeizxkpzsjnagrevzpevhdqyy/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/main.o0#
 
 CCompileXIB /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib
-s317178198.006652
-e317178198.278933
+s317614508.635009
+e317614509.869907
 r1
 xCompileXIB
 x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib
-lSLF07#2@41"CompileXIB English.lproj/AssemblyFile.xib317178198#317178198#0(0"0(0#0#75"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib29836824280170576#390"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/English.lproj/AssemblyFile.nib /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib --sdk /Developer/SDKs/MacOSX10.6.sdk0#
+o2011-01-24 18:15:09.763 ibtool[2165:607] __CFServiceControllerBeginPBSLoadForLocalizations timed out while talking to pbs
+lSLF07#2@41"CompileXIB English.lproj/AssemblyFile.xib317614508#317614509#0(122"2011-01-24 18:15:09.763 ibtool[2165:607] __CFServiceControllerBeginPBSLoadForLocalizations timed out while talking to pbs0(0#0#75"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib29836824280170576#390"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/English.lproj/AssemblyFile.nib /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib --sdk /Developer/SDKs/MacOSX10.6.sdk0#
 
 CCompileXIB /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib
 s317178198.009438
@@ -511,15 +527,24 @@ xbuild/Debug/Edit68K.app/Contents/Resources/print.png
 xprint.png
 lSLF07#2@14"Copy print.png317178198#317178198#0(0"0(0#0#54"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/print.png8605658496#343"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/print.png /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources0#
 
+CCpResource build/Debug/Edit68K.app/Contents/Resources/template.x68 template.x68
+s317614550.562943
+e317614550.574565
+r1
+xCpResource
+xbuild/Debug/Edit68K.app/Contents/Resources/template.x68
+xtemplate.x68
+lSLF07#2@17"Copy template.x68317614550#317614550#0(0"0(0#0#57"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/template.x688621913408#346"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/template.x68 /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources0#
+
 CLd /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/MacOS/Edit68K normal x86_64
-s317162209.660325
-e317162211.352279
+s317614148.021351
+e317614149.185050
 r1
 xLd
 x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/MacOS/Edit68K
 xnormal
 xx86_64
-lSLF07#2@96"Link /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/MacOS/Edit68K317162209#317162211#0(0"0(0#0#0"8602584000#572"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -filelist /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/Edit68K.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/MacOS/Edit68K0#
+lSLF07#2@96"Link /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/MacOS/Edit68K317614148#317614149#0(0"0(0#0#0"13229766294700130#572"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -filelist /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/Edit68K.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/MacOS/Edit68K0#
 
 CProcessInfoPlistFile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Info.plist Edit68K-Info.plist
 s317162205.570579
@@ -557,10 +582,10 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@29"Precompile Edit68K_Prefix.pch317086490#317086493#0(0"0(0#0#63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/Edit68K_Prefix.pch4300885448#1416"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/Edit68K_Prefix.pch -o /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-dlqhicudmzkrbqgbkjgbnuyellhv/Edit68K_Prefix.pch.gch0#
 
 CTouch /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app
-s317178198.439498
-e317178198.442353
+s317614550.574932
+e317614550.577246
 r1
 xTouch
 x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app
-lSLF07#2@74"Touch /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app317178198#317178198#0(0"0(0#0#0"8606535168#143"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /usr/bin/touch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app0#
+lSLF07#2@74"Touch /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app317614550#317614550#0(0"0(0#0#0"8618632224#143"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /usr/bin/touch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app0#
 
