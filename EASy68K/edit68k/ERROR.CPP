@@ -31,14 +31,15 @@
 
 #include <stdio.h>
 #include "asm.h"
-#include "mainS.h"
-#include "textS.h"
+//#include "mainS.h"
+//#include "textS.h"
 
 extern char buffer[256];  //ck used to form messages for display in windows
 extern char numBuf[20];
 extern bool WARflag;
-extern lineNumL68;      // listing line number
-TListItem  *ListItem;
+extern int lineNumL68;      // listing line number
+// TODO: (GUI) Need structure to store errors then show them in GUI
+//TListItem  *ListItem;
 extern char includeFile[256];  // name of current include file
 extern bool includedFileError; // true if include error message displayed
 
@@ -239,52 +240,51 @@ int printError(FILE *outFile, int errorCode, int lineNum)
 
   // display error messages in edit window
 
-  // if include file then display error in proper window
-  if (includeFile[0]) {         // if not NULL
-    bool openIncFile = true;    // open included file when true
-    AnsiString incFile(includeFile);
-
-    // check to see if file is already open
-    for(int i = Main->MDIChildCount-1; i >= 0; i--) {
-      TextStuff = (TTextStuff*)Main->MDIChildren[i];
-      //if(TextStuff->Project.CurrentFile == ExpandFileName(incFile)) { // if file already open
-      if(ExpandFileName(TextStuff->Project.CurrentFile).AnsiCompareIC(ExpandFileName(incFile)) == 0) {
-        if (TextStuff->Project.Modified) {         // if it is modified
-          if (includedFileError == false) {
-            AnsiString asBuffer = "An Error occurred in the included file " +
-                          ExtractFileName(incFile) +
-                          ".\nThe file is currently open and has been modified." +
-                          "\nThe line numbers of errors may not be correct.";
-            ShowMessage(asBuffer);
-            includedFileError = true;   // prevent multiple messages
-          }
-        }
-        openIncFile = false;
-        TextStuff->BringToFront();
-        break;
-      }
-    }
-    if (openIncFile)
-      Main->OpenFile(incFile);
-  }
-
-  //Grab the active Child Form
-  TTextStuff *Active = (TTextStuff*)Main->ActiveMDIChild; //grab active mdi child
-
-  Active->Messages->Enabled = true; //need to allow user to click errors
-  if (Active->Messages->Height < 87)
-    Active->Messages->Height = 87;
-  ListItem = Active->Messages->Items->Add();
-  if (lineNum >= 0)
-    sprintf(numBuf, "Line %d ", lineNum);
-  else
-    numBuf[0] = '\0';
-  ListItem->Caption = lineNum;        // display line number of error
-  buffer[strlen(buffer)-1]='\0';      // trim off '\n'
-  ListItem->SubItems->Add(buffer);    // add error message to edit window
-  ListItem->SubItems->Add(Active->Project.CurrentFile);       // display file
+// TODO: (GUI) Display assembler errors in GUI
+//  // if include file then display error in proper window
+//  if (includeFile[0]) {         // if not NULL
+//    bool openIncFile = true;    // open included file when true
+//    AnsiString incFile(includeFile);
+//
+//    // check to see if file is already open
+//    for(int i = Main->MDIChildCount-1; i >= 0; i--) {
+//      TextStuff = (TTextStuff*)Main->MDIChildren[i];
+//      //if(TextStuff->Project.CurrentFile == ExpandFileName(incFile)) { // if file already open
+//      if(ExpandFileName(TextStuff->Project.CurrentFile).AnsiCompareIC(ExpandFileName(incFile)) == 0) {
+//        if (TextStuff->Project.Modified) {         // if it is modified
+//          if (includedFileError == false) {
+//            AnsiString asBuffer = "An Error occurred in the included file " +
+//                          ExtractFileName(incFile) +
+//                          ".\nThe file is currently open and has been modified." +
+//                          "\nThe line numbers of errors may not be correct.";
+//            ShowMessage(asBuffer);
+//            includedFileError = true;   // prevent multiple messages
+//          }
+//        }
+//        openIncFile = false;
+//        TextStuff->BringToFront();
+//        break;
+//      }
+//    }
+//    if (openIncFile)
+//      Main->OpenFile(incFile);
+//  }
+//
+//  //Grab the active Child Form
+//  TTextStuff *Active = (TTextStuff*)Main->ActiveMDIChild; //grab active mdi child
+//
+//  Active->Messages->Enabled = true; //need to allow user to click errors
+//  if (Active->Messages->Height < 87)
+//    Active->Messages->Height = 87;
+//  ListItem = Active->Messages->Items->Add();
+//  if (lineNum >= 0)
+//    sprintf(numBuf, "Line %d ", lineNum);
+//  else
+//    numBuf[0] = '\0';
+//  ListItem->Caption = lineNum;        // display line number of error
+//  buffer[strlen(buffer)-1]='\0';      // trim off '\n'
+//  ListItem->SubItems->Add(buffer);    // add error message to edit window
+//  ListItem->SubItems->Add(Active->Project.CurrentFile);       // display file
 
   return NORMAL;
 }
-
-

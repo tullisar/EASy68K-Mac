@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140C0F2912F189430045813A /* MACRO.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 14085DB012DA76120084F11C /* MACRO.CPP */; };
+		140C0F5B12F42D6C0045813A /* SYMBOL.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 14085DB512DA76120084F11C /* SYMBOL.CPP */; };
+		140C0F6512F42E860045813A /* BUILD.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 14085DA712DA76120084F11C /* BUILD.CPP */; };
+		140C0F6D12F430020045813A /* OPPARSE.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 14085DB312DA76120084F11C /* OPPARSE.CPP */; };
+		140C0F7512F430540045813A /* INSTLOOK.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 14085DAD12DA76120084F11C /* INSTLOOK.CPP */; };
+		140C0F7D12F430DB0045813A /* INSTTABL.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 14085DAE12DA76120084F11C /* INSTTABL.CPP */; };
+		140C0FA312F433690045813A /* DIRECTIV.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 14085DA912DA76120084F11C /* DIRECTIV.CPP */; };
 		14291E8E12E25565009769CB /* indent_decrease.png in Resources */ = {isa = PBXBuildFile; fileRef = 14291E8C12E25565009769CB /* indent_decrease.png */; };
 		14291E8F12E25565009769CB /* indent_increase.png in Resources */ = {isa = PBXBuildFile; fileRef = 14291E8D12E25565009769CB /* indent_increase.png */; };
 		14295E1112E4EBE9008BF6B5 /* indent_decrease-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 14295E0F12E4EBE9008BF6B5 /* indent_decrease-small.png */; };
@@ -19,6 +26,14 @@
 		1442018212E7B66300B0C666 /* list_num-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 1442018112E7B66300B0C666 /* list_num-small.png */; };
 		14534FF812EFDED10093FC9B /* ASSEMBLE.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 14085DA512DA76120084F11C /* ASSEMBLE.CPP */; };
 		14DDCA5A12E7D55100DDD613 /* template.x68 in Resources */ = {isa = PBXBuildFile; fileRef = 14DDCA5912E7D55100DDD613 /* template.x68 */; };
+		14DDE81F12F4D956004765D0 /* CODEGEN.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 14085DA812DA76120084F11C /* CODEGEN.CPP */; };
+		14DDE82D12F4DA4A004765D0 /* OBJECT.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 14085DB212DA76120084F11C /* OBJECT.CPP */; };
+		14DDE83812F4E6A6004765D0 /* MOVEM.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 14085DB112DA76120084F11C /* MOVEM.CPP */; };
+		14DDE84512F4E802004765D0 /* STRUCTURED.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 14085DB412DA76120084F11C /* STRUCTURED.CPP */; };
+		14DF9E5512F0DA5200FA3080 /* GLOBALS.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 14085DAC12DA76120084F11C /* GLOBALS.CPP */; };
+		14DF9E5A12F0DACD00FA3080 /* ERROR.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 14085DAA12DA76120084F11C /* ERROR.CPP */; };
+		14DF9E7C12F0E1AF00FA3080 /* EVAL.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 14085DAB12DA76120084F11C /* EVAL.CPP */; };
+		14DF9E8312F0E30F00FA3080 /* LISTING.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 14085DAF12DA76120084F11C /* LISTING.CPP */; };
 		1DDD582C0DA1D0D100B32029 /* AssemblyFile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* AssemblyFile.xib */; };
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
@@ -230,6 +245,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "Edit68K" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -279,6 +295,21 @@
 				8D15AC310486D014006FF6A4 /* AssemblyFile.m in Sources */,
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
 				14534FF812EFDED10093FC9B /* ASSEMBLE.CPP in Sources */,
+				14DF9E5512F0DA5200FA3080 /* GLOBALS.CPP in Sources */,
+				14DF9E5A12F0DACD00FA3080 /* ERROR.CPP in Sources */,
+				14DF9E7C12F0E1AF00FA3080 /* EVAL.CPP in Sources */,
+				14DF9E8312F0E30F00FA3080 /* LISTING.CPP in Sources */,
+				140C0F2912F189430045813A /* MACRO.CPP in Sources */,
+				140C0F5B12F42D6C0045813A /* SYMBOL.CPP in Sources */,
+				140C0F6512F42E860045813A /* BUILD.CPP in Sources */,
+				140C0F6D12F430020045813A /* OPPARSE.CPP in Sources */,
+				140C0F7512F430540045813A /* INSTLOOK.CPP in Sources */,
+				140C0F7D12F430DB0045813A /* INSTTABL.CPP in Sources */,
+				140C0FA312F433690045813A /* DIRECTIV.CPP in Sources */,
+				14DDE81F12F4D956004765D0 /* CODEGEN.CPP in Sources */,
+				14DDE82D12F4DA4A004765D0 /* OBJECT.CPP in Sources */,
+				14DDE83812F4E6A6004765D0 /* MOVEM.CPP in Sources */,
+				14DDE84512F4E802004765D0 /* STRUCTURED.CPP in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +393,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
+				WARNING_CFLAGS = "-Wno-write-strings";
 			};
 			name = Debug;
 		};

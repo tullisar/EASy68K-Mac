@@ -57,99 +57,92 @@ instruction asmMac = { "ASMMACRO", NULL, 0, false, asmMacro };
 
 char *instLookup(char *p, instruction *(*instPtrPtr), char *sizePtr, int *errorPtr)
 {
-  char opcode[SIGCHARS+1];
-  int i, hi, lo, mid, cmp;
-  symbolDef *symbol;
-
-  try {
-    /*	printf("InstLookup: Input string is \"%s\"\n", p); */
-    i = 0;
-    do {
-      if (i < SIGCHARS)
-        opcode[i++] = *p;
-      p++;
-    } while (isalnum(*p) || *p == '_' || *p == '-');
-    opcode[i] = '\0';
-    if (*p == '.')
-      if (isspace(p[2]) || !p[2]) {
-        if (p[1] == 'B')
-          *sizePtr = BYTE_SIZE;
-        else if (p[1] == 'W' || isspace(p[1]))  // *ck 12-8-2005
-          *sizePtr = WORD_SIZE;
-        else if (p[1] == 'L')
-          *sizePtr = LONG_SIZE;
-        else if (p[1] == 'S')
-          *sizePtr = SHORT_SIZE;
-        else {
-          *sizePtr = 0;
-          NEWERROR(*errorPtr, INV_SIZE_CODE);
+    char opcode[SIGCHARS+1];
+    int i, hi, lo, mid, cmp;
+    symbolDef *symbol;
+    
+    try {
+        /*	printf("InstLookup: Input string is \"%s\"\n", p); */
+        i = 0;
+        do {
+            if (i < SIGCHARS)
+                opcode[i++] = *p;
+            p++;
+        } while (isalnum(*p) || *p == '_' || *p == '-');
+        opcode[i] = '\0';
+        if (*p == '.')
+            if (isspace(p[2]) || !p[2]) {
+                if (p[1] == 'B')
+                    *sizePtr = BYTE_SIZE_M;
+                else if (p[1] == 'W' || isspace(p[1]))  // *ck 12-8-2005
+                    *sizePtr = WORD_SIZE;
+                else if (p[1] == 'L')
+                    *sizePtr = LONG_SIZE;
+                else if (p[1] == 'S')
+                    *sizePtr = SHORT_SIZE;
+                else {
+                    *sizePtr = 0;
+                    NEWERROR(*errorPtr, INV_SIZE_CODE);
+                }
+                p += 2;
+            } else {
+                NEWERROR(*errorPtr, SYNTAX);
+                return NULL;
+            }
+            else if (!isspace(*p) && *p) {
+                NEWERROR(*errorPtr, SYNTAX);
+                return NULL;
+            }
+            else
+                *sizePtr = 0;
+        
+        lo = 0;
+        hi = tableSize - 1;
+        
+        // search for opcode in instTable
+        do {
+            mid = (hi + lo) / 2;
+            cmp = strcmp(opcode, instTable[mid].mnemonic);
+            if (cmp > 0)
+                lo = mid + 1;
+            else if (cmp < 0)
+                hi = mid - 1;
+        } while (cmp && (hi >= lo));
+        
+        // if opcode found
+        if (!cmp) {
+            // if bitfield instruction and BITflag is false
+            if (instTable[mid].flavorPtr &&
+                instTable[mid].flavorPtr->exec == bitField && !BITflag) {
+                NEWERROR(*errorPtr, INV_OPCODE);        // error invalid opcode
+                return NULL;
+            }
+            *instPtrPtr = &instTable[mid];
+            return p;
+            
+            // else, opcode not found
+        } else {
+            
+            // search for matching macro definition in symbol table
+            symbol = lookup(opcode, false, errorPtr);
+            if ( (*errorPtr < ERRORN) && (symbol->flags & MACRO_SYM) ) { // if found
+                if(pass2 && !(symbol->flags & BACKREF))  // if forward reference
+                    NEWERROR(*errorPtr, FORWARD_REF);     // warning
+                *instPtrPtr = &asmMac;    // point to asmMac function description
+                macroFP = symbol->value;  // get file pointer to macro
+                return p;                 // return pointer to macro parameters
+            } else {
+                
+                // not a macro call either, so must be invalid opcode
+                NEWERROR(*errorPtr, INV_OPCODE);
+                return NULL;
+            }
         }
-        p += 2;
-      } else {
-        NEWERROR(*errorPtr, SYNTAX);
-        return NULL;
-      }
-    else if (!isspace(*p) && *p) {
-      NEWERROR(*errorPtr, SYNTAX);
-      return NULL;
     }
-    else
-      *sizePtr = 0;
-
-    lo = 0;
-    hi = tableSize - 1;
-
-    // search for opcode in instTable
-    do {
-      mid = (hi + lo) / 2;
-      cmp = strcmp(opcode, instTable[mid].mnemonic);
-      if (cmp > 0)
-        lo = mid + 1;
-      else if (cmp < 0)
-        hi = mid - 1;
-    } while (cmp && (hi >= lo));
-
-    // if opcode found
-    if (!cmp) {
-      // if bitfield instruction and BITflag is false
-      if (instTable[mid].flavorPtr &&
-          instTable[mid].flavorPtr->exec == bitField && !BITflag) {
-        NEWERROR(*errorPtr, INV_OPCODE);        // error invalid opcode
+    catch( ... ) {
+        NEWERROR(*errorPtr, EXCEPTION);
+        sprintf(buffer, "ERROR: An exception occurred in routine 'instLookup'. \n");
         return NULL;
-      }
-      *instPtrPtr = &instTable[mid];
-      return p;
-
-    // else, opcode not found
-    } else {
-
-      // search for matching macro definition in symbol table
-      symbol = lookup(opcode, false, errorPtr);
-      if ( (*errorPtr < ERRORN) && (symbol->flags & MACRO_SYM) ) { // if found
-        if(pass2 && !(symbol->flags & BACKREF))  // if forward reference
-          NEWERROR(*errorPtr, FORWARD_REF);     // warning
-        *instPtrPtr = &asmMac;    // point to asmMac function description
-        macroFP = symbol->value;  // get file pointer to macro
-        return p;                 // return pointer to macro parameters
-      } else {
-
-        // not a macro call either, so must be invalid opcode
-        NEWERROR(*errorPtr, INV_OPCODE);
-        return NULL;
-      }
     }
-  }
-  catch( ... ) {
-    NEWERROR(*errorPtr, EXCEPTION);
-    sprintf(buffer, "ERROR: An exception occurred in routine 'instLookup'. \n");
-    return NULL;
-  }
-  //return NORMAL;
+    //return NORMAL;
 }
-
-
-
-
-
-
-

@@ -45,18 +45,16 @@
  *
  *    Modified: 2011-01-25
  *              Robert Bartlett-Schneider
- *              Modified files such that
+ *              Modified various routines for Mac OS X Port
+ *              Removed references to Windows GUI and used 
+ *                alternate implementation of ChangeFileExt
  *
  ************************************************************************/
 
 #include <stdio.h>
 #include <ctype.h>
+#include <stack.h>
 #include "asm.h"
-//#include "assembleS.h"       // Not a part of Mac OS X Port
-//#include "mainS.h"
-//#include "textS.h"
-//#include "editorOptions.h"
-// #include <vcl.h>
 
 extern int loc;                 // The assembler's location counter
 extern int sectionLoc[16];      // section locations
@@ -122,90 +120,126 @@ extern bool mapRead;
 extern bool mapProtected;
 extern bool mapInvalid;
 
-//extern stack<int,vector<int> > stcStack;
-//extern stack<char, vector<char> > dbStack;
-//extern stack<String, vector<String> > forStack;
+extern stack<int,vector<int> > stcStack;
+extern stack<char, vector<char> > dbStack;
+extern stack<char*, vector<char*> > forStack;
 
 //------------------------------------------------------------
+// assembleFile()
 // Assemble source file
+//------------------------------------------------------------
 int assembleFile(char fileName[], char tempName[], char workName[])
 {
-  //char outName[];
-  int i;
+    //char outName[];
+    // int i; // TODO (UNUSED VARIABLE) int i
+    char listFileName[256];
+    char objFileName[256];
+    char binFileName[256];
+    
+    try {
+        tmpFile = fopen(tempName, "w+");
+        
+        // Initial opening of file  
+        if (!tmpFile) {
+            sprintf(buffer,"Error creating temp file.");
+            // TODO: (GUI) Send error to GUI
+            // Application->MessageBox(buffer, "Error", MB_OK);
+            return SEVERE;
+        }
+        
+        inFile = fopen(fileName, "r");
+        if (!inFile) {
+            // TODO: (GUI) Send error to GUI
+            // Application->MessageBox("Error reading source file.", "Error", MB_OK);
+            return SEVERE;
+        }
+        
+        // If generate listing is checked then create .L68 file
+        if (listFlag) {
+            changeFileExt(workName, ".L68", listFileName);
+            if( initList(listFileName ) != NORMAL )             
+                listFlag = false;                   
+        }
+        
+        // if Object file flag then create .S68 file (S-Record)
+        if (objFlag) {
+            changeFileExt(workName, ".S68", objFileName);
+            if ( initObj(objFileName) != NORMAL )
+                objFlag = false;
+        }
+        
+        // Assemble the file
+        processFile();
+        
+        // Close files and print error and warning counts
+        fclose(inFile);
+        fclose(tmpFile);
+        finishList();
+        if (objFlag)
+            finishObj();
+        
+        // NOTE: clearSymbols() located within SYMBOL.CPP
+        clearSymbols();               //ck clear symbol table memory
+        
+        // clear stacks used in structured assembly
+        while(stcStack.empty() == false)
+            stcStack.pop();
+        while(dbStack.empty() == false)
+            dbStack.pop();
+        while(forStack.empty() == false)
+            forStack.pop();
+        
+        // minimize message area if no errors or warnings
+        // TODO: (GUI) Send errors to main window or minimize error box if no more errors
+        //    if (warningCount == 0 && errorCount == 0) {
+        //      TTextStuff *Active = (TTextStuff*)Main->ActiveMDIChild; //grab active mdi child
+        //        Active->Messages->Height = 7;
+        //    }
+        //
+        //    AssemblerBox->lblStatus->Caption = IntToStr(warningCount);
+        //    AssemblerBox->lblStatus2->Caption = IntToStr(errorCount);
+        //
+        //    if(errorCount == 0 && errorCount == 0)
+        //    {
+        //      AssemblerBox->cmdExecute->Enabled = true;
+        //    }
+    }
+    catch( ... ) {
+        sprintf(buffer, "ERROR: An exception occurred in routine 'assembleFile'. \n");
+        printError(NULL, EXCEPTION, 0);
+        return NULL;
+    }
+    
+    return NORMAL;
+}
 
-  try {
-    tmpFile = fopen(tempName, "w+");
-      
-    // Initial opening of file  
-    if (!tmpFile) {
-      sprintf(buffer,"Error creating temp file.");
-//      Application->MessageBox(buffer, "Error", MB_OK);
-      return SEVERE;
+//------------------------------------------------------------
+// changeFileExt()
+// Change the extension of a file
+// TODO: (CREDIT) Credit original author for this function
+//------------------------------------------------------------
+void changeFileExt(char *fileName, char *newExt, char *newFileName) {
+
+    strcpy(newFileName, fileName);
+    char *ext = strstr(newFileName, ".X68");
+    if (ext != NULL) {
+        *ext = '\0';
+    } else {
+        ext = strstr(newFileName, ".x68");   // rbs - the file name may also have a lowercase .x68
+        if ( ext != NULL )
+            *ext = '\0';
     }
 
-    inFile = fopen(fileName, "r");
-    if (!inFile) {
-//      Application->MessageBox("Error reading source file.", "Error", MB_OK);
-      return SEVERE;
-    }
-
-    // if generate listing is checked then create .L68 file
-    if (listFlag) {
-//      outName = ChangeFileExt(workName, ".L68");
-//      initList(outName.c_str());                // initialize list file
-    }
-
-    // if Object file flag then create .S68 file (S-Record)
-    if (objFlag) {
-//      outName = ChangeFileExt(workName, ".S68");
-//      if(initObj(outName.c_str()) != NORMAL)     // if error initializing object file
-        objFlag = false;                        // disable object file creation
-    }
-
-    // Assemble the file
-    processFile();
-
-    // Close files and print error and warning counts
-    fclose(inFile);
-    fclose(tmpFile);
-    finishList();
-    if (objFlag)
-      finishObj();
-
-    clearSymbols();               //ck clear symbol table memory
-
-    // clear stacks used in structured assembly
-    while(stcStack.empty() == false)
-      stcStack.pop();
-    while(dbStack.empty() == false)
-      dbStack.pop();
-    while(forStack.empty() == false)
-      forStack.pop();
-
-    // minimize message area if no errors or warnings
-    if (warningCount == 0 && errorCount == 0) {
-      TTextStuff *Active = (TTextStuff*)Main->ActiveMDIChild; //grab active mdi child
-        Active->Messages->Height = 7;
-    }
-
-    AssemblerBox->lblStatus->Caption = IntToStr(warningCount);
-    AssemblerBox->lblStatus2->Caption = IntToStr(errorCount);
-
-    if(errorCount == 0 && errorCount == 0)
-    {
-      AssemblerBox->cmdExecute->Enabled = true;
-    }
-  }
-  catch( ... ) {
-    sprintf(buffer, "ERROR: An exception occurred in routine 'assembleFile'. \n");
-    printError(NULL, EXCEPTION, 0);
-    return NULL;
-  }
-
-  return NORMAL;
+    strcat(newFileName,newExt);
 }
 
 
+           
+//------------------------------------------------------------
+// strcap()
+// Convert a given string to uppercase if the capFlag is 
+// set.
+//------------------------------------------------------------
 int strcap(char *d, char *s)
 {
   bool capFlag;
@@ -233,7 +267,10 @@ int strcap(char *d, char *s)
   return NORMAL;
 }
 
-
+//------------------------------------------------------------
+// skipSpace()
+// Appears to remove leading spaces from a string
+//------------------------------------------------------------
 char *skipSpace(char *p)
 {
   try {
@@ -248,9 +285,12 @@ char *skipSpace(char *p)
   }
 }
 
+//------------------------------------------------------------
+// processFile()
 // continue assembly process by reading source file and sending each
 // line to assemble()
 // does 2 passes from here
+//------------------------------------------------------------
 int processFile()
 {
   int error;
@@ -326,7 +366,10 @@ int processFile()
   return NORMAL;
 }
 
+//------------------------------------------------------------
+// assemble()
 // Conditionally Assemble one line of code
+//------------------------------------------------------------
 int assemble(char *line, int *errorPtr)
 {
   int value = 0;
@@ -358,12 +401,14 @@ int assemble(char *line, int *errorPtr)
     // conditional assembly for all code
 
     // ----- IFC -----
+    
     if(!(stricmp(token[1], "IFC"))) {       // if IFC opcode
       if (token[0] != empty)                // if label present
         NEWERROR(*errorPtr, LABEL_ERROR);
       if (skipCond)
         nestLevel++;                        // nest level of skip
       else {
+        
         if (stricmp(token[2], token[3])) {  // If IFC strings don't match
           skipCond = true;                  // conditionally skip lines
           nestLevel++;                      // nest level of skip
@@ -372,6 +417,7 @@ int assemble(char *line, int *errorPtr)
       }
 
     // ----- IFNC -----
+    
     } else if(!(stricmp(token[1], "IFNC"))) { // if IFNC opcode
       if (token[0] != empty)                  // if label present
         NEWERROR(*errorPtr, LABEL_ERROR);
@@ -381,6 +427,7 @@ int assemble(char *line, int *errorPtr)
         if (token[3] == empty) {                // if IFNC arguments missing
           NEWERROR(*errorPtr, INVALID_ARG);
         } else {
+            
           if (!(stricmp(token[2], token[3]))) { // if IFNC strings match
             skipCond = true;                    // conditionally skip lines
             nestLevel++;                        // nest level of skip
@@ -390,6 +437,7 @@ int assemble(char *line, int *errorPtr)
       }
 
     // ----- IFEQ -----
+        
     } else if(!(stricmp(token[1], "IFEQ"))) { // if IFEQ opcode
       if (token[0] != empty)                  // if label present
         NEWERROR(*errorPtr, LABEL_ERROR);
@@ -409,6 +457,7 @@ int assemble(char *line, int *errorPtr)
       }
 
     // ----- IFNE -----
+        
     } else if(!(stricmp(token[1], "IFNE"))) {  // if IFNE opcode
       if (token[0] != empty)                  // if label present
         NEWERROR(*errorPtr, LABEL_ERROR);
@@ -428,6 +477,7 @@ int assemble(char *line, int *errorPtr)
       }
 
     // ----- IFLT -----
+        
     } else if(!(stricmp(token[1], "IFLT"))) {  // if IFLT opcode
       if (token[0] != empty)                  // if label present
         NEWERROR(*errorPtr, LABEL_ERROR);
@@ -447,6 +497,7 @@ int assemble(char *line, int *errorPtr)
       }
 
     // ----- IFLE -----
+        
     } else if(!(stricmp(token[1], "IFLE"))) {  // if IFLE opcode
       if (token[0] != empty)                  // if label present
         NEWERROR(*errorPtr, LABEL_ERROR);
@@ -466,6 +517,7 @@ int assemble(char *line, int *errorPtr)
       }
 
     // ----- IFGT -----
+        
     } else if(!(stricmp(token[1], "IFGT"))) {  // if IFGT opcode
       if (token[0] != empty)                  // if label present
         NEWERROR(*errorPtr, LABEL_ERROR);
@@ -485,6 +537,7 @@ int assemble(char *line, int *errorPtr)
       }
 
     // ----- IFGE -----
+        
     } else if(!(stricmp(token[1], "IFGE"))) {  // if IFGE opcode
       if (token[0] != empty)                  // if label present
         NEWERROR(*errorPtr, LABEL_ERROR);
@@ -504,6 +557,7 @@ int assemble(char *line, int *errorPtr)
       }
 
     // ----- ENDC -----
+        
     } else if(!(stricmp(token[1], "ENDC"))) {  // if ENDC opcode
       if (token[0] != empty)                  // if label present
         NEWERROR(*errorPtr, LABEL_ERROR);
@@ -544,7 +598,10 @@ int assemble(char *line, int *errorPtr)
   return NORMAL;
 }
 
+//------------------------------------------------------------
+// createCode()
 // create machine code for instruction
+//------------------------------------------------------------
 int createCode(char *capLine, int *errorPtr) {
   instruction *tablePtr;
   flavor *flavorPtr;
@@ -763,7 +820,7 @@ char *fieldParse(char *p, opDescriptor *d, int *errorPtr)
 int pickMask(int size, flavor *flavorPtr, int *errorPtr)
 {
   if (!size || size & flavorPtr->sizes)
-    if (size & (BYTE_SIZE | SHORT_SIZE))
+    if (size & (BYTE_SIZE_M | SHORT_SIZE))
       return flavorPtr->bytemask;
   else if (!size || size == WORD_SIZE)
     return flavorPtr->wordmask;
@@ -850,6 +907,3 @@ int tokenize(char* instr, char* delim, char *token[], char* tokens){
   }
   return tokCount;
 }
-
-
-

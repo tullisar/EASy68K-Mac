@@ -95,10 +95,10 @@ through a pointer in the flavor list for that flavor.
 
 /* Define size code masks for instructions that allow more than one size */
 
-#define BW	(BYTE_SIZE | WORD_SIZE)
+#define BW	(BYTE_SIZE_M | WORD_SIZE)
 #define WL	(WORD_SIZE | LONG_SIZE)
-#define BWL	(BYTE_SIZE | WORD_SIZE | LONG_SIZE)
-#define BL	(BYTE_SIZE | LONG_SIZE)
+#define BWL	(BYTE_SIZE_M | WORD_SIZE | LONG_SIZE)
+#define BL	(BYTE_SIZE_M | LONG_SIZE)
 
 
 //---------------------------------------------------------
@@ -106,8 +106,8 @@ through a pointer in the flavor list for that flavor.
 // The order of the "flavors" is important
 
 flavor abcdfl[] = {
-	{ DnDirect, DnDirect, BYTE_SIZE, twoReg, 0xC100, 0xC100, 0 },
-	{ AnIndPre, AnIndPre, BYTE_SIZE, twoReg, 0xC108, 0xC108, 0 }
+	{ DnDirect, DnDirect, BYTE_SIZE_M, twoReg, 0xC100, 0xC100, 0 },
+	{ AnIndPre, AnIndPre, BYTE_SIZE_M, twoReg, 0xC108, 0xC108, 0 }
        };
 
 flavor addfl[] = {
@@ -141,13 +141,13 @@ flavor andfl[] = {
 	{ Data, DnDirect, BWL, arithReg, 0xC000, 0xC040, 0xC080 },
 	{ DnDirect, MemAlt, BWL, arithAddr, 0xC100, 0xC140, 0xC180 },
 	{ IMMEDIATE, DataAlt, BWL, immedInst, 0x0200, 0x0240, 0x0280 },
-	{ IMMEDIATE, CCRDirect, BYTE_SIZE, immedToCCR, 0x023C, 0x023C, 0 },
+	{ IMMEDIATE, CCRDirect, BYTE_SIZE_M, immedToCCR, 0x023C, 0x023C, 0 },
 	{ IMMEDIATE, SRDirect, WORD_SIZE, immedWord, 0, 0x027C, 0 }
        };
 
 flavor andifl[] = {
 	{ IMMEDIATE, DataAlt, BWL, immedInst, 0x0200, 0x0240, 0x0280 },
-	{ IMMEDIATE, CCRDirect, BYTE_SIZE, immedToCCR, 0x023C, 0x023C, 0 },
+	{ IMMEDIATE, CCRDirect, BYTE_SIZE_M, immedToCCR, 0x023C, 0x023C, 0 },
 	{ IMMEDIATE, SRDirect, WORD_SIZE, immedWord, 0, 0x027C, 0 }
        };
 
@@ -164,25 +164,25 @@ flavor asrfl[] = {
        };
 
 flavor bccfl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6400, 0x6400, 0x6400 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6400, 0x6400, 0x6400 }
        };
 
 flavor bchgfl[] = {
-	{ DnDirect, MemAlt, BYTE_SIZE, arithAddr, 0x0140, 0x0140, 0 },
+	{ DnDirect, MemAlt, BYTE_SIZE_M, arithAddr, 0x0140, 0x0140, 0 },
 	{ DnDirect, DnDirect, LONG_SIZE, arithAddr, 0, 0x0140, 0x0140 },
-	{ IMMEDIATE, MemAlt, BYTE_SIZE, staticBit, 0x0840, 0x0840, 0 },
+	{ IMMEDIATE, MemAlt, BYTE_SIZE_M, staticBit, 0x0840, 0x0840, 0 },
 	{ IMMEDIATE, DnDirect, LONG_SIZE, staticBit, 0, 0x0840, 0x0840 }
        };
 
 flavor bclrfl[] = {
-	{ DnDirect, MemAlt, BYTE_SIZE, arithAddr, 0x0180, 0x0180, 0 },
+	{ DnDirect, MemAlt, BYTE_SIZE_M, arithAddr, 0x0180, 0x0180, 0 },
 	{ DnDirect, DnDirect, LONG_SIZE, arithAddr, 0, 0x0180, 0x0180 },
-	{ IMMEDIATE, MemAlt, BYTE_SIZE, staticBit, 0x0880, 0x0880, 0 },
+	{ IMMEDIATE, MemAlt, BYTE_SIZE_M, staticBit, 0x0880, 0x0880, 0 },
 	{ IMMEDIATE, DnDirect, LONG_SIZE, staticBit, 0, 0x0880, 0x0880 }
        };
 
 flavor bcsfl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6500, 0x6500, 0x6500 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6500, 0x6500, 0x6500 }
        };
 
 flavor bfchgfl[] = {
@@ -218,81 +218,81 @@ flavor bftstfl[] = {
        };
 
 flavor beqfl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6700, 0x6700, 0x6700 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6700, 0x6700, 0x6700 }
        };
 
 flavor bgefl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6C00, 0x6C00, 0x6C00 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6C00, 0x6C00, 0x6C00 }
        };
 
 flavor bgtfl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6E00, 0x6E00, 0x6E00 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6E00, 0x6E00, 0x6E00 }
        };
 
 flavor bhifl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6200, 0x6200, 0x6200 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6200, 0x6200, 0x6200 }
        };
 
 flavor bhsfl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6400, 0x6400, 0x6400 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6400, 0x6400, 0x6400 }
        };
 
 flavor blefl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6f00, 0x6F00, 0x6F00 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6f00, 0x6F00, 0x6F00 }
        };
 
 flavor blofl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6500, 0x6500, 0x6500 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6500, 0x6500, 0x6500 }
        };
 
 flavor blsfl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6300, 0x6300, 0x6300 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6300, 0x6300, 0x6300 }
        };
 
 flavor bltfl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6d00, 0x6D00, 0x6D00 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6d00, 0x6D00, 0x6D00 }
        };
 
 flavor bmifl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6b00, 0x6B00, 0x6B00 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6b00, 0x6B00, 0x6B00 }
        };
 
 flavor bnefl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6600, 0x6600, 0x6600 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6600, 0x6600, 0x6600 }
        };
 
 flavor bplfl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6a00, 0x6A00, 0x6A00 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6a00, 0x6A00, 0x6A00 }
        };
 
 flavor brafl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6000, 0x6000, 0x6000 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6000, 0x6000, 0x6000 }
        };
 
 flavor bsetfl[] = {
-	{ DnDirect, MemAlt, BYTE_SIZE, arithAddr, 0x01C0, 0x01C0, 0 },
+	{ DnDirect, MemAlt, BYTE_SIZE_M, arithAddr, 0x01C0, 0x01C0, 0 },
 	{ DnDirect, DnDirect, LONG_SIZE, arithAddr, 0, 0x01C0, 0x01C0 },
-	{ IMMEDIATE, MemAlt, BYTE_SIZE, staticBit, 0x08C0, 0x08C0, 0 },
+	{ IMMEDIATE, MemAlt, BYTE_SIZE_M, staticBit, 0x08C0, 0x08C0, 0 },
 	{ IMMEDIATE, DnDirect, LONG_SIZE, staticBit, 0, 0x08C0, 0x08C0 }
        };
 
 flavor bsrfl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6100, 0x6100, 0x6100 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6100, 0x6100, 0x6100 }
        };
 
 flavor btstfl[] = {
-	{ DnDirect, Memory, BYTE_SIZE, arithAddr, 0x0100, 0x0100, 0 },
+	{ DnDirect, Memory, BYTE_SIZE_M, arithAddr, 0x0100, 0x0100, 0 },
 	{ DnDirect, DnDirect, LONG_SIZE, arithAddr, 0, 0x0100, 0x0100 },
-	{ IMMEDIATE, Memory, BYTE_SIZE, staticBit, 0x0800, 0x0800, 0 },
+	{ IMMEDIATE, Memory, BYTE_SIZE_M, staticBit, 0x0800, 0x0800, 0 },
 	{ IMMEDIATE, DnDirect, LONG_SIZE, staticBit, 0, 0x0800, 0x0800 }
        };
 
 flavor bvcfl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6800, 0x6800, 0x6800 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6800, 0x6800, 0x6800 }
        };
 
 flavor bvsfl[] = {
-	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE | WORD_SIZE, branch, 0x6900, 0x6900, 0x6900 }
+	{ Absolute, 0, SHORT_SIZE | LONG_SIZE | BYTE_SIZE_M | WORD_SIZE, branch, 0x6900, 0x6900, 0x6900 }
        };
 
 flavor chkfl[] = {
@@ -414,7 +414,7 @@ flavor eorfl[] = {
 
 flavor eorifl[] = {
 	{ IMMEDIATE, DataAlt, BWL, immedInst, 0x0A00, 0x0A40, 0x0A80 },
-	{ IMMEDIATE, CCRDirect, BYTE_SIZE, immedToCCR, 0x0A3C, 0x0A3C, 0 },
+	{ IMMEDIATE, CCRDirect, BYTE_SIZE_M, immedToCCR, 0x0A3C, 0x0A3C, 0 },
 	{ IMMEDIATE, SRDirect, WORD_SIZE, immedWord, 0, 0x0A7C, 0 }
        };
 
@@ -508,7 +508,7 @@ flavor mulufl[] = {
        };
 
 flavor nbcdfl[] = {
-	{ DataAlt, 0, BYTE_SIZE, oneOp, 0x4800, 0x4800, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, oneOp, 0x4800, 0x4800, 0 }
        };
 
 flavor negfl[] = {
@@ -531,13 +531,13 @@ flavor orfl[] = {
 	{ Data, DnDirect, BWL, arithReg, 0x8000, 0x8040, 0x8080 },
 	{ DnDirect, MemAlt, BWL, arithAddr, 0x8100, 0x8140, 0x8180 },
 	{ IMMEDIATE, DataAlt, BWL, immedInst, 0x0000, 0x0040, 0x0080 },
-	{ IMMEDIATE, CCRDirect, BYTE_SIZE, immedToCCR, 0x003C, 0x003C, 0 },
+	{ IMMEDIATE, CCRDirect, BYTE_SIZE_M, immedToCCR, 0x003C, 0x003C, 0 },
 	{ IMMEDIATE, SRDirect, WORD_SIZE, immedWord, 0, 0x007C, 0 }
        };
 
 flavor orifl[] = {
 	{ IMMEDIATE, DataAlt, BWL, immedInst, 0x0000, 0x0040, 0x0080 },
-	{ IMMEDIATE, CCRDirect, BYTE_SIZE, immedToCCR, 0x003C, 0x003C, 0 },
+	{ IMMEDIATE, CCRDirect, BYTE_SIZE_M, immedToCCR, 0x003C, 0x003C, 0 },
 	{ IMMEDIATE, SRDirect, WORD_SIZE, immedWord, 0, 0x007C, 0 }
        };
 
@@ -590,72 +590,72 @@ flavor rtsfl[] = {
        };
 
 flavor sbcdfl[] = {
-	{ DnDirect, DnDirect, BYTE_SIZE, twoReg, 0x8100, 0x8100, 0 },
-	{ AnIndPre, AnIndPre, BYTE_SIZE, twoReg, 0x8108, 0x8108, 0 }
+	{ DnDirect, DnDirect, BYTE_SIZE_M, twoReg, 0x8100, 0x8100, 0 },
+	{ AnIndPre, AnIndPre, BYTE_SIZE_M, twoReg, 0x8108, 0x8108, 0 }
        };
 
 flavor sccfl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x54C0, 0x54C0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x54C0, 0x54C0, 0 }
        };
 
 flavor scsfl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x55C0, 0x55C0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x55C0, 0x55C0, 0 }
        };
 
 flavor seqfl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x57C0, 0x57C0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x57C0, 0x57C0, 0 }
        };
 
 flavor sffl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x51C0, 0x51C0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x51C0, 0x51C0, 0 }
        };
 
 flavor sgefl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x5CC0, 0x5CC0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x5CC0, 0x5CC0, 0 }
        };
 
 flavor sgtfl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x5EC0, 0x5EC0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x5EC0, 0x5EC0, 0 }
        };
 
 flavor shifl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x52C0, 0x52C0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x52C0, 0x52C0, 0 }
        };
 
 flavor shsfl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x54C0, 0x54C0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x54C0, 0x54C0, 0 }
        };
 
 flavor slefl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x5FC0, 0x5FC0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x5FC0, 0x5FC0, 0 }
        };
 
 flavor slofl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x55C0, 0x55C0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x55C0, 0x55C0, 0 }
        };
 
 flavor slsfl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x53C0, 0x53C0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x53C0, 0x53C0, 0 }
        };
 
 flavor sltfl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x5DC0, 0x5DC0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x5DC0, 0x5DC0, 0 }
        };
 
 flavor smifl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x5BC0, 0x5BC0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x5BC0, 0x5BC0, 0 }
        };
 
 flavor snefl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x56C0, 0x56C0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x56C0, 0x56C0, 0 }
        };
 
 flavor splfl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x5AC0, 0x5AC0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x5AC0, 0x5AC0, 0 }
        };
 
 flavor stfl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x50C0, 0x50C0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x50C0, 0x50C0, 0 }
        };
 
 flavor stopfl[] = {
@@ -690,11 +690,11 @@ flavor subxfl[] = {
        };
 
 flavor svcfl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x58C0, 0x58C0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x58C0, 0x58C0, 0 }
        };
 
 flavor svsfl[] = {
-	{ DataAlt, 0, BYTE_SIZE, scc, 0x59C0, 0x59C0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, scc, 0x59C0, 0x59C0, 0 }
        };
 
 flavor swapfl[] = {
@@ -702,7 +702,7 @@ flavor swapfl[] = {
        };
 
 flavor tasfl[] = {
-	{ DataAlt, 0, BYTE_SIZE, oneOp, 0x4AC0, 0x4AC0, 0 }
+	{ DataAlt, 0, BYTE_SIZE_M, oneOp, 0x4AC0, 0x4AC0, 0 }
        };
 
 flavor trapfl[] = {
@@ -901,5 +901,3 @@ instruction instTable[] = {
 /* Declare a global variable containing the size of the instruction table */
 
 int tableSize = sizeof(instTable)/sizeof(instruction);
-
-

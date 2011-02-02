@@ -71,14 +71,16 @@ tabTypes tabType;
 bool maximizedEdit;     // true starts child window in editor maximized
 bool autoIndent;        // true, copies whitespace from preceding line
 bool realTabs;          // true, use real tabs in editor, false, use spaces
-FontStyle codeStyle;
-FontStyle unknownStyle;
-FontStyle directiveStyle;
-FontStyle commentStyle;
-FontStyle labelStyle;
-FontStyle structureStyle;
-FontStyle errorStyle;
-FontStyle textStyle;
+
+// TODO: (GUI) Font sytles & coloring for syntax coloring
+//FontStyle codeStyle;
+//FontStyle unknownStyle;
+//FontStyle directiveStyle;
+//FontStyle commentStyle;
+//FontStyle labelStyle;
+//FontStyle structureStyle;
+//FontStyle errorStyle;
+//FontStyle textStyle;
 
 // Sturctured Assembly
 unsigned int stcLabelI;  // structured if label number
@@ -96,4 +98,3 @@ int mapROMStart, mapROMEnd;
 int mapReadStart, mapReadEnd;
 int mapProtectedStart, mapProtectedEnd;
 int mapInvalidStart, mapInvalidEnd;
-

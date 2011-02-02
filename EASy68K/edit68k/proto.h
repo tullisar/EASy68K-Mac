@@ -24,7 +24,9 @@ int	assemble(char *, int *);
 
 int     createCode(char *, int *);
 
-int     assembleFile(char fileName[], char tempName[], AnsiString workName);
+int     assembleFile(char fileName[], char tempName[], char workName[]);
+
+void    changeFileExt(char *filename, char *newExt, char *newFilename); // RBS
 
 char    *fieldParse(char *p, opDescriptor *d, int *errorPtr);
 
@@ -193,4 +195,3 @@ int listOn(int, char *, char *, int *);
 int listOff(int, char *, char *, int *);
 
 int memory(int, char *, char *, int *);
-

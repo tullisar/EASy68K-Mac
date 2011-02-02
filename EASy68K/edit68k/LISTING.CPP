@@ -53,15 +53,15 @@
  *              Monroe County Community College
  *              http://www.monroeccc.edu/ckelly
  *
+ *    Modified: 2011-01-26
+ *              Robert Bartlett-Schneider
+ *              Modified for Mac OS X Port
+ *
  ************************************************************************/
 
-
-#include <vcl.h>
 #include <stdio.h>
 #include <ctype.h>
-#include "editorOptions.h"
-#include "texts.h"
-#include "mainS.h"
+#include <time.h>
 #include "asm.h"
 
 /* Declarations of global variables */
@@ -73,176 +73,211 @@ extern FILE *listFile;
 extern int lineNum;
 extern int lineNumL68;
 
-static char listData[49];      /* Buffer in which listing lines are assembled */
+static char listData[49];   /* Buffer in which listing lines are assembled */
 
-extern char *listPtr;	       /* Pointer to above buffer (this pointer is
-				  global because it is actually manipulated
-				  by equ() and set() to put specially formatted
-				  information in the listing) */
+extern char *listPtr;       /* Pointer to above buffer (this pointer is
+                             global because it is actually manipulated
+                             by equ() and set() to put specially formatted
+                             information in the listing) */
 
-extern int errorCount, warningCount;	/* Number of errors and warnings */
-extern char buffer[256];  //ck used to form messages for display in windows
+extern int errorCount, warningCount;    /* Number of errors and warnings */
+extern char buffer[256];                //ck used to form messages for display in windows
 extern char numBuf[20];
-extern unsigned int startAddress;     // starting address of program
+extern unsigned int startAddress;       // starting address of program
 
 extern tabTypes tabType;
 extern bool listFlag;
-bool createdL68;                // true when L68 (listing) file is created
+bool createdL68;                        // true when L68 (listing) file is created
 
+//------------------------------------------------------------
+// initList()
+//------------------------------------------------------------
 int initList(char *name)
 {
-  try {
-    createdL68 = false;
-    listFile = fopen(name, "w");
-    if (!listFile) {
-      sprintf(buffer,"Unable to create listing file");
-      Application->MessageBox(buffer, "Error", MB_OK);
-      return MILD_ERROR;
+    try {
+        createdL68 = false;
+        listFile = fopen(name, "w");
+        if (!listFile) {
+            sprintf(buffer,"Unable to create listing file");
+            // TODO: (GUI) Send error to GUI
+            //Application->MessageBox(buffer, "Error", MB_OK);
+            return MILD_ERROR;
+        }
+        
+        // Current time as a string for use in timestamp for listfile.
+        time_t now = time(NULL);
+        char *timeStr = ctime(&now);
+        
+        // Reserve room for starting address
+        fprintf(listFile, "00000000 Starting Address\n");
+        
+        // Assembler Info and Timestamp
+        fprintf(listFile, "Assembler used: %s\n", TITLE);
+        fprintf(listFile, "Created On: %s\n\n", timeStr);
+        
+        createdL68 = true;
+        return NORMAL;
     }
-
-    //  TDateTime DateTime = Time();  // store the current date and time
-    AnsiString timeStr = DateTimeToStr(Now()); // date & time to a string
-
-    // reserve room for starting address
-    fprintf(listFile, "00000000 Starting Address\n");
-
-    fprintf(listFile, "Assembler used: %s\n", TITLE);
-    fprintf(listFile, "Created On: %s\n\n", timeStr.c_str());
-
-    createdL68 = true;
-    return NORMAL;
-  }
-  catch( ... ) {
-    sprintf(buffer, "ERROR: An exception occurred in routine 'initList'. \n");
-    printError(NULL, EXCEPTION, 0);
-    return MILD_ERROR;
-  }
+    catch( ... ) {
+        sprintf(buffer, "ERROR: An exception occurred in routine 'initList'. \n");
+        // TODO: (GUI) Send error to GUI
+        printError(NULL, EXCEPTION, 0);
+        return MILD_ERROR;
+    }
 }
 
+//------------------------------------------------------------
+// listLine()
+//------------------------------------------------------------
 int listLine(char text[], char lineIdent[])   // ck 4-2006 lineIdent[]
 {
-  // FixedTabSize->Value
-  try {
-    if (!createdL68)
-      return NORMAL;
-    TTextStuff *Active = (TTextStuff*)Main->ActiveMDIChild; //grab active mdi child
-    fprintf(listFile, "%-32.32s", listData);
-    if (!continuation) {
-      // replace tab with spaces
-      int i=0, j=0, k, t;
-      while (text[i] && j < 255-8) {
-	if (text[i] == '\t') {          // if tab
-          if (Active->Project.TabType == Assembly) {
-            if (j <= TAB1)
-              t = TAB1 - j;
-            else if (j <= TAB2)
-              t = TAB2 - j;
+    // TODO: (WORKAROUND) This is a temporary local variable for fixed tab size
+    int fixedTabSize = 4;
+    bool fixedTabs = true;
+    
+    // FixedTabSize->Value
+    try {
+        if (!createdL68)
+            return NORMAL;
+        //TTextStuff *Active = (TTextStuff*)Main->ActiveMDIChild; //grab active mdi child
+        fprintf(listFile, "%-32.32s", listData);
+        if (!continuation) {
+            // replace tab with spaces
+            int i=0, j=0, k, t;
+            while (text[i] && j < 255-8) {
+                if (text[i] == '\t') {          // if tab
+                    if (!fixedTabs) {
+                        if (j <= TAB1)
+                            t = TAB1 - j;
+                        else if (j <= TAB2)
+                            t = TAB2 - j;
+                        else
+                            t = TAB3 - j;
+                    } else {                      // else fixed tabs
+                        // TODO: (TABS) Create global variable or binding to determine tab size, replace with tabsize
+                        t = fixedTabSize - (j % fixedTabSize);
+                        
+                    }
+                    for (k=0; k<t; k++)       // replace with spaces
+                        buffer[j++] = ' ';
+                } else
+                    buffer[j++] = text[i];        // else, copy character
+                i++;
+            }
+            if (j>0 && buffer[j-1] != '\n')   // if line does not end in '\n'
+                buffer[j++] = '\n';             // add it
+            buffer[j] = '\0';
+            
+            if (lineIdent[0])                 // if line identifier
+                fprintf(listFile, "%6d%s %s", lineNumL68, lineIdent, buffer);
             else
-              t = TAB3 - j;
-          } else {                      // else fixed tabs
-            t = Active->Project.TabSize - (j % Active->Project.TabSize);
-
-          }
-          for (k=0; k<t; k++)       // replace with spaces
-	    buffer[j++] = ' ';
+                fprintf(listFile, "%6d  %s", lineNumL68, buffer);
         } else
-          buffer[j++] = text[i];        // else, copy character
-        i++;
-      }
-      if (j>0 && buffer[j-1] != '\n')   // if line does not end in '\n'
-        buffer[j++] = '\n';             // add it
-      buffer[j] = '\0';
-
-      if (lineIdent[0])                 // if line identifier
-        fprintf(listFile, "%6d%s %s", lineNumL68, lineIdent, buffer);
-      else
-        fprintf(listFile, "%6d  %s", lineNumL68, buffer);
-    } else
-      putc('\n', listFile);
-
-    if (ferror(listFile)) {
-      sprintf(buffer,"Error writing to listing file\n");
-      Application->MessageBox(buffer, "Error", MB_OK);
-      return MILD_ERROR;
+            putc('\n', listFile);
+        
+        if (ferror(listFile)) {
+            sprintf(buffer,"Error writing to listing file\n");
+            // TODO: (GUI) Send error to document window
+            //Application->MessageBox(buffer, "Error", MB_OK);
+            return MILD_ERROR;
+        }
+        
+        lineNumL68++;
     }
-    lineNumL68++;
-  }
-  catch( ... ) {
-    sprintf(buffer, "ERROR: An exception occurred in routine 'listLine'. \n");
-    printError(NULL, EXCEPTION, 0);
-    return MILD_ERROR;
-  }
-
-  return NORMAL;
+    catch( ... ) {
+        sprintf(buffer, "ERROR: An exception occurred in routine 'listLine'. \n");
+        printError(NULL, EXCEPTION, 0);
+        return MILD_ERROR;
+    }
+    
+    return NORMAL;
 }
 
-
+//------------------------------------------------------------
+// listLoc()
+// TODO: (WORKAROUND) Examine compiler warning to see if casting is a bad idea. Cast as (unsigned long) to ignore...
+// warning: format '%08lX' expects type 'long unsigned int', but argument 3 has type 'int'
+//------------------------------------------------------------
 int listLoc()
 {
-  if (offsetMode || showEqual)
-    sprintf(listData, "%08lX= ", loc);
-  else
-    sprintf(listData, "%08lX  ", loc);
-  listPtr = listData + 10;
-
-  return NORMAL;
+    if (offsetMode || showEqual)
+        sprintf(listData, "%08lX= ", (unsigned long)loc);
+    else
+        sprintf(listData, "%08lX  ", (unsigned long)loc);
+    listPtr = listData + 10;
+    
+    return NORMAL;
 }
 
+//------------------------------------------------------------
+// listCond()
 // Lists the value of skipCond
 // when skipCond is True the conditional test was False
+//------------------------------------------------------------
 int listCond(bool cond)
 {
-  if (cond)
-    sprintf(listPtr,"               %s ","FALSE");
-  else
-    sprintf(listPtr,"               %s ","TRUE");
-
-  return NORMAL;
+    if (cond)
+        sprintf(listPtr,"               %s ","FALSE");
+    else
+        sprintf(listPtr,"               %s ","TRUE");
+    
+    return NORMAL;
 }
 
+//------------------------------------------------------------
+// listError()
 // List error message
 // Errors are always written to file if possible
 // They are not turned off by NOLIST directive
+// TODO: (POSSIBLE BUG) lineNum parameter shares the name as a global variable...... could cause issues
+//------------------------------------------------------------
 int listError(char *lineNum, char *errMsg)
 {
-  if (!createdL68)
+    if (!createdL68)
+        return NORMAL;
+    fprintf(listFile, "%s", lineNum);         // write line number to file
+    fprintf(listFile, "%s", errMsg);          // write error message to file
     return NORMAL;
-  fprintf(listFile, lineNum);         // write line number to file
-  fprintf(listFile, errMsg);          // write error message to file
-  return NORMAL;
 }
 
+//------------------------------------------------------------
+// listObj
+//------------------------------------------------------------
 int listObj(int data, int size)
 {
-  if (!CEXflag && (listPtr - listData + size > 31)) {
-    strcpy(listData + ((size == WORD_SIZE) ? 26 : 28), "...");
+    if (!CEXflag && (listPtr - listData + size > 31)) {
+        strcpy(listData + ((size == WORD_SIZE) ? 26 : 28), "...");
+        return NORMAL;
+    }
+    if (CEXflag && (listPtr - listData + size > 31)) {
+        listLine(line);
+        strcpy(listData, "          ");
+        listPtr = listData + 10;
+        continuation = true;
+    }
+    switch (size) {
+        case BYTE_SIZE_M: sprintf(listPtr, "%02X ", data & 0xFF);
+            listPtr += 3;
+            break;
+        case WORD_SIZE: sprintf(listPtr, "%04X ", data & 0xFFFF);
+            listPtr += 5;
+            break;
+            // TODO: (WORKAROUND) Make sure casting data as (unsigned long) isn't a bad workaround
+        case LONG_SIZE: sprintf(listPtr, "%08lX ", (unsigned long)data);
+            listPtr += 9;
+            break;
+        default: sprintf(buffer,"LISTOBJ: INVALID SIZE CODE!\n");
+            // TODO: (GUI) Send error message to document window
+            //Application->MessageBox(buffer, "Error", MB_OK);
+            return MILD_ERROR;
+    }
+    
     return NORMAL;
-  }
-  if (CEXflag && (listPtr - listData + size > 31)) {
-    listLine(line);
-    strcpy(listData, "          ");
-    listPtr = listData + 10;
-    continuation = true;
-  }
-  switch (size) {
-    case BYTE_SIZE: sprintf(listPtr, "%02X ", data & 0xFF);
-      listPtr += 3;
-      break;
-    case WORD_SIZE: sprintf(listPtr, "%04X ", data & 0xFFFF);
-      listPtr += 5;
-      break;
-    case LONG_SIZE: sprintf(listPtr, "%08lX ", data);
-      listPtr += 9;
-      break;
-    default: sprintf(buffer,"LISTOBJ: INVALID SIZE CODE!\n");
-      Application->MessageBox(buffer, "Error", MB_OK);
-      return MILD_ERROR;
-  }
-
-  return NORMAL;
 }
 
-
+//------------------------------------------------------------
+// finishList()
+//------------------------------------------------------------
 int finishList()
 {
   try {
@@ -269,7 +304,7 @@ int finishList()
 
     // write starting address to first line of file
     rewind(listFile);                     // rewind to start of file
-    fprintf(listFile, "%08lX", startAddress);
+    fprintf(listFile, "%08lX", (unsigned long)startAddress);
 
     fclose(listFile);
     return NORMAL;
@@ -281,8 +316,3 @@ int finishList()
     return MILD_ERROR;
   }
 }
-
-
-
-
-

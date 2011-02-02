@@ -26,17 +26,19 @@
 /* include system header files for prototype checking */
 #include <stdio.h>
 #include <string.h>
-#include <system.hpp>
-#include <process.h>
 #include <stdlib.h>
-#include <malloc.h>
-#include <vcl.h>
 
 /* Define a couple of useful tests */
 
 #define isTerm(c)   (c == ',' || c == '/' || c == '-' || isspace(c) || !c || c == '{')
 #define isRegNum(c) ((c >= '0') && (c <= '7'))
 
+// Replace stricmp so that it can be used but still perform the same function
+#ifndef WIN32 
+#define stricmp strcasecmp 
+#define strnicmp strncasecmp
+#define strcmpi strcasecmp
+#endif
 
 const char TITLE[] = "EASy68K Editor/Assembler v5.6.1";
 
@@ -221,7 +223,7 @@ const int VBRDirect     = 0x20000;
 //const int SHORT	((int) 8)
 
 // const int BYTE_SIZE  = 1;
-const int BYTE_SIZE_M = 1
+const int BYTE_SIZE_M = 1;
 const int WORD_SIZE   = 2;
 const int LONG_SIZE   = 4;
 const int SHORT_SIZE  = 8;

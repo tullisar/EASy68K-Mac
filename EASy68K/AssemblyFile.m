@@ -47,6 +47,8 @@
     return @"AssemblyFile";
 }
 
+
+
 - (void)windowControllerDidLoadNib:(NSWindowController *) aController
 {
     [super windowControllerDidLoadNib:aController];

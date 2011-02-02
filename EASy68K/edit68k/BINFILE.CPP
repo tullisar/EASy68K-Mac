@@ -28,12 +28,8 @@
  *
  ************************************************************************/
 
-
-#include <vcl.h>
 #include <stdio.h>
 #include <ctype.h>
-#include "mainS.h"
-#include "textS.h"
 #include "asm.h"
 
 // prototype
@@ -61,7 +57,8 @@ int initBin(char *name)
   binFile = fopen(name, "wb");  // create binary file
   if (!binFile) {
     sprintf(buffer,"Unable to create binary file!");
-    Application->MessageBox(buffer, "Error", MB_OK);
+      // TODO: (GUI) Send error to GUI
+      // Application->MessageBox(buffer, "Error", MB_OK);
     return MILD_ERROR;
   }
 
@@ -123,8 +120,8 @@ int outputBin(int newAddr, int data, int size)
   }
 
   // if writing WORD_SIZE or LONG_SIZE data to odd address
-  if ((size != BYTE_SIZE) && (binAddr % 2)) {
-    writeBigEndian(0, BYTE_SIZE);            // pad with byte of 0
+  if ((size != BYTE_SIZE_M) && (binAddr % 2)) {
+    writeBigEndian(0, BYTE_SIZE_M);            // pad with byte of 0
     byteCount++;                        // count the byte
     binAddr++;                          // next address
     fileSize += 1;                      // keep track of file size
@@ -186,7 +183,7 @@ void writeBigEndian(int data, int size)
 
   try {
   // if writing WORD_SIZE or LONG_SIZE data to odd address
-  if ((size != BYTE_SIZE) && (ftell(binFile) % 2))
+  if ((size != BYTE_SIZE_M) && (ftell(binFile) % 2))
   {
     dataByte = 0;
     fwrite(&dataByte, 1, 1, binFile);   // pad with byte of 0
