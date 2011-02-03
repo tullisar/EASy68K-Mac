@@ -98,6 +98,7 @@ target system it is the responsibility of the transmitting program to provide th
 ************************************************************************/
 
 #include <stdio.h>
+#include <cstdlib>
 #include <ctype.h>
 #include "asm.h"
 
@@ -245,7 +246,7 @@ int outputObj(int newAddr, int data, int size)
 int writeObj()
 {
     char recLen[3];
-    char* str;
+    char str[256];
     char* sRec = sRecord;
     
     try {
@@ -256,12 +257,16 @@ int writeObj()
         
         // Calculate checksum and add to record
         checksum = 0;
+        str[0] = '0';
+        str[1] = 'x';
+        str[4] = '\0';
         for (int i=0; i<byteCount; i++) {
-            sprintf(str,"%c",sRec[0]);
-            *sRec++;
-            sprintf(str,"%c",sRec[0]);
-            *sRec++;
-            checksum+= (atoi(str) & 0xFF);
+            str[2] = *sRec++;
+            str[3] = *sRec++;
+            char  *dummy;
+            checksum+= (strtol(str, &dummy, 0));
+            
+            //checksum+= (atoi(str) & 0xFF);
             
             // TODO: (BUG CHECK) Ensure above solution works to replace the following
             // str = "0x";

@@ -1,26 +1,26 @@
 TASM68K
 v7
 r0
-t318323898.605798
+t318379878.628618
 cCheck dependencies
-cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/main.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/assemble.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/build.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/codegen.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/codegen.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/directiv.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/error.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/error.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/eval.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/eval.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/globals.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/globals.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/instlook.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/instlook.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/insttabl.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/insttabl.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/listing.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/listing.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/macro.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/movem.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/movem.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/object.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/opparse.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/opparse.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/structured.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/symbol.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/symbol.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-cLd /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/ASM68K normal x86_64
+cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/main.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/assemble.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/build.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/codegen.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/codegen.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/directiv.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/error.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/error.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/eval.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/eval.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/globals.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/globals.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/instlook.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/instlook.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/insttabl.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/insttabl.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/listing.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/listing.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/macro.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/movem.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/movem.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/object.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/opparse.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/opparse.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/structured.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/symbol.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/symbol.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cLd /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/ASM68K normal i386
 
 N/Developer/SDKs/MacOSX10.6.sdk
 c000000004ABBF0FD00000000000000EE
@@ -221,6 +221,152 @@ s24495
 i<stdio.h>
 i"asm.h"
 
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/ASM68K.LinkFileList
+c000000004D49DFD30000000000000767
+t1296687059
+s1895
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/assemble.o
+t1296687060
+s162184
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/build.o
+t1296687060
+s27244
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/codegen.o
+t1296687060
+s9908
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/directiv.o
+t1296687060
+s36144
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/error.o
+t1296687060
+s15760
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/eval.o
+t1296687060
+s20788
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/globals.o
+t1296687060
+s10956
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/instlook.o
+t1296687060
+s12644
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/insttabl.o
+t1296687060
+s30952
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/listing.o
+t1296687060
+s18380
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/macro.o
+t1296687060
+s21316
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/main.o
+t1296687059
+s10528
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/movem.o
+t1296687060
+s16464
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/object.o
+t1296687060
+s20644
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/opparse.o
+t1296687060
+s15392
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/structured.o
+t1296687061
+s267096
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/symbol.o
+t1296687060
+s15124
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/ASM68K.LinkFileList
+c000000004D49DFC40000000000000756
+t1296687044
+s1878
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/assemble.o
+t1296687045
+s172380
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/build.o
+t1296687045
+s32204
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/codegen.o
+t1296687045
+s11036
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/directiv.o
+t1296687045
+s43220
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/error.o
+t1296687045
+s17288
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/eval.o
+t1296687045
+s23636
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/globals.o
+t1296687045
+s11036
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/instlook.o
+t1296687045
+s13836
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/insttabl.o
+t1296687045
+s31472
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/listing.o
+t1296687045
+s21056
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/macro.o
+t1296687045
+s24380
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/main.o
+t1296687045
+s11136
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/movem.o
+t1296687045
+s18980
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/object.o
+t1296687045
+s23456
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/opparse.o
+t1296687045
+s19136
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/structured.o
+t1296687046
+s286736
+
+N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/symbol.o
+t1296687046
+s16868
+
 N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/ASM68K.LinkFileList
 c000000004D4902630000000000000789
 t1296630371
@@ -343,7 +489,7 @@ t1296629708
 s70728
 
 N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/main.o
-t1296631050
+t1296631759
 s10996
 
 N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/movem.o
@@ -351,8 +497,8 @@ t1296629709
 s17220
 
 N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/object.o
-t1296629709
-s18000
+t1296687013
+s20248
 
 N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/opparse.o
 t1296629709
@@ -371,8 +517,8 @@ t1296629709
 s15952
 
 N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/ASM68K
-t1296631051
-s219672
+t1296687061
+s202692
 
 N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/codegen.cpp
 c000000004D48B3D90000000000001C76
@@ -446,8 +592,8 @@ i<stdlib.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp
-c000000004D49050A0000000000000D93
-t1296631050
+c000000004D49054B0000000000000D93
+t1296631115
 s3475
 i<stdio.h>
 i<getopt.h>
@@ -462,10 +608,11 @@ i<ctype.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp
-c000000004D48FFC00000000000003644
-t1296629696
-s13892
+c000000004D49E4F100000000000036C1
+t1296688369
+s14017
 i<stdio.h>
+i<cstdlib>
 i<ctype.h>
 i"asm.h"
 
@@ -512,7 +659,519 @@ i"asm.h"
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies318323898#318323898#0(0"0(0#1#0"8610523232#0"0#
+lSLF07#2@18"Check dependencies318379878#318379878#0(0"0(0#1#0"8610537536#0"0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/assemble.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s318379859.824955
+e318379860.369337
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/assemble.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h:59,
+o                 from /Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp:56:
+o/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp: In function 'int assembleFile(char*, char*, char*)':
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp:137: warning: unused variable 'binFileName'
+lSLF07#2@64"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp318379859#318379860#0(842"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h:59,                 from /Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp:56:/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated./Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp: In function 'int assembleFile(char*, char*, char*)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp:137: warning: unused variable 'binFileName'2(22@354"#warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.318379859#179#451#3(7@78"In file included from /Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp318379859#18446744073709551615#0#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp318322902#56#0#56#0#0"0(7@91"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h318379859#18446744073709551615#0#0(6@69"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h275368770#59#0#59#0#0"0(13@438"#warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated. in /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h318379859#18446744073709551615#0#0(6@80"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h275368770#32#0#32#0#0"0(6@80"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h275368770#32#0#32#0#10"#warning *0(22@29"Unused variable 'binFileName'318379860#741#101#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp318322902#137#0#137#0#19"unused variable '*'0(0#0#56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp8616010784#1349"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/i386 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/assemble.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/build.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s318379859.900538
+e318379860.012501
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/build.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build.cpp318379859#318379860#0(0"0(0#0#53"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build.cpp8615070016#1343"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/i386 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/build.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/codegen.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/codegen.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s318379860.012596
+e318379860.068195
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/codegen.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/codegen.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/codegen.cpp318379860#318379860#0(0"0(0#0#55"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/codegen.cpp8618921984#1347"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/i386 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/codegen.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/codegen.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/directiv.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s318379860.068284
+e318379860.184485
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/directiv.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp: In function 'int section(int, char*, char*, int*)':
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:135: warning: unused variable 'newLoc'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp: In function 'int equ(int, char*, char*, int*)':
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:258: warning: unused variable 'op1'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp: In function 'int include(int, char*, char*, int*)':
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:634: warning: unused variable 'incLine'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:636: warning: unused variable 'i'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:637: warning: unused variable 'tempFP'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:638: warning: unused variable 'comment'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:639: warning: unused variable 'value'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:640: warning: unused variable 'backRef'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:644: warning: unused variable 'lineNumInc'
+lSLF07#2@64"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318379860#318379860#0(1188"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp: In function 'int section(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:135: warning: unused variable 'newLoc'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp: In function 'int equ(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:258: warning: unused variable 'op1'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp: In function 'int include(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:634: warning: unused variable 'incLine'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:636: warning: unused variable 'i'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:637: warning: unused variable 'tempFP'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:638: warning: unused variable 'comment'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:639: warning: unused variable 'value'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:640: warning: unused variable 'backRef'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:644: warning: unused variable 'lineNumInc'9(22@24"Unused variable 'newLoc'318379860#110#96#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#135#0#135#0#19"unused variable '*'0(22@21"Unused variable 'op1'318379860#312#93#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#258#0#258#0#19"unused variable '*'0(22@25"Unused variable 'incLine'318379860#515#97#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#634#0#634#0#19"unused variable '*'0(22@19"Unused variable 'i'318379860#612#91#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#636#0#636#0#19"unused variable '*'0(22@24"Unused variable 'tempFP'318379860#703#96#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#637#0#637#0#19"unused variable '*'0(22@25"Unused variable 'comment'318379860#799#97#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#638#0#638#0#19"unused variable '*'0(22@23"Unused variable 'value'318379860#896#95#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#639#0#639#0#19"unused variable '*'0(22@25"Unused variable 'backRef'318379860#991#97#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#640#0#640#0#19"unused variable '*'0(22@28"Unused variable 'lineNumInc'318379860#1088#100#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#644#0#644#0#19"unused variable '*'0(0#0#56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp8618751392#1349"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/i386 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/directiv.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/error.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/error.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s318379860.184571
+e318379860.238731
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/error.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/error.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/error.cpp318379860#318379860#0(0"0(0#0#53"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/error.cpp8617261792#1343"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/i386 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/error.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/error.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/eval.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/eval.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s318379860.238821
+e318379860.329594
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/eval.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/eval.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/eval.cpp318379860#318379860#0(0"0(0#0#52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/eval.cpp8616038368#1341"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/i386 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/eval.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/eval.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/globals.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/globals.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s318379860.329674
+e318379860.381029
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/globals.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/globals.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/globals.cpp318379860#318379860#0(0"0(0#0#55"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/globals.cpp8615419968#1347"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/i386 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/globals.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/globals.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/instlook.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/instlook.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s318379860.369425
+e318379860.446683
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/instlook.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/instlook.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/instlook.cpp318379860#318379860#0(0"0(0#0#56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/instlook.cpp8612966464#1349"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/i386 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/instlook.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/instlook.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/insttabl.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/insttabl.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s318379860.381120
+e318379860.458219
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/insttabl.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/insttabl.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/insttabl.cpp318379860#318379860#0(0"0(0#0#56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/insttabl.cpp8618614880#1349"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/i386 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/insttabl.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/insttabl.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/listing.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/listing.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s318379860.446762
+e318379860.524721
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/listing.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/listing.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/listing.cpp318379860#318379860#0(0"0(0#0#55"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/listing.cpp8618787936#1347"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/i386 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/listing.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/listing.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/macro.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s318379860.458311
+e318379860.548724
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/macro.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp: In function 'int asmMacro(int, char*, char*, int*)':
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp:179: warning: unused variable 'tokenEnd'
+lSLF07#2@61"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp318379860#318379860#0(203"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp: In function 'int asmMacro(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp:179: warning: unused variable 'tokenEnd'1(22@26"Unused variable 'tokenEnd'318379860#108#95#0(6@53"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp317993809#179#0#179#0#19"unused variable '*'0(0#0#53"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp8618723200#1343"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/i386 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/macro.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/main.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s318379859.824217
+e318379859.900427
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/main.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp: In function 'int main(int, char**)':
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:65: warning: format not a string literal and no format arguments
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:78: warning: format not a string literal and no format arguments
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:17: warning: unused variable 'digit_optind'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:25: warning: unused variable 'sfile'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:26: warning: unused variable 'lfile'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:27: warning: unused variable 'bfile'
+lSLF07#2@60"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318379859#318379859#0(694"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp: In function 'int main(int, char**)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:65: warning: format not a string literal and no format arguments/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:78: warning: format not a string literal and no format arguments/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:17: warning: unused variable 'digit_optind'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:25: warning: unused variable 'sfile'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:26: warning: unused variable 'lfile'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:27: warning: unused variable 'bfile'6(22@51"Format not a string literal and no format arguments318379859#91#118#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#65#0#65#0#51"format not a string literal and no format arguments0(22@51"Format not a string literal and no format arguments318379859#209#118#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#78#0#78#0#51"format not a string literal and no format arguments0(22@30"Unused variable 'digit_optind'318379859#327#97#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#17#0#17#0#19"unused variable '*'0(22@23"Unused variable 'sfile'318379859#424#90#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#25#0#25#0#19"unused variable '*'0(22@23"Unused variable 'lfile'318379859#514#90#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#26#0#26#0#19"unused variable '*'0(22@23"Unused variable 'bfile'318379859#604#90#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#27#0#27#0#19"unused variable '*'0(0#0#52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp8617278528#1341"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/i386 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/main.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/movem.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/movem.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s318379860.524809
+e318379860.599980
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/movem.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/movem.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/movem.cpp318379860#318379860#0(0"0(0#0#53"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/movem.cpp8618368960#1343"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/i386 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/movem.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/movem.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/object.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s318379860.548813
+e318379860.633876
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/object.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@62"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp318379860#318379860#0(0"0(0#0#54"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp8618314400#1345"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/i386 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/object.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/opparse.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/opparse.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s318379860.600077
+e318379860.721465
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/opparse.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/opparse.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/opparse.cpp318379860#318379860#0(0"0(0#0#55"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/opparse.cpp8617671104#1347"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/i386 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/opparse.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/opparse.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/structured.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s318379860.633963
+e318379861.250449
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/structured.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h:59,
+o                 from /Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:16:
+o/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp: In function 'void outCmpBcc(char**, char*, char*, int&)':
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:157: warning: unused variable 'extI'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp: In function 'int asmStructure(int, char*, char*, int*)':
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:301: warning: unused variable 'symbol'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:303: warning: unused variable 'value'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:304: warning: unused variable 'backRef'
+lSLF07#2@66"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp318379860#318379861#0(1257"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h:59,                 from /Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:16:/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated./Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp: In function 'void outCmpBcc(char**, char*, char*, int&)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:157: warning: unused variable 'extI'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp: In function 'int asmStructure(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:301: warning: unused variable 'symbol'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:303: warning: unused variable 'value'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:304: warning: unused variable 'backRef'5(22@354"#warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.318379860#181#451#3(7@80"In file included from /Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp318379860#18446744073709551615#0#0(6@58"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp318231124#16#0#16#0#0"0(7@91"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h318379860#18446744073709551615#0#0(6@69"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h275368770#59#0#59#0#0"0(13@438"#warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated. in /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h318379860#18446744073709551615#0#0(6@80"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h275368770#32#0#32#0#0"0(6@80"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h275368770#32#0#32#0#10"#warning *0(22@22"Unused variable 'extI'318379861#750#96#0(6@58"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp318231124#157#0#157#0#19"unused variable '*'0(22@24"Unused variable 'symbol'318379861#963#98#0(6@58"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp318231124#301#0#301#0#19"unused variable '*'0(22@23"Unused variable 'value'318379861#1061#97#0(6@58"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp318231124#303#0#303#0#19"unused variable '*'0(22@25"Unused variable 'backRef'318379861#1158#99#0(6@58"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp318231124#304#0#304#0#19"unused variable '*'0(0#0#58"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp8610548576#1353"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/i386 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/structured.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/symbol.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/symbol.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s318379860.721565
+e318379860.788788
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/symbol.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/symbol.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@62"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/symbol.cpp318379860#318379860#0(0"0(0#0#54"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/symbol.cpp8618788320#1345"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/i386 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/symbol.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/symbol.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/assemble.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+s318379844.698798
+e318379845.460166
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/assemble.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp
+xnormal
+xppc
+xc++
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h:59,
+o                 from /Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp:56:
+o/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp: In function 'int assembleFile(char*, char*, char*)':
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp:137: warning: unused variable 'binFileName'
+lSLF07#2@64"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp318379844#318379845#0(842"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h:59,                 from /Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp:56:/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated./Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp: In function 'int assembleFile(char*, char*, char*)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp:137: warning: unused variable 'binFileName'2(22@354"#warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.318379844#179#451#3(7@78"In file included from /Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp318379844#18446744073709551615#0#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp318322902#56#0#56#0#0"0(7@91"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h318379844#18446744073709551615#0#0(6@69"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h275368770#59#0#59#0#0"0(13@438"#warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated. in /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h318379844#18446744073709551615#0#0(6@80"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h275368770#32#0#32#0#0"0(6@80"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h275368770#32#0#32#0#10"#warning *0(22@29"Unused variable 'binFileName'318379845#741#101#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp318322902#137#0#137#0#19"unused variable '*'0(0#0#56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp8609661056#1356"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/ppc -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/assemble.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/assemble.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/build.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+s318379845.172790
+e318379845.264619
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/build.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build.cpp
+xnormal
+xppc
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build.cpp318379845#318379845#0(0"0(0#0#53"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build.cpp8618721056#1350"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/ppc -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/build.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/codegen.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/codegen.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+s318379845.264710
+e318379845.326152
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/codegen.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/codegen.cpp
+xnormal
+xppc
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/codegen.cpp318379845#318379845#0(0"0(0#0#55"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/codegen.cpp8618649760#1354"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/ppc -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/codegen.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/codegen.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/directiv.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+s318379845.326245
+e318379845.439122
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/directiv.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp
+xnormal
+xppc
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp: In function 'int section(int, char*, char*, int*)':
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:135: warning: unused variable 'newLoc'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp: In function 'int equ(int, char*, char*, int*)':
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:258: warning: unused variable 'op1'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp: In function 'int include(int, char*, char*, int*)':
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:634: warning: unused variable 'incLine'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:636: warning: unused variable 'i'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:637: warning: unused variable 'tempFP'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:638: warning: unused variable 'comment'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:639: warning: unused variable 'value'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:640: warning: unused variable 'backRef'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:644: warning: unused variable 'lineNumInc'
+lSLF07#2@64"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318379845#318379845#0(1188"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp: In function 'int section(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:135: warning: unused variable 'newLoc'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp: In function 'int equ(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:258: warning: unused variable 'op1'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp: In function 'int include(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:634: warning: unused variable 'incLine'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:636: warning: unused variable 'i'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:637: warning: unused variable 'tempFP'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:638: warning: unused variable 'comment'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:639: warning: unused variable 'value'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:640: warning: unused variable 'backRef'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp:644: warning: unused variable 'lineNumInc'9(22@24"Unused variable 'newLoc'318379845#110#96#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#135#0#135#0#19"unused variable '*'0(22@21"Unused variable 'op1'318379845#312#93#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#258#0#258#0#19"unused variable '*'0(22@25"Unused variable 'incLine'318379845#515#97#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#634#0#634#0#19"unused variable '*'0(22@19"Unused variable 'i'318379845#612#91#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#636#0#636#0#19"unused variable '*'0(22@24"Unused variable 'tempFP'318379845#703#96#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#637#0#637#0#19"unused variable '*'0(22@25"Unused variable 'comment'318379845#799#97#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#638#0#638#0#19"unused variable '*'0(22@23"Unused variable 'value'318379845#896#95#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#639#0#639#0#19"unused variable '*'0(22@25"Unused variable 'backRef'318379845#991#97#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#640#0#640#0#19"unused variable '*'0(22@28"Unused variable 'lineNumInc'318379845#1088#100#0(6@56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp318303172#644#0#644#0#19"unused variable '*'0(0#0#56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp8617927712#1356"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/ppc -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/directiv.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/directiv.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/error.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/error.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+s318379845.439209
+e318379845.513318
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/error.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/error.cpp
+xnormal
+xppc
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/error.cpp318379845#318379845#0(0"0(0#0#53"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/error.cpp8617746176#1350"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/ppc -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/error.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/error.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/eval.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/eval.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+s318379845.460247
+e318379845.554634
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/eval.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/eval.cpp
+xnormal
+xppc
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/eval.cpp318379845#318379845#0(0"0(0#0#52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/eval.cpp8617605504#1348"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/ppc -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/eval.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/eval.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/globals.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/globals.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+s318379845.513404
+e318379845.555584
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/globals.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/globals.cpp
+xnormal
+xppc
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/globals.cpp318379845#318379845#0(0"0(0#0#55"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/globals.cpp8616098816#1354"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/ppc -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/globals.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/globals.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/instlook.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/instlook.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+s318379845.554727
+e318379845.641830
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/instlook.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/instlook.cpp
+xnormal
+xppc
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/instlook.cpp318379845#318379845#0(0"0(0#0#56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/instlook.cpp8616056544#1356"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/ppc -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/instlook.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/instlook.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/insttabl.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/insttabl.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+s318379845.555652
+e318379845.650697
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/insttabl.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/insttabl.cpp
+xnormal
+xppc
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/insttabl.cpp318379845#318379845#0(0"0(0#0#56"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/insttabl.cpp8615909344#1356"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/ppc -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/insttabl.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/insttabl.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/listing.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/listing.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+s318379845.642548
+e318379845.718309
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/listing.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/listing.cpp
+xnormal
+xppc
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/listing.cpp318379845#318379845#0(0"0(0#0#55"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/listing.cpp8618561344#1354"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/ppc -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/listing.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/listing.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/macro.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+s318379845.650781
+e318379845.737054
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/macro.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp
+xnormal
+xppc
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp: In function 'int asmMacro(int, char*, char*, int*)':
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp:179: warning: unused variable 'tokenEnd'
+lSLF07#2@61"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp318379845#318379845#0(203"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp: In function 'int asmMacro(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp:179: warning: unused variable 'tokenEnd'1(22@26"Unused variable 'tokenEnd'318379845#108#95#0(6@53"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp317993809#179#0#179#0#19"unused variable '*'0(0#0#53"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp8618438784#1350"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/ppc -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/macro.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/macro.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/main.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+s318379844.698055
+e318379845.172703
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/main.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp
+xnormal
+xppc
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp: In function 'int main(int, char**)':
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:65: warning: format not a string literal and no format arguments
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:78: warning: format not a string literal and no format arguments
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:17: warning: unused variable 'digit_optind'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:25: warning: unused variable 'sfile'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:26: warning: unused variable 'lfile'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:27: warning: unused variable 'bfile'
+lSLF07#2@60"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318379844#318379845#0(694"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp: In function 'int main(int, char**)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:65: warning: format not a string literal and no format arguments/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:78: warning: format not a string literal and no format arguments/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:17: warning: unused variable 'digit_optind'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:25: warning: unused variable 'sfile'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:26: warning: unused variable 'lfile'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:27: warning: unused variable 'bfile'6(22@51"Format not a string literal and no format arguments318379845#91#118#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#65#0#65#0#51"format not a string literal and no format arguments0(22@51"Format not a string literal and no format arguments318379845#209#118#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#78#0#78#0#51"format not a string literal and no format arguments0(22@30"Unused variable 'digit_optind'318379845#327#97#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#17#0#17#0#19"unused variable '*'0(22@23"Unused variable 'sfile'318379845#424#90#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#25#0#25#0#19"unused variable '*'0(22@23"Unused variable 'lfile'318379845#514#90#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#26#0#26#0#19"unused variable '*'0(22@23"Unused variable 'bfile'318379845#604#90#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#27#0#27#0#19"unused variable '*'0(0#0#52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp8612390176#1348"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/ppc -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/main.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/movem.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/movem.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+s318379845.718393
+e318379845.802850
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/movem.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/movem.cpp
+xnormal
+xppc
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/movem.cpp318379845#318379845#0(0"0(0#0#53"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/movem.cpp8618140672#1350"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/ppc -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/movem.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/movem.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/object.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+s318379845.737146
+e318379845.850862
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/object.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp
+xnormal
+xppc
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@62"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp318379845#318379845#0(0"0(0#0#54"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp8618075296#1352"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/ppc -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/object.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/opparse.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/opparse.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+s318379845.802935
+e318379845.979213
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/opparse.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/opparse.cpp
+xnormal
+xppc
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/opparse.cpp318379845#318379845#0(0"0(0#0#55"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/opparse.cpp8617889184#1354"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/ppc -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/opparse.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/opparse.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/structured.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+s318379845.850950
+e318379846.466603
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/structured.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp
+xnormal
+xppc
+xc++
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h:59,
+o                 from /Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:16:
+o/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp: In function 'void outCmpBcc(char**, char*, char*, int&)':
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:157: warning: unused variable 'extI'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp: In function 'int asmStructure(int, char*, char*, int*)':
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:301: warning: unused variable 'symbol'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:303: warning: unused variable 'value'
+o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:304: warning: unused variable 'backRef'
+lSLF07#2@66"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp318379845#318379846#0(1257"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h:59,                 from /Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:16:/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated./Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp: In function 'void outCmpBcc(char**, char*, char*, int&)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:157: warning: unused variable 'extI'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp: In function 'int asmStructure(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:301: warning: unused variable 'symbol'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:303: warning: unused variable 'value'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp:304: warning: unused variable 'backRef'5(22@354"#warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.318379845#181#451#3(7@80"In file included from /Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp318379845#18446744073709551615#0#0(6@58"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp318231124#16#0#16#0#0"0(7@91"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h318379845#18446744073709551615#0#0(6@69"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h275368770#59#0#59#0#0"0(13@438"#warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated. in /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h318379845#18446744073709551615#0#0(6@80"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h275368770#32#0#32#0#0"0(6@80"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h275368770#32#0#32#0#10"#warning *0(22@22"Unused variable 'extI'318379846#750#96#0(6@58"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp318231124#157#0#157#0#19"unused variable '*'0(22@24"Unused variable 'symbol'318379846#963#98#0(6@58"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp318231124#301#0#301#0#19"unused variable '*'0(22@23"Unused variable 'value'318379846#1061#97#0(6@58"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp318231124#303#0#303#0#19"unused variable '*'0(22@25"Unused variable 'backRef'318379846#1158#99#0(6@58"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp318231124#304#0#304#0#19"unused variable '*'0(0#0#58"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp8617717632#1360"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/ppc -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/structured.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/structured.o0#
+
+CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/symbol.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/symbol.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+s318379845.979287
+e318379846.039558
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/symbol.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/symbol.cpp
+xnormal
+xppc
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@62"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/symbol.cpp318379845#318379846#0(0"0(0#0#54"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/symbol.cpp8617947616#1352"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch ppc -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mtune=G5 -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/ppc -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/symbol.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/symbol.o0#
 
 CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/ASSEMBLE.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/ASSEMBLE.CPP normal x86_64 c++ com.apple.compilers.gcc.4_2
 s318322508.391269
@@ -829,8 +1488,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@60"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318322508#318322508#0(0"0(0#0#52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp8610547328#1363"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/main-E59B34DF3DEFA74.o0#
 
 CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/main.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s318323850.927856
-e318323850.988272
+s318324559.697660
+e318324559.749910
 r1
 xCompileC
 xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/main.o
@@ -846,13 +1505,23 @@ o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:17: warning: unused variab
 o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:25: warning: unused variable 'sfile'
 o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:26: warning: unused variable 'lfile'
 o/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:27: warning: unused variable 'bfile'
-lSLF07#2@60"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323850#318323850#0(694"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp: In function 'int main(int, char**)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:65: warning: format not a string literal and no format arguments/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:78: warning: format not a string literal and no format arguments/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:17: warning: unused variable 'digit_optind'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:25: warning: unused variable 'sfile'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:26: warning: unused variable 'lfile'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:27: warning: unused variable 'bfile'6(22@51"Format not a string literal and no format arguments318323850#91#118#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323850#65#0#65#0#51"format not a string literal and no format arguments0(22@51"Format not a string literal and no format arguments318323850#209#118#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323850#78#0#78#0#51"format not a string literal and no format arguments0(22@30"Unused variable 'digit_optind'318323850#327#97#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323850#17#0#17#0#19"unused variable '*'0(22@23"Unused variable 'sfile'318323850#424#90#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323850#25#0#25#0#19"unused variable '*'0(22@23"Unused variable 'lfile'318323850#514#90#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323850#26#0#26#0#19"unused variable '*'0(22@23"Unused variable 'bfile'318323850#604#90#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323850#27#0#27#0#19"unused variable '*'0(0#0#52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp8610669536#1347"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/main.o0#
+lSLF07#2@60"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318324559#318324559#0(694"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp: In function 'int main(int, char**)':/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:65: warning: format not a string literal and no format arguments/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:78: warning: format not a string literal and no format arguments/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:17: warning: unused variable 'digit_optind'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:25: warning: unused variable 'sfile'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:26: warning: unused variable 'lfile'/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp:27: warning: unused variable 'bfile'6(22@51"Format not a string literal and no format arguments318324559#91#118#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#65#0#65#0#51"format not a string literal and no format arguments0(22@51"Format not a string literal and no format arguments318324559#209#118#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#78#0#78#0#51"format not a string literal and no format arguments0(22@30"Unused variable 'digit_optind'318324559#327#97#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#17#0#17#0#19"unused variable '*'0(22@23"Unused variable 'sfile'318324559#424#90#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#25#0#25#0#19"unused variable '*'0(22@23"Unused variable 'lfile'318324559#514#90#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#26#0#26#0#19"unused variable '*'0(22@23"Unused variable 'bfile'318324559#604#90#0(6@52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp318323915#27#0#27#0#19"unused variable '*'0(0#0#52"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp8614182208#1347"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/main.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/main.o0#
 
 CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/movem.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/movem.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/object.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-r0
+s318379813.801955
+e318379813.893864
+r1
+xCompileC
+xbuild/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/object.o
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@62"Compile /Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp318379813#318379813#0(0"0(0#0#54"/Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp8600903264#1351"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/ASM68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/ASM68K/object.cpp -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/object.o0#
 
 CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/opparse.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/opparse.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
@@ -866,13 +1535,33 @@ r0
 CCompileC build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/symbol.o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/symbol.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
 
+CLd /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/ASM68K normal i386
+s318379861.250532
+e318379861.306909
+r1
+xLd
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/ASM68K
+xnormal
+xi386
+lSLF07#2@67"Link /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/ASM68K318379861#318379861#0(0"0(0#0#0"8618571616#515"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -filelist /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/i386/ASM68K.LinkFileList -mmacosx-version-min=10.6 -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/ASM68K0#
+
+CLd /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/ASM68K normal ppc
+s318379846.466773
+e318379846.595642
+r1
+xLd
+x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/ASM68K
+xnormal
+xppc
+lSLF07#2@67"Link /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/ASM68K318379846#318379846#0(0"0(0#0#0"8618884864#513"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch ppc -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -filelist /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/ppc/ASM68K.LinkFileList -mmacosx-version-min=10.6 -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/ASM68K0#
+
 CLd /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/ASM68K normal x86_64
-s318323850.988349
-e318323851.017913
+s318379813.893942
+e318379813.925434
 r1
 xLd
 x/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/ASM68K
 xnormal
 xx86_64
-lSLF07#2@67"Link /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/ASM68K318323850#318323851#0(0"0(0#0#0"8618346784#519"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -filelist /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/ASM68K.LinkFileList -mmacosx-version-min=10.6 -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/ASM68K0#
+lSLF07#2@67"Link /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/ASM68K318379813#318379813#0(0"0(0#0#0"8618674432#519"    cd /Users/tullisar/Projects/EASy68K-Mac/ASM68K    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -F/Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug -filelist /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/ASM68K.build/Debug/ASM68K.build/Objects-normal/x86_64/ASM68K.LinkFileList -mmacosx-version-min=10.6 -o /Users/tullisar/Projects/EASy68K-Mac/ASM68K/build/Debug/ASM68K0#
 
