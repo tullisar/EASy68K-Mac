@@ -85,7 +85,7 @@ extern char buffer[256];                //ck used to form messages for display i
 extern char numBuf[20];
 extern unsigned int startAddress;       // starting address of program
 
-extern tabTypes tabType;
+// extern tabTypes tabType;
 extern bool listFlag;
 bool createdL68;                        // true when L68 (listing) file is created
 

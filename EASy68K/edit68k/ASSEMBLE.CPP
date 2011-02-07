@@ -293,77 +293,79 @@ char *skipSpace(char *p)
 //------------------------------------------------------------
 int processFile()
 {
-  int error;
-  bool comment;                 // true when line is comment
-  int value;
-  bool backRef;
-
-  try {
-    offsetMode = false;         // clear flags
-    showEqual = false;
-    pass2 = false;
-    macroNestLevel = 0;         // count nested macro calls
-    includedFileError = false;  // true if include error message displayed
-    mapROM = false;             // memory map flags
-    mapRead = false;
-    mapProtected = false;
-    mapInvalid = false;
-
-    for (pass = 0; pass < 2; pass++) {
-      globalLabel[0] = '\0';    // for local labels
-      labelNum = 0;             // macro label \@ number
-      // evalNumber() contains error code that depends on the range of these numbers
-      stcLabelI = 0x00000000;   // structured if label number
-      stcLabelW = 0x10000000;   // structured while label number
-      stcLabelF = 0x20000000;   // structured for label number
-      stcLabelR = 0x30000000;   // structured repeat label number
-      stcLabelD = 0x40000000;   // structured dbloop label number
-      includeNestLevel = 0;     // count nested include directives
-      includeFile[0] = '\0';    // name of current include file
-
-      loc = 0;
-      for (int i=0; i<16; i++)  // clear section locations
-        sectionLoc[i] = 0;
-      sectI = 0;                // current section
-
-      lineNum = 1;
-      lineNumL68 = 1;
-      endFlag = false;
-      errorCount = warningCount = 0;
-      skipCond = false;             // true conditionally skips lines in code
-      while(!endFlag && fgets(line, 256, inFile)) {
-        error = OK;
-        continuation = false;
-        skipList = false;
-        printCond = false;           // true to print condition on listing line
-        skipCreateCode = false;
-
-        assemble(line, &error);      // assemble one line of code
-
-        lineNum++;
-      }
-      if (!pass2) {
-        pass2 = true;
-        //    ************************************************************
-        //    ********************  STARTING PASS 2  *********************
-        //    ************************************************************
-      } else {                  // pass2 just completed
-        if(!endFlag) {          // if no END directive was found
-          error = END_MISSING;
-          warningCount++;
-          printError(listFile, error, lineNum);
+    int error;
+    
+    // TODO: (UNUSED VARIABLES) bool comment, int value, bool backRef
+    // bool comment;                 // true when line is comment
+    // int value;
+    // bool backRef;
+    
+    try {
+        offsetMode = false;         // clear flags
+        showEqual = false;
+        pass2 = false;
+        macroNestLevel = 0;         // count nested macro calls
+        includedFileError = false;  // true if include error message displayed
+        mapROM = false;             // memory map flags
+        mapRead = false;
+        mapProtected = false;
+        mapInvalid = false;
+        
+        for (pass = 0; pass < 2; pass++) {
+            globalLabel[0] = '\0';    // for local labels
+            labelNum = 0;             // macro label \@ number
+            // evalNumber() contains error code that depends on the range of these numbers
+            stcLabelI = 0x00000000;   // structured if label number
+            stcLabelW = 0x10000000;   // structured while label number
+            stcLabelF = 0x20000000;   // structured for label number
+            stcLabelR = 0x30000000;   // structured repeat label number
+            stcLabelD = 0x40000000;   // structured dbloop label number
+            includeNestLevel = 0;     // count nested include directives
+            includeFile[0] = '\0';    // name of current include file
+            
+            loc = 0;
+            for (int i=0; i<16; i++)  // clear section locations
+                sectionLoc[i] = 0;
+            sectI = 0;                // current section
+            
+            lineNum = 1;
+            lineNumL68 = 1;
+            endFlag = false;
+            errorCount = warningCount = 0;
+            skipCond = false;             // true conditionally skips lines in code
+            while(!endFlag && fgets(line, 256, inFile)) {
+                error = OK;
+                continuation = false;
+                skipList = false;
+                printCond = false;           // true to print condition on listing line
+                skipCreateCode = false;
+                
+                assemble(line, &error);      // assemble one line of code
+                
+                lineNum++;
+            }
+            if (!pass2) {
+                pass2 = true;
+                //    ************************************************************
+                //    ********************  STARTING PASS 2  *********************
+                //    ************************************************************
+            } else {                  // pass2 just completed
+                if(!endFlag) {          // if no END directive was found
+                    error = END_MISSING;
+                    warningCount++;
+                    printError(listFile, error, lineNum);
+                }
+            }
+            rewind(inFile);
         }
-      }
-      rewind(inFile);
     }
-  }
-  catch( ... ) {
-    sprintf(buffer, "ERROR: An exception occurred in routine 'processFile'. \n");
-    printError(NULL, EXCEPTION, 0);
-    return NULL;
-  }
-
-  return NORMAL;
+    catch( ... ) {
+        sprintf(buffer, "ERROR: An exception occurred in routine 'processFile'. \n");
+        printError(NULL, EXCEPTION, 0);
+        return NULL;
+    }
+    
+    return NORMAL;
 }
 
 //------------------------------------------------------------

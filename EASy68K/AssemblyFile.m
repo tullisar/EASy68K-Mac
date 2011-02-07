@@ -16,13 +16,27 @@
 {
     self = [super init];
     if (self) {
-    
+        
         [self initTextStorage];
     
+        listFlag = true;
+        objFlag = true;
     }
     return self;
 }
 
+// Customized getter method for textStorage
+- (NSTextStorage *)textStorage {
+    return [[textStorage retain] autorelease];
+}
+
+// Customized setter method for textStorage
+- (void) setTextStorage:(NSTextStorage *)value {
+    if (textStorage != value) {
+        if (textStorage) [textStorage release];
+        textStorage = [value copy];
+    }
+}
 
 /* Initializes the textStorage which will be loaded with the template file */
 - (void)initTextStorage {
@@ -57,31 +71,38 @@
 
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError
 {
-    // Insert code here to write your document to data of the specified type. If the given outError != NULL, ensure that you set *outError when returning nil.
-
-    // You can also choose to override -fileWrapperOfType:error:, -writeToURL:ofType:error:, or -writeToURL:ofType:forSaveOperation:originalContentsURL:error: instead.
-
-    // For applications targeted for Panther or earlier systems, you should use the deprecated API -dataRepresentationOfType:. In this case you can also choose to override -fileWrapperRepresentationOfType: or -writeToFile:ofType: instead.
-
-    if ( outError != NULL ) {
-		*outError = [NSError errorWithDomain:NSOSStatusErrorDomain code:unimpErr userInfo:NULL];
-	}
-	return nil;
+    NSData *data;
+    [self setTextStorage:[textView textStorage]];
+    NSMutableDictionary *dict = [NSDictionary dictionaryWithObject:NSPlainTextDocumentType
+                                                            forKey:NSDocumentTypeDocumentAttribute];
+    [textView breakUndoCoalescing];
+    data = [[self textStorage] dataFromRange:NSMakeRange(0, [[self textStorage] length])
+                     documentAttributes:dict error:outError];
+    return data;
 }
 
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError
 {
-    // Insert code here to read your document from the given data of the specified type.  If the given outError != NULL, ensure that you set *outError when returning NO.
-
-    // You can also choose to override -readFromFileWrapper:ofType:error: or -readFromURL:ofType:error: instead. 
+    BOOL readSuccess = NO;
     
-    // For applications targeted for Panther or earlier systems, you should use the deprecated API -loadDataRepresentation:ofType. In this case you can also choose to override -readFromFile:ofType: or -loadFileWrapperRepresentation:ofType: instead.
+//    NSTextStorage*fileContents = [[NSAttributedString alloc]
+//                                        initWithData:data options:NULL documentAttributes:NULL
+//                                        error:outError];
+    NSTextStorage* fileContents = [[NSTextStorage alloc]
+                                  initWithData:data options:NULL documentAttributes:NULL error:outError];
     
-    if ( outError != NULL ) {
-		*outError = [NSError errorWithDomain:NSOSStatusErrorDomain code:unimpErr userInfo:NULL];
-	}
-    return YES;
+    if (fileContents) {
+        readSuccess = YES;
+        [self setTextStorage:fileContents];
+        [fileContents release];
+    }
+    return readSuccess;
 }
+
+- (void)assemble {
+    [self displayName];
+}
+
 
 - (void)dealloc {
     [textStorage release];

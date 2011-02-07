@@ -14,3 +14,5 @@ START:                          ; first instruction of the program
 
 
         END     START           ; last line of source
+
+* Looks like font information is already saved on a per file basis, handled by the OS. Nice!

@@ -237,7 +237,7 @@ const int MILD_ERROR = 1;
 const int CRITICAL = 2;
 
 // tab types
-enum tabTypes{ Assembly, Fixed };
+// enum tabTypes{ Assembly, Fixed };
 
 const int TAB1 = 12;          // tab positions for smart tabs (in characters)
 const int TAB2 = 20;

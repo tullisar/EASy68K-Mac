@@ -31,8 +31,6 @@
 
 #include <stdio.h>
 #include "asm.h"
-//#include "mainS.h"
-//#include "textS.h"
 
 extern char buffer[256];  //ck used to form messages for display in windows
 extern char numBuf[20];

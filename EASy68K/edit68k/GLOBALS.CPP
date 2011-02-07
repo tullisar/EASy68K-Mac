@@ -67,7 +67,7 @@ bool WARflag;           // true shows Warnings during assembly
 bool noFileName;        // true indicates no name for current source file
 
 // Editor flags
-tabTypes tabType;
+// tabTypes tabType;
 bool maximizedEdit;     // true starts child window in editor maximized
 bool autoIndent;        // true, copies whitespace from preceding line
 bool realTabs;          // true, use real tabs in editor, false, use spaces
