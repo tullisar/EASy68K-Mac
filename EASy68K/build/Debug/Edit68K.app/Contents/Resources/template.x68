@@ -7,6 +7,8 @@
         ORG     $1000
 START:                          ; first instruction of the program
 
+        MOVE.W  #$FFFF,D1
+
         MOVE.B  #9,D0            
         TRAP    #15             ; halt simulator
 

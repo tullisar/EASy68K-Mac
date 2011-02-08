@@ -1,6 +1,6 @@
 //
-//  MyDocument.h
-//  EASy68K
+//  AssemblyFile.h
+//  Edit68K
 //
 //  Created by Robert Bartlett-Schneider on 1/9/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
@@ -13,6 +13,7 @@
 extern bool listFlag;
 extern bool objFlag;
 
+extern int assembleFile(char fileName[], char tempName[], char workName[]);
 
 @interface AssemblyFile : NSDocument {
     
@@ -26,5 +27,6 @@ extern bool objFlag;
 - (NSTextStorage *) textStorage;
 - (void) setTextStorage:(NSTextStorage *) value;
 - (void) initTextStorage;
+- (IBAction)assemble:(id)sender;
 
 @end
