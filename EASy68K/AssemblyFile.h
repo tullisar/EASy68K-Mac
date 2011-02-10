@@ -20,6 +20,8 @@ extern int assembleFile(char fileName[], char tempName[], char workName[]);
     IBOutlet NSTextView *textView;
     NSTextStorage *textStorage;
     
+    BOOL savedYet;
+    
 }
 
 @property (readwrite, retain) NSTextStorage *textStorage;

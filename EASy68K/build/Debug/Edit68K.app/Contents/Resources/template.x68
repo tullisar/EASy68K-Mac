@@ -1,13 +1,11 @@
 *-----------------------------------------------------------
-* Program     : Modification
+* Program     :
 * Written By  :
 * Date        :
 * Description :
 *-----------------------------------------------------------
         ORG     $1000
 START:                          ; first instruction of the program
-
-        MOVE.W  #$FFFF,D1
 
         MOVE.B  #9,D0            
         TRAP    #15             ; halt simulator
@@ -16,5 +14,3 @@ START:                          ; first instruction of the program
 
 
         END     START           ; last line of source
-
-* Looks like font information is already saved on a per file basis, handled by the OS. Nice!

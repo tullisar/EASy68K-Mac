@@ -22,6 +22,8 @@
         
         [self initTextStorage];
     
+        savedYet = NO;
+        
         listFlag = true;
         objFlag = true;
     }
@@ -92,7 +94,7 @@
     data = [[self textStorage] dataFromRange:NSMakeRange(0, [[self textStorage] length])
                      documentAttributes:dict error:outError];
     
-
+    savedYet = YES;
     
     return data;
 }
@@ -122,19 +124,29 @@
 // TODO: Test to see if file has been saved to disk yet. 
     //At the moment, this REQUIRES that the file has been previously saved     
     
-    char inputFile[256];
-    char tempFile[256];
-    
-    NSString *path = [[self fileURL] path];
-    const char *cPath = [path cStringUsingEncoding:NSASCIIStringEncoding];
-    
-    sprintf(inputFile, "%s", cPath);
-    strcpy(tempFile, "edit68k-XXXXXX");
-    
-    if (mktemp(tempFile) == NULL) {
-        NSLog(@"%@",@"Error creating temporary file via mkstemp()");
+    if (!savedYet) {
+        NSString *description = NSLocalizedString(@"Please save the file before attempting to assemble it.", @"");
+        NSAlert *saveFileFirst = [[[NSAlert alloc] init] autorelease];
+        [saveFileFirst setMessageText:description];
+        [saveFileFirst addButtonWithTitle:@"Okay"];
+        [saveFileFirst setAlertStyle:NSWarningAlertStyle];
+        [saveFileFirst runModal];
     } else {
-        assembleFile(inputFile, tempFile, inputFile);
+        
+        char inputFile[256];
+        char tempFile[256];
+        
+        NSString *path = [[self fileURL] path];
+        const char *cPath = [path cStringUsingEncoding:NSASCIIStringEncoding];
+        
+        sprintf(inputFile, "%s", cPath);
+        strcpy(tempFile, "edit68k-XXXXXX");
+        
+        if (mktemp(tempFile) == NULL) {
+            NSLog(@"%@",@"Error creating temporary file via mkstemp()");
+        } else {
+            assembleFile(inputFile, tempFile, inputFile);
+        }
     }
 }
 
