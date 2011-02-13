@@ -1,7 +1,7 @@
 TEdit68K
 v7
 r0
-t319023069.158911
+t319329121.896564
 cCheck dependencies
 cProcessInfoPlistFile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Info.plist Edit68K-Info.plist
 cCpResource build/Debug/Edit68K.app/Contents/Resources/English.lproj/Credits.rtf English.lproj/Credits.rtf
@@ -19,7 +19,7 @@ cCpResource build/Debug/Edit68K.app/Contents/Resources/print.png print.png
 cCpResource build/Debug/Edit68K.app/Contents/Resources/list_num.png list_num.png
 cCpResource build/Debug/Edit68K.app/Contents/Resources/list_num-small.png list_num-small.png
 cCpResource build/Debug/Edit68K.app/Contents/Resources/template.x68 template.x68
-cProcessPCH++ /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch.gch Edit68K_Prefix.pch normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
+cProcessPCH++ /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch.gch Edit68K_Prefix.pch normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
 cCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/AssemblyFile.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
 cCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/main.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
 cCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/assemble.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
@@ -87,15 +87,15 @@ t1262583222
 s5900
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.h
-c000000004D535E5D0000000000000299
-t1297309277
+c000000004D5854910000000000000299
+t1297634449
 s665
 i<Cocoa/Cocoa.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m
-c000000004D53AFB70000000000001550
-t1297330103
+c000000004D5854910000000000001550
+t1297634449
 s5456
 i"AssemblyFile.h"
 
@@ -112,29 +112,29 @@ s2556
 i"AssemblyFlie.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/Edit68K_Prefix.pch
-c000000004D374B460000000000000091
-t1295469382
+c000000004D3622990000000000000091
+t1295393433
 s145
 i<Cocoa/Cocoa.h>
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib
-c000000004D535B2F0000000000015202
-t1297308463
+c000000004D5854910000000000015202
+t1297634449
 s86530
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/Credits.rtf
-c000000004D374B4600000000000001B4
-t1295469382
+c000000004D36229900000000000001B4
+t1295393433
 s436
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/InfoPlist.strings
-c000000004D374B46000000000000002D
-t1295469382
+c000000004D362299000000000000002D
+t1295393433
 s45
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib
-c000000004D5359D900000000000378D2
-t1297308121
+c000000004D58549100000000000378D2
+t1297634449
 s227538
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib
@@ -180,35 +180,35 @@ s5872
 i"TextViewAspect.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app
-t1297330218
+t1297636321
 s102
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Info.plist
-t1297304750
+t1297634475
 s1319
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/MacOS/Edit68K
-t1297330108
+t1297636321
 s226880
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/PkgInfo
-t1297304750
+t1297634475
 s8
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/English.lproj/AssemblyFile.nib
-t1297309279
-s18583
+t1297634477
+s18570
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/English.lproj/Credits.rtf
-t1297066242
+t1295393689
 s436
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/English.lproj/InfoPlist.strings
-t1297066242
+t1295393689
 s92
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/English.lproj/MainMenu.nib
-t1297308126
+t1297634477
 s45777
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/English.lproj/MyDocument.nib
@@ -216,47 +216,47 @@ t1295393743
 s16629
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/indent_decrease-small.png
-t1297066244
+t1295393689
 s3192
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/indent_decrease.png
-t1297066244
+t1295393689
 s5746
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/indent_increase-small.png
-t1297066244
+t1295393689
 s3196
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/indent_increase.png
-t1297066244
+t1295393689
 s5758
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/list_num-small.png
-t1297304662
+t1297634449
 s3238
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/list_num.png
-t1297304662
+t1297634449
 s5996
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/playback_play-small.png
-t1297066244
+t1295393689
 s3209
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/playback_play.png
-t1297066244
+t1295393689
 s5874
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/print-small.png
-t1297304662
+t1297634449
 s3262
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/print.png
-t1297304662
+t1297634449
 s5900
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/template.x68
-t1297330218
+t1297634475
 s439
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/ASSEMBLE.o
@@ -264,8 +264,8 @@ t1296610215
 s164648
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/AssemblyFile.o
-t1297330107
-s37156
+t1297636278
+s37164
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/AssemblyFlie.o
 t1295393693
@@ -296,8 +296,8 @@ t2
 s0
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/Edit68K.LinkFileList
-c000000004D534C560000000000000836
-t1297304662
+c000000004D5854920000000000000836
+t1297634450
 s2102
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/GLOBALS.o
@@ -353,72 +353,72 @@ t2
 s0
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/assemble.o
-t1297304662
-s165792
+t1297636278
+s165664
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/build.o
-t1297304662
-s30072
+t1297636278
+s30080
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/codegen.o
-t1297304662
-s12504
+t1297636278
+s12512
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/directiv.o
-t1297304662
-s37852
+t1297636321
+s37828
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/error.o
-t1297304662
-s17784
+t1297636278
+s17792
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/eval.o
-t1297304662
-s20624
+t1297636278
+s20632
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/globals.o
-t1297304662
-s13848
+t1297636278
+s13856
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/instlook.o
-t1297304662
+t1297636278
 s14512
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/insttabl.o
-t1297304662
-s42116
+t1297636278
+s42148
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/listing.o
-t1297304662
-s19724
+t1297636278
+s19732
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/macro.o
-t1297304662
-s22536
+t1297636321
+s22520
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/main.o
-t1297304662
-s5188
+t1297636278
+s5196
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/movem.o
-t1297304662
-s18404
+t1297636278
+s18412
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/object.o
-t1297304662
-s21448
+t1297636278
+s21456
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/opparse.o
-t1297304662
-s17872
+t1297636278
+s17880
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/structured.o
-t1297304662
-s283956
+t1297636279
+s283732
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/symbol.o
-t1297304662
-s17136
+t1297636278
+s17144
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/ASSEMBLE.CPP
 c000000004D4901560000000000008411
@@ -561,8 +561,8 @@ i<ctype.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/asm.h
-c000000004D534C56000000000000251F
-t1297304662
+c000000004D585492000000000000251F
+t1297634450
 s9503
 i<stdio.h>
 i<string.h>
@@ -570,76 +570,76 @@ i<stdlib.h>
 i"proto.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp
-c000000004D534C560000000000008411
-t1297304662
-s33809
+c000000004D58603100000000000082CF
+t1297637425
+s33487
 i<stdio.h>
 i<ctype.h>
 i<stack.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/build.cpp
-c000000004D534C560000000000005FAF
-t1297304662
+c000000004D5854920000000000005FAF
+t1297634450
 s24495
 i<stdio.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/codegen.cpp
-c000000004D534C560000000000001C76
-t1297304662
+c000000004D5854920000000000001C76
+t1297634450
 s7286
 i<stdio.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp
-c000000004D534C5600000000000082B0
-t1297304662
-s33456
+c000000004D585BD800000000000082B6
+t1297636312
+s33462
 i<stdio.h>
 i<ctype.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/error.cpp
-c000000004D534C5600000000000028BE
-t1297304662
+c000000004D58549200000000000028BE
+t1297634450
 s10430
 i<stdio.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/eval.cpp
-c000000004D534C56000000000000300C
-t1297304662
+c000000004D585492000000000000300C
+t1297634450
 s12300
 i<stdio.h>
 i<ctype.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/globals.cpp
-c000000004D534C560000000000000F68
-t1297304662
+c000000004D5854920000000000000F68
+t1297634450
 s3944
 i<stdio.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/instlook.cpp
-c000000004D534C5600000000000013EA
-t1297304662
+c000000004D58549200000000000013EA
+t1297634450
 s5098
 i<stdio.h>
 i<ctype.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/insttabl.cpp
-c000000004D534C560000000000007AA2
-t1297304662
+c000000004D5854920000000000007AA2
+t1297634450
 s31394
 i<stdio.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/listing.cpp
-c000000004D534C560000000000002BF4
-t1297304662
+c000000004D5854920000000000002BF4
+t1297634450
 s11252
 i<stdio.h>
 i<ctype.h>
@@ -647,9 +647,9 @@ i<time.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/macro.cpp
-c000000004D534C56000000000000489D
-t1297304662
-s18589
+c000000004D585BE100000000000048A0
+t1297636321
+s18592
 i<stdio.h>
 i<ctype.h>
 i<string.h>
@@ -657,16 +657,16 @@ i<stdlib.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/movem.cpp
-c000000004D534C560000000000003445
-t1297304662
+c000000004D5854920000000000003445
+t1297634450
 s13381
 i<stdio.h>
 i<ctype.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/object.cpp
-c000000004D534C5600000000000036C1
-t1297304662
+c000000004D58549200000000000036C1
+t1297634450
 s14017
 i<stdio.h>
 i<cstdlib>
@@ -674,22 +674,22 @@ i<ctype.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/opparse.cpp
-c000000004D534C5600000000000043DB
-t1297304662
+c000000004D58549200000000000043DB
+t1297634450
 s17371
 i<stdio.h>
 i<ctype.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/proto.h
-c000000004D534C5600000000000012AC
-t1297304662
+c000000004D58549200000000000012AC
+t1297634450
 s4780
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp
-c000000004D534C5600000000000089B4
-t1297304662
-s35252
+c000000004D585B8500000000000089C0
+t1297636229
+s35264
 i<stack.h>
 i<vector.h>
 i<stdio.h>
@@ -699,72 +699,72 @@ i<stack>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/symbol.cpp
-c000000004D534C5600000000000025F0
-t1297304662
+c000000004D58549200000000000025F0
+t1297634450
 s9712
 i<stdio.h>
 i<ctype.h>
 i"asm.h"
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_decrease-small.png
-c000000004D374B460000000000000C78
-t1295469382
+c000000004D36229A0000000000000C78
+t1295393434
 s3192
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_decrease.png
-c000000004D374B460000000000001672
-t1295469382
+c000000004D36229A0000000000001672
+t1295393434
 s5746
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_increase-small.png
-c000000004D374B460000000000000C7C
-t1295469382
+c000000004D36229A0000000000000C7C
+t1295393434
 s3196
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/indent_increase.png
-c000000004D374B46000000000000167E
-t1295469382
+c000000004D36229A000000000000167E
+t1295393434
 s5758
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/list_num-small.png
-c000000004B417D980000000000000CA6
-t1262583192
+c000000004D3F9F6F0000000000000CA6
+t1296015215
 s3238
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/list_num.png
-c000000004B417DB6000000000000176C
-t1262583222
+c000000004D3F9F6F000000000000176C
+t1296015215
 s5996
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m
-c000000004D374B460000000000000108
-t1295469382
+c000000004D36229A0000000000000108
+t1295393434
 s264
 i<Cocoa/Cocoa.h>
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/playback_play-small.png
-c000000004D374B460000000000000C89
-t1295469382
+c000000004D36229A0000000000000C89
+t1295393434
 s3209
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/playback_play.png
-c000000004D374B4600000000000016F2
-t1295469382
+c000000004D36229A00000000000016F2
+t1295393434
 s5874
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/print-small.png
-c000000004B417D980000000000000CBE
-t1262583192
+c000000004D3F9F6F0000000000000CBE
+t1296015215
 s3262
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/print.png
-c000000004B417DB6000000000000170C
-t1262583222
+c000000004D3F9F6F000000000000170C
+t1296015215
 s5900
 
 N/Users/tullisar/Projects/EASy68K-Mac/EASy68K/template.x68
-c000000004D53B02300000000000001B7
-t1297330211
+c000000004D58549200000000000001B7
+t1297634450
 s439
 
 N/var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-beawauvdayesejgqxktepjchlzha/Edit68K_Prefix.pch.gch
@@ -787,6 +787,10 @@ N/var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/Shared
 t1297066251
 s58615440
 
+N/var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch.gch
+t1297636277
+s58537616
+
 N/var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-dlqhicudmzkrbqgbkjgbnuyellhv/Edit68K_Prefix.pch.gch
 t1295393693
 s54212368
@@ -796,13 +800,13 @@ t1296019139
 s2527600
 
 NEdit68K-Info.plist
-c000000004D534C5600000000000005D3
-t1297304662
+c000000004D58549100000000000005D3
+t1297634449
 s1491
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies319023069#319023069#0(0"0(0#1#0"8630031104#0"0#
+lSLF07#2@18"Check dependencies319329121#319329121#0(0"0(0#1#0"4300885448#0"0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/ASSEMBLE.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/ASSEMBLE.CPP normal x86_64 c++ com.apple.compilers.gcc.4_2
 s318303013.882346
@@ -845,8 +849,8 @@ o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m:20: warning: '...' 
 lSLF07#2@67"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m317993729#317993729#0(551"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m: In function '-[AssemblyFile init]':/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m:20: warning: 'AssemblyFile' may not respond to '-initTextStorage'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m:20: warning: (Messages without a matching method signature/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m:20: warning: will be assumed to return 'id' and accept/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m:20: warning: '...' as arguments.)2(22@52"'AssemblyFile' may not respond to '-initTextStorage'317993729#97#126#0(6@59"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m317779030#20#0#20#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)317993729#223#119#0(6@59"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m317779030#20#0#20#0#0"0(0#0#59"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m8620383552#1551"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-fzpaeizxkpzsjnagrevzpevhdqyy/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/AssemblyFile.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/AssemblyFile.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s319022903.824668
-e319022907.083260
+s319329078.047115
+e319329078.199313
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/AssemblyFile.o
@@ -855,7 +859,7 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@67"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m319022903#319022907#0(0"0(0#0#59"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m3401403401131030528#1570"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/AssemblyFile.o0#
+lSLF07#2@67"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m319329078#319329078#0(0"0(0#0#59"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m4300885448#1586"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFile.m -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/AssemblyFile.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/AssemblyFlie.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/AssemblyFlie.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
 s317086493.675307
@@ -1126,8 +1130,8 @@ CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/assemble
 r0
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/assemble.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s318759179.549957
-e318759180.275399
+s319329078.059497
+e319329078.947487
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/assemble.o
@@ -1136,19 +1140,14 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-oIn file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h:59,
-o                 from /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp:56:
-o/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.
-o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp: In function 'int assembleFile(char*, char*, char*)':
-o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp:137: warning: unused variable 'binFileName'
-lSLF07#2@73"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp318759179#318759180#0(869"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h:59,                 from /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp:56:/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated./Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp: In function 'int assembleFile(char*, char*, char*)':/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp:137: warning: unused variable 'binFileName'2(22@354"#warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.318759179#188#451#3(7@87"In file included from /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp318759179#18446744073709551615#0#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp318322902#56#0#56#0#0"0(7@91"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h318759179#18446744073709551615#0#0(6@69"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h275368770#59#0#59#0#0"0(13@438"#warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated. in /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h318759179#18446744073709551615#0#0(6@80"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h275368770#32#0#32#0#0"0(6@80"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h275368770#32#0#32#0#10"#warning *0(22@29"Unused variable 'binFileName'318759180#759#110#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp318322902#137#0#137#0#19"unused variable '*'0(0#0#65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp8618592640#1572"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/assemble.o0#
+lSLF07#2@73"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp319329078#319329078#0(0"0(0#0#65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp4300885448#1588"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/assemble.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/assemble.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/build.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/build.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/build.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/build.cpp normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s318759180.035851
-e318759180.188174
+s319329078.335830
+e319329078.501383
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/build.o
@@ -1157,14 +1156,14 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@70"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/build.cpp318759180#318759180#0(0"0(0#0#62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/build.cpp8616451904#1566"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/build.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/build.o0#
+lSLF07#2@70"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/build.cpp319329078#319329078#0(0"0(0#0#62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/build.cpp4300885448#1582"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/build.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/build.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/codegen.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/codegen.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/codegen.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/codegen.cpp normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s318759180.430220
-e318759180.510551
+s319329078.551979
+e319329078.675884
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/codegen.o
@@ -1173,14 +1172,14 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@72"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/codegen.cpp318759180#318759180#0(0"0(0#0#64"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/codegen.cpp8617358048#1570"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/codegen.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/codegen.o0#
+lSLF07#2@72"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/codegen.cpp319329078#319329078#0(0"0(0#0#64"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/codegen.cpp4300885448#1586"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/codegen.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/codegen.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/directiv.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/directiv.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s318759180.372794
-e318759180.531217
+s319329121.467520
+e319329121.835973
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/directiv.o
@@ -1189,10 +1188,6 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp: In function 'int section(int, char*, char*, int*)':
-o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:135: warning: unused variable 'newLoc'
-o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp: In function 'int equ(int, char*, char*, int*)':
-o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:258: warning: unused variable 'op1'
 o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp: In function 'int include(int, char*, char*, int*)':
 o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:634: warning: unused variable 'incLine'
 o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:636: warning: unused variable 'i'
@@ -1201,14 +1196,14 @@ o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:638: warning:
 o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:639: warning: unused variable 'value'
 o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:640: warning: unused variable 'backRef'
 o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:644: warning: unused variable 'lineNumInc'
-lSLF07#2@73"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp318759180#318759180#0(1296"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp: In function 'int section(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:135: warning: unused variable 'newLoc'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp: In function 'int equ(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:258: warning: unused variable 'op1'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp: In function 'int include(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:634: warning: unused variable 'incLine'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:636: warning: unused variable 'i'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:637: warning: unused variable 'tempFP'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:638: warning: unused variable 'comment'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:639: warning: unused variable 'value'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:640: warning: unused variable 'backRef'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:644: warning: unused variable 'lineNumInc'9(22@24"Unused variable 'newLoc'318759180#119#105#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp318303172#135#0#135#0#19"unused variable '*'0(22@21"Unused variable 'op1'318759180#339#102#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp318303172#258#0#258#0#19"unused variable '*'0(22@25"Unused variable 'incLine'318759180#560#106#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp318303172#634#0#634#0#19"unused variable '*'0(22@19"Unused variable 'i'318759180#666#100#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp318303172#636#0#636#0#19"unused variable '*'0(22@24"Unused variable 'tempFP'318759180#766#105#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp318303172#637#0#637#0#19"unused variable '*'0(22@25"Unused variable 'comment'318759180#871#106#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp318303172#638#0#638#0#19"unused variable '*'0(22@23"Unused variable 'value'318759180#977#104#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp318303172#639#0#639#0#19"unused variable '*'0(22@25"Unused variable 'backRef'318759180#1081#106#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp318303172#640#0#640#0#19"unused variable '*'0(22@28"Unused variable 'lineNumInc'318759180#1187#109#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp318303172#644#0#644#0#19"unused variable '*'0(0#0#65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp8616505408#1572"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/directiv.o0#
+lSLF07#2@73"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp319329121#319329121#0(855"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp: In function 'int include(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:634: warning: unused variable 'incLine'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:636: warning: unused variable 'i'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:637: warning: unused variable 'tempFP'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:638: warning: unused variable 'comment'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:639: warning: unused variable 'value'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:640: warning: unused variable 'backRef'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp:644: warning: unused variable 'lineNumInc'7(22@25"Unused variable 'incLine'319329121#119#106#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp319329112#634#0#634#0#19"unused variable '*'0(22@19"Unused variable 'i'319329121#225#100#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp319329112#636#0#636#0#19"unused variable '*'0(22@24"Unused variable 'tempFP'319329121#325#105#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp319329112#637#0#637#0#19"unused variable '*'0(22@25"Unused variable 'comment'319329121#430#106#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp319329112#638#0#638#0#19"unused variable '*'0(22@23"Unused variable 'value'319329121#536#104#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp319329112#639#0#639#0#19"unused variable '*'0(22@25"Unused variable 'backRef'319329121#640#106#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp319329112#640#0#640#0#19"unused variable '*'0(22@28"Unused variable 'lineNumInc'319329121#746#109#0(6@65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp319329112#644#0#644#0#19"unused variable '*'0(0#0#65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp4300885448#1588"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/directiv.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/directiv.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/error.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/error.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/error.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/error.cpp normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s318759179.607641
-e318759179.680170
+s319329078.143616
+e319329078.250222
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/error.o
@@ -1217,14 +1212,14 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@70"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/error.cpp318759179#318759179#0(0"0(0#0#62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/error.cpp8618068864#1566"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/error.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/error.o0#
+lSLF07#2@70"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/error.cpp319329078#319329078#0(0"0(0#0#62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/error.cpp4300885448#1582"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/error.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/error.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/eval.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/eval.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/eval.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/eval.cpp normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s318759179.680258
-e318759179.801713
+s319329078.165340
+e319329078.298712
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/eval.o
@@ -1233,14 +1228,14 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@69"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/eval.cpp318759179#318759179#0(0"0(0#0#61"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/eval.cpp8616648672#1564"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/eval.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/eval.o0#
+lSLF07#2@69"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/eval.cpp319329078#319329078#0(0"0(0#0#61"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/eval.cpp4300885448#1580"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/eval.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/eval.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/globals.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/globals.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/globals.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/globals.cpp normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s318759197.298252
-e318759197.380145
+s319329078.060290
+e319329078.165223
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/globals.o
@@ -1249,14 +1244,14 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@72"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/globals.cpp318759197#318759197#0(0"0(0#0#64"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/globals.cpp8619407840#1570"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/globals.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/globals.o0#
+lSLF07#2@72"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/globals.cpp319329078#319329078#0(0"0(0#0#64"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/globals.cpp4300885448#1586"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/globals.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/globals.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/instlook.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/instlook.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/instlook.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/instlook.cpp normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s318759180.275487
-e318759180.372710
+s319329078.419737
+e319329078.523632
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/instlook.o
@@ -1265,14 +1260,14 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@73"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/instlook.cpp318759180#318759180#0(0"0(0#0#65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/instlook.cpp8617852768#1572"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/instlook.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/instlook.o0#
+lSLF07#2@73"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/instlook.cpp319329078#319329078#0(0"0(0#0#65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/instlook.cpp4300885448#1588"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/instlook.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/instlook.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/insttabl.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/insttabl.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/insttabl.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/insttabl.cpp normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s318759180.302807
-e318759180.430130
+s319329078.501504
+e319329078.636609
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/insttabl.o
@@ -1281,14 +1276,14 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@73"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/insttabl.cpp318759180#318759180#0(0"0(0#0#65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/insttabl.cpp8617656096#1572"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/insttabl.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/insttabl.o0#
+lSLF07#2@73"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/insttabl.cpp319329078#319329078#0(0"0(0#0#65"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/insttabl.cpp4300885448#1588"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/insttabl.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/insttabl.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/listing.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/listing.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/listing.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/listing.cpp normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s318759197.300957
-e318759197.419462
+s319329078.199432
+e319329078.335707
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/listing.o
@@ -1297,14 +1292,14 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@72"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/listing.cpp318759197#318759197#0(0"0(0#0#64"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/listing.cpp8618286208#1570"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/listing.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/listing.o0#
+lSLF07#2@72"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/listing.cpp319329078#319329078#0(0"0(0#0#64"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/listing.cpp4300885448#1586"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/listing.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/listing.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/macro.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/macro.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/macro.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/macro.cpp normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s318759179.852208
-e318759179.941942
+s319329121.239377
+e319329121.692476
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/macro.o
@@ -1313,9 +1308,7 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/macro.cpp: In function 'int asmMacro(int, char*, char*, int*)':
-o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/macro.cpp:179: warning: unused variable 'tokenEnd'
-lSLF07#2@70"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/macro.cpp318759179#318759179#0(221"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/macro.cpp: In function 'int asmMacro(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/macro.cpp:179: warning: unused variable 'tokenEnd'1(22@26"Unused variable 'tokenEnd'318759179#117#104#0(6@62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/macro.cpp317993809#179#0#179#0#19"unused variable '*'0(0#0#62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/macro.cpp8617773472#1566"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/macro.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/macro.o0#
+lSLF07#2@70"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/macro.cpp319329121#319329121#0(0"0(0#0#62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/macro.cpp4300885448#1582"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/macro.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/macro.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/main.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
 s317993729.422967
@@ -1331,8 +1324,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@59"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m317993729#317993729#0(0"0(0#0#51"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m8600547328#1535"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-fzpaeizxkpzsjnagrevzpevhdqyy/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/main.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/main.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s318759051.942661
-e318759052.143872
+s319329078.058483
+e319329078.143492
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/main.o
@@ -1341,14 +1334,14 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@59"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m318759051#318759052#0(0"0(0#0#51"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m8613454720#1554"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/main.o0#
+lSLF07#2@59"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m319329078#319329078#0(0"0(0#0#51"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m4300885448#1570"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/main.m -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/main.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/movem.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/movem.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/movem.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/movem.cpp normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s318759180.531305
-e318759180.639152
+s319329078.675997
+e319329078.947337
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/movem.o
@@ -1357,14 +1350,14 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@70"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/movem.cpp318759180#318759180#0(0"0(0#0#62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/movem.cpp8615924928#1566"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/movem.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/movem.o0#
+lSLF07#2@70"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/movem.cpp319329078#319329078#0(0"0(0#0#62"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/movem.cpp4300885448#1582"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/movem.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/movem.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/object.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/object.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/object.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/object.cpp normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s318759180.510642
-e318759180.661447
+s319329078.636949
+e319329078.947172
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/object.o
@@ -1373,14 +1366,14 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@71"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/object.cpp318759180#318759180#0(0"0(0#0#63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/object.cpp8615572736#1568"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/object.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/object.o0#
+lSLF07#2@71"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/object.cpp319329078#319329078#0(0"0(0#0#63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/object.cpp4300885448#1584"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/object.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/object.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/opparse.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/opparse.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/opparse.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/opparse.cpp normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s318759180.188256
-e318759180.302708
+s319329078.395653
+e319329078.551845
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/opparse.o
@@ -1389,14 +1382,14 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@72"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/opparse.cpp318759180#318759180#0(0"0(0#0#64"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/opparse.cpp8617897760#1570"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/opparse.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/opparse.o0#
+lSLF07#2@72"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/opparse.cpp319329078#319329078#0(0"0(0#0#64"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/opparse.cpp4300885448#1586"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/opparse.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/opparse.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/structured.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/structured.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s318759180.639239
-e318759181.259212
+s319329078.718124
+e319329079.614760
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/structured.o
@@ -1405,23 +1398,14 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-oIn file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h:59,
-o                 from /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp:16:
-o/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.
-o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp: In function 'void outCmpBcc(char**, char*, char*, int&)':
-o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp:157: warning: unused variable 'extI'
-o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp: In function 'int asmStructure(int, char*, char*, int*)':
-o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp:301: warning: unused variable 'symbol'
-o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp:303: warning: unused variable 'value'
-o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp:304: warning: unused variable 'backRef'
-lSLF07#2@75"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp318759180#318759181#0(1320"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h:59,                 from /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp:16:/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated./Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp: In function 'void outCmpBcc(char**, char*, char*, int&)':/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp:157: warning: unused variable 'extI'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp: In function 'int asmStructure(int, char*, char*, int*)':/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp:301: warning: unused variable 'symbol'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp:303: warning: unused variable 'value'/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp:304: warning: unused variable 'backRef'5(22@354"#warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.318759180#190#451#3(7@89"In file included from /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp318759180#18446744073709551615#0#0(6@67"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp318231124#16#0#16#0#0"0(7@91"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h318759180#18446744073709551615#0#0(6@69"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/stack.h275368770#59#0#59#0#0"0(13@438"#warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated. in /Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h318759180#18446744073709551615#0#0(6@80"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h275368770#32#0#32#0#0"0(6@80"/Developer/SDKs/MacOSX10.6.sdk/usr/include/c++/4.2.1/backward/backward_warning.h275368770#32#0#32#0#10"#warning *0(22@22"Unused variable 'extI'318759181#768#105#0(6@67"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp318231124#157#0#157#0#19"unused variable '*'0(22@24"Unused variable 'symbol'318759181#999#107#0(6@67"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp318231124#301#0#301#0#19"unused variable '*'0(22@23"Unused variable 'value'318759181#1106#106#0(6@67"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp318231124#303#0#303#0#19"unused variable '*'0(22@25"Unused variable 'backRef'318759181#1212#108#0(6@67"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp318231124#304#0#304#0#19"unused variable '*'0(0#0#67"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp8617239776#1576"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/structured.o0#
+lSLF07#2@75"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp319329078#319329079#0(0"0(0#0#67"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp4300885448#1592"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/structured.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/structured.o0#
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/symbol.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/symbol.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
 r0
 
 CCompileC build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/symbol.o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/symbol.cpp normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s318759179.942033
-e318759180.035759
+s319329078.298835
+e319329078.419624
 r1
 xCompileC
 xbuild/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/symbol.o
@@ -1430,23 +1414,29 @@ xnormal
 xx86_64
 xobjective-c++
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@71"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/symbol.cpp318759179#318759180#0(0"0(0#0#63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/symbol.cpp8616928992#1568"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -include /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/symbol.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/symbol.o0#
+lSLF07#2@71"Compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/symbol.cpp319329078#319329078#0(0"0(0#0#63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/symbol.cpp4300885448#1584"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -include /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/edit68k/symbol.cpp -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/symbol.o0#
 
 CCompileXIB /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib
-s319002079.339389
-e319002079.576207
+s319327275.273172
+e319327277.216593
 r1
 xCompileXIB
 x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib
-lSLF07#2@41"CompileXIB English.lproj/AssemblyFile.xib319002079#319002079#0(0"0(0#0#75"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib29836824280170576#390"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/English.lproj/AssemblyFile.nib /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib --sdk /Developer/SDKs/MacOSX10.6.sdk0#
+o/* com.apple.ibtool.document.notices */
+o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib:100074: note: This view is clipping its content.
+o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib:100071: note: This view is clipping its content.
+o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib:100087: note: This view is clipping its content.
+o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib:100084: note: This view is clipping its content.
+o/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib:100067: note: This view is clipping its content.
+lSLF07#2@41"CompileXIB English.lproj/AssemblyFile.xib319327275#319327277#0(665"/* com.apple.ibtool.document.notices *//Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib:100074: note: This view is clipping its content./Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib:100071: note: This view is clipping its content./Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib:100087: note: This view is clipping its content./Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib:100084: note: This view is clipping its content./Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib:100067: note: This view is clipping its content.5(13@34"This view is clipping its content.319327277#18446744073709551615#0#0(6@75"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib319327249#100074#0#100074#0#0"0(13@34"This view is clipping its content.319327277#18446744073709551615#0#0(6@75"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib319327249#100071#0#100071#0#0"0(13@34"This view is clipping its content.319327277#18446744073709551615#0#0(6@75"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib319327249#100087#0#100087#0#0"0(13@34"This view is clipping its content.319327277#18446744073709551615#0#0(6@75"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib319327249#100084#0#100084#0#0"0(13@34"This view is clipping its content.319327277#18446744073709551615#0#0(6@75"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib319327249#100067#0#100067#0#0"0(0#0#75"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib4300885448#353"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/English.lproj/AssemblyFile.nib /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/AssemblyFile.xib0#
 
 CCompileXIB /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib
-s319000926.387678
-e319000926.760284
+s319327275.305688
+e319327277.400422
 r1
 xCompileXIB
 x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib
-lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib319000926#319000926#0(0"0(0#0#71"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib29836824280170576#382"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/English.lproj/MainMenu.nib /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib --sdk /Developer/SDKs/MacOSX10.6.sdk0#
+lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib319327275#319327277#0(0"0(0#0#71"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib4300885448#345"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources/English.lproj/MainMenu.nib /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MainMenu.xib0#
 
 CCompileXIB /Users/tullisar/Projects/EASy68K-Mac/EASy68K/English.lproj/MyDocument.xib
 s317086543.457825
@@ -1572,32 +1562,32 @@ xprint.png
 lSLF07#2@14"Copy print.png318759044#318759044#0(0"0(0#0#54"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/print.png8617490272#343"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/print.png /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources0#
 
 CCpResource build/Debug/Edit68K.app/Contents/Resources/template.x68 template.x68
-s319023018.328458
-e319023018.357556
+s319327275.307261
+e319327275.885816
 r1
 xCpResource
 xbuild/Debug/Edit68K.app/Contents/Resources/template.x68
 xtemplate.x68
-lSLF07#2@17"Copy template.x68319023018#319023018#0(0"0(0#0#57"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/template.x688629994816#346"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/template.x68 /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources0#
+lSLF07#2@17"Copy template.x68319327275#319327275#0(0"0(0#0#57"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/template.x684300885448#346"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/tullisar/Projects/EASy68K-Mac/EASy68K/template.x68 /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Resources0#
 
 CLd /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/MacOS/Edit68K normal x86_64
-s319022907.083478
-e319022908.152139
+s319329121.836074
+e319329121.893547
 r1
 xLd
 x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/MacOS/Edit68K
 xnormal
 xx86_64
-lSLF07#2@96"Link /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/MacOS/Edit68K319022907#319022908#0(0"0(0#0#0"8625237792#572"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -filelist /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/Edit68K.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/MacOS/Edit68K0#
+lSLF07#2@96"Link /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/MacOS/Edit68K319329121#319329121#0(0"0(0#0#0"4300885448#572"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -filelist /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Objects-normal/x86_64/Edit68K.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/MacOS/Edit68K0#
 
 CProcessInfoPlistFile /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Info.plist Edit68K-Info.plist
-s318997550.602789
-e318997550.616689
+s319327275.240412
+e319327275.272804
 r1
 xProcessInfoPlistFile
 x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Info.plist
 xEdit68K-Info.plist
-lSLF07#2@26"Process Edit68K-Info.plist318997550#318997550#0(0"0(0#0#63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/Edit68K-Info.plist32932993188560964#328"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    builtin-infoPlistUtility Edit68K-Info.plist -genpkginfo /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Info.plist0#
+lSLF07#2@26"Process Edit68K-Info.plist319327275#319327275#0(0"0(0#0#63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/Edit68K-Info.plist13229753409208424#328"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    builtin-infoPlistUtility Edit68K-Info.plist -genpkginfo /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app/Contents/Info.plist0#
 
 CProcessPCH /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-ffaejhroccpvjehdwuqsrauvfqeo/Edit68K_Prefix.pch.gch Edit68K_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
 s317993591.037264
@@ -1679,6 +1669,19 @@ xobjective-c++
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@29"Precompile Edit68K_Prefix.pch318759044#318759051#0(0"0(0#0#63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/Edit68K_Prefix.pch8616710208#1454"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++-header -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/Edit68K_Prefix.pch -o /var/folders/6n/6nmKYF59ELa7fxII-W5ToE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hjwjwquftbymlacadegziyoazuqw/Edit68K_Prefix.pch.gch0#
 
+CProcessPCH++ /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch.gch Edit68K_Prefix.pch normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
+s319329074.612711
+e319329078.046890
+r1
+xProcessPCH++
+x/var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch.gch
+xEdit68K_Prefix.pch
+xnormal
+xx86_64
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile Edit68K_Prefix.pch319329074#319329078#0(0"0(0#0#63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/Edit68K_Prefix.pch4300885448#1470"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++-header -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -Wno-write-strings -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -Wno-deprecated -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/Edit68K_Prefix.pch -o /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-bdgrvzezicirfkhggctykhowwazl/Edit68K_Prefix.pch.gch0#
+
 CProcessPCH++ /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hgqdynquxbfykkdpodxizzrhuagv/Edit68K_Prefix.pch.gch Edit68K_Prefix.pch normal x86_64 c++ com.apple.compilers.gcc.4_2
 s317711939.534608
 e317711939.847801
@@ -1693,10 +1696,10 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@29"Precompile Edit68K_Prefix.pch317711939#317711939#0(0"0(0#0#63"/Users/tullisar/Projects/EASy68K-Mac/EASy68K/Edit68K_Prefix.pch4300885448#1425"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++-header -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-generated-files.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-own-target-headers.hmap -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-all-target-headers.hmap -iquote /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/Edit68K-project-headers.hmap -F/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/include -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources/x86_64 -I/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Edit68K.build/Debug/Edit68K.build/DerivedSources -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/Edit68K_Prefix.pch -o /var/folders/xd/xd7PLeT6F1u-f6utNqfga++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edit68K_Prefix-hgqdynquxbfykkdpodxizzrhuagv/Edit68K_Prefix.pch.gch0#
 
 CTouch /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app
-s319023018.359308
-e319023018.362441
+s319329121.893638
+e319329121.896519
 r1
 xTouch
 x/Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app
-lSLF07#2@74"Touch /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app319023018#319023018#0(0"0(0#0#0"8625765248#143"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /usr/bin/touch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app0#
+lSLF07#2@74"Touch /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app319329121#319329121#0(0"0(0#0#0"4300885448#143"    cd /Users/tullisar/Projects/EASy68K-Mac/EASy68K    /usr/bin/touch -c /Users/tullisar/Projects/EASy68K-Mac/EASy68K/build/Debug/Edit68K.app0#
 

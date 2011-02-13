@@ -132,7 +132,7 @@ int org(int size, char *label, char *op, int *errorPtr)
 int section(int size, char *label, char *op, int *errorPtr)
 {
     int value;
-    int newLoc;
+    // int newLoc;
     bool backRef = true;
     
     if (size)
@@ -255,7 +255,7 @@ int equ(int size, char *label, char *op, int *errorPtr)
 {
     int value;
     bool backRef;
-    char *op1;
+    // char *op1;
     
     if (size)
         NEWERROR(*errorPtr, INV_SIZE_CODE);

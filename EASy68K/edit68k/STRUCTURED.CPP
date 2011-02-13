@@ -154,7 +154,7 @@ void outCmpBcc( char *token[], char *last, char *label, int &error) {
     
     char stcLine[256], stcCmp[256], extent[256];
     int orm=0;
-    int extI=0;
+    // int extI=0;
     int n=0;
     
     try {
@@ -298,10 +298,10 @@ int asmStructure(int size, char *label, char *arg, int *errorPtr)
         char capLine[256];
         char tokenEnd[10];            // last token of structure goes here
         char stcLabel[256], stcLabel2[256], stcLine[256], sizeStr[256], extent[256];
-        symbolDef *symbol;
+        // symbolDef *symbol;
         int error;
-        int value;
-        bool backRef;
+        // int value;
+        // bool backRef;
         int n = 2;                    // token index
         int i;
         

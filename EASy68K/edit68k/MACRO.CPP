@@ -176,7 +176,7 @@ int asmMacro(int size, char *label, char *arg, int *errorPtr)
     const int MAX_SIZE = 512;       // maximun size of input line
     char *token[MAXT];              // pointers to tokens
     char tokens[MAX_SIZE];          // place tokens here
-    char *tokenEnd[MAXT];           // where tokens end in source line
+    // char *tokenEnd[MAXT];           // where tokens end in source line
     int error, argN, i, n;
     int tempFP;                           // temporary File Pointer
     int value;

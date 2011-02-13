@@ -131,10 +131,8 @@ extern stack<char*, vector<char*> > forStack;
 int assembleFile(char fileName[], char tempName[], char workName[])
 {
     //char outName[];
-    // int i; // TODO (UNUSED VARIABLE) int i
     char listFileName[256];
     char objFileName[256];
-    char binFileName[256];
     
     try {
         tmpFile = fopen(tempName, "w+");
@@ -216,29 +214,22 @@ int assembleFile(char fileName[], char tempName[], char workName[])
 //------------------------------------------------------------
 // changeFileExt()
 // Change the extension of a file
-// TODO: (CREDIT) Credit original author for this function
 //------------------------------------------------------------
 void changeFileExt(char *fileName, char *newExt, char *newFileName) {
-
     strcpy(newFileName, fileName);
-    char *ext = strstr(newFileName, ".X68");
-    if (ext != NULL) {
+    
+    char *ext = strrchr(newFileName, '.');
+    if (ext != NULL)
         *ext = '\0';
-    } else {
-        ext = strstr(newFileName, ".x68");   // rbs - the file name may also have a lowercase .x68
-        if ( ext != NULL )
-            *ext = '\0';
-    }
-
-    strcat(newFileName,newExt);
+    
+    strcat(newFileName, newExt);
 }
 
 
            
 //------------------------------------------------------------
 // strcap()
-// Convert a given string to uppercase if the capFlag is 
-// set.
+// Convert a string pointed to by s to uppercase.
 //------------------------------------------------------------
 int strcap(char *d, char *s)
 {
