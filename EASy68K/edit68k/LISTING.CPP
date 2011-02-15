@@ -100,7 +100,7 @@ int initList(char *name)
         if (!listFile) {
             sprintf(buffer,"Unable to create listing file");
             // TODO: (GUI) Send error to GUI
-            //Application->MessageBox(buffer, "Error", MB_OK);
+            NSLog(@"%s",buffer);
             return MILD_ERROR;
         }
         
@@ -120,7 +120,6 @@ int initList(char *name)
     }
     catch( ... ) {
         sprintf(buffer, "ERROR: An exception occurred in routine 'initList'. \n");
-        // TODO: (GUI) Send error to GUI
         printError(NULL, EXCEPTION, 0);
         return MILD_ERROR;
     }
@@ -178,7 +177,7 @@ int listLine(char text[], char lineIdent[])   // ck 4-2006 lineIdent[]
         if (ferror(listFile)) {
             sprintf(buffer,"Error writing to listing file\n");
             // TODO: (GUI) Send error to document window
-            //Application->MessageBox(buffer, "Error", MB_OK);
+            NSLog(@"%s",buffer);
             return MILD_ERROR;
         }
         
@@ -229,7 +228,6 @@ int listCond(bool cond)
 // List error message
 // Errors are always written to file if possible
 // They are not turned off by NOLIST directive
-// TODO: (POSSIBLE BUG) lineNum parameter shares the name as a global variable...... could cause issues
 //------------------------------------------------------------
 int listError(char *lineNum, char *errMsg)
 {
@@ -268,7 +266,7 @@ int listObj(int data, int size)
             break;
         default: sprintf(buffer,"LISTOBJ: INVALID SIZE CODE!\n");
             // TODO: (GUI) Send error message to document window
-            //Application->MessageBox(buffer, "Error", MB_OK);
+            NSLog(@"%s",buffer);
             return MILD_ERROR;
     }
     

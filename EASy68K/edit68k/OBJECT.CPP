@@ -139,7 +139,7 @@ int initObj(char *name)
     if (!objFile) {
         sprintf(buffer,"Unable to create S-Record file");
         // TODO: (GUI) Send error to GUI
-        // Application->MessageBox(buffer, "Error", MB_OK);
+        NSLog(@"%s",buffer);
         return MILD_ERROR;
     }
     
@@ -226,7 +226,7 @@ int outputObj(int newAddr, int data, int size)
             default :
                 sprintf(buffer,"outputObj: INVALID SIZE CODE!\n");
                 // TODO: (GUI) Send error to GUI
-                // Application->MessageBox(buffer, "Error", MB_OK);
+                NSLog(@"%s",buffer);
                 return MILD_ERROR;
         }
         objPtr += size*2;
@@ -265,14 +265,6 @@ int writeObj()
             str[3] = *sRec++;
             char  *dummy;
             checksum+= (strtol(str, &dummy, 0));
-            
-            //checksum+= (atoi(str) & 0xFF);
-            
-            // TODO: (BUG CHECK) Ensure above solution works to replace the following
-            // str = "0x";
-            // str += *sRec++;
-            // str += *sRec++;
-            // checksum += (char) (StrToInt(str) & 0xFF);
         }
         
         sprintf(sRec, "%02X\n", (~checksum & 0xFF)); // put checksum in sRecord
@@ -282,7 +274,7 @@ int writeObj()
         if (ferror(objFile)) {
             sprintf(buffer,"%s",objErrorMsg);
             // TODO: (GUI) Send error to GUI
-            // Application->MessageBox(buffer, "Error", MB_OK);
+            NSLog(@"%s",buffer);
             return MILD_ERROR;
         }
     }
@@ -381,7 +373,7 @@ int finishObj()
         if (ferror(objFile)) {
             sprintf(buffer,"%s",objErrorMsg);
             // TODO: (GUI) Send error to GUI
-            // Application->MessageBox(buffer, "Error", MB_OK);
+            NSLog(@"%s",buffer);
             return MILD_ERROR;
         }
         fclose(objFile);

@@ -21,6 +21,8 @@
         [self initTextStorage];
         savedYet = NO;
     }
+    
+    
     return self;
 }
 
@@ -176,6 +178,9 @@
     MEXflag = false;
     SEXflag = false;
     WARflag = false;
+
+    
+    
 }
 
 //--------------------------------------------------------

@@ -141,14 +141,15 @@ int assembleFile(char fileName[], char tempName[], char workName[])
         if (!tmpFile) {
             sprintf(buffer,"Error creating temp file.");
             // TODO: (GUI) Send error to GUI
-            // Application->MessageBox(buffer, "Error", MB_OK);
+            NSLog(@"%s",buffer); // TEMPORARY
             return SEVERE;
         }
         
         inFile = fopen(fileName, "r");
         if (!inFile) {
+            sprintf(buffer,"Error reading source file.");
             // TODO: (GUI) Send error to GUI
-            // Application->MessageBox("Error reading source file.", "Error", MB_OK);
+            NSLog(@"%s",buffer); // TEMPORARY
             return SEVERE;
         }
         

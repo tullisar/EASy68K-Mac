@@ -1,3 +1,5 @@
+// NOTE: This file is not used by EASy68K it seems....
+
 /***********************************************************************
  *
  *		BINFILE.CPP
