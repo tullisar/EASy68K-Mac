@@ -26,7 +26,7 @@
 	<key>CFBundleExecutable</key>
 	<string>Edit68K</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.Edit68K</string>
+	<string>org.savetherobots.Edit68K</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

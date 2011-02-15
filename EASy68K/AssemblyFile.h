@@ -12,6 +12,12 @@
 
 extern bool listFlag;
 extern bool objFlag;
+extern bool CEXflag;
+extern bool BITflag;
+extern bool CREflag;
+extern bool MEXflag;
+extern bool SEXflag;
+extern bool WARflag;
 
 extern int assembleFile(char fileName[], char tempName[], char workName[]);
 

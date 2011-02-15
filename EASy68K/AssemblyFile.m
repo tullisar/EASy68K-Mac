@@ -15,17 +15,11 @@
 //--------------------------------------------------------
 // init()
 //--------------------------------------------------------
-- (id)init
-{
+- (id)init {
     self = [super init];
     if (self) {
-        
         [self initTextStorage];
-    
         savedYet = NO;
-        
-        listFlag = true;
-        objFlag = true;
     }
     return self;
 }
@@ -120,9 +114,7 @@
 // assemble() assemble's the current document
 //--------------------------------------------------------
 - (IBAction)assemble:(id)sender {
-
-// TODO: Test to see if file has been saved to disk yet. 
-    //At the moment, this REQUIRES that the file has been previously saved     
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     
     if (!savedYet) {
         NSString *description = NSLocalizedString(@"Please save the file before attempting to assemble it.", @"");
@@ -132,7 +124,6 @@
         [saveFileFirst setAlertStyle:NSWarningAlertStyle];
         [saveFileFirst runModal];
     } else {
-        
         char inputFile[256];
         char tempFile[256];
         
@@ -142,6 +133,15 @@
         sprintf(inputFile, "%s", cPath);
         strcpy(tempFile, "edit68k-XXXXXX");
         
+        listFlag = ([ud boolForKey:@"generateListFile"] ? true : false);
+        objFlag  = ([ud boolForKey:@"generateSRecord"] ? true : false);
+        CEXflag  = ([ud boolForKey:@"listFileConstantsEpanded"] ? true : false);
+        BITflag  = ([ud boolForKey:@"assembleBitFieldInstructions"] ? true : false);
+        CREflag  = ([ud boolForKey:@"listFileCrossReference"] ? true : false);
+        MEXflag  = ([ud boolForKey:@"listFileMacrosExpanded"] ? true : false);
+        SEXflag  = ([ud boolForKey:@"listFileStructuredExpanded"] ? true : false);
+        WARflag  = ([ud boolForKey:@"showWarnings"] ? true : false);
+        
         if (mktemp(tempFile) == NULL) {
             NSLog(@"%@",@"Error creating temporary file via mkstemp()");
         } else {
@@ -150,6 +150,33 @@
     }
 }
 
+//--------------------------------------------------------
+// initialize()
+// Initialize the default values for Shared User Defaults
+//--------------------------------------------------------
++ (void)initialize {
+    [[NSUserDefaults standardUserDefaults] registerDefaults:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [NSNumber numberWithBool:YES], @"generateListFile",
+      [NSNumber numberWithBool:YES], @"generateSRecord",
+      [NSNumber numberWithBool:NO], @"showWarnings",
+      [NSNumber numberWithBool:NO], @"autoSaveBeforeAssembling",
+      [NSNumber numberWithBool:NO], @"assembleBitFieldInstructions",
+      [NSNumber numberWithBool:NO], @"listFileCrossReference",
+      [NSNumber numberWithBool:NO], @"listFileStructuredExpanded",
+      [NSNumber numberWithBool:NO], @"listFileConstantsExpanded",
+      [NSNumber numberWithBool:NO], @"listFileMacrosExpanded",
+      nil]];
+    
+    listFlag = true;
+    objFlag = true;
+    CEXflag = false;
+    BITflag = false;
+    CREflag = false;
+    MEXflag = false;
+    SEXflag = false;
+    WARflag = false;
+}
 
 //--------------------------------------------------------
 // dealloc() 
