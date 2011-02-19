@@ -63,11 +63,11 @@ void BPointExpr::getInfixExpr(int * _infix_expr, int & _i_count) {
                 _infix_expr[i] = infix_expr[i];
 }
 
-AnsiString BPointExpr::getExprString() {
+char* BPointExpr::getExprString() {
         return expr;
 }
 
-void BPointExpr::setExprString(AnsiString _expr) {
+void BPointExpr::setExprString(char* _expr) {
         expr = _expr;
 }
 
@@ -149,7 +149,3 @@ bool BPointExpr::isBreak() {
         if(isBrk) bpCountCond[id] = 0;          // Reset counter for next iteration.
 	return isBrk;
 }
-
-
-
-

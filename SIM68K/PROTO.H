@@ -175,6 +175,3 @@ void DFcommand();        // shows register display
 void __fastcall initPrint();
 void haltSimulator();
 int memoryMapCheck(maptype mapt, int loc, int bytes);
-
-
-

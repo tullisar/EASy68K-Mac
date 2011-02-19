@@ -11,7 +11,7 @@ information entered manually by the user.
 
 ***************************************************************************/
 
-#include <vcl.h>
+// #include <vcl.h>
 #pragma hdrstop
 
 #ifndef BPOINT

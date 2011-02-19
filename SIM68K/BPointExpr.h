@@ -11,8 +11,8 @@ expression information entered manually by the user.
 
 ***************************************************************************/
 
-#include <vcl.h>
-#pragma hdrstop
+//#include <vcl.h>
+//#pragma hdrstop
 
 #include "BPoint.h"
 
@@ -30,8 +30,8 @@ class BPointExpr {
                         void getPostfixExpr(int *, int &);
                         void setInfixExpr(int *, int);
                         void getInfixExpr(int *, int &);
-                        AnsiString getExprString();
-                        void setExprString(AnsiString);
+                        char* getExprString();
+                        void setExprString(char *);
                         int getCount();
                         void setCount(int);
                         bool isBreak();
@@ -44,7 +44,7 @@ class BPointExpr {
                         int infix_expr[MAX_LB_NODES];
                         int p_count; // Number of valid postfix_expr elements
                         int i_count;
-                        AnsiString expr;    // Expression is stored linearly for display.
+                        char* expr;    // Expression is stored linearly for display.
                         int count;	    // Specifies a count for the number of times the other
                                             // expression conditions must be met before isBrk is true.
                         bool isBrk;	    // Flag whether or not the condition to break has been met.

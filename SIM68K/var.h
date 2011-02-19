@@ -55,7 +55,7 @@ int 	inst;
 
 
 
-unsigned __int64  cycles;
+unsigned long int cycles;
 int 	trace, sstep, old_trace, old_sstep, exceptions, bitfield;
 bool    halt;                   // true, halts running program
 bool    stopInstruction;        // true after running stop instruction

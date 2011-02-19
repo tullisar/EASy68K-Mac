@@ -244,4 +244,3 @@ const int SREC_MAX = 515;       // maximum buffer size for S-Record
 const int MAX_COMM = 16;        // maximum number of comm ports supported
 const int MAX_SERIAL_IN = 256;  // maximum size of serial input buffer
 #endif
-

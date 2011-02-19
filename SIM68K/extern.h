@@ -38,7 +38,7 @@ extern short    SR, OLD_SR;
 extern char*	memory;
 extern char	bpoints;
 extern char	lbuf[SREC_MAX], *wordptr[20];
-extern unsigned __int64	cycles;
+extern unsigned long int cycles;
 extern int	brkpt[100];
 extern int      stepToAddr;             // Step Over stopping address
 extern int      runToAddr;              // runToCursor stopping address
@@ -131,12 +131,13 @@ extern unsigned char FullScreenMonitor;
 extern char FullScreenDeviceName[32];
 
 // function pointers to APIs that don't always exist. (for compatibility with 95)
-typedef HRESULT (CALLBACK* CHANGEDISPLAYSETTINGSEXAPROC)(LPCTSTR,LPDEVMODEA,HWND,DWORD,LPVOID);
-extern CHANGEDISPLAYSETTINGSEXAPROC ChangeDisplaySettingsExAPtr;
-typedef HRESULT (CALLBACK* ENUMDISPLAYSETTINGSEXAPROC)(LPCTSTR,DWORD,LPDEVMODE,DWORD);
-extern ENUMDISPLAYSETTINGSEXAPROC EnumDisplaySettingsExAPtr;
-typedef HRESULT (CALLBACK* ENUMDISPLAYDEVICESAPROC)(LPCTSTR,DWORD,PDISPLAY_DEVICE,DWORD);
-extern ENUMDISPLAYDEVICESAPROC EnumDisplayDevicesAPtr;
+// TODO: Ensure that these aren't used except for Windows specific purposes
+//typedef HRESULT (CALLBACK* CHANGEDISPLAYSETTINGSEXAPROC)(LPCTSTR,LPDEVMODEA,HWND,DWORD,LPVOID);
+//extern CHANGEDISPLAYSETTINGSEXAPROC ChangeDisplaySettingsExAPtr;
+//typedef HRESULT (CALLBACK* ENUMDISPLAYSETTINGSEXAPROC)(LPCTSTR,DWORD,LPDEVMODE,DWORD);
+//extern ENUMDISPLAYSETTINGSEXAPROC EnumDisplaySettingsExAPtr;
+//typedef HRESULT (CALLBACK* ENUMDISPLAYDEVICESAPROC)(LPCTSTR,DWORD,PDISPLAY_DEVICE,DWORD);
+//extern ENUMDISPLAYDEVICESAPROC EnumDisplayDevicesAPtr;
 
 // true if directSound may be used
 extern bool dsoundExist;
@@ -157,4 +158,3 @@ extern byte mouseDownIRQ, mouseUpIRQ, mouseMoveIRQ;
 extern byte keyDownIRQ, keyUpIRQ;
 
 #endif
-

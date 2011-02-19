@@ -214,4 +214,3 @@ bool BPoint::isBreak() {
 //        size = bp.size;
 //        isEnab = bp.isEnab;
 //}
-
