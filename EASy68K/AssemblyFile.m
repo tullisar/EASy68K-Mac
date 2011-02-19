@@ -10,7 +10,7 @@
 
 @implementation AssemblyFile
 
-@synthesize textStorage;
+@synthesize textStorage, noErrors, errorDisplay;
 
 //--------------------------------------------------------
 // init()
@@ -20,6 +20,7 @@
     if (self) {
         [self initTextStorage];
         savedYet = NO;
+        noErrors = YES;
     }
     
     
@@ -145,9 +146,21 @@
         WARflag  = ([ud boolForKey:@"showWarnings"] ? true : false);
         
         if (mktemp(tempFile) == NULL) {
+            [self setNoErrors:NO];
+            [self setErrorDisplay:[NSString stringWithFormat:@"There was an error during the assembly process. See console output."]];
             NSLog(@"%@",@"Error creating temporary file via mkstemp()");
         } else {
-            assembleFile(inputFile, tempFile, inputFile);
+            if ( assembleFile(inputFile, tempFile, inputFile) != NORMAL) {
+                [self setNoErrors:NO];
+                [self setErrorDisplay:[NSString stringWithFormat:@"Errors: %d Warnings: %d",errorCount,warningCount]];
+            } else {
+                if (errorCount > 0 || warningCount > 0) {
+                    [self setErrorDisplay:[NSString stringWithFormat:@"Errors: %d Warnings: %d",errorCount,warningCount]];
+                    [self setNoErrors:NO];
+                } else {
+                    [self setNoErrors:YES];
+                }
+            }
         }
     }
 }
@@ -177,10 +190,7 @@
     CREflag = false;
     MEXflag = false;
     SEXflag = false;
-    WARflag = false;
-
-    
-    
+    WARflag = false;    
 }
 
 //--------------------------------------------------------

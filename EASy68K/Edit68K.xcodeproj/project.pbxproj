@@ -25,6 +25,7 @@
 		1442018012E7B64E00B0C666 /* list_num.png in Resources */ = {isa = PBXBuildFile; fileRef = 1442017F12E7B64E00B0C666 /* list_num.png */; };
 		1442018212E7B66300B0C666 /* list_num-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 1442018112E7B66300B0C666 /* list_num-small.png */; };
 		14534FF812EFDED10093FC9B /* assemble.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14085DA512DA76120084F11C /* assemble.cpp */; };
+		14BDECFF130FD0A300C24410 /* attention.png in Resources */ = {isa = PBXBuildFile; fileRef = 14BDECFE130FD0A300C24410 /* attention.png */; };
 		14DDCA5A12E7D55100DDD613 /* template.x68 in Resources */ = {isa = PBXBuildFile; fileRef = 14DDCA5912E7D55100DDD613 /* template.x68 */; };
 		14DDE81F12F4D956004765D0 /* codegen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14085DA812DA76120084F11C /* codegen.cpp */; };
 		14DDE82D12F4DA4A004765D0 /* object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14085DB212DA76120084F11C /* object.cpp */; };
@@ -76,6 +77,7 @@
 		1442017F12E7B64E00B0C666 /* list_num.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_num.png; sourceTree = "<group>"; };
 		1442018112E7B66300B0C666 /* list_num-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list_num-small.png"; sourceTree = "<group>"; };
 		14534FEF12EFDA650093FC9B /* proto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = proto.h; path = edit68k/proto.h; sourceTree = "<group>"; };
+		14BDECFE130FD0A300C24410 /* attention.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attention.png; sourceTree = "<group>"; };
 		14DDCA5912E7D55100DDD613 /* template.x68 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.x68; sourceTree = "<group>"; };
 		1DDD58290DA1D0D100B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/AssemblyFile.xib; sourceTree = "<group>"; };
 		1DDD582B0DA1D0D100B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				14BDECFE130FD0A300C24410 /* attention.png */,
 				14DDCA5912E7D55100DDD613 /* template.x68 */,
 				1442018112E7B66300B0C666 /* list_num-small.png */,
 				1442017F12E7B64E00B0C666 /* list_num.png */,
@@ -281,6 +284,7 @@
 				1442018012E7B64E00B0C666 /* list_num.png in Resources */,
 				1442018212E7B66300B0C666 /* list_num-small.png in Resources */,
 				14DDCA5A12E7D55100DDD613 /* template.x68 in Resources */,
+				14BDECFF130FD0A300C24410 /* attention.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
