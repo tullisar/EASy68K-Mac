@@ -154,7 +154,7 @@ extern bool keyShiftUp, keyAltUp, keyCtrlUp;
 extern int mouseXDown, mouseYDown;
 extern bool mouseLeftDown, mouseRightDown, mouseMiddleDown, mouseDoubleDown;
 extern bool keyShiftDown, keyAltDown, keyCtrlDown;
-extern byte mouseDownIRQ, mouseUpIRQ, mouseMoveIRQ;
-extern byte keyDownIRQ, keyUpIRQ;
+extern char mouseDownIRQ, mouseUpIRQ, mouseMoveIRQ;
+extern char keyDownIRQ, keyUpIRQ;
 
 #endif

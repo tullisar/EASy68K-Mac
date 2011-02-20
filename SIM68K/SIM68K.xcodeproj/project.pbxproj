@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1472F19513113A0500C03ECD /* BPointExpr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 147DBAF013107AB300C6E372 /* BPointExpr.cpp */; };
+		1472F1A013113A7100C03ECD /* CODE1.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 147DBAF613107AB300C6E372 /* CODE1.CPP */; };
+		1472F1A313113A9000C03ECD /* CODE2.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 147DBAF713107AB300C6E372 /* CODE2.CPP */; };
+		1472F1A813113A9F00C03ECD /* CODE3.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 147DBAF813107AB300C6E372 /* CODE3.CPP */; };
+		1472F1AB13113ABC00C03ECD /* CODE4.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 147DBAF913107AB300C6E372 /* CODE4.CPP */; };
+		1472F1B213113B0000C03ECD /* CODE5.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 147DBAFA13107AB300C6E372 /* CODE5.CPP */; };
+		1472F1B513113B1100C03ECD /* CODE6.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 147DBAFB13107AB300C6E372 /* CODE6.CPP */; };
+		1472F1B813113B1A00C03ECD /* CODE7.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 147DBAFC13107AB300C6E372 /* CODE7.CPP */; };
+		1472F1EC1311CBBB00C03ECD /* RUN.CPP in Sources */ = {isa = PBXBuildFile; fileRef = 147DBB2913107AB300C6E372 /* RUN.CPP */; };
 		147DBB6813107B1200C6E372 /* BPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 147DBAEE13107AB300C6E372 /* BPoint.cpp */; };
 		8DD76F6A0486A84900D96B5E /* SIM68K.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* SIM68K.1 */; };
 /* End PBXBuildFile section */
@@ -299,6 +308,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				147DBB6813107B1200C6E372 /* BPoint.cpp in Sources */,
+				1472F19513113A0500C03ECD /* BPointExpr.cpp in Sources */,
+				1472F1A013113A7100C03ECD /* CODE1.CPP in Sources */,
+				1472F1A313113A9000C03ECD /* CODE2.CPP in Sources */,
+				1472F1A813113A9F00C03ECD /* CODE3.CPP in Sources */,
+				1472F1AB13113ABC00C03ECD /* CODE4.CPP in Sources */,
+				1472F1B213113B0000C03ECD /* CODE5.CPP in Sources */,
+				1472F1B513113B1100C03ECD /* CODE6.CPP in Sources */,
+				1472F1B813113B1A00C03ECD /* CODE7.CPP in Sources */,
+				1472F1EC1311CBBB00C03ECD /* RUN.CPP in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

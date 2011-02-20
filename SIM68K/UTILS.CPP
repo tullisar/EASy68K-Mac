@@ -14,8 +14,6 @@ The routines are :
 
 ***************************************************************************/
 
-
-
 #include <stdio.h>
 #include "extern.h"         /* contains global declarations */
 #include "SIM68Ku.h"

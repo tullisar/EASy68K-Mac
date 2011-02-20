@@ -9,8 +9,6 @@ This file contains opcode values to decode 68000 instructions.  It is
 
 ***************************************************************************/
 
-
-
 extern int	ORI(), ORI_TO_CCR(), ORI_TO_SR(), BIT_OP(), MOVEP(), 
 		ANDI(), ANDI_TO_CCR(), ANDI_TO_SR(), SUBI(), ADDI(),
 		EORI(), EORI_TO_CCR(), EORI_TO_SR(), CMPI(), MOVEA(),

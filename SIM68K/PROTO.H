@@ -9,7 +9,7 @@ This file contains function prototype definitions for all functions
 
 ***************************************************************************/
 
-
+// MARK: NOTE: Removed __fastcall specifier for initPrint()
 
 int MOVE(void );
 int MOVEP(void );
@@ -172,6 +172,7 @@ void finishSim();
 void errmess();		/* error message for invalid input */
 void startSim();
 void DFcommand();        // shows register display
-void __fastcall initPrint();
+// MARK: NOTE: Removed __fastcall for initPrint()
+void initPrint();
 void haltSimulator();
 int memoryMapCheck(maptype mapt, int loc, int bytes);

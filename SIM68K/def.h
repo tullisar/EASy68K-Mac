@@ -2,12 +2,11 @@
 #define defH
 
 #include <stdio.h>
-#pragma hdrstop
 
 /***************************** 68000 SIMULATOR ****************************
-File Name: DEF.H
-This file contains definitions used in the simulator source files.
-***************************************************************************/
+ File Name: DEF.H
+ This file contains definitions used in the simulator source files.
+ ***************************************************************************/
 #define uint unsigned int
 #define ushort unsigned short
 #define uchar unsigned char
@@ -24,7 +23,7 @@ enum maptype {Invalid=0x01, Protected=0x02, Read=0x04, Rom=0x10};
 
 // status register bitmasks
 
-const int bit_1	        = 0x0001;
+const int bit_1	    = 0x0001;
 const int bit_2		= 0x0002;
 const int bit_3		= 0x0004;
 const int bit_4		= 0x0008;
@@ -154,8 +153,8 @@ const short F_READONLY = 3;
 const int MAXFILES = 8;         // maximun files that may be open at one time
 
 struct FileStruct {
-  FILE *fp;                     // file pointer
-  char name[256];               // file name
+    FILE *fp;                     // file pointer
+    char name[256];               // file name
 };
 
 // simulator log types

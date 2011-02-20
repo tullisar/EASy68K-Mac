@@ -173,8 +173,3 @@ void scrshow() 	        // update register display
 //  old_trace = ~trace;
 //  OLD_SR = ~SR;
 }
-
-
-
-
-
