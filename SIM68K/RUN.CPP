@@ -701,26 +701,29 @@ int runprog()
     
     if (trace || halt) {
         runMode = false;                                    // stop running if enabled
-//        if (!stopInstruction)
-//            Hardware->autoIRQoff();                         // turn off auto interrupt timers unless STOP instruction ck 1-11-2008
-//        if (simIO->fullScreen && Form1->Monitor->MonitorNum == FullScreenMonitor) {
-//            simIO->fullScreen = false;
-//            simIO->setupWindow();
-//        }
+        // MARK: HARDWARE: Turn off Auto IRQ
+        // if (!stopInstruction)
+        //     Hardware->autoIRQoff();                         // turn off auto interrupt timers unless STOP instruction ck 1-11-2008
+        
+        // MARK: I/O: Disable full-screen and set up window
+        // if (simIO->fullScreen && Form1->Monitor->MonitorNum == FullScreenMonitor) {
+        //     simIO->fullScreen = false;
+        //     simIO->setupWindow();
+        // }
         
         scrshow();                                          // if trace is on then update the screen
         
-        if (halt)
-            Form1->setMenuTrace();    // set menu and toolbar to disable debug commands
-        else {
-            Form1->setMenuActive();   // enable debug commands
-            //Hardware->enable();
-        }
+        // if (halt)
+        //     Form1->setMenuTrace();    // set menu and toolbar to disable debug commands
+        // else {
+        //     Form1->setMenuActive();   // enable debug commands
+        //     Hardware->enable();
+        // }
         
-        if (trace) {
-            if (!inputMode)           // if not doing user input
-                Form1->SetFocus();      //   bring Form1 to top
-        }
+        // if (trace) {
+        //     if (!inputMode)           // if not doing user input
+        //         Form1->SetFocus();      //   bring Form1 to top
+        // }
     }
     
     return 0;
@@ -744,7 +747,6 @@ int runprog()
  
  
  ****************************************************************************/
-
 
 int exec_inst()
 {
@@ -771,8 +773,9 @@ int exec_inst()
                 if ( (inst & ~inst_arr[i].mask) == inst_arr[i].val)
                 {
                     if (trace) {
-                        sprintf(buffer,"PC=%08X  Code=%04X  %s", PC-2, inst, inst_arr[i].name);
-                        Form1->Message->Lines->Add(buffer);
+                        sprintf(buffer,"PC=%08X  Code=%04X  %s", (unsigned int)(PC-2), inst, inst_arr[i].name);
+                        // MARK: GUI: Put opcode in GUI somewhere?
+                        // Form1->Message->Lines->Add(buffer);
                         
                         if (logging)
                         {
@@ -801,6 +804,7 @@ int exec_inst()
                                             fprintf(ElogFile,"-");          // is this necessary?
                                         else {
                                             if (memory[(addr+i) & ADDRMASK] >= ' ')    // if displayable char
+                                                // ???: What does this even mean? Need to study formatted strings even more.
                                                 fprintf(ElogFile,"%hc",memory[(addr+i) & ADDRMASK]);
                                             else
                                                 fprintf(ElogFile,"-");
@@ -833,10 +837,11 @@ int exec_inst()
                             
                             // ----- if logging instruction -----
                             if (ElogFlag) {
-                                if(Form1->lineToLog() == false) {  // output instruction to log file
-                                    fprintf(ElogFile, buffer); // if source not present output limited info
-                                    fprintf(ElogFile, "\n");
-                                }
+                                // MARK: GUI: Do I need to do anything here?
+                                // if(Form1->lineToLog() == false) {  // output instruction to log file
+                                //     fprintf(ElogFile, buffer); // if source not present output limited info
+                                //     fprintf(ElogFile, "\n");
+                                // }
                                 fflush(ElogFile);                  // write all bufferred data to file
                             }
                         } // end if logging
@@ -887,12 +892,13 @@ int exec_inst()
                             case SUCCESS  : break;
                             case STOP_TRAP :             // STOP instruction
                                 //trace = true;
-                                Form1->AutoTraceTimer->Enabled = false;
+                                // Form1->AutoTraceTimer->Enabled = false;
                                 halt = true;
                                 if (stopInstruction == false) {
                                     stopInstruction = true;
-                                    Form1->Message->Lines->Add("STOP instruction. Execution halted");
-                                    Form1->SetFocus();    // bring Form1 to top
+                                    // MARK: GUI: Notify of STOP instruction to GUI
+                                    // Form1->Message->Lines->Add("STOP instruction. Execution halted");
+                                    // Form1->SetFocus();    // bring Form1 to top
                                     scrshow();            // update the screen
                                 }  
                                 break;
@@ -932,66 +938,80 @@ int exec_inst()
                         {
                             case SUCCESS  : break;
                             case BAD_INST : halt = true;    // halt the program
-                                Form1->Message->Lines->Add(str.sprintf
-                                                           ("Illegal instruction found at location %4x. Execution halted", OLD_PC));
+                                // MARK: GUI: Notify GUI of illegal instruction
+                                // Form1->Message->Lines->Add(str.sprintf
+                                //                            ("Illegal instruction found at location %4x. Execution halted", OLD_PC));
                                 break;
                             case NO_PRIVILEGE : halt = true;
-                                Form1->Message->Lines->Add(str.sprintf
-                                                           ("supervisor privilege violation at location %4x. Execution halted", OLD_PC));
+                                // MARK: GUI: Notify GUI of supervisor privelage instruction
+                                // Form1->Message->Lines->Add(str.sprintf
+                                //                            ("supervisor privilege violation at location %4x. Execution halted", OLD_PC));
                                 break;
                             case CHK_EXCEPTION : halt = true;
-                                Form1->Message->Lines->Add(str.sprintf
-                                                           ("CHK exception occurred at location %4x. Execution halted", OLD_PC));
+                                // MARK: GUI: Notify GUI of CHK exception
+                                // Form1->Message->Lines->Add(str.sprintf
+                                //                            ("CHK exception occurred at location %4x. Execution halted", OLD_PC));
                                 break;
                             case STOP_TRAP : halt = true;
-                                Form1->AutoTraceTimer->Enabled = false;
-                                Form1->Message->Lines->Add(str.sprintf
-                                                           ("STOP instruction executed at location %4x. Execution halted", OLD_PC));
-                                Log->stopLogWithAnnounce();
-                                Form1->SetFocus();    // bring Form1 to top
+                                // MARK: GUI: Notify GUI of STOP instruction
+                                // Form1->AutoTraceTimer->Enabled = false;
+                                // Form1->Message->Lines->Add(str.sprintf
+                                //                            ("STOP instruction executed at location %4x. Execution halted", OLD_PC));
+                                // Log->stopLogWithAnnounce();
+                                // Form1->SetFocus();    // bring Form1 to top
                                 scrshow();            // update the screen
-                                Hardware->disable();
+                                // Hardware->disable();
                                 break;
                             case TRAP_TRAP : halt = true;
-                                Form1->Message->Lines->Add(str.sprintf
-                                                           ("TRAP exception occurred at location %4x. Execution halted", OLD_PC));
+                                // MARK: GUI: Notify GUI of TRAP instruction
+                                // Form1->Message->Lines->Add(str.sprintf
+                                //                            ("TRAP exception occurred at location %4x. Execution halted", OLD_PC));
                                 break;
                             case TRAPV_TRAP : halt = true;
-                                Form1->Message->Lines->Add(str.sprintf
-                                                           ("TRAPV exception occurred at location %4x. Execution halted", OLD_PC));
+                                // MARK: GUI: Notify GUI of TRAPV instruction
+                                // Form1->Message->Lines->Add(str.sprintf
+                                //                           ("TRAPV exception occurred at location %4x. Execution halted", OLD_PC));
                                 break;
                             case DIV_BY_ZERO : halt = true;
-                                Form1->Message->Lines->Add(str.sprintf
-                                                           ("Divide by zero occurred at location %4x. Execution halted", OLD_PC));
+                                // MARK: GUI: Notify GUI of Divide by Zero error
+                                // Form1->Message->Lines->Add(str.sprintf
+                                //                           ("Divide by zero occurred at location %4x. Execution halted", OLD_PC));
                                 break;
                             case ADDR_ERROR : halt = true;
-                                Form1->Message->Lines->Add("Execution halted");
+                                // MARK: GUI: Notify GUI of address error
+                                // Form1->Message->Lines->Add("Execution halted");
                                 break;
                             case BUS_ERROR : halt = true;
-                                Form1->Message->Lines->Add("Execution halted");
+                                // MARK: GUI: Notify GUI of bus error
+                                // Form1->Message->Lines->Add("Execution halted");
                                 break;
                             case TRACE_EXCEPTION : halt = true;
-                                Form1->Message->Lines->Add(str.sprintf
-                                                           ("Trace exception occurred at location %4x. Execution halted", OLD_PC));
+                                // MARK: GUI: Notify GUI of trace exception
+                                // Form1->Message->Lines->Add(str.sprintf
+                                //                            ("Trace exception occurred at location %4x. Execution halted", OLD_PC));
                                 break;
                             case LINE_1010 : halt = true;
-                                Form1->Message->Lines->Add(str.sprintf
-                                                           ("Line 1010 Emulator exception occurred at location %4x. Execution halted", OLD_PC));
+                                // MARK: GUI: Notify GUI of Line 1010 Emulator exception
+                                // Form1->Message->Lines->Add(str.sprintf
+                                //                            ("Line 1010 Emulator exception occurred at location %4x. Execution halted", OLD_PC));
                                 break;
                             case LINE_1111 : halt = true;
-                                Form1->Message->Lines->Add(str.sprintf
-                                                           ("Line 1111 Emulator exception occurred at location %4x. Execution halted", OLD_PC));
+                                // MARK: GUI: Notify GUI of Line 1111 Emulator exception
+                                // Form1->Message->Lines->Add(str.sprintf
+                                //                            ("Line 1111 Emulator exception occurred at location %4x. Execution halted", OLD_PC));
                                 break;
                             default: halt = true;
-                                Form1->Message->Lines->Add(str.sprintf
-                                                           ("Unknown execution error %4x occurred at location %4x. Execution halted", exec_result, OLD_PC));
+                                // MARK: GUI: Notify GUI of Unkown excecution error
+                                // Form1->Message->Lines->Add(str.sprintf
+                                //                            ("Unknown execution error %4x occurred at location %4x. Execution halted", exec_result, OLD_PC));
                         }
                         
                         if (SR & tbit)
                         {
                             halt = true;
-                            Form1->Message->Lines->Add(str.sprintf
-                                                       ("TRACE exception occurred at location %4x. Execution halted", OLD_PC));
+                            // MARK: GUI: Notify GUI of TRACE exception
+                            // Form1->Message->Lines->Add(str.sprintf
+                            //                            ("TRACE exception occurred at location %4x. Execution halted", OLD_PC));
                         }
                     }
                     break;        // break out of for loop
@@ -999,19 +1019,16 @@ int exec_inst()
             } // end for
         } // end if
     } catch( ... ) {
-        Form1->AutoTraceTimer->Enabled = false;
-        sprintf(buffer, "ERROR: An exception occurred in routine 'exec_inst'.\nPC=%08X  Code=%04X", PC-2, inst);
-        Application->MessageBox(buffer, "Error", MB_OK);
+        // MARK: GUI: Notify GUI of unhandled exception in program
+        // Form1->AutoTraceTimer->Enabled = false;
+        // sprintf(buffer, "ERROR: An exception occurred in routine 'exec_inst'.\nPC=%08X  Code=%04X", PC-2, inst);
+        // Application->MessageBox(buffer, "Error", MB_OK);
         trace = true;       // stop running programs
         sstep = false;
     }
     
     return 0;
 }
-
-
-
-
 
 /**************************** int exceptionHandler () *****************************
  
@@ -1030,15 +1047,16 @@ int exec_inst()
 
 void exceptionHandler(int clas, long loc, int r_w)
 {
-    int    infoWord;
-    AnsiString str;
+    int  infoWord;
+    char *str;
     
     // if SSP on odd address OR outside memory range
     if ( (A[8] % 2) || (A[8] < 0) || ((unsigned int)A[8] > MEMSIZE) ){
-        Form1->AutoTraceTimer->Enabled = false;
-        Form1->Message->Lines->Add(str.sprintf
-                                   ("Error during Exception Handler: SSP odd or outside memory space "));
-        Form1->Message->Lines->Add(str.sprintf ("at location %4x", A[8]));
+        // MARK: GUI: Notify GUI of error
+        // Form1->AutoTraceTimer->Enabled = false;
+        // Form1->Message->Lines->Add(str.sprintf
+        //                             ("Error during Exception Handler: SSP odd or outside memory space "));
+        // Form1->Message->Lines->Add(str.sprintf ("at location %4x", A[8]));
         trace = true;       // stop running programs
         sstep = false;
         return;
@@ -1113,9 +1131,10 @@ void irqHandler()
 // Halt Simulator
 void haltSimulator()
 {
-    Form1->AutoTraceTimer->Enabled = false;
+    // MARK: GUI: Disable trace timer
+    // Form1->AutoTraceTimer->Enabled = false;
     trace = false;
     halt = true;
-    Hardware->disable();
-    Log->stopLogWithAnnounce();
+    // Hardware->disable();
+    // Log->stopLogWithAnnounce();
 }

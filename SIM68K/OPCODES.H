@@ -156,5 +156,3 @@ int	(*(names[]))() =
                 CMP, EOR, EXG, EXG, EXG, ABCD, MULS, MULU, AND, ADDA, ADDX,
                 ADD, BIT_FIELD, SHIFT_ROT, SHIFT_ROT, LINE1111
 		};
-
-
