@@ -240,7 +240,7 @@ int loadSrec(char *name)        // load memory with contents of s_record file
             switch (s_type) {                                               // What type of S record ?
                 case '0' :                                                  // S0  Description of S-Record
                     skipRecord = true;                                      // don't load S0 data
-                    for (bufend = bufptr; bufend[0] != '\0'; bufend++);     // put bufend at end of line
+                    for (bufend = bufptr; *bufend != '\0'; bufend++);       // put bufend at end of line
                     if (sscanf(bufptr,"%04x", &loc) != 1)                   // 2 byte address
                         sRecError = true;
                     else
