@@ -32,7 +32,7 @@ char *getText(int WORD_MASK, char *prompt)     /* returns pointer to scanned WOR
 		{
 		printf("%s",prompt);
                 cin.getline(lbuf,20);
-		if (*lbuf==NULL) exit(0);
+		if (!*lbuf != NULL) exit(0);
 		scrollWindow();
 		if ((p = scan(lbuf,wordptr,5)) < 1) 
 			errflg = true;
@@ -233,6 +233,3 @@ int pchange(char oldval)
 	return nval;
 
 }
-
-
-

@@ -66,11 +66,11 @@ const int A_REGS	= 9;            // number of A registers
 // modes are permitted.
 // Imm d[PC,Xi] d[PC] Abs.L Abs.W d[An,Xi] d[An] -[An] [An]+ [An] An Dn
 //  0      1      1     1     1      1       1     0     0     1   0  0
-const int DATA_ADDR             = 0x0ffd;
+const int DATA_ADDR         = 0x0ffd;
 const int MEMORY_ADDR		= 0x0ffc;
 const int CONTROL_ADDR		= 0x07e4;
 const int ALTERABLE_ADDR	= 0x01ff;
-const int ALL_ADDR		= 0x0fff;
+const int ALL_ADDR          = 0x0fff;
 const int DATA_ALT_ADDR		= (DATA_ADDR & ALTERABLE_ADDR);
 const int MEM_ALT_ADDR		= (MEMORY_ADDR & ALTERABLE_ADDR);
 const int CONT_ALT_ADDR		= (CONTROL_ADDR & ALTERABLE_ADDR);

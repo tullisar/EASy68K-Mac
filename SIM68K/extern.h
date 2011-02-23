@@ -24,8 +24,6 @@ using namespace std;
 #include "proto.h"     	/* function prototypes */
 #include "BPoint.h"
 #include "BPointExpr.h"
-#pragma hdrstop
-
 
 extern char buffer[256];       // used to form messages for display in windows
 extern char numBuf[20];        // "

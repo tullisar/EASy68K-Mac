@@ -205,18 +205,21 @@ int loadSrec(char *name)        // load memory with contents of s_record file
     FILE *fp;
     int bytecount, line, loc, end__of__file;
     char s_byte[4], s_type, nambuf[40];
-    char *bufptr, *bufend;
+    char *bufptr = new char[SREC_MAX];
+    char *bufend = bufptr;
+    char *bufstart = bufptr;
     uchar checksum;
-    char str[256];
-    char str2[256];
+    char str[SREC_MAX];
+    char strbuf[SREC_MAX];
+    char str2[SREC_MAX];
     const char* EASy68K_HEADER = "S0 = 68KPROG   20CREATED BY EASY68K";
     bool EASy68Kv2_0_SRecord = false;
     bool sRecError = false;
-    bool skipRecord;              // used to skip loading record data
+    bool skipRecord;                                                        // used to skip loading record data
     
     try {
         fp = fopen(name, "rt");
-        if (fp == NULL) {             // if file cannot be opened, print message
+        if (fp == NULL) {                                                   // if file cannot be opened, print message
             // MARK: GUI: Notify GUI of file read error
             // Form1->Message->Lines->Add(str.sprintf("error: cannot open file %s", name));
             return FAILURE;
@@ -226,63 +229,75 @@ int loadSrec(char *name)        // load memory with contents of s_record file
         end__of__file = false;
         s_type = 0;
         
-        while (fgets(lbuf, SREC_MAX, fp) != NULL) { // read file until end
-            bufptr = lbuf;
+        while (fgets(lbuf, SREC_MAX, fp) != NULL) {                         // read file until end
+            sprintf(bufptr, "%s", lbuf);
             checksum = 0;
             skipRecord = false;
             line++;
             sscanf (lbuf, "S%c%2x", &s_type, &bytecount);
             bufptr += 4;
             checksum += bytecount;
-            switch (s_type) {                                           // what type of S record ?
-                case '0' :                                              // S0  Description of S-Record
-                    skipRecord = true;                                  // don't load S0 data
-                    for (bufend = bufptr; *bufend != '\0'; bufend++);   // put bufend at end of line
-                    if (sscanf(bufptr,"%04x", &loc) != 1)               // 2 byte address
+            switch (s_type) {                                               // What type of S record ?
+                case '0' :                                                  // S0  Description of S-Record
+                    skipRecord = true;                                      // don't load S0 data
+                    for (bufend = bufptr; bufend[0] != '\0'; bufend++);     // put bufend at end of line
+                    if (sscanf(bufptr,"%04x", &loc) != 1)                   // 2 byte address
                         sRecError = true;
                     else
                         bufptr += 4;
                     
-                    // str = "S0 = ";
                     sprintf(str, "%s", "S0 = ");
-                    while (sscanf(bufptr,"%2x",&s_byte)) {
-                        int i = 0;
+                    while (sscanf(bufptr,"%2x",&s_byte)) {                  // ???: This looks okay, but make sure nothing wierd is happening
                         bufptr += 2;
                         checksum += s_byte[0];
-                        if ((bufptr + 2) >= bufend) break;              // if checksum byte
-                        if (s_byte[0] >= ' ' && s_byte[0] <= '~')       // if displayable
-                            str = str + s_byte[0];                      // add character to str
-                        else
-                            str = str + '.';                            // use '.' for non displayable
+                        if ((bufptr + 2) >= bufend) break;                  // if checksum byte
+                        if (s_byte[0] >= ' ' && s_byte[0] <= '~') {         // if displayable
+                            sprintf(strbuf, "%c", s_byte[0]);
+                            strcat(str, strbuf);                            // add character to str
+                        } else {
+                            sprintf(strbuf, "%c", '.');
+                            strcat(str, strbuf);                            // use '.' for non displayable
+                        }
                     }
                     checksum = ~checksum &0xFF;
-                    if(checksum)                          // if checksum not 0
-                        Form1->Message->Lines->Add(str2.sprintf("Checksum error on line %d...",line));
-                    Form1->Message->Lines->Add(str);
-                    if(EASy68Kv2_0_SRecord)       // if this is an EASy68K 2.0 SRecord file
-                    {
+                    if(checksum) {                                          // if checksum not 0
+                        // MARK: GUI: Notify GUI of checksum error on line...
+                        // Form1->Message->Lines->Add(str2.sprintf("Checksum error on line %d...",line));
+                    }   
+                       
+                    // MARK: GUI: Add line to GUI... not sure where it shows up yet
+                    // Form1->Message->Lines->Add(str);
+                    if(EASy68Kv2_0_SRecord) {                               // if this is an EASy68K 2.0 SRecord file
                         // Set Memory Map in Hardware form
                         // Does not erase existing map if no map specified
-                        if(str.SubString(6,9) == "      ROM") {        // if ROM range included
+                        if(strstr(str, "ROM")) {                            // if ROM range included
+                            // MARK: HARDWARE: Set ROM start/end in Hardware
                             // Hardware->ROMChk->Checked = true;
                             // Hardware->ROMStartEdit->EditText = str.SubString(16,6);
                             // Hardware->ROMEndEdit->EditText = str.SubString(23,6);
-                        } else if(str.SubString(6,9) == "     READ") { // if Read/Only range included
+                            
+                        } else if(strstr(str, "READ")) {                    // if Read/Only range included
+                            // MARK: HARDWARE: Set Read/Only range in Hardware
                             // Hardware->ReadChk->Checked = true;
                             // Hardware->ReadStartEdit->EditText = str.SubString(16,6);
                             // Hardware->ReadEndEdit->EditText = str.SubString(23,6);
-                        } else if(str.SubString(6,9) == "PROTECTED") { // if Protected range included
+                            
+                        } else if(strstr(str, "PROTECTED")) {               // if Protected range included
+                            // MARK: HARDWARE: Set Protected range in Hardware
                             // Hardware->ProtectedChk->Checked = true;
                             // Hardware->ProtectedStartEdit->EditText = str.SubString(16,6);
                             // Hardware->ProtectedEndEdit->EditText = str.SubString(23,6);
-                        } else if(str.SubString(6,9) == "  INVALID") { // if Invalid range included
+                            
+                        } else if(strstr(str, "INVALID")) { // if Invalid range included
+                            // MARK: HARDWARE: Set Invalid range in hardware
                             // Hardware->InvalidChk->Checked = true;
                             // Hardware->InvalidStartEdit->EditText = str.SubString(16,6);
                             // Hardware->InvalidEndEdit->EditText = str.SubString(23,6);
                         }
-                    }else if(str == EASy68K_HEADER)
+                    } else if(strcmp(str, EASy68K_HEADER) == 0)
                         EASy68Kv2_0_SRecord = true;
-                    str = "";
+                    
+                    sprintf(str, "%s", "");
                     break;
                     // S1 2-byte address
                 case '1' :
@@ -352,7 +367,8 @@ int loadSrec(char *name)        // load memory with contents of s_record file
                     checksum += s_byte[0];
                     if ((bufptr + 2) >= bufend) break;    // if checksum byte
                     if ((loc < 0) || (loc > (MEMSIZE - 1))) {
-                        Form1->Message->Lines->Add(str.sprintf("Invalid Address on line %d...",line));
+                        // MARK: GUI: Notify GUI of invalid address error in S-record
+                        // Form1->Message->Lines->Add(str.sprintf("Invalid Address on line %d...",line));
                         sRecError = true;
                         break;
                     }
@@ -361,26 +377,31 @@ int loadSrec(char *name)        // load memory with contents of s_record file
                 }
                 checksum = ~checksum &0xFF;
                 if(checksum)                    // if checksum not 0
-                    Form1->Message->Lines->Add(str.sprintf("Checksum error on line %d...",line));
+                    // MARK: GUI: Notify GUI of checksum error in S-record
+                    // Form1->Message->Lines->Add(str.sprintf("Checksum error on line %d...",line));
                 if (sRecError) break;
             }
         } // endw read until end of file
-        if (sRecError)                     // if error reading file, print message
-        {
-            Form1->Message->Lines->Add(str.sprintf("Invalid data on line %d of .S68 file...",line));
-            Form1->Message->Lines->Add(str.sprintf ("%d: %s", line, lbuf));    // *ck 12-3-2005
-            Form1->Message->Lines->Add(str.sprintf("Remainder of load stopped..."));
+        
+        if (sRecError) {                                                // if error reading file, print messag{
+            // Form1->Message->Lines->Add(str.sprintf("Invalid data on line %d of .S68 file...",line));
+            // Form1->Message->Lines->Add(str.sprintf ("%d: %s", line, lbuf));    // *ck 12-3-2005
+            // Form1->Message->Lines->Add(str.sprintf("Remainder of load stopped..."));
         }else{
-            Form1->Message->Lines->Add(str.sprintf(".S68 file read successful"));
+            // Form1->Message->Lines->Add(str.sprintf(".S68 file read successful"));
         }
         fclose(fp);			// close file specified
+        
+        delete [] bufstart;
+        
         return SUCCESS;
     }
     catch( ... ) {
-        Form1->Message->Lines->Add(str.sprintf("Unexpected Error reading .S68 file"));
+        // MARK: GUI: Report unexpected error while reading .S68 file to GUI
+        // Form1->Message->Lines->Add(str.sprintf("Unexpected Error reading .S68 file"));
+        delete [] bufstart;      
         return FAILURE;
     }
+    
+    
 }
-
-
-

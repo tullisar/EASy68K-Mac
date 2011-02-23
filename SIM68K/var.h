@@ -23,8 +23,6 @@ using namespace std;
 
 #include "BPoint.h"
 #include "BPointExpr.h"
-#pragma hdrstop
-
 
 // General
 char	*memory = NULL;        // pointer for main 68000 memory
@@ -32,8 +30,6 @@ char	*memory = NULL;        // pointer for main 68000 memory
 char buffer[256];       // used to form messages for display in windows
 char numBuf[20];        // "
 AnsiString errstr, str;
-
-
 
 // _____________________________________________________________________
 // The following variables must remain together. put() and value_of()
@@ -51,9 +47,6 @@ long	EV1, EV2;
 long	source, dest, result;
 int 	inst;
 // _____________________________________________________________________
-
-
-
 
 unsigned long int cycles;
 int 	trace, sstep, old_trace, old_sstep, exceptions, bitfield;

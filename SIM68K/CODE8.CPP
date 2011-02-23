@@ -162,7 +162,7 @@ int	JMP()
         return error;         // return error code
     
     /* perform the JMP operation */
-    PC = (int) ((int)EA1 - (int)&memory[0]);
+    PC = (EA1 - (long *)&memory[0]);
     
     switch (eff_addr_code (inst, 0)) {
         case 0x02 : inc_cyc (8);
@@ -202,7 +202,7 @@ int	JSR()
         stepToAddr = PC;
     }
     
-    PC = (int) ((int)EA1 - (int)&memory[0]);
+    PC = (EA1 - (long *)&memory[0]);
     
     switch (eff_addr_code (inst, 0)) {
         case 0x02 : inc_cyc (16);
