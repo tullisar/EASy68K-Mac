@@ -66,9 +66,6 @@ int	to_2s_comp (long number, long size, long *result)
     
 }
 
-
-
-
 /**************************** int from_2s_comp () **************************
  
  name       : int from_2s_comp (number, size, result)
@@ -587,13 +584,14 @@ void put (long *dest, long source, long size)
     //    mem_put (source, (int) ((int)dest - (int)&memory[0]), size);
     //  else          // else dest is register
     //    *dest = (source & size) | (*dest & ~size);
-    
-    // FIXME: Make sure I did the casts correct, not sure why they were the way they were.
-    
+        
     if ( ( dest >= &D[0] ) && (dest < (long*)&inst ) )
         *dest = (source & size) | (*dest & ~size);
     else          // else dest is memory
-        mem_put (source, (int) (dest - (long *)&memory[0]), size);
+        // mem_put (source, (int) (dest - (long *)&memory[0]), size);
+        // NOTE: mem_put expects the difference between dest & memory to be in bytes, I have accounted for this.
+        mem_put (source, (int) (dest - (long *)&memory[0])*sizeof(long), size);
+
 }
 
 /**************************** int value_of() *******************************
@@ -624,7 +622,10 @@ void value_of (long *EA, long *EV, long size)
     if ( ( EA >= (long *)&D[0] ) && ( EA < (long *)&inst ) )
         *EV = *EA & size;
     else          // else EA is memory
-        mem_req ( (int) (EA - (long *)&memory[0]), size, EV);
+        // NOTE: mem_req expects the difference between dest & memory to be in bytes, I have accounted for this.
+        // mem_req ( (int) (EA - (long *)&memory[0]), size, EV);
+        mem_req ( (int) (EA - (long *)&memory[0])*sizeof(long), size, EV);
+
 }
 
 
@@ -859,6 +860,7 @@ int check_condition (int condition)
  return flip(&n);
  }
  */
+
 // FIXME: Make sure it's okay to use char*
 ushort flip(ushort *n) {
     const char *b = (char *) n;

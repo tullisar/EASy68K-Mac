@@ -220,6 +220,7 @@ int loadSrec(char *name)        // load memory with contents of s_record file
     try {
         fp = fopen(name, "rt");
         if (fp == NULL) {                                                   // if file cannot be opened, print message
+
             // MARK: GUI: Notify GUI of file read error
             // Form1->Message->Lines->Add(str.sprintf("error: cannot open file %s", name));
             return FAILURE;
@@ -247,7 +248,7 @@ int loadSrec(char *name)        // load memory with contents of s_record file
                         bufptr += 4;
                     
                     sprintf(str, "%s", "S0 = ");
-                    while (sscanf(bufptr,"%2x",&s_byte)) {                  // ???: This looks okay, but make sure nothing wierd is happening
+                    while (sscanf(bufptr,"%2x",&s_byte)) {                  // ???: This looks okay, this is really wierd code
                         bufptr += 2;
                         checksum += s_byte[0];
                         if ((bufptr + 2) >= bufend) break;                  // if checksum byte

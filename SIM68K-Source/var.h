@@ -29,7 +29,7 @@ char	*memory = NULL;        // pointer for main 68000 memory
 
 char buffer[256];       // used to form messages for display in windows
 char numBuf[20];        // "
-AnsiString errstr, str;
+// AnsiString errstr, str;
 
 // _____________________________________________________________________
 // The following variables must remain together. put() and value_of()

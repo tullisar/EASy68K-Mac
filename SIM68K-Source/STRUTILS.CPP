@@ -173,7 +173,7 @@ int getval(int WORD_MASK, char *prompt)
     {
 		printf("%s",prompt);
         cin.getline(lbuf,20);
-		if (*lbuf==NULL) exit(0);
+		if (*lbuf=='\0') exit(0);
 		scrollWindow();
 		if ((p = scan(lbuf,wordptr,5)) < 1)
 			errflg = true;
@@ -222,7 +222,7 @@ int pchange(char oldval)
     
 	errflg = 0;
     cin.getline(lbuf,80);
-	if (*lbuf == NULL)
+	if (*lbuf == '\0')
         exit(0);
 	scrollWindow();
 	wcount = scan(lbuf,wordptr,1);

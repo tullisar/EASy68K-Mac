@@ -11,9 +11,6 @@ expression information entered manually by the user.
 
 ***************************************************************************/
 
-//#include <vcl.h>
-//#pragma hdrstop
-
 #include "BPoint.h"
 
 #ifndef BPOINT_EXPR
