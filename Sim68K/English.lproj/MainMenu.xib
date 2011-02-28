@@ -12,11 +12,11 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="533"/>
 			<integer value="537"/>
-			<integer value="562"/>
+			<integer value="539"/>
 			<integer value="29"/>
-			<integer value="551"/>
+			<integer value="563"/>
+			<integer value="371"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1580,10 +1580,11 @@
 				<int key="NSWindowStyleMask">31</int>
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{230, 189}, {176, 352}}</string>
-				<int key="NSWTFlags">-1535639552</int>
+				<int key="NSWTFlags">-461897728</int>
 				<string key="NSWindowTitle">68000 Stack</string>
 				<string key="NSWindowClass">NSPanel</string>
 				<nil key="NSViewClass"/>
+				<string key="NSWindowContentMaxSize">{1.79769e+308, 1.79769e+308}</string>
 				<string key="NSWindowContentMinSize">{176, 352}</string>
 				<object class="NSView" key="NSWindowView" id="375332731">
 					<reference key="NSNextResponder"/>
@@ -1860,10 +1861,11 @@
 				<int key="NSWindowStyleMask">31</int>
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{230, 245}, {486, 296}}</string>
-				<int key="NSWTFlags">-1535639552</int>
+				<int key="NSWTFlags">-461897728</int>
 				<string key="NSWindowTitle">Sim68K I/O</string>
 				<string key="NSWindowClass">NSPanel</string>
 				<nil key="NSViewClass"/>
+				<string key="NSWindowContentMaxSize">{1.79769e+308, 1.79769e+308}</string>
 				<string key="NSWindowContentMinSize">{486, 296}</string>
 				<object class="NSView" key="NSWindowView" id="437735104">
 					<reference key="NSNextResponder"/>
@@ -2033,15 +2035,16 @@
 			<object class="NSWindowTemplate" id="979668253">
 				<int key="NSWindowStyleMask">31</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{230, 255}, {378, 286}}</string>
-				<int key="NSWTFlags">-1535639552</int>
+				<string key="NSWindowRect">{{230, 266}, {387, 275}}</string>
+				<int key="NSWTFlags">-461897728</int>
 				<string key="NSWindowTitle">Hardware</string>
 				<string key="NSWindowClass">NSPanel</string>
 				<nil key="NSViewClass"/>
+				<string key="NSWindowContentMaxSize">{1.79769e+308, 1.79769e+308}</string>
 				<object class="NSView" key="NSWindowView" id="485083850">
 					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
-					<string key="NSFrameSize">{378, 286}</string>
+					<string key="NSFrameSize">{387, 275}</string>
 					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
@@ -4244,10 +4247,7 @@
 					<string>541.IBPluginDependency</string>
 					<string>542.IBPluginDependency</string>
 					<string>543.IBPluginDependency</string>
-					<string>544.IBPluginDependency</string>
 					<string>545.IBPluginDependency</string>
-					<string>546.IBPluginDependency</string>
-					<string>547.IBPluginDependency</string>
 					<string>548.IBPluginDependency</string>
 					<string>549.IBPluginDependency</string>
 					<string>550.IBAttributePlaceholdersKey</string>
@@ -4436,9 +4436,9 @@
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
-					<string>{{574, 574}, {736, 501}}</string>
+					<string>{{563, 578}, {736, 501}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{574, 574}, {736, 501}}</string>
+					<string>{{563, 578}, {736, 501}}</string>
 					<integer value="1"/>
 					<string>{{33, 99}, {480, 360}}</string>
 					<string>{3.40282e+38, 3.40282e+38}</string>
@@ -4527,24 +4527,21 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{377, 776}, {176, 352}}</string>
+					<string>{{380, 780}, {176, 352}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{377, 776}, {176, 352}}</string>
+					<string>{{380, 780}, {176, 352}}</string>
 					<boolean value="YES"/>
 					<boolean value="YES"/>
 					<string>{176, 352}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{937, 208}, {486, 296}}</string>
+					<string>{{790, 246}, {486, 296}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{937, 208}, {486, 296}}</string>
+					<string>{{790, 246}, {486, 296}}</string>
 					<boolean value="YES"/>
 					<boolean value="YES"/>
 					<string>{486, 296}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{697, 970}, {616, 0}}</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -4582,9 +4579,9 @@
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{441, 216}, {378, 286}}</string>
+					<string>{{375, 230}, {387, 275}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{441, 216}, {378, 286}}</string>
+					<string>{{375, 230}, {387, 275}}</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{286, 129}, {275, 183}}</string>
