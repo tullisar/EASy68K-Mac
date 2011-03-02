@@ -8,8 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Sim68KAppDelegate : NSObject <NSApplicationDelegate> {
+@class NoodleLineNumberView;
+
+@interface Sim68KAppDelegate : NSObject {
+// @interface Sim68KAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindow *window;
+    IBOutlet NSScrollView   *scrollView;
+    IBOutlet NSTextView     *scriptView;
+	NoodleLineNumberView	*lineNumberView;
+    
 }
 
 @property (assign) IBOutlet NSWindow *window;
