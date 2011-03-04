@@ -78,23 +78,23 @@ const int CONT_ALT_ADDR		= (CONTROL_ADDR & ALTERABLE_ADDR);
 
 /* these are the instruction return codes */
 
-const int SUCCESS		= 0x0000;
-const int BAD_INST		= 0x0001;
-const int NO_PRIVILEGE		= 0x0002;
-const int CHK_EXCEPTION	        = 0x0003;
-//const int ILLEGAL_TRAP		= 0x0004;
-const int STOP_TRAP		= 0x0005;
-const int TRAPV_TRAP		= 0x0006;
-const int TRAP_TRAP		= 0x0007;
-const int DIV_BY_ZERO		= 0x0008;
-const int USER_BREAK		= 0x0009;
-const int BUS_ERROR             = 0x000A;
-const int ADDR_ERROR            = 0x000B;
-const int LINE_1010             = 0x000C;
-const int LINE_1111             = 0x000D;
-const int TRACE_EXCEPTION       = 0x000E;
-const int ROM_MAP               = 0x000F;
-const int FAILURE		= 0x1111;	// general failure
+const int SUCCESS           = 0x0000;
+const int BAD_INST          = 0x0001;
+const int NO_PRIVILEGE      = 0x0002;
+const int CHK_EXCEPTION     = 0x0003;
+//const int ILLEGAL_TRAP    = 0x0004;
+const int STOP_TRAP         = 0x0005;
+const int TRAPV_TRAP        = 0x0006;
+const int TRAP_TRAP         = 0x0007;
+const int DIV_BY_ZERO       = 0x0008;
+const int USER_BREAK        = 0x0009;
+const int BUS_ERROR         = 0x000A;
+const int ADDR_ERROR        = 0x000B;
+const int LINE_1010         = 0x000C;
+const int LINE_1111         = 0x000D;
+const int TRACE_EXCEPTION   = 0x000E;
+const int ROM_MAP           = 0x000F;
+const int FAILURE           = 0x1111;	// general failure
 
 
 // these are the cases for condition code setting

@@ -7,11 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		147C8E00131CB95D00928E25 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147C8DFF131CB95D00928E25 /* BWToolkitFramework.framework */; };
-		147C8E34131CB99500928E25 /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 147C8DFF131CB95D00928E25 /* BWToolkitFramework.framework */; };
+		140089C1131EF4C6009B565A /* bpoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089AF131EF4C6009B565A /* bpoint.cpp */; };
+		140089C2131EF4C6009B565A /* bpointexpr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089B0131EF4C6009B565A /* bpointexpr.cpp */; };
+		140089C3131EF4C6009B565A /* code1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089B1131EF4C6009B565A /* code1.cpp */; };
+		140089C4131EF4C6009B565A /* code2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089B2131EF4C6009B565A /* code2.cpp */; };
+		140089C5131EF4C6009B565A /* code3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089B3131EF4C6009B565A /* code3.cpp */; };
+		140089C6131EF4C6009B565A /* code4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089B4131EF4C6009B565A /* code4.cpp */; };
+		140089C7131EF4C6009B565A /* code5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089B5131EF4C6009B565A /* code5.cpp */; };
+		140089C8131EF4C6009B565A /* code6.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089B6131EF4C6009B565A /* code6.cpp */; };
+		140089C9131EF4C6009B565A /* code7.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089B7131EF4C6009B565A /* code7.cpp */; };
+		140089CA131EF4C6009B565A /* code8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089B8131EF4C6009B565A /* code8.cpp */; };
+		140089CB131EF4C6009B565A /* code9.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089B9131EF4C6009B565A /* code9.cpp */; };
+		140089CC131EF4C6009B565A /* run.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089BA131EF4C6009B565A /* run.cpp */; };
+		140089CD131EF4C6009B565A /* scan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089BB131EF4C6009B565A /* scan.cpp */; };
+		140089CE131EF4C6009B565A /* simops1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089BC131EF4C6009B565A /* simops1.cpp */; };
+		140089CF131EF4C6009B565A /* simops2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089BD131EF4C6009B565A /* simops2.cpp */; };
+		140089D0131EF4C6009B565A /* startsim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089BE131EF4C6009B565A /* startsim.cpp */; };
+		140089D1131EF4C6009B565A /* strutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089BF131EF4C6009B565A /* strutils.cpp */; };
+		140089D2131EF4C6009B565A /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089C0131EF4C6009B565A /* utils.cpp */; };
+		14008A44131F17BC009B565A /* Simulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 14008A43131F17BC009B565A /* Simulator.m */; };
 		148C96E4131CECE1001CDD1C /* MarkerLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C96DF131CECE1001CDD1C /* MarkerLineNumberView.m */; };
 		148C96E5131CECE1001CDD1C /* NoodleLineNumberMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C96E1131CECE1001CDD1C /* NoodleLineNumberMarker.m */; };
 		148C96E6131CECE1001CDD1C /* NoodleLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C96E3131CECE1001CDD1C /* NoodleLineNumberView.m */; };
+		14CFAD5F131EE717005D7D7A /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CFAD5E131EE717005D7D7A /* BWToolkitFramework.framework */; };
+		14CFAD97131EE739005D7D7A /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14CFAD5E131EE717005D7D7A /* BWToolkitFramework.framework */; };
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* Sim68KAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* Sim68KAppDelegate.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -20,13 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		147C8E35131CB9A500928E25 /* CopyFiles */ = {
+		14CFADAB131EE73E005D7D7A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				147C8E34131CB99500928E25 /* BWToolkitFramework.framework in CopyFiles */,
+				14CFAD97131EE739005D7D7A /* BWToolkitFramework.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,13 +55,40 @@
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		147C8DFF131CB95D00928E25 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = /System/Library/Frameworks/BWToolkitFramework.framework; sourceTree = "<absolute>"; };
+		140089A9131EF4C6009B565A /* BPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPoint.h; sourceTree = "<group>"; };
+		140089AA131EF4C6009B565A /* BPointExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPointExpr.h; sourceTree = "<group>"; };
+		140089AB131EF4C6009B565A /* def.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = def.h; sourceTree = "<group>"; };
+		140089AC131EF4C6009B565A /* extern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extern.h; sourceTree = "<group>"; };
+		140089AD131EF4C6009B565A /* proto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = proto.h; sourceTree = "<group>"; };
+		140089AE131EF4C6009B565A /* var.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = var.h; sourceTree = "<group>"; };
+		140089AF131EF4C6009B565A /* bpoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bpoint.cpp; sourceTree = "<group>"; };
+		140089B0131EF4C6009B565A /* bpointexpr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bpointexpr.cpp; sourceTree = "<group>"; };
+		140089B1131EF4C6009B565A /* code1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = code1.cpp; sourceTree = "<group>"; };
+		140089B2131EF4C6009B565A /* code2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = code2.cpp; sourceTree = "<group>"; };
+		140089B3131EF4C6009B565A /* code3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = code3.cpp; sourceTree = "<group>"; };
+		140089B4131EF4C6009B565A /* code4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = code4.cpp; sourceTree = "<group>"; };
+		140089B5131EF4C6009B565A /* code5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = code5.cpp; sourceTree = "<group>"; };
+		140089B6131EF4C6009B565A /* code6.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = code6.cpp; sourceTree = "<group>"; };
+		140089B7131EF4C6009B565A /* code7.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = code7.cpp; sourceTree = "<group>"; };
+		140089B8131EF4C6009B565A /* code8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = code8.cpp; sourceTree = "<group>"; };
+		140089B9131EF4C6009B565A /* code9.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = code9.cpp; sourceTree = "<group>"; };
+		140089BA131EF4C6009B565A /* run.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = run.cpp; sourceTree = "<group>"; };
+		140089BB131EF4C6009B565A /* scan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scan.cpp; sourceTree = "<group>"; };
+		140089BC131EF4C6009B565A /* simops1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simops1.cpp; sourceTree = "<group>"; };
+		140089BD131EF4C6009B565A /* simops2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simops2.cpp; sourceTree = "<group>"; };
+		140089BE131EF4C6009B565A /* startsim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = startsim.cpp; sourceTree = "<group>"; };
+		140089BF131EF4C6009B565A /* strutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strutils.cpp; sourceTree = "<group>"; };
+		140089C0131EF4C6009B565A /* utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utils.cpp; sourceTree = "<group>"; };
+		140089DB131EF4E5009B565A /* opcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opcodes.h; sourceTree = "<group>"; };
+		14008A42131F17BC009B565A /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Simulator.h; sourceTree = "<group>"; };
+		14008A43131F17BC009B565A /* Simulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Simulator.m; sourceTree = "<group>"; };
 		148C96DE131CECE1001CDD1C /* MarkerLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerLineNumberView.h; sourceTree = "<group>"; };
 		148C96DF131CECE1001CDD1C /* MarkerLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerLineNumberView.m; sourceTree = "<group>"; };
 		148C96E0131CECE1001CDD1C /* NoodleLineNumberMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberMarker.h; sourceTree = "<group>"; };
 		148C96E1131CECE1001CDD1C /* NoodleLineNumberMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleLineNumberMarker.m; sourceTree = "<group>"; };
 		148C96E2131CECE1001CDD1C /* NoodleLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberView.h; sourceTree = "<group>"; };
 		148C96E3131CECE1001CDD1C /* NoodleLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleLineNumberView.m; sourceTree = "<group>"; };
+		14CFAD5E131EE717005D7D7A /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = Library/Frameworks/BWToolkitFramework.framework; sourceTree = SDKROOT; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		256AC3D80F4B6AC300CF3369 /* Sim68KAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sim68KAppDelegate.h; sourceTree = "<group>"; };
 		256AC3D90F4B6AC300CF3369 /* Sim68KAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sim68KAppDelegate.m; sourceTree = "<group>"; };
@@ -60,7 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				147C8E00131CB95D00928E25 /* BWToolkitFramework.framework in Frameworks */,
+				14CFAD5F131EE717005D7D7A /* BWToolkitFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +116,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				14008A42131F17BC009B565A /* Simulator.h */,
+				14008A43131F17BC009B565A /* Simulator.m */,
 				148C96DE131CECE1001CDD1C /* MarkerLineNumberView.h */,
 				148C96DF131CECE1001CDD1C /* MarkerLineNumberView.m */,
 				148C96E0131CECE1001CDD1C /* NoodleLineNumberMarker.h */,
@@ -86,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-				147C8DFF131CB95D00928E25 /* BWToolkitFramework.framework */,
+				14CFAD5E131EE717005D7D7A /* BWToolkitFramework.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -101,6 +149,38 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
+		14CFADCD131EEB20005D7D7A /* Sim68K Source */ = {
+			isa = PBXGroup;
+			children = (
+				140089A9131EF4C6009B565A /* BPoint.h */,
+				140089AA131EF4C6009B565A /* BPointExpr.h */,
+				140089AB131EF4C6009B565A /* def.h */,
+				140089AC131EF4C6009B565A /* extern.h */,
+				140089DB131EF4E5009B565A /* opcodes.h */,
+				140089AD131EF4C6009B565A /* proto.h */,
+				140089AE131EF4C6009B565A /* var.h */,
+				140089AF131EF4C6009B565A /* bpoint.cpp */,
+				140089B0131EF4C6009B565A /* bpointexpr.cpp */,
+				140089B1131EF4C6009B565A /* code1.cpp */,
+				140089B2131EF4C6009B565A /* code2.cpp */,
+				140089B3131EF4C6009B565A /* code3.cpp */,
+				140089B4131EF4C6009B565A /* code4.cpp */,
+				140089B5131EF4C6009B565A /* code5.cpp */,
+				140089B6131EF4C6009B565A /* code6.cpp */,
+				140089B7131EF4C6009B565A /* code7.cpp */,
+				140089B8131EF4C6009B565A /* code8.cpp */,
+				140089B9131EF4C6009B565A /* code9.cpp */,
+				140089BA131EF4C6009B565A /* run.cpp */,
+				140089BB131EF4C6009B565A /* scan.cpp */,
+				140089BC131EF4C6009B565A /* simops1.cpp */,
+				140089BD131EF4C6009B565A /* simops2.cpp */,
+				140089BE131EF4C6009B565A /* startsim.cpp */,
+				140089BF131EF4C6009B565A /* strutils.cpp */,
+				140089C0131EF4C6009B565A /* utils.cpp */,
+			);
+			name = "Sim68K Source";
+			sourceTree = "<group>";
+		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +192,7 @@
 		29B97314FDCFA39411CA2CEA /* Sim68K */ = {
 			isa = PBXGroup;
 			children = (
+				14CFADCD131EEB20005D7D7A /* Sim68K Source */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -159,7 +240,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
-				147C8E35131CB9A500928E25 /* CopyFiles */,
+				14CFADAB131EE73E005D7D7A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -178,6 +259,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Sim68K" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -216,6 +298,25 @@
 				148C96E4131CECE1001CDD1C /* MarkerLineNumberView.m in Sources */,
 				148C96E5131CECE1001CDD1C /* NoodleLineNumberMarker.m in Sources */,
 				148C96E6131CECE1001CDD1C /* NoodleLineNumberView.m in Sources */,
+				140089C1131EF4C6009B565A /* bpoint.cpp in Sources */,
+				140089C2131EF4C6009B565A /* bpointexpr.cpp in Sources */,
+				140089C3131EF4C6009B565A /* code1.cpp in Sources */,
+				140089C4131EF4C6009B565A /* code2.cpp in Sources */,
+				140089C5131EF4C6009B565A /* code3.cpp in Sources */,
+				140089C6131EF4C6009B565A /* code4.cpp in Sources */,
+				140089C7131EF4C6009B565A /* code5.cpp in Sources */,
+				140089C8131EF4C6009B565A /* code6.cpp in Sources */,
+				140089C9131EF4C6009B565A /* code7.cpp in Sources */,
+				140089CA131EF4C6009B565A /* code8.cpp in Sources */,
+				140089CB131EF4C6009B565A /* code9.cpp in Sources */,
+				140089CC131EF4C6009B565A /* run.cpp in Sources */,
+				140089CD131EF4C6009B565A /* scan.cpp in Sources */,
+				140089CE131EF4C6009B565A /* simops1.cpp in Sources */,
+				140089CF131EF4C6009B565A /* simops2.cpp in Sources */,
+				140089D0131EF4C6009B565A /* startsim.cpp in Sources */,
+				140089D1131EF4C6009B565A /* strutils.cpp in Sources */,
+				140089D2131EF4C6009B565A /* utils.cpp in Sources */,
+				14008A44131F17BC009B565A /* Simulator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +378,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

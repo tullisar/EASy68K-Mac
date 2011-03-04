@@ -161,3 +161,10 @@ bool mouseLeftDown, mouseRightDown, mouseMiddleDown, mouseDoubleDown;
 bool keyShiftDown, keyAltDown, keyCtrlDown;
 char mouseDownIRQ, mouseUpIRQ, mouseMoveIRQ;
 char keyDownIRQ, keyUpIRQ;
+
+// HARDWARE
+// FIXME: Move this into a better location
+int seg7loc, LEDloc, switchLoc, pbLoc;
+int ROMStart=0, ROMEnd=0, ReadStart=0, ReadEnd=0;
+int ProtectedStart=0, ProtectedEnd=0, InvalidStart=0, InvalidEnd=0;
+bool ROMMap=false, ReadMap=false, ProtectedMap=false, InvalidMap=false;

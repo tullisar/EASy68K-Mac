@@ -5,7 +5,7 @@
 // ez68k.ali links the .htm file with the IDH_ help topic
 //
 #define IDH_INTRO			1000
-#define IDH_QUICKREF			1100
+#define IDH_QUICKREF        1100
 #define IDH_ABCD			1200
 #define IDH_ADD				1300
 #define IDH_ADDA			1400

@@ -216,7 +216,7 @@
 			rects = [layoutManager rectArrayForCharacterRange:NSMakeRange(index, 0)
 								 withinSelectedCharacterRange:nullRange
 											  inTextContainer:container
-													rectCount:&rectCount];
+													rectCount:(NSUInteger *)&rectCount];
 			
 			for (i = 0; i < rectCount; i++)
 			{
@@ -266,7 +266,7 @@
         while (index < stringLength);
         
         // Check if text ends with a new line.
-        [text getLineStart:NULL end:&lineEnd contentsEnd:&contentEnd forRange:NSMakeRange([[lineIndices lastObject] unsignedIntValue], 0)];
+        [text getLineStart:NULL end:(NSUInteger *)&lineEnd contentsEnd:(NSUInteger *)&contentEnd forRange:NSMakeRange([[lineIndices lastObject] unsignedIntValue], 0)];
         if (contentEnd < lineEnd)
         {
             [lineIndices addObject:[NSNumber numberWithUnsignedInt:index]];
@@ -428,7 +428,7 @@
                 rects = [layoutManager rectArrayForCharacterRange:NSMakeRange(index, 0)
                                      withinSelectedCharacterRange:nullRange
                                                   inTextContainer:container
-                                                        rectCount:&rectCount];
+                                                        rectCount:(NSUInteger *)&rectCount];
 				
                 if (rectCount > 0)
                 {
