@@ -24,6 +24,7 @@
         A0 = A1 = A2 = A3 = A4 = A5 = A6 = A7 = 0;
         D0 = D1 = D2 = D3 = D4 = D5 = D6 = D7 = 0;
         GUI_SR = GUI_US = GUI_SS = GUI_PC = 0;
+        startPC = 0;
         return self;
     } else {
         return nil;
@@ -90,14 +91,32 @@
 // loadProgram()
 // 
 // -----------------------------------------------------------------
-- (void) loadProgram {
+- (void) loadProgram:(NSString* )name {
+    
+    unsigned int result;
+    char fName[256];
+    char lFile[256];
     
     // Format memory
     for (int i=0; i<MEMSIZE; i++) memory[i] = 0xFF;
     
-    // Set toggle switch memory to 0
-    // int switchAddr = [hardware switchAddr];
-    // 
+    // Initialize the Hardware
+    // [hardware init]
+    
+    // Load the S-Record
+    sprintf(fName,"%s",[name cStringUsingEncoding:NSUTF8StringEncoding]);
+    if (!loadSrec(fName)) {
+        
+        startPC = PC;
+        
+        // ASSUMES User does not have any paths with .s68 in them for
+        // directory names...
+        // nsstring pathExtension returns .s68
+        // stringByReplacingOccurrencesOfString:withString:options:range:
+        // NSStringEnumerationReverse
+        
+        
+    }
     
     //
     

@@ -16,6 +16,7 @@
     unsigned short GUI_SR;
     unsigned long  GUI_US, GUI_SS, GUI_PC;    
     
+    unsigned long  startPC;
 }
 
 @property (assign) unsigned long A0;
@@ -42,6 +43,6 @@
 - (void) initSim;
 - (void) memFormat;
 - (void) runLoop;
-- (void) loadProgram;
+- (void) loadProgram:(NSString*)name;
 
 @end
