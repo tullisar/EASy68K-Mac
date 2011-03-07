@@ -17,6 +17,10 @@
     unsigned long  GUI_US, GUI_SS, GUI_PC;    
     
     unsigned long  startPC;
+    
+    // Containers
+    NSString *listFile;
+    
 }
 
 @property (assign) unsigned long A0;
