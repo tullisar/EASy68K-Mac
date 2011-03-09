@@ -19,7 +19,7 @@
     unsigned long  startPC;
     
     // Containers
-    NSString *listFile;
+    NSAttributedString *listFile;
     
 }
 
@@ -43,10 +43,13 @@
 @property (assign) unsigned long GUI_US;
 @property (assign) unsigned long GUI_SS;
 @property (assign) unsigned long GUI_PC;
+@property (retain) NSAttributedString *listFile;
 
 - (void) initSim;
 - (void) memFormat;
 - (void) runLoop;
 - (void) loadProgram:(NSString*)name;
+- (void) displayReg;
+
 
 @end

@@ -13,6 +13,10 @@
 @interface Sim68KAppDelegate : NSObject {
 // @interface Sim68KAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindow *window;
+    NSPanel  *panelIO;
+    NSPanel  *panelHardware;
+    NSPanel  *panelStack;
+    NSPanel  *panelMemory;
     IBOutlet NSScrollView   *scrollView;
     IBOutlet NSTextView     *scriptView;
 	NoodleLineNumberView	*lineNumberView;
@@ -21,6 +25,9 @@
 }
 
 @property (assign) IBOutlet NSWindow *window;
-
+@property (assign) IBOutlet NSPanel  *panelIO;
+@property (assign) IBOutlet NSPanel *panelHardware;
+@property (assign) IBOutlet NSPanel *panelStack;
+@property (assign) IBOutlet NSPanel *panelMemory;
 
 @end

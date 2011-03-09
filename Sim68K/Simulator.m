@@ -13,6 +13,7 @@
 
 @synthesize A0,A1,A2,A3,A4,A5,A6,A7,D0,D1,D2,D3,D4,D5,D6,D7,
             GUI_SR,GUI_US,GUI_SS,GUI_PC;
+@synthesize listFile;
 
 
 // -----------------------------------------------------------------
@@ -45,6 +46,7 @@
 // 
 // -----------------------------------------------------------------
 - (void) initSim {
+    [self memFormat];
     initSim();
 }
 
@@ -94,38 +96,28 @@
 - (void) loadProgram:(NSString* )name {
     
     NSRange notFoundRange = NSMakeRange(NSNotFound, 0);
-    
-    // unsigned int result;
-    char fName[256];
-    // char lFile[256];
-    
-    // Format memory
-    for (int i=0; i<MEMSIZE; i++) memory[i] = 0xFF;
-    
-    // Initialize the Hardware
-    // [hardware init]
-    // memory[[hardware switchAddr]] = 0x00;
-    
+    char fName[1024];                                   // Temporary buffer for NSString->C String
+                                                        // TODO: Halt Simulator if running
+    [self initSim];                                     // Re-initialize simulator in case one was already open
+                                                        // TODO: Initialize Hardware
     // Load the S-Record
     sprintf(fName,"%s",[name cStringUsingEncoding:NSUTF8StringEncoding]);
     if (!loadSrec(fName)) {
         
         startPC = PC;
-        
-        NSMutableString *listFileName;
-        [listFileName initWithFormat:@"%@%@",[name stringByDeletingPathExtension],@".l68"];
-        listFile = [NSString stringWithContentsOfFile:listFileName
+        NSString *listFileName = [NSString stringWithFormat:@"%@%@",
+                                  [name stringByDeletingPathExtension],
+                                  @".l68"];
+        NSString *listFileTemp;
+        listFileTemp = [NSString stringWithContentsOfFile:listFileName
                                              encoding:NSUTF8StringEncoding
                                                 error:NULL];
-        if (listFile) {
-            // Loads the listfile into memory
-            NSArray *lines = [listFile componentsSeparatedByCharactersInSet:
+        if (listFileTemp) {
+            NSArray *lines = [listFileTemp componentsSeparatedByCharactersInSet:
                               [NSCharacterSet newlineCharacterSet]];
-            
             int offsetPC = [[[lines objectAtIndex:0]
-                             substringToIndex:7] 
+                             substringToIndex:8] 
                             intValue];
-            
             if ((offsetPC > 0x000000000) && (offsetPC < 0x01000000))
                 startPC = PC = offsetPC;
             
@@ -136,17 +128,44 @@
                     // if (isInstruction)
                     //     setBreakPoint;
                 }
-                
                 found = [line rangeOfString:@"*[sim68k]bitfield"];
                 if (!NSEqualRanges(found, notFoundRange)) {
                     // enable bitfield instructions
                 }
             }
+            
+            NSAttributedString *listContainer;
+            listContainer = [[[NSAttributedString alloc] initWithString:listFileTemp] autorelease];
+            [self setListFile:listContainer];
+            
         } else {
             // No listfile, source level debugging not available.
             // Spit out error!
         }
+        
+        [self displayReg];
+    } else {
+        // TODO: Error loading S-Record
     }
+}
+
+// -----------------------------------------------------------------
+// displayReg
+// Updates all the GUI registers to match those of the 68000 simulator
+// -----------------------------------------------------------------
+- (void)displayReg {
+    [self setA0:A[0]];
+    [self setA1:A[1]];
+    [self setA2:A[2]];
+    [self setA3:A[3]];
+    [self setA4:A[4]];
+    [self setA5:A[5]];
+    [self setA6:A[6]];
+    [self setA7:A[7]];
+    [self setGUI_US:A[7]];
+    [self setGUI_SS:A[8]];
+    [self setGUI_PC:PC];
+    [self setGUI_SR:SR];
 }
 
 // Overridden Setters for Registers. This is so when changing
@@ -262,6 +281,13 @@
 - (void)setGUI_US:(unsigned long)value {
     GUI_US = value;
     A[7] = value;
+}
+
+// -----------------------------------------------------------------
+// GUI_US
+// -----------------------------------------------------------------
+- (unsigned long)setGUI_US {
+    return A[7];
 }
 
 // -----------------------------------------------------------------

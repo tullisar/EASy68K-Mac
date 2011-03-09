@@ -26,6 +26,9 @@
 		140089D1131EF4C6009B565A /* strutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089BF131EF4C6009B565A /* strutils.cpp */; };
 		140089D2131EF4C6009B565A /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089C0131EF4C6009B565A /* utils.cpp */; };
 		14008A44131F17BC009B565A /* Simulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 14008A43131F17BC009B565A /* Simulator.m */; };
+		141FDB261325B8E000A249F3 /* ShortHexStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 141FDB251325B8E000A249F3 /* ShortHexStringTransformer.m */; };
+		141FDB351325BA0800A249F3 /* ShortBinaryStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 141FDB341325BA0800A249F3 /* ShortBinaryStringTransformer.m */; };
+		141FDB791325DB0D00A249F3 /* IntHexStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 141FDB781325DB0D00A249F3 /* IntHexStringTransformer.m */; };
 		148C96E4131CECE1001CDD1C /* MarkerLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C96DF131CECE1001CDD1C /* MarkerLineNumberView.m */; };
 		148C96E5131CECE1001CDD1C /* NoodleLineNumberMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C96E1131CECE1001CDD1C /* NoodleLineNumberMarker.m */; };
 		148C96E6131CECE1001CDD1C /* NoodleLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C96E3131CECE1001CDD1C /* NoodleLineNumberView.m */; };
@@ -82,6 +85,12 @@
 		140089DB131EF4E5009B565A /* opcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opcodes.h; sourceTree = "<group>"; };
 		14008A42131F17BC009B565A /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Simulator.h; sourceTree = "<group>"; };
 		14008A43131F17BC009B565A /* Simulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Simulator.m; sourceTree = "<group>"; };
+		141FDB241325B8E000A249F3 /* ShortHexStringTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortHexStringTransformer.h; sourceTree = "<group>"; };
+		141FDB251325B8E000A249F3 /* ShortHexStringTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortHexStringTransformer.m; sourceTree = "<group>"; };
+		141FDB331325BA0800A249F3 /* ShortBinaryStringTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortBinaryStringTransformer.h; sourceTree = "<group>"; };
+		141FDB341325BA0800A249F3 /* ShortBinaryStringTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortBinaryStringTransformer.m; sourceTree = "<group>"; };
+		141FDB771325DB0D00A249F3 /* IntHexStringTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntHexStringTransformer.h; sourceTree = "<group>"; };
+		141FDB781325DB0D00A249F3 /* IntHexStringTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntHexStringTransformer.m; sourceTree = "<group>"; };
 		148C96DE131CECE1001CDD1C /* MarkerLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerLineNumberView.h; sourceTree = "<group>"; };
 		148C96DF131CECE1001CDD1C /* MarkerLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerLineNumberView.m; sourceTree = "<group>"; };
 		148C96E0131CECE1001CDD1C /* NoodleLineNumberMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberMarker.h; sourceTree = "<group>"; };
@@ -116,6 +125,12 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				141FDB771325DB0D00A249F3 /* IntHexStringTransformer.h */,
+				141FDB781325DB0D00A249F3 /* IntHexStringTransformer.m */,
+				141FDB241325B8E000A249F3 /* ShortHexStringTransformer.h */,
+				141FDB251325B8E000A249F3 /* ShortHexStringTransformer.m */,
+				141FDB331325BA0800A249F3 /* ShortBinaryStringTransformer.h */,
+				141FDB341325BA0800A249F3 /* ShortBinaryStringTransformer.m */,
 				14008A42131F17BC009B565A /* Simulator.h */,
 				14008A43131F17BC009B565A /* Simulator.m */,
 				148C96DE131CECE1001CDD1C /* MarkerLineNumberView.h */,
@@ -259,6 +274,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Sim68K" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -316,6 +332,9 @@
 				140089D1131EF4C6009B565A /* strutils.cpp in Sources */,
 				140089D2131EF4C6009B565A /* utils.cpp in Sources */,
 				14008A44131F17BC009B565A /* Simulator.m in Sources */,
+				141FDB261325B8E000A249F3 /* ShortHexStringTransformer.m in Sources */,
+				141FDB351325BA0800A249F3 /* ShortBinaryStringTransformer.m in Sources */,
+				141FDB791325DB0D00A249F3 /* IntHexStringTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
