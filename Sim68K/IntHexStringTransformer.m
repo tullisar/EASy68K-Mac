@@ -40,7 +40,7 @@
     NSScanner *temp = [NSScanner scannerWithString:(NSString *)value];
     unsigned int result = 0;
     if ([temp scanHexInt:&result]) {
-        return (id)result;
+        return [NSNumber numberWithUnsignedInt:result];
     } else {
         return 0;
     }
