@@ -774,6 +774,7 @@ int exec_inst()
                 {
                     if (trace) {
                         sprintf(buffer,"PC=%08X  Code=%04X  %s", (unsigned int)(PC-2), inst, inst_arr[i].name);
+                        NSLog(@"%s",buffer);
                         // MARK: GUI: Put opcode in GUI somewhere?
                         // Form1->Message->Lines->Add(buffer);
                         
@@ -846,6 +847,8 @@ int exec_inst()
                             }
                         } // end if logging
                     }
+                    sprintf(buffer,"PC=%08X  Code=%04X  %s", (unsigned int)(PC-2), inst, inst_arr[i].name);
+                    NSLog(@"%s",buffer);
                     
                     if (SR & tbit)                        // if trace bit set
                         trace_bit = true;

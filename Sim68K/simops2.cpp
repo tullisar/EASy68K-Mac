@@ -231,6 +231,7 @@ int loadSrec(char *name)        // load memory with contents of s_record file
         s_type = 0;
         
         while (fgets(lbuf, SREC_MAX, fp) != NULL) {                         // read file until end
+            bufptr = bufstart;
             sprintf(bufptr, "%s", lbuf);
             checksum = 0;
             skipRecord = false;

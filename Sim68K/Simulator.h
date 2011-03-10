@@ -15,7 +15,7 @@
     unsigned long  D0,D1,D2,D3,D4,D5,D6,D7;
     unsigned short GUI_SR;
     unsigned long  GUI_US, GUI_SS, GUI_PC;    
-    
+    unsigned long long GUI_Cycles;
     unsigned long  startPC;
     
     // Containers
@@ -43,6 +43,7 @@
 @property (assign) unsigned long GUI_US;
 @property (assign) unsigned long GUI_SS;
 @property (assign) unsigned long GUI_PC;
+@property (assign) unsigned long long GUI_Cycles;
 @property (retain) NSAttributedString *listFile;
 
 - (void) initSim;

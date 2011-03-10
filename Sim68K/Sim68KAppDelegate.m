@@ -14,11 +14,14 @@
 #import "ShortHexStringTransformer.h"
 #import "ShortBinaryStringTransformer.h"
 
+#include "extern.h"
+
 //#import <BWToolkitFramework/BWToolkitFramework.h>
 
 @implementation Sim68KAppDelegate
 
 @synthesize window, panelIO, panelMemory, panelStack, panelHardware;
+@synthesize file;
 
 // -----------------------------------------------------------------
 // initialize
@@ -47,8 +50,8 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {}
 
 // -----------------------------------------------------------------
-// displayReg
-// Updates all the GUI registers to match those of the 68000 simulator
+// awakeFromNib
+// Runs when the NIB file has been loaded.
 // -----------------------------------------------------------------
 - (void)awakeFromNib {
     
@@ -59,6 +62,7 @@
     [scrollView setHasVerticalRuler:YES];
     [scrollView setRulersVisible:YES];
     [scriptView setFont:[NSFont fontWithName:@"Courier" size:11]];
+    [scriptView setEditable:NO];
     
     // Initialize the simulator
     [simulator initSim];
@@ -79,10 +83,39 @@
                           
                           if (result == NSFileHandlingPanelOKButton) {
                               [simulator loadProgram:[[openPanel URL] path]];
-                              // TODO: Set Title Bar
+                              [scriptView setFont:[NSFont fontWithName:@"Courier" size:11]];
+                              [scriptView setEditable:NO];
+                              [self setFile:[[openPanel URL] path]];
+                              [window setTitleWithRepresentedFilename:file];
                           }
                       }];
 }
 
+// -----------------------------------------------------------------
+// runProg
+// Initiates the runloop
+// -----------------------------------------------------------------
+- (IBAction)runProg:(id)sender {
+    trace       = false;
+    sstep       = false;
+    runMode     = true;
+    runModeSave = runMode;
+    if (file)
+        [simulator runLoop];
+}
+
+// -----------------------------------------------------------------
+// stepExecute
+// Executes a single instruction
+// -----------------------------------------------------------------
+- (IBAction)stepExecute:(id)sender {
+    trace       = true;
+    sstep       = true;
+    stepToAddr  = 0;
+    runMode     = true;
+    runModeSave = runMode;
+    if (file)
+        [simulator runLoop];
+}
 
 @end

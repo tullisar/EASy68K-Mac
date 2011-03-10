@@ -12,7 +12,7 @@
 @implementation Simulator
 
 @synthesize A0,A1,A2,A3,A4,A5,A6,A7,D0,D1,D2,D3,D4,D5,D6,D7,
-            GUI_SR,GUI_US,GUI_SS,GUI_PC;
+            GUI_SR,GUI_US,GUI_SS,GUI_PC,GUI_Cycles;
 @synthesize listFile;
 
 
@@ -25,6 +25,7 @@
         A0 = A1 = A2 = A3 = A4 = A5 = A6 = A7 = 0;
         D0 = D1 = D2 = D3 = D4 = D5 = D6 = D7 = 0;
         GUI_SR = GUI_US = GUI_SS = GUI_PC = 0;
+        GUI_Cycles = 0;
         startPC = 0;
         return self;
     } else {
@@ -62,7 +63,8 @@
         for (int i=0; i<MEMSIZE; i++)
             memory[i] = 0xFF;
     } catch(...) {
-        // MARK: ERROR: Output error message.
+        // TODO: GUI Error
+        NSLog(@"There was an unexpected error when attempting to format the 68000 memory");
         exit(1);    // FAIL
     }
 }
@@ -72,12 +74,15 @@
 // Runs the 6800 program loaded into memory
 // -----------------------------------------------------------------
 - (void) runLoop {
+
+    
     static BOOL running = NO;
     
     if (!running) {
         running = YES;
         try {
             while (runMode) {
+                if (trace && sstep) [self displayReg];
                 runprog();
                 // Process messages?
             }
@@ -85,6 +90,10 @@
             // Unexpected error
         }
     }
+    
+    [self displayReg];
+    if (stopInstruction || halt)
+        [self setGUI_PC:startPC];
     
     running = NO;
     return;
@@ -115,9 +124,12 @@
         if (listFileTemp) {
             NSArray *lines = [listFileTemp componentsSeparatedByCharactersInSet:
                               [NSCharacterSet newlineCharacterSet]];
-            int offsetPC = [[[lines objectAtIndex:0]
-                             substringToIndex:8] 
-                            intValue];
+            NSString *lineAddress = [NSString stringWithFormat:@"0x%@",
+                                    [[lines objectAtIndex:0] substringToIndex:8]];
+            NSScanner *hexScanner = [NSScanner scannerWithString:lineAddress];
+
+            unsigned int offsetPC = 0;
+            if (![hexScanner scanHexInt:&offsetPC]) offsetPC = 0;
             if ((offsetPC > 0x000000000) && (offsetPC < 0x01000000))
                 startPC = PC = offsetPC;
             
@@ -125,12 +137,13 @@
                 NSString *line = [lines objectAtIndex:i];
                 NSRange found = [line rangeOfString:@"*[sim68k]break"];
                 if (!NSEqualRanges(found, notFoundRange)) {
+                    // TODO: Set breakpoint at the location found
                     // if (isInstruction)
                     //     setBreakPoint;
                 }
                 found = [line rangeOfString:@"*[sim68k]bitfield"];
                 if (!NSEqualRanges(found, notFoundRange)) {
-                    // enable bitfield instructions
+                    // TODO: Enable bitfield instructions
                 }
             }
             
@@ -139,13 +152,15 @@
             [self setListFile:listContainer];
             
         } else {
-            // No listfile, source level debugging not available.
-            // Spit out error!
+            // TODO: GUI Error
+            NSLog(@"Unable to locate or load associated listfile. Source level debugging will be unavailable.");
         }
         
         [self displayReg];
+        
     } else {
-        // TODO: Error loading S-Record
+        // TODO: GUI Error
+        NSLog(@"Error loading S-Record file");
     }
 }
 
@@ -162,10 +177,19 @@
     [self setA5:A[5]];
     [self setA6:A[6]];
     [self setA7:A[7]];
+    [self setD0:D[0]];
+    [self setD1:D[1]];
+    [self setD2:D[2]];
+    [self setD3:D[3]];
+    [self setD4:D[4]];
+    [self setD5:D[5]];
+    [self setD6:D[6]];
+    [self setD7:D[7]];
     [self setGUI_US:A[7]];
     [self setGUI_SS:A[8]];
     [self setGUI_PC:PC];
     [self setGUI_SR:SR];
+    [self setGUI_Cycles:cycles];
 }
 
 // Overridden Setters for Registers. This is so when changing
@@ -175,15 +199,8 @@
 // setA0
 // -----------------------------------------------------------------
 - (void)setA0:(unsigned long)value {        
-    if ( value != A0 ) {
-        A0 = value;
-        A[0] = value;
-        [self setA0:value];
-    } else {
-        A0 = value;
-        A[0] = value;
-    }
-
+    A0 = value;
+    A[0] = value;
 }
 
 // -----------------------------------------------------------------
@@ -312,5 +329,14 @@
     GUI_PC = value;
     PC = value;
 }
+
+// -----------------------------------------------------------------
+// setGUI_Cycles
+// -----------------------------------------------------------------
+- (void)setGUI_Cycles:(unsigned long long)value {
+    GUI_Cycles = value;
+    cycles = value;
+}
+
 
 @end

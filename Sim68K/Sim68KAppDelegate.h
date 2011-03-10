@@ -21,6 +21,7 @@
     IBOutlet NSTextView     *scriptView;
 	NoodleLineNumberView	*lineNumberView;
     
+    NSString *file;
     IBOutlet Simulator      *simulator;
 }
 
@@ -29,5 +30,10 @@
 @property (assign) IBOutlet NSPanel *panelHardware;
 @property (assign) IBOutlet NSPanel *panelStack;
 @property (assign) IBOutlet NSPanel *panelMemory;
+@property (retain) NSString *file;
+
+- (IBAction)openDocument:(id)sender;
+- (IBAction)runProg:(id)sender;
+- (IBAction)stepExecute:(id)sender;
 
 @end

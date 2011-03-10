@@ -719,52 +719,52 @@ int	STOP()
 
 int TRAP()
 {
-    return NOP();
+    // return NOP();                                            // Temporarily call NOP until implemented
     
-    /*
     int vector, cid, code;
     char *inStr;
-    char buf[256];                        // temp buffer
-    byte mouseIRQ, keyIRQ;
+    char buf[256];                                              // temp buffer
+    char mouseIRQ, keyIRQ;
     
     vector = inst & 0x0F;
-    if(vector == 15) {                    // if display vector
-        switch ((char)D[0]) {               // which task ?
-            case 0: case 1:                   // display D1.W chars
-                inStr = &memory[A[1] & ADDRMASK];          // address of string
-                strncpy(buf,inStr,255);         // make copy of string so we can terminate it
-                if ((short)D[1] > 255)          // if D1 size > 255
-                    buf[255] = '\0';              // terminate at char 255
+    if(vector == 15) {                                          // if display vector
+        switch ((char)D[0]) {                                   // which task ?
+            /*
+            case 0: case 1:                                     // TASK 0, TASK 1: display D1.W chars
+                inStr = &memory[A[1] & ADDRMASK];               // address of string
+                strncpy(buf,inStr,255);                         // make copy of string so we can terminate it
+                if ((short)D[1] > 255)                          // if D1 size > 255
+                    buf[255] = '\0';                            // terminate at char 255
                 else
-                    buf[(short)D[1]] = '\0';      // terminate at D1 char
+                    buf[(short)D[1]] = '\0';                    // terminate at D1 char
                 // check memory map
                 code = memoryMapCheck(Invalid, (A[1] & ADDRMASK), strlen(inStr));
-                if (code == BUS_ERROR)        // if bus error caused by memory map
+                if (code == BUS_ERROR)                          // if bus error caused by memory map
                     return code;
                 
-                if ((char)D[0])                 // if D0.B = 1
-                    simIO->textOut(buf);          // display string without CRLF
+                if ((char)D[0])                                 // if D0.B = 1
+                    simIO->textOut(buf);                        // display string without CRLF
                 else
-                    simIO->textOutCR(buf);        // display string with CRLF
+                    simIO->textOutCR(buf);                      // display string with CRLF
                 break;
-            case 2:  // input
-                inStr = &memory[A[1] & ADDRMASK];  // address of string
-                simIO->textIn(inStr, &D[1], NULL); // read string into inStr, length in D1
+            case 2:                                             // TASK 2: input
+                inStr = &memory[A[1] & ADDRMASK];               // address of string
+                simIO->textIn(inStr, &D[1], NULL);              // read string into inStr, length in D1
                 break;
-            case 3:  // display number in D1.L
-                itoa(D[1], buf, 10);            // convert D1.L to string, put in buf
-                simIO->textOut(buf);            // display number without CRLF
+            case 3:                                             // TASK 3: display number in D1.L
+                itoa(D[1], buf, 10);                            // convert D1.L to string, put in buf
+                simIO->textOut(buf);                            // display number without CRLF
                 break;
-            case 4:  // read number to D1.L   // inputBuf & inputSize must be global
-                simIO->textIn(inputBuf, &inputSize, &D[1]); // read number to D1
+            case 4:                                             // TASK 4: read number to D1.L (inputBuf & inputSize must be global)
+                simIO->textIn(inputBuf, &inputSize, &D[1]);     // read number to D1
                 break;
-            case 5:  // read char to D1.B
+            case 5:                                             // TASK 5: read char to D1.B
                 simIO->charIn((char*)&D[1]);
                 break;
-            case 6:  // display char in D1.B
+            case 6:                                             // TASK 6: display char in D1.B
                 simIO->charOut((char)D[1]);
                 break;
-            case 7:  // Set D1.B to 1 if keyboard input is pending, otherwise set to 0
+            case 7:                                             // TASK 7: Set D1.B to 1 if keyboard input is pending, otherwise set to 0
                 if(pendingKey) {
                     D[1] &= 0xFFFFFF00;
                     D[1] |= 0x00000001;
@@ -772,7 +772,7 @@ int TRAP()
                     D[1] &= 0xFFFFFF00;
                 }
                 break;
-            case 8:  // Return time in hundredths of a second since midnight in D1.L
+            case 8:                                             // TASK 8: Return time in hundredths of a second since midnight in D1.L
                 struct  time t;
                 gettime(&t);
                 D[1] = t.ti_hour * 60 * 60 * 100 +
@@ -780,53 +780,59 @@ int TRAP()
                 t.ti_sec  * 100 +
                 t.ti_hund;
                 break;
-            case 9:  // terminate the program
-                Form1->AutoTraceTimer->Enabled = false;
+            */
+            case 9:                                             // TASK 9: terminate the program
+                // MARK: HARDWARE: Form1->AutoTraceTimer->Enabled = false;
                 trace = false;
                 halt = true;
-                Hardware->disable();
-                Log->stopLogWithAnnounce();
+                // MARK: HARDWARE: Hardware->disable();
+                // MARK: LOG: Log->stopLogWithAnnounce();
                 break;
-            case 10:                  // print text at (A1)
-                inStr = &memory[A[1] & ADDRMASK];        // address of string
+            /*
+            case 10:                                            // TASK 10: print text at (A1)
+                inStr = &memory[A[1] & ADDRMASK];               // address of string
                 // check memory map
                 code = memoryMapCheck(Invalid, (A[1] & ADDRMASK), strlen(inStr));
-                if (code == BUS_ERROR)        // if bus error caused by memory map
+                if (code == BUS_ERROR)                          // if bus error caused by memory map
                     return code;
                 while (*inStr)
                     printChar(*inStr++);
                 break;
-            case 11: // position cursor at col,row. D1.W holds col,row as bytes
-                if ((unsigned short)D[1] == 0xFF00)  // Clear Screen if D1.W is $FF00.
+            case 11:                                            // TASK 11: position cursor at col,row. D1.W holds col,row as bytes
+                if ((unsigned short)D[1] == 0xFF00)             // Clear Screen if D1.W is $FF00.
                     simIO->clear();
-                else if ((unsigned short)D[1] == 0x00FF) // Return cursor position
-                    simIO->getrc((short*)&D[1]);          // puts cursor position in D1.W
+                else if ((unsigned short)D[1] == 0x00FF)        // Return cursor position
+                    simIO->getrc((short*)&D[1]);                // puts cursor position in D1.W
                 else
                     simIO->gotorc((char)D[1],(char)(D[1]>>8));
                 break;
-            case 12:  // keyboard echo (on/off)
-                if ((char)D[1]==0)              // if D1.B = 0
+            case 12:                                            // TASK 12: keyboard echo (on/off)
+                if ((char)D[1]==0)                              // if D1.B = 0
                     keyboardEcho = false;
                 else
                     keyboardEcho = true;
                 break;
-            case 13: case 14:           // Display NULL terminated string at (A1)
-                inStr = &memory[A[1] & ADDRMASK];    // address of string
+            */
+            case 13: case 14:                                   // TASK 13, TASK 14: Display NULL terminated string at (A1)
+                inStr = &memory[A[1] & ADDRMASK];               // address of string
                 // check memory map
                 code = memoryMapCheck(Invalid, (A[1] & ADDRMASK), strlen(inStr));
-                if (code == BUS_ERROR)        // if bus error caused by memory map
+                if (code == BUS_ERROR)                          // if bus error caused by memory map
                     return code;
-                if ((char)D[0]==14)             // if D0.B = 14
-                    simIO->textOut(inStr);        // display string without CRLF
+                if ((char)D[0]==14)                             // if D0.B = 14
+                    NSLog(@"%s",inStr);
+                    // simIO->textOut(inStr);                   // display string without CRLF
                 else
-                    simIO->textOutCR(inStr);      // display string with CRLF
+                    // simIO->textOutCR(inStr);                 // display string with CRLF
                 break;
-            case 15:                    // Display D1 converted to radix in D2.B
-                if ((char)D[2]>=2 && (char)D[2]<=36) {   // if 2 <= D2.B <= 36
-                    ultoa(D[1], buf, (char)D[2]);  // convert D1.L to string, put in buf
+                break;
+            /*
+            case 15:                                            // TASK 15: Display D1 converted to radix in D2.B
+                if ((char)D[2]>=2 && (char)D[2]<=36) {          // if 2 <= D2.B <= 36
+                    ultoa(D[1], buf, (char)D[2]);               // convert D1.L to string, put in buf
                     AnsiString hex = buf;
-                    hex = hex.UpperCase();         // convert to upper case
-                    simIO->textOut(hex.c_str());   // display number without CRLF
+                    hex = hex.UpperCase();                      // convert to upper case
+                    simIO->textOut(hex.c_str());                // display number without CRLF
                 }
                 break;
             case 16:                    // turn input prompt on/off
@@ -1265,13 +1271,14 @@ int TRAP()
             case 105:                  // if Get Local IP
                 simIO->getLocalIP(&memory[A[2] & ADDRMASK], (int*)&D[0]);
                 break;
+            */
             default:
+                return NOP();                                           // DEFAULT: Return NOP if not handled
                 return (TRAP_TRAP);
         } // switch
         return SUCCESS;
-    }else
+    } else
         return (TRAP_TRAP);
-     */
 }
 
 int	TRAPV()
