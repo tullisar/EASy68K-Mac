@@ -54,9 +54,11 @@
 // Runs when the NIB file has been loaded.
 // -----------------------------------------------------------------
 - (void)awakeFromNib {
+    // Global delegate reference (ick), necessary for simulator functions to reference GUI
+    appDelegate = self;
     
     // Initialize the NSTextView with the NoodleLineNumberView
-    lineNumberView = [[MarkerLineNumberView alloc] initWithScrollView:scrollView];
+    lineNumberView = [[[MarkerLineNumberView alloc] initWithScrollView:scrollView] autorelease];
     [scrollView setVerticalRulerView:lineNumberView];
     [scrollView setHasHorizontalRuler:NO];
     [scrollView setHasVerticalRuler:YES];

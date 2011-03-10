@@ -106,7 +106,7 @@ int	SCC()
 // BRA
 int BRA()
 {
-    long	displacement;
+    long displacement;
     
     displacement = inst & 0xff;
     if (displacement == 0) {
@@ -127,7 +127,7 @@ int BRA()
 
 int	BSR()
 {
-    long	displacement;
+    long displacement;
     
     displacement = inst & 0xff;
     if (displacement == 0) {

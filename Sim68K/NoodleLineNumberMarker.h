@@ -30,9 +30,9 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface NoodleLineNumberMarker : NSRulerMarker
+@interface NoodleLineNumberMarker : NSRulerMarker 
 {
-	unsigned		lineNumber;
+	unsigned lineNumber;
 }
 
 - (id)initWithRulerView:(NSRulerView *)aRulerView lineNumber:(float)line image:(NSImage *)anImage imageOrigin:(NSPoint)imageOrigin;

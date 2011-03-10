@@ -1,8 +1,7 @@
-
 /***************************** 68000 SIMULATOR ****************************
 
-File Name: VAR.H
-Version: 1.0
+File Name: var.h
+Version: 1.0 (Mac OS X)
 
 This file contains all global variable definitions for the simulator
 program.  It is included in the module "SIM68Ku".
@@ -10,13 +9,15 @@ program.  It is included in the module "SIM68Ku".
         BE CAREFUL TO KEEP THESE DECLARATIONS IDENTICAL TO THE GLOBAL
         VARIABLE DECLARATIONS IN "EXTERN.H"
 
-
+Modified: Robert Bartlett-Schneider
+          2011-03-04
+          robert@savetherobots.org
+ 
 ***************************************************************************/
 
 
 #include "def.h"        /* include file for constants & types */
 #include "proto.h"      /* function prototypes */
-
 
 #include <stack>
 using namespace std;
@@ -159,3 +160,6 @@ int seg7loc, LEDloc, switchLoc, pbLoc;
 int ROMStart=0, ROMEnd=0, ReadStart=0, ReadEnd=0;
 int ProtectedStart=0, ProtectedEnd=0, InvalidStart=0, InvalidEnd=0;
 bool ROMMap=false, ReadMap=false, ProtectedMap=false, InvalidMap=false;
+
+// Global Obj-C Variables for refernce
+Sim68KAppDelegate *appDelegate;

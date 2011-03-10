@@ -24,6 +24,7 @@ using namespace std;
 #include "proto.h"     	/* function prototypes */
 #include "BPoint.h"
 #include "BPointExpr.h"
+#import "Sim68KAppDelegate.h"
 
 extern char buffer[256];       // used to form messages for display in windows
 extern char numBuf[20];        // "
@@ -128,15 +129,6 @@ extern unsigned char FullScreenMonitor;
 // screen device to use for full screen output
 extern char FullScreenDeviceName[32];
 
-// function pointers to APIs that don't always exist. (for compatibility with 95)
-// TODO: Ensure that these aren't used except for Windows specific purposes
-//typedef HRESULT (CALLBACK* CHANGEDISPLAYSETTINGSEXAPROC)(LPCTSTR,LPDEVMODEA,HWND,DWORD,LPVOID);
-//extern CHANGEDISPLAYSETTINGSEXAPROC ChangeDisplaySettingsExAPtr;
-//typedef HRESULT (CALLBACK* ENUMDISPLAYSETTINGSEXAPROC)(LPCTSTR,DWORD,LPDEVMODE,DWORD);
-//extern ENUMDISPLAYSETTINGSEXAPROC EnumDisplaySettingsExAPtr;
-//typedef HRESULT (CALLBACK* ENUMDISPLAYDEVICESAPROC)(LPCTSTR,DWORD,PDISPLAY_DEVICE,DWORD);
-//extern ENUMDISPLAYDEVICESAPROC EnumDisplayDevicesAPtr;
-
 // true if directSound may be used
 extern bool dsoundExist;
 
@@ -161,5 +153,8 @@ extern int seg7loc, LEDloc, switchLoc, pbLoc;
 extern int ROMStart, ROMEnd, ReadStart, ReadEnd;
 extern int ProtectedStart, ProtectedEnd, InvalidStart, InvalidEnd;
 extern bool ROMMap, ReadMap, ProtectedMap, InvalidMap;
+
+// Global Obj-c Objects
+extern Sim68KAppDelegate *appDelegate;
 
 #endif

@@ -1,31 +1,26 @@
-
 /***************************** 68000 SIMULATOR ****************************
  
- File Name: SIM.C
- Version: 1.0
+ File Name: startsim.cpp
+ Version: 1.0 (Mac OS X)
  
- This file contains the function 'main()' and various screen management
- routines.
+ This file contains the function 'initSim()'
  
  Modified: Chuck Kelly
  Monroe County Community College
  http://www.monroeccc.edu/ckelly
  
- ***************************************************************************/
+ Modified: Robert Bartlett-Schneider
+           2011-03-03
+           robert@savetherobots.org
+ 
+***************************************************************************/
 
 #include <stdio.h>
-#include <iostream.h>
+#include <iostream>
 #include "extern.h"
 #include "var.h"
 
-//#include "SIM68Ku.h"
-//#include "Stack1.h"
-//#include "Memory1.h"
-//#include "simIOu.h"
-//#include "hardwareu.h"
-//#include "net.h"
-
-//void scrshow(); 	/* update register display */
+void scrshow(); 	/* update register display */
 extern bool inputMode;
 extern bool disableKeyCommands;  // defined in SIM68Ku
 
@@ -34,20 +29,6 @@ void initSim()                   // initialization for the simulator
     int	i;
 
     // MARK: GUI: GUI initialization will be done elsewhere
-//    Form1->AutoTraceTimer->Enabled = false;
-//    simIO->clear();               // clear output window
-//    simIO->setWindowSize(640,480); // reset output window size
-//    simIO->setDrawingMode(4);     // set default pen mode
-//    simIO->setDrawingMode(16);    // turn off double buffering
-//    simIO->setPenWidth(1);        // set default pen width
-//    simIO->setLineColor(clWhite);
-//    simIO->setFillColor(clBlack);
-//    simIO->BackBuffer->Canvas->Font->Assign(Form1->FontDialogSimIO->Font);  // apply font
-//    simIO->Font->Assign(Form1->FontDialogSimIO->Font);
-    
-//    Form1->ListBox1->Font->Assign(Form1->FontDialogSource->Font);  // apply font
-//    Form1->HeadingsLbl->Font->Assign(Form1->FontDialogSource->Font);
-//    Form1->Message->Font->Assign(Form1->FontDialogSource->Font);
     
     inputMode = false;
     pendingKey = 0;               // clear pendingKey

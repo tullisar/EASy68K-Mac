@@ -74,8 +74,6 @@
 // Runs the 6800 program loaded into memory
 // -----------------------------------------------------------------
 - (void) runLoop {
-
-    
     static BOOL running = NO;
     
     if (!running) {
@@ -113,7 +111,7 @@
     sprintf(fName,"%s",[name cStringUsingEncoding:NSUTF8StringEncoding]);
     if (!loadSrec(fName)) {
         
-        startPC = PC;
+        startPC = OLD_PC = PC;
         NSString *listFileName = [NSString stringWithFormat:@"%@%@",
                                   [name stringByDeletingPathExtension],
                                   @".l68"];
@@ -160,7 +158,7 @@
         
     } else {
         // TODO: GUI Error
-        NSLog(@"Error loading S-Record file");
+        NSLog(@"Error loading S-Record file.");
     }
 }
 

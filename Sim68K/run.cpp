@@ -640,7 +640,7 @@ int eff_addr_noread (long size, int mask, int add_times)
 int runprog()
 {
     int i;
-    char ch, *pc_str;
+    // char ch, *pc_str;
     
     halt = false;
     exec_inst();                                            // execute an instruction
@@ -655,8 +655,8 @@ int runprog()
     
     if (errflg) {                                           // if illegal opcode in program initiate an exception
         halt = true;                                        // force halt
-        // MARK: GUI: Notify GUI of error
-        // Form1->Message->Lines->Add("Address or Bus error during exception processing. Execution halted");
+        // MARK: ERROR: Notify GUI of Address/Bus error
+        NSLog(@"Address or Bus error during exception processing. Execution halted.");
     }
     
     // Simple Breakpoints
@@ -683,8 +683,9 @@ int runprog()
         // Evaluate isBreak() for all expressions
         //if(true) {
         if(bpExpressions[i].isBreak()) {
-            // MARK: GUI: Notify GUI of break point
-            trace = true;             // force trace mode
+            // MARK: ERROR: Notify GUI of Breakpoint
+            NSLog(@"Breakpoint encountered at %04x. Execution halted.",PC);
+            trace = true;                                  // force trace mode
             // ???: Again, what is AutoTraceTimer used for?
             // Form1->AutoTraceTimer->Enabled = false;
         }
@@ -700,7 +701,7 @@ int runprog()
     OLD_PC = PC;                                            // update the OLD_PC
     
     if (trace || halt) {
-        runMode = false;                                    // stop running if enabled
+        runMode = false;                                        // stop running if enabled
         // MARK: HARDWARE: Turn off Auto IRQ
         // if (!stopInstruction)
         //     Hardware->autoIRQoff();                         // turn off auto interrupt timers unless STOP instruction ck 1-11-2008
@@ -730,7 +731,6 @@ int runprog()
 }
 
 /**************************** int exec_inst() *****************************
- 
  name       : int exec_inst ()
  parameters : NONE
  function   : executes a single instruction at the location pointed
@@ -744,8 +744,6 @@ int runprog()
  is turned off by the user in which case the exception
  is not initiated and the program simply terminates and
  informs the user that an exception condition has occurred.
- 
- 
  ****************************************************************************/
 
 int exec_inst()
@@ -775,36 +773,34 @@ int exec_inst()
                     if (trace) {
                         sprintf(buffer,"PC=%08X  Code=%04X  %s", (unsigned int)(PC-2), inst, inst_arr[i].name);
                         NSLog(@"%s",buffer);
-                        // MARK: GUI: Put opcode in GUI somewhere?
-                        // Form1->Message->Lines->Add(buffer);
-                        
+                        // TODO: Display last instruction executed in window during trace                        
                         if (logging)
                         {
                             // ----- if logging memory -----
-                            if (ElogFlag == INST_REG_MEM) {     // if logging memory
-                                int addr = logMemAddr;            // address to log
-                                int nRows = logMemBytes/16;       // how many rows to log
+                            if (ElogFlag == INST_REG_MEM) {                                     // if logging memory
+                                int addr = logMemAddr;                                          // address to log
+                                int nRows = logMemBytes/16;                                     // how many rows to log
                                 
-                                fprintf(ElogFile,"\n");           // blank line
+                                fprintf(ElogFile,"\n");                                         // blank line
                                 // display memory by rows of 16 bytes
                                 for (int r=0; r<nRows; r++) {
-                                    if (addr < 0 || addr >= MEMSIZE)    // if invalid address
+                                    if (addr < 0 || addr >= MEMSIZE)                            // if invalid address
                                         fprintf(ElogFile,"%08X: Invalid Address",addr);
-                                    else                                // valid address
+                                    else                                                        // valid address
                                         fprintf(ElogFile,"%08X: ",addr);
                                     // display 16 hex bytes of memory
                                     for (int i=0; i<16; i++) {
-                                        if (addr+i >= MEMSIZE)            // if invalid address
-                                            fprintf(ElogFile,"xx ");        // is this necessary?
+                                        if (addr+i >= MEMSIZE)                                  // if invalid address
+                                            fprintf(ElogFile,"xx ");                            // is this necessary?
                                         else
                                             fprintf(ElogFile,"%02hX ",(unsigned char)memory[(addr+i) & ADDRMASK]);
                                     }
                                     // display 16 bytes as ASCII
                                     for (int i=0; i<16; i++) {
-                                        if (addr+i >= MEMSIZE)            // if invalid address
-                                            fprintf(ElogFile,"-");          // is this necessary?
+                                        if (addr+i >= MEMSIZE)                                  // if invalid address
+                                            fprintf(ElogFile,"-");                              // is this necessary?
                                         else {
-                                            if (memory[(addr+i) & ADDRMASK] >= ' ')    // if displayable char
+                                            if (memory[(addr+i) & ADDRMASK] >= ' ')             // if displayable char
                                                 // ???: What does this even mean? Need to study formatted strings even more.
                                                 fprintf(ElogFile,"%hc",memory[(addr+i) & ADDRMASK]);
                                             else
@@ -838,7 +834,7 @@ int exec_inst()
                             
                             // ----- if logging instruction -----
                             if (ElogFlag) {
-                                // MARK: GUI: Do I need to do anything here?
+                                // TODO: Determine if instruction logging is enabled and output to file
                                 // if(Form1->lineToLog() == false) {  // output instruction to log file
                                 //     fprintf(ElogFile, buffer); // if source not present output limited info
                                 //     fprintf(ElogFile, "\n");
@@ -847,8 +843,14 @@ int exec_inst()
                             }
                         } // end if logging
                     }
-                    sprintf(buffer,"PC=%08X  Code=%04X  %s", (unsigned int)(PC-2), inst, inst_arr[i].name);
-                    NSLog(@"%s",buffer);
+                    
+#ifdef DEBUG_BUILD
+                    // Output the last instruction executed to the console for debugging purposes
+                    if (!trace && !sstep) {
+                        sprintf(buffer,"PC=%08X  Code=%04X  %s", (unsigned int)(PC-2), inst, inst_arr[i].name);
+                        NSLog(@"%s",buffer);
+                    }
+#endif
                     
                     if (SR & tbit)                        // if trace bit set
                         trace_bit = true;
@@ -863,45 +865,44 @@ int exec_inst()
                     //-------------------------------------------------------------------
                     //------------------------ EXCEPTION PROCESSING ---------------------
                     //-------------------------------------------------------------------
-                    if (exceptions)               // if exception processing enabled
+                    if (exceptions)                                     // if exception processing enabled
                     {
-                        OLD_PC = PC;                //ck 2.9.2
+                        OLD_PC = PC;                                    //ck 2.9.2
                         
-                        switch (exec_result)        // these results prevent trace exception
+                        switch (exec_result)                            // these results prevent trace exception
                         {
-                            case BAD_INST : inc_cyc (34);    // Illegal instruction
-                                OLD_PC -= 2;                    // ck 12-16-2005
+                            case BAD_INST : inc_cyc (34);               // Illegal instruction
+                                OLD_PC -= 2;                            // ck 12-16-2005
                                 mem_req (0x10, LONG_MASK, &PC);
                                 exceptionHandler (1, 0, READ);
                                 break;
-                            case NO_PRIVILEGE : inc_cyc (34); // Privileged violation
+                            case NO_PRIVILEGE : inc_cyc (34);           // Privileged violation
                                 mem_req (0x20, LONG_MASK, &PC);
                                 exceptionHandler (1, 0, READ);
                                 break;
                         }
                         intMask = 0xFF80 >> (7 - ((SR & intmsk) >> 8)) | 0x40;
-                        if ( irq & intMask)         // if IRQ
-                            irqHandler();             // process IRQ
+                        if ( irq & intMask)                             // if IRQ
+                            irqHandler();                               // process IRQ
                         
-                        if (trace_bit)      // if trace exception enabled
+                        if (trace_bit)                                  // if trace exception enabled
                         {
                             inc_cyc (34);
                             mem_req (0x24, LONG_MASK, &PC);
                             exceptionHandler (2, 0, READ);
-                            OLD_PC = PC;              //ck 2.9.2
+                            OLD_PC = PC;                                //ck 2.9.2
                         }
-                        switch (exec_result)        // these results do not prevent trace exception
+                        switch (exec_result)                            // these results do not prevent trace exception
                         {
                             case SUCCESS  : break;
-                            case STOP_TRAP :             // STOP instruction
+                            case STOP_TRAP :                            // STOP instruction
                                 //trace = true;
                                 // Form1->AutoTraceTimer->Enabled = false;
                                 halt = true;
                                 if (stopInstruction == false) {
                                     stopInstruction = true;
-                                    // MARK: GUI: Notify of STOP instruction to GUI
-                                    // Form1->Message->Lines->Add("STOP instruction. Execution halted");
-                                    // Form1->SetFocus();    // bring Form1 to top
+                                    // MARK: ERROR: Notify GUI of STOP instruction
+                                    NSLog(@"STOP instruction. Execution halted");
                                     scrshow();            // update the screen
                                 }  
                                 break;
@@ -935,94 +936,82 @@ int exec_inst()
                                 break;
                         }
                     }
-                    else        // exception processing not enabled
+                    else                                                        // exception processing not enabled
                     {
                         switch (exec_result)
                         {
                             case SUCCESS  : break;
-                            case BAD_INST : halt = true;    // halt the program
-                                // MARK: GUI: Notify GUI of illegal instruction
-                                // Form1->Message->Lines->Add(str.sprintf
-                                //                            ("Illegal instruction found at location %4x. Execution halted", OLD_PC));
+                            case BAD_INST : halt = true;                        // halt the program
+                                // MARK: ERROR: Notify GUI of ILLEGAL instruction
+                                NSLog(@"Illegal instruction found at location %04x. Execution halted.", OLD_PC);    
                                 break;
                             case NO_PRIVILEGE : halt = true;
-                                // MARK: GUI: Notify GUI of supervisor privelage instruction
-                                // Form1->Message->Lines->Add(str.sprintf
-                                //                            ("supervisor privilege violation at location %4x. Execution halted", OLD_PC));
+                                // MARK: ERROR: Notify GUI of Privelage violation
+                                NSLog(@"Supervisor privilege violation at location %04x. Execution halted.", OLD_PC);
                                 break;
                             case CHK_EXCEPTION : halt = true;
                                 // MARK: GUI: Notify GUI of CHK exception
-                                // Form1->Message->Lines->Add(str.sprintf
-                                //                            ("CHK exception occurred at location %4x. Execution halted", OLD_PC));
+                                NSLog(@"CHK exception ocurred at location %04x. Execution halted.", OLD_PC);
                                 break;
                             case STOP_TRAP : halt = true;
+                                NSLog(@"STOP instruction executed at location %04x. Execution halted.",OLD_PC);
                                 // MARK: GUI: Notify GUI of STOP instruction
                                 // Form1->AutoTraceTimer->Enabled = false;
-                                // Form1->Message->Lines->Add(str.sprintf
-                                //                            ("STOP instruction executed at location %4x. Execution halted", OLD_PC));
                                 // Log->stopLogWithAnnounce();
-                                // Form1->SetFocus();    // bring Form1 to top
-                                scrshow();            // update the screen
-                                // Hardware->disable();
+                                // MARK: HARDWARE: Disable hardware
                                 break;
                             case TRAP_TRAP : halt = true;
-                                // MARK: GUI: Notify GUI of TRAP instruction
+                                NSLog(@"TRAP exception occurred at location %04x. Execution halted.", OLD_PC);
+                                // MARK: GUI: Notify GUI of TRAP exception
                                 // Form1->Message->Lines->Add(str.sprintf
                                 //                            ("TRAP exception occurred at location %4x. Execution halted", OLD_PC));
                                 break;
                             case TRAPV_TRAP : halt = true;
-                                // MARK: GUI: Notify GUI of TRAPV instruction
-                                // Form1->Message->Lines->Add(str.sprintf
-                                //                           ("TRAPV exception occurred at location %4x. Execution halted", OLD_PC));
+                                // MARK: ERROR: Notify GUI of TRAPV exception
+                                NSLog(@"TRAPV exception occurred at location %04x. Execution halted.", OLD_PC);
                                 break;
                             case DIV_BY_ZERO : halt = true;
-                                // MARK: GUI: Notify GUI of Divide by Zero error
-                                // Form1->Message->Lines->Add(str.sprintf
-                                //                           ("Divide by zero occurred at location %4x. Execution halted", OLD_PC));
+                                // MARK: ERROR: Notify GUI of Divide by Zero error
+                                NSLog(@"Divide by zero occurred at location %04x. Execution halted", OLD_PC);
                                 break;
                             case ADDR_ERROR : halt = true;
-                                // MARK: GUI: Notify GUI of address error
-                                // Form1->Message->Lines->Add("Execution halted");
+                                // MARK: ERROR: Notify GUI of Address error
+                                NSLog(@"Execution halted, an address error has occurred.");
                                 break;
                             case BUS_ERROR : halt = true;
-                                // MARK: GUI: Notify GUI of bus error
-                                // Form1->Message->Lines->Add("Execution halted");
+                                // MARK: ERROR: Notify GUI of Bus error
+                                NSLog(@"Execution halted, a bus error has occurred.");
                                 break;
                             case TRACE_EXCEPTION : halt = true;
-                                // MARK: GUI: Notify GUI of trace exception
-                                // Form1->Message->Lines->Add(str.sprintf
-                                //                            ("Trace exception occurred at location %4x. Execution halted", OLD_PC));
+                                // MARK: ERROR: Notify GUI of Trace exception
+                                NSLog(@"Trace exception occurred at location %04x. Execution halted", OLD_PC);
                                 break;
                             case LINE_1010 : halt = true;
-                                // MARK: GUI: Notify GUI of Line 1010 Emulator exception
-                                // Form1->Message->Lines->Add(str.sprintf
-                                //                            ("Line 1010 Emulator exception occurred at location %4x. Execution halted", OLD_PC));
+                                // MARK: ERROR: Notify GUI of Line 1010 Emulator exception
+                                NSLog(@"Line 1010 Emulator exception occurred at location %04x. Execution halted", OLD_PC);
                                 break;
                             case LINE_1111 : halt = true;
-                                // MARK: GUI: Notify GUI of Line 1111 Emulator exception
-                                // Form1->Message->Lines->Add(str.sprintf
-                                //                            ("Line 1111 Emulator exception occurred at location %4x. Execution halted", OLD_PC));
+                                // MARK: ERROR: Notify GUI of Line 1111 Emulator exception
+                                NSLog(@"Line 1111 Emulator exception occurred at location %04x. Execution halted", OLD_PC);
                                 break;
                             default: halt = true;
-                                // MARK: GUI: Notify GUI of Unkown excecution error
-                                // Form1->Message->Lines->Add(str.sprintf
-                                //                            ("Unknown execution error %4x occurred at location %4x. Execution halted", exec_result, OLD_PC));
+                                // MARK: ERROR: Notify GUI of Unkown Execution error
+                                NSLog(@"Unknown execution error %4x occurred at location %04x. Execution halted", exec_result, OLD_PC);
                         }
                         
                         if (SR & tbit)
                         {
                             halt = true;
-                            // MARK: GUI: Notify GUI of TRACE exception
-                            // Form1->Message->Lines->Add(str.sprintf
-                            //                            ("TRACE exception occurred at location %4x. Execution halted", OLD_PC));
+                            // MARK: ERROR: Notify GUI of TRACE exception
+                            NSLog(@"TRACE exception occurred at location %04x. Execution halted", OLD_PC);
                         }
                     }
-                    break;        // break out of for loop
+                    break; // break out of for loop
                 }
             } // end for
         } // end if
     } catch( ... ) {
-        // MARK: GUI: Notify GUI of unhandled exception in program
+        // MARK: ERROR: Notify GUI of unhandled exception in program
         // Form1->AutoTraceTimer->Enabled = false;
         // sprintf(buffer, "ERROR: An exception occurred in routine 'exec_inst'.\nPC=%08X  Code=%04X", PC-2, inst);
         // Application->MessageBox(buffer, "Error", MB_OK);
@@ -1033,8 +1022,7 @@ int exec_inst()
     return 0;
 }
 
-/**************************** int exceptionHandler () *****************************
- 
+/**************************** int exceptionHandler () ************************
  name       : int exception (class, loc, r_w)
  parameters : int class : class of exception to be taken
  long loc : the address referenced in the case of an
@@ -1044,8 +1032,6 @@ int exec_inst()
  function   : initiates exception processing by pushing the appropriate
  exception stack frame on the system stack and turning
  supervisor mode on and trace mode off.
- 
- 
  ****************************************************************************/
 
 void exceptionHandler(int clas, long loc, int r_w)
