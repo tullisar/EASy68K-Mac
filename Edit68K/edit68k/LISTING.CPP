@@ -260,8 +260,9 @@ int listObj(int data, int size)
         case WORD_SIZE: sprintf(listPtr, "%04X ", data & 0xFFFF);
             listPtr += 5;
             break;
-            // TODO: (WORKAROUND) Make sure casting data as (unsigned long) isn't a bad workaround
-        case LONG_SIZE: sprintf(listPtr, "%08lX ", (unsigned long)data);
+            // TODO: (WORKAROUND) Make sure casting data as (unsigned long) isn't a bad workaround 
+            // NOTE: IT WAS!
+        case LONG_SIZE: sprintf(listPtr, "%08lX ", data);
             listPtr += 9;
             break;
         default: sprintf(buffer,"LISTOBJ: INVALID SIZE CODE!\n");

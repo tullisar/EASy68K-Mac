@@ -222,7 +222,8 @@ int outputObj(int newAddr, int data, int size)
                 byteCount += 2;
                 break;
             case LONG_SIZE :
-                sprintf(objPtr, "%08lX", (unsigned long)data);
+                // TODO: REMOVED CAST TO (unsigned long)
+                sprintf(objPtr, "%08lX", data);
                 byteCount += 4;
                 break;
             default :
