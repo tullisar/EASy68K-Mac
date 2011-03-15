@@ -1,3 +1,5 @@
+// FIXME: Something is wrong when generating S-Record files... :(
+
 /***********************************************************************
  *
  *		OBJECT.C
@@ -256,6 +258,7 @@ int writeObj()
         strncpy(sRec, recLen, 2);
         
         // Calculate checksum and add to record
+        // FIXME: PERHAPS HERE IS THE PROBLEM?! Examine original...
         checksum = 0;
         str[0] = '0';
         str[1] = 'x';
