@@ -34,6 +34,11 @@
 
 - (IBAction)openDocument:(id)sender;
 - (IBAction)runProg:(id)sender;
-- (IBAction)stepExecute:(id)sender;
+- (IBAction)step:(id)sender;
+- (IBAction)trace:(id)sender;
+- (IBAction)pause:(id)sender;
+- (IBAction)rewindProg:(id)sender;
+- (IBAction)runToCursor:(id)sender;
+- (IBAction)reload:(id)sender;
 
 @end

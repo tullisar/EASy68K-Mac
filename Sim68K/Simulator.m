@@ -12,7 +12,7 @@
 @implementation Simulator
 
 @synthesize A0,A1,A2,A3,A4,A5,A6,A7,D0,D1,D2,D3,D4,D5,D6,D7,
-            GUI_SR,GUI_US,GUI_SS,GUI_PC,GUI_Cycles;
+            GUI_SR,GUI_US,GUI_SS,GUI_PC,GUI_Cycles,startPC;
 @synthesize listFile;
 
 
@@ -27,6 +27,7 @@
         GUI_SR = GUI_US = GUI_SS = GUI_PC = 0;
         GUI_Cycles = 0;
         startPC = 0;
+        simLoaded = NO;
         return self;
     } else {
         return nil;
@@ -49,6 +50,7 @@
 - (void) initSim {
     [self memFormat];
     initSim();
+    [self displayReg];
 }
 
 // -----------------------------------------------------------------
@@ -80,8 +82,8 @@
         running = YES;
         try {
             while (runMode) {
-                if (trace && sstep) [self displayReg];
                 runprog();
+                if (trace || sstep) [self displayReg];
                 // Process messages?
             }
         } catch(...) {
@@ -154,10 +156,12 @@
             NSLog(@"Unable to locate or load associated listfile. Source level debugging will be unavailable.");
         }
         
+        simLoaded = YES;
         [self displayReg];
         
     } else {
         // TODO: GUI Error
+        simLoaded = NO;
         NSLog(@"Error loading S-Record file.");
     }
 }
@@ -190,13 +194,97 @@
     [self setGUI_Cycles:cycles];
 }
 
+// -----------------------------------------------------------------
+// runProg
+// Initiates the program run loop after disabling tracing and steps
+// -----------------------------------------------------------------
+- (void)runProg {
+    if (simLoaded) {
+        trace       = false;
+        sstep       = false;
+        runMode     = true;
+        runModeSave = runMode;
+        // MARK: HARDWARE: Enable Auto-IRQ
+        // MARK: I/O: Bring I/O front
+        [self runLoop];
+    }
+}
+
+// -----------------------------------------------------------------
+// step
+// Steps through the next instruction
+// -----------------------------------------------------------------
+- (void)step {
+    if (simLoaded) {
+        trace       = true;
+        sstep       = true;
+        stepToAddr  = 0;
+        runMode     = true;
+        runModeSave = runMode;
+        [self runLoop];
+    }
+}
+
+// -----------------------------------------------------------------
+// trace
+// Traces into the next instruction
+// -----------------------------------------------------------------
+- (void)trace {
+    if (simLoaded) {
+        trace       = true;
+        sstep       = false;
+        runprog();
+        [self displayReg];
+    }
+}
+
+// -----------------------------------------------------------------
+// pause
+// Pauses program execution
+// -----------------------------------------------------------------
+- (void)pause {
+    if (simLoaded) {
+        trace       = true;
+        sstep       = false;
+        runMode     = false;
+        if (inputMode)
+            inputMode = false;
+        [self displayReg];
+        // TODO: Disable auto-trace timer
+        // MARK: HARDWARE: Disable auto IRQ
+    }
+}
+
+// -----------------------------------------------------------------
+// rewindProg
+// Rewinds the loaded program
+// -----------------------------------------------------------------
+- (void)rewind {
+    // TODO: Disable auto-trace timer
+    PC = [self startPC];
+    initSim();
+    [self displayReg];
+    OLD_PC = PC;
+}
+
+// -----------------------------------------------------------------
+// runToCursor
+// Tells the simulator to rewind the program loaded
+// -----------------------------------------------------------------
+- (void)runToCursor:(long)location {
+    // MARK: DEBUG: Must set during debug, as it'll always be zero for now.
+    location = 0x00000000;
+    runToAddr = location;
+}
+
+
 // Overridden Setters for Registers. This is so when changing
 // fields that are bound to a particular value, it will also
 // change the corresponding 68000 register in addition to the GUI
 // -----------------------------------------------------------------
 // setA0
 // -----------------------------------------------------------------
-- (void)setA0:(unsigned long)value {        
+- (void)setA0:(long)value {        
     A0 = value;
     A[0] = value;
 }
@@ -204,7 +292,7 @@
 // -----------------------------------------------------------------
 // setA1
 // -----------------------------------------------------------------
-- (void)setA1:(unsigned long)value {
+- (void)setA1:(long)value {
     A1 = value;
     A[1] = value;
 }
@@ -212,7 +300,7 @@
 // -----------------------------------------------------------------
 // setA2
 // -----------------------------------------------------------------
-- (void)setA2:(unsigned long)value {
+- (void)setA2:(long)value {
     A2 = value;
     A[2] = value;
 }
@@ -220,7 +308,7 @@
 // -----------------------------------------------------------------
 // setA3
 // -----------------------------------------------------------------
-- (void)setA3:(unsigned long)value {
+- (void)setA3:(long)value {
     A3 = value;
     A[3] = value;
 }
@@ -228,7 +316,7 @@
 // -----------------------------------------------------------------
 // setA4
 // -----------------------------------------------------------------
-- (void)setA4:(unsigned long)value {
+- (void)setA4:(long)value {
     A4 = value;
     A[4] = value;
 }
@@ -236,7 +324,7 @@
 // -----------------------------------------------------------------
 // setA5
 // -----------------------------------------------------------------
-- (void)setA5:(unsigned long)value {
+- (void)setA5:(long)value {
     A5 = value;
     A[5] = value;
 }
@@ -244,7 +332,7 @@
 // -----------------------------------------------------------------
 // setA6
 // -----------------------------------------------------------------
-- (void)setA6:(unsigned long)value {
+- (void)setA6:(long)value {
     A6 = value;
     A[6] = value;
 }
@@ -252,7 +340,7 @@
 // -----------------------------------------------------------------
 // setA7
 // -----------------------------------------------------------------
-- (void)setA7:(unsigned long)value {
+- (void)setA7:(long)value {
     A7 = value;
     A[7] = value;
 }
@@ -260,7 +348,7 @@
 // -----------------------------------------------------------------
 // setD0
 // -----------------------------------------------------------------
-- (void)setD0:(unsigned long)value {
+- (void)setD0:(long)value {
     D0 = value;
     D[0] = value;
 }
@@ -268,7 +356,7 @@
 // -----------------------------------------------------------------
 // setD1
 // -----------------------------------------------------------------
-- (void)setD1:(unsigned long)value {
+- (void)setD1:(long)value {
     D1 = value;
     D[1] = value;
 }
@@ -276,7 +364,7 @@
 // -----------------------------------------------------------------
 // setD2
 // -----------------------------------------------------------------
-- (void)setD2:(unsigned long)value {
+- (void)setD2:(long)value {
     D2 = value;
     D[2] = value;
 }
@@ -284,15 +372,47 @@
 // -----------------------------------------------------------------
 // setD3
 // -----------------------------------------------------------------
-- (void)setD3:(unsigned long)value {
+- (void)setD3:(long)value {
     D3 = value;
     D[3] = value;
 }
 
 // -----------------------------------------------------------------
+// setD4
+// -----------------------------------------------------------------
+- (void)setD4:(long)value {
+    D4 = value;
+    D[4] = value;
+}
+
+// -----------------------------------------------------------------
+// setD5
+// -----------------------------------------------------------------
+- (void)setD5:(long)value {
+    D5 = value;
+    D[5] = value;
+}
+
+// -----------------------------------------------------------------
+// setD6
+// -----------------------------------------------------------------
+- (void)setD6:(long)value {
+    D6 = value;
+    D[6] = value;
+}
+
+// -----------------------------------------------------------------
+// setD7
+// -----------------------------------------------------------------
+- (void)setD7:(long)value {
+    D7 = value;
+    D[7] = value;
+}
+
+// -----------------------------------------------------------------
 // setGUI_SR
 // -----------------------------------------------------------------
-- (void)setGUI_SR:(unsigned short)value {
+- (void)setGUI_SR:(short)value {
     GUI_SR = value;
     SR = value;
 }
@@ -300,7 +420,7 @@
 // -----------------------------------------------------------------
 // setGUI_US
 // -----------------------------------------------------------------
-- (void)setGUI_US:(unsigned long)value {
+- (void)setGUI_US:(long)value {
     GUI_US = value;
     A[7] = value;
 }
@@ -308,14 +428,14 @@
 // -----------------------------------------------------------------
 // GUI_US
 // -----------------------------------------------------------------
-- (unsigned long)setGUI_US {
+- (long)setGUI_US {
     return A[7];
 }
 
 // -----------------------------------------------------------------
 // setGUI_SS
 // -----------------------------------------------------------------
-- (void)setGUI_SS:(unsigned long)value {
+- (void)setGUI_SS:(long)value {
     GUI_SS = value;
     A[8] = value;
 }
@@ -323,7 +443,7 @@
 // -----------------------------------------------------------------
 // setGUI_PC
 // -----------------------------------------------------------------
-- (void)setGUI_PC:(unsigned long)value {
+- (void)setGUI_PC:(long)value {
     GUI_PC = value;
     PC = value;
 }
@@ -331,7 +451,7 @@
 // -----------------------------------------------------------------
 // setGUI_Cycles
 // -----------------------------------------------------------------
-- (void)setGUI_Cycles:(unsigned long long)value {
+- (void)setGUI_Cycles:(unsigned long int)value {
     GUI_Cycles = value;
     cycles = value;
 }

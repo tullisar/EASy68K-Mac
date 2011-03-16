@@ -582,12 +582,20 @@ void put (long *dest, long source, long size)
     //  else          // else dest is register
     //    *dest = (source & size) | (*dest & ~size);
         
-    if ( ( dest >= &D[0] ) && (dest < (long*)&inst ) )
+    if ( ( dest >= (long *)&D[0] ) && (dest < (long*)&inst ) )
         *dest = (source & size) | (*dest & ~size);
-    else          // else dest is memory
+    else {         // else dest is memory
         // mem_put (source, (int) (dest - (long *)&memory[0]), size);
         // NOTE: mem_put expects the difference between dest & memory to be in bytes, I have accounted for this.
-        mem_put (source, (int) (dest - (long *)&memory[0])*sizeof(long), size);
+        unsigned long *destAddr = (unsigned long *)dest;
+        unsigned long *memAddr = (unsigned long *)&memory[0];
+        unsigned long max = (unsigned long)destAddr;
+        unsigned long min = (unsigned long)memAddr;
+        unsigned long distance = max-min;
+        mem_put (source, (int)distance, size);
+//        mem_put (source, (int) ((unsigned long *)dest - (unsigned long *)&memory[0])*sizeof(long), size);
+
+    }
 
 }
 
@@ -621,7 +629,7 @@ void value_of (long *EA, long *EV, long size)
     else          // else EA is memory
         // NOTE: mem_req expects the difference between dest & memory to be in bytes, I have accounted for this.
         // mem_req ( (int) (EA - (long *)&memory[0]), size, EV);
-        mem_req ( (int) (EA - (long *)&memory[0])*sizeof(long), size, EV);
+        mem_req ( (int) ((unsigned long *)EA - (unsigned long *)&memory[0])*sizeof(long), size, EV);
 
 }
 

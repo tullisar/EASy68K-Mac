@@ -68,7 +68,6 @@
     
     // Initialize the simulator
     [simulator initSim];
-    [simulator displayReg];
     
     [window makeKeyAndOrderFront:self];
 }
@@ -95,29 +94,61 @@
 
 // -----------------------------------------------------------------
 // runProg
-// Initiates the runloop
+// Tells the simulator to run the program normally
 // -----------------------------------------------------------------
 - (IBAction)runProg:(id)sender {
-    trace       = false;
-    sstep       = false;
-    runMode     = true;
-    runModeSave = runMode;
-    if (file)
-        [simulator runLoop];
+    [simulator runProg];
 }
 
 // -----------------------------------------------------------------
-// stepExecute
-// Executes a single instruction
+// step
+// Tells the simulator to step through the next instruction
 // -----------------------------------------------------------------
-- (IBAction)stepExecute:(id)sender {
-    trace       = true;
-    sstep       = true;
-    stepToAddr  = 0;
-    runMode     = true;
-    runModeSave = runMode;
-    if (file)
-        [simulator runLoop];
+- (IBAction)step:(id)sender {
+    [simulator step];
+}
+
+// -----------------------------------------------------------------
+// trace
+// Tells the simulator to trace into the next instruction
+// -----------------------------------------------------------------
+- (IBAction)trace:(id)sender {
+    [simulator trace];
+}
+
+// -----------------------------------------------------------------
+// pause
+// Tells the simulator to pause program execution
+// -----------------------------------------------------------------
+- (IBAction)pause:(id)sender {
+    [simulator pause];
+}
+
+// -----------------------------------------------------------------
+// rewindProg
+// Tells the simulator to rewind the program loaded
+// -----------------------------------------------------------------
+- (IBAction)rewindProg:(id)sender {
+    [simulator rewind];
+}
+
+// -----------------------------------------------------------------
+// runToCursor
+// Tells the simulator to rewind the program loaded
+// -----------------------------------------------------------------
+- (IBAction)runToCursor:(id)sender {
+    // TODO: Get cursor location from listFile, then use this as execute location
+    // long runToAddr = [self getAddressFromSelectedLine];
+    // [simulator runToCursor:location];
+    [simulator runToCursor:0x00000000];
+}
+
+// -----------------------------------------------------------------
+// reload
+// Tells the simulator to reload the program entirely.
+// -----------------------------------------------------------------
+- (IBAction)reload:(id)sender {
+    [simulator loadProgram:[self file]];
 }
 
 @end

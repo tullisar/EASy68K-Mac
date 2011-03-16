@@ -138,7 +138,7 @@ int	BSR()
     
     // perform the BSR operation
     A[a_reg(7)] -= 4;
-    put ((long *) &memory[A[a_reg(7)]], PC, LONG_MASK);
+    put ((long *)&memory[A[a_reg(7)]], PC, LONG_MASK);
     
     // set address to stop program execution if user selects "Step Over"
     if (sstep && stepToAddr == 0) {  // if "Step Over" mode
