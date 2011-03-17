@@ -550,11 +550,10 @@ int mem_request (long *loc, long size, long *result)
 }
 
 /**************************** int put() ************************************
- 
- name       : int put (dest, source, size)
- parameters : long *dest : the destination to move data to
+ name        : int put (dest, source, size)
+ parameters  : long *dest : the destination to move data to
  long source : the data to move
- long size : the appropriate size mask for the operation
+ long size   : the appropriate size mask for the operation
  function   : put() performs the task of putting the result of some
  operation into a destination location "according to
  size".  This means that the bits of the destination
@@ -603,15 +602,15 @@ void put (long *dest, long source, long size)
  
  name       : int value_of (EA, EV, size)
  parameters : long *EA : the location of the data to be evaluated
- long *EV : the location of the result
- long size : the appropriate size mask
+              long *EV : the location of the result
+              long size  : the appropriate size mask
  function   : value_of() returns the value of the location referenced
- regardless of whether it is a virtual memory location
- or a 68000 register location.  The "C" language stores
- the bytes in an integer in the reverse-order that we
- store the bytes in virtual memory, so this function
- provides a general way of finding the value at a
- location.
+              regardless of whether it is a virtual memory location
+              or a 68000 register location.  The "C" language stores
+              the bytes in an integer in the reverse-order that we
+              store the bytes in virtual memory, so this function
+              provides a general way of finding the value at a
+              location.
  
  ****************************************************************************/
 
@@ -664,9 +663,9 @@ void value_of (long *EA, long *EV, long size)
 int cc_update (int x, int n, int z, int v, int c,
                long source, long dest, long result, long size, int r)
 {
-    int	x_bit, n_bit, z_bit, v_bit, c_bit, mask;
-    long	Rm, Dm, Sm;
-    long	count, temp1, temp2, m;
+    int  x_bit, n_bit, z_bit, v_bit, c_bit, mask;
+    long Rm, Dm, Sm;
+    long count, temp1, temp2, m;
     
     /* assign the bits to their variables here */
     x_bit = SR & xbit;
