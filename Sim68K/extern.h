@@ -20,8 +20,9 @@ simulator program.  It is included in all modules other than the module
 #include <stack>
 using namespace std;
 
-#include "def.h"       	/* constant declarations */
-#include "proto.h"     	/* function prototypes */
+#include "def.h"       	 /* constant declarations */
+#include "proto.h"     	 /* function prototypes */
+#include "mac68kutils.h" /* functions specific to mac os x port */
 #include "BPoint.h"
 #include "BPointExpr.h"
 #import "Sim68KAppDelegate.h"

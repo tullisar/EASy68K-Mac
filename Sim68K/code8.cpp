@@ -163,13 +163,7 @@ int	JMP()
     
     /* perform the JMP operation */
     // PC = (EA1 - (long *)&memory[0]);
-    // NOTE: Re-cast to unsigned longs to avoid calculation problems with address...
-    unsigned long *EAddr = (unsigned long *)EA1;
-    unsigned long *memAddr = (unsigned long *)&memory[0];
-    unsigned long max = (unsigned long)EAddr;
-    unsigned long min = (unsigned long)memAddr;
-    unsigned long newPC = max-min;
-    PC = newPC;
+    PC = memDistance(EA1, &memory[0], BYTE_MASK);;
     switch (eff_addr_code (inst, 0)) {
         case 0x02 : inc_cyc (8);
             break;

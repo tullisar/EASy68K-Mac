@@ -2,7 +2,7 @@
 /***************************** 68000 SIMULATOR ****************************
  
  File Name: UTILS.C
- Version: 1.0
+ Version: 1.0 (Mac OS X)
  
  This file contains various routines to aid in executing a 68000 instruction
  
@@ -11,6 +11,12 @@
  to_2s_comp, from_2s_comp, sign_extend, inc_cyc, eff_addr_code,
  a_reg, mem_put, mem_req, mem_request, put, value_of, cc_update,
  and check_condition.
+ 
+ Modified: 2011-03-17
+           Robert Bartlett-Schneider
+           Modified put() routine to avoid an automatic alignment the 
+           compiler was doing when subtracting two unsigned long pointers
+           that were originally declared as signed long pointers.
  
  ***************************************************************************/
 
@@ -27,13 +33,11 @@ extern int seg7loc, LEDloc, switchLoc, pbLoc;
  
  name       : int to_2s_comp (number, size, result)
  parameters : long number : the number to be converted to 2's compliment
- long size : the size of the operation
- long *result : the result of the conversion
+              long size : the size of the operation
+              long *result : the result of the conversion
  function   : to_2s_comp() converts a number to 2's compliment notation.
  
- 
  ****************************************************************************/
-
 int	to_2s_comp (long number, long size, long *result)
 {
     
@@ -67,16 +71,13 @@ int	to_2s_comp (long number, long size, long *result)
  
  name       : int from_2s_comp (number, size, result)
  parameters : long number : the number to be converted to 2's compliment
- long size : the size of the operation
- long *result : the result of the conversion
+              long size : the size of the operation
+              long *result : the result of the conversion
  function   : from_2s_comp() converts a number from 2's compliment 
- notation to the "C" language format so that operations
- may be performed on it.
- 
+              notation to the "C" language format so that operations
+              be performed on it.
  
  ****************************************************************************/
-
-
 int	from_2s_comp (long number, long size, long *result)
 {
     
@@ -115,20 +116,15 @@ int	from_2s_comp (long number, long size, long *result)
     
 }
 
-
-
 /**************************** int sign_extend () ***************************
  
  name       : int sign_extend (number, size_from, result)
  parameters : int number : the number to sign extended
- long size_from : the size of the source
- long *result : the result of the sign extension
+              long size_from : the size of the source
+              long *result : the result of the sign extension
  function   : sign_extend() sign-extends a number from byte to word or
- from word to long.
- 
- 
+              word to long.
  ****************************************************************************/
-
 int	sign_extend (int number, long size_from, long *result)
 {
     
@@ -142,18 +138,13 @@ int	sign_extend (int number, long size_from, long *result)
     
 }
 
-
-
-
 /**************************** int inc_cyc () *******************************
  
  name       : int inc_cyc (num)
  parameters : int num : number of cycles to increment the cycle counter.
  function   : inc_cyc() increments the machine cycle counter by 'num'.
  
- 
  ****************************************************************************/
-
 void inc_cyc (int num)
 {
     
@@ -161,21 +152,17 @@ void inc_cyc (int num)
     
 }
 
-
-
 /**************************** int eff_addr_code () *************************
  
  name       : int eff_addr_code (inst, start)
  parameters : int inst : the instruction word
- int start : the start bit of the effective address field
+              int start : the start bit of the effective address field
  function   : returns the number of the addressing mode contained in
- the effective address field of the instruction.  This
- number is used in calculating the execution time for
- many functions.
- 
+              the effective address field of the instruction.  This
+              number is used in calculating the execution time for
+              many functions.
  
  ****************************************************************************/
-
 int eff_addr_code (int inst, int start)
 {
 	int	mode, reg;
@@ -200,24 +187,18 @@ int eff_addr_code (int inst, int start)
     }
     
 	return 12;
-    
 }
-
-
-
 
 /**************************** int a_reg () *********************************
  
  name       : int a_reg (reg_num)
  parameters : int reg_num : the address register number to be processed
  function   : a_reg() allows both the SSP and USP to act as A[7].  It
- returns the value '8' if the supervisor bit is set and
- the reg_num input was '7'.  Otherwise, it returns the
- reg_num without change.
- 
- 
- ****************************************************************************/
+              returns the value '8' if the supervisor bit is set and
+              the reg_num input was '7'.  Otherwise, it returns the
+              reg_num without change.
 
+ ****************************************************************************/
 int a_reg (int reg_num)
 {
     
@@ -321,18 +302,17 @@ int memoryMapCheck(maptype mapt, int loc, int bytes)
  
  name       : int mem_put(data, loc, size)
  parameters : long data : the data to be placed in memory
- int loc   : the location to place the data
- long size : the appropriate size mask for the operation
+              int loc   : the location to place the data
+              long size : the appropriate size mask for the operation
  function   : mem_put() puts data in main memory.  It acts as the "memory
- management unit" in that it checks for out-of-bound
- virtual addresses and odd memory accesses on long and
- word operations and performs the appropriate traps in
- the cases where there is a violation.  Theoretically,
- this is the only place in the simulator where the main
- memory should be written to.
+              management unit" in that it checks for out-of-bound
+              virtual addresses and odd memory accesses on long and
+              word operations and performs the appropriate traps in
+              the cases where there is a violation.  Theoretically,
+              this is the only place in the simulator where the main
+              memory should be written to.
  
  ****************************************************************************/
-
 int mem_put (long data, int loc, long size)
 {
     char *str;
@@ -397,25 +377,23 @@ int mem_put (long data, int loc, long size)
     return SUCCESS;
 }
 
-
 /**************************** int mem_req() ********************************
  
  name       : int mem_req(loc, size, result)
  parameters : int loc : the memory location to read data from
- long size : the appropriate size mask for the operation
- long *result : a pointer to the longword location
- to store the result in
+              long size : the appropriate size mask for the operation
+              long *result : a pointer to the longword location
+              to store the result in
  function   : mem_req() returns the contents of a location in main
- memory.  It acts as the "memory management unit" in
- that it checks for out-of-bound virtual addresses and
- odd memory accesses on long and word operations and
- performs the appropriate traps in the cases where there
- is a violation.  Theoretically, this is the only function
- in the simulator where the main memory should be read
- from.
+              memory.  It acts as the "memory management unit" in
+              that it checks for out-of-bound virtual addresses and
+              odd memory accesses on long and word operations and
+              performs the appropriate traps in the cases where there
+              is a violation.  Theoretically, this is the only function
+              in the simulator where the main memory should be read
+              from.
  
  ****************************************************************************/
-
 int mem_req (int loc, long size, long *result)
 {
     long	temp;
@@ -501,32 +479,28 @@ int mem_req (int loc, long size, long *result)
     return SUCCESS;
 }
 
-
-
-
 /**************************** int mem_request() ****************************
  
  name       : int mem_request (loc, size, result)
  parameters : int *loc : the memory location to read data from
- long size : the appropriate size mask for the operation
- long *result : a pointer to the longword location
- to store the result in
+              long size : the appropriate size mask for the operation
+              long *result : a pointer to the longword location
+              to store the result in
  function   : mem_request() is another "level" of main-memory access.
- It performs the task of calling the functin mem_req()
- (above) using "WORD_MASK" for the size mask if the simulator
- wants a byte from main memory.  Also, it increments
- the location pointer passed to it.  This is to
- facilitate easy opcode and operand fetch operations
- where the program counter needs to be incremented.
+              It performs the task of calling the functin mem_req()
+              (above) using "WORD_MASK" for the size mask if the simulator
+              wants a byte from main memory.  Also, it increments
+              the location pointer passed to it.  This is to
+              facilitate easy opcode and operand fetch operations
+              where the program counter needs to be incremented.
  
- Therefore, in the simulator, "mem_req()" requests data
- from main memory, and "mem_request()" does the same but
- also increments the location pointer.  Note that
- mem_request() requires a pointer to an int as the first
- parameter.
+              Therefore, in the simulator, "mem_req()" requests data
+              from main memory, and "mem_request()" does the same but
+              also increments the location pointer.  Note that
+              mem_request() requires a pointer to an int as the first
+              parameter.
  
  ****************************************************************************/
-
 int mem_request (long *loc, long size, long *result)
 {
 	int	req_result;
@@ -552,27 +526,32 @@ int mem_request (long *loc, long size, long *result)
 /**************************** int put() ************************************
  name        : int put (dest, source, size)
  parameters  : long *dest : the destination to move data to
- long source : the data to move
- long size   : the appropriate size mask for the operation
- function   : put() performs the task of putting the result of some
- operation into a destination location "according to
- size".  This means that the bits of the destination
- that are in excess to the size of the operation are not
- affected.  This function provides a general-purpose
- mechanism for putting the result of an operation in
- the destination, no matter whether the destination is
- a memory location or a 68000 register.  The data is
- placed in the destination correctly and the rest of
- the bits in a register are left alone.
+               long source : the data to move
+               size   : the appropriate size mask for the operation
+ function    : put() performs the task of putting the result of some
+               operation into a destination location "according to
+               size".  This means that the bits of the destination
+               that are in excess to the size of the operation are not
+               affected.  This function provides a general-purpose
+               mechanism for putting the result of an operation in
+               the destination, no matter whether the destination is
+               a memory location or a 68000 register.  The data is
+               placed in the destination correctly and the rest of
+               the bits in a register are left alone.
  void        : Used only in exceptionHandler() in RUN.CPP. Return
- values are ignored.
+               values are ignored.
  
  Modified: Chuck Kelly
  Monroe County Community College
  http://www.monroeccc.edu/ckelly
  
+ Modified: 2011-03-17
+           Robert Bartlett-Schneider
+           Used function memDistance to get reliable results when subtracting
+           pointers that represent memory addresses, but are provided as signed
+           longs instead of unsigned longs.
+ 
  ****************************************************************************/
-
 void put (long *dest, long source, long size)
 {
     //  // if dest is memory
@@ -585,15 +564,7 @@ void put (long *dest, long source, long size)
         *dest = (source & size) | (*dest & ~size);
     else {         // else dest is memory
         // mem_put (source, (int) (dest - (long *)&memory[0]), size);
-        // NOTE: mem_put expects the difference between dest & memory to be in bytes, I have accounted for this.
-        unsigned long *destAddr = (unsigned long *)dest;
-        unsigned long *memAddr = (unsigned long *)&memory[0];
-        unsigned long max = (unsigned long)destAddr;
-        unsigned long min = (unsigned long)memAddr;
-        unsigned long distance = max-min;
-        mem_put (source, (int)distance, size);
-//        mem_put (source, (int) ((unsigned long *)dest - (unsigned long *)&memory[0])*sizeof(long), size);
-
+        mem_put (source, (int)memDistance(dest, &memory[0], BYTE_MASK), size); // RBS 03/17/11
     }
 
 }
@@ -611,9 +582,14 @@ void put (long *dest, long source, long size)
               store the bytes in virtual memory, so this function
               provides a general way of finding the value at a
               location.
+
+ Modified: 2011-03-17
+           Robert Bartlett-Schneider
+           Used function memDistance to get reliable results when subtracting
+           pointers that represent memory addresses, but are provided as signed
+           longs instead of unsigned longs.
  
  ****************************************************************************/
-
 void value_of (long *EA, long *EV, long size)
 {
     //  // if invalid 68000 address
@@ -628,34 +604,33 @@ void value_of (long *EA, long *EV, long size)
     else          // else EA is memory
         // NOTE: mem_req expects the difference between dest & memory to be in bytes, I have accounted for this.
         // mem_req ( (int) (EA - (long *)&memory[0]), size, EV);
-        mem_req ( (int) ((unsigned long *)EA - (unsigned long *)&memory[0])*sizeof(long), size, EV);
-
+        // mem_req ( (int) ((unsigned long *)EA - (unsigned long *)&memory[0])*sizeof(long), size, EV);
+        mem_req ((int)memDistance(EA, &memory[0], BYTE_MASK), size, EV);
 }
-
 
 /**************************** int cc_update() *****************************
  
  name       : int cc_update (x, n, z, v, c, source, dest, result, size, r)
  parameters : int x, n, z, v, c : the codes for actions that should be
- taken to compute the different condition codes.
- long source : the source operand for the instruction
- long dest : the destination operand for the instruction
- long result : the result of the instruction
- long size : the size of the instruction
- int r : the shift count for shift and rotate instructions
+              taken to compute the different condition codes.
+              long source : the source operand for the instruction
+              long dest : the destination operand for the instruction
+              long result : the result of the instruction
+              long size : the size of the instruction
+              int r : the shift count for shift and rotate instructions
  function   : updates the five condition codes according to the codes
- passed as parameters.  each of the condition codes
- has a number of ways it can be calculated, and the
- appropriate method of computation is passed as the
- parameter for that condition code.  The source, dest, and
- result operands contain the source, destination, and
- result of the instruction requesting updating the
- condition codes.  Also, for shift and rotate instructions
- the shift count needs to be passed.
+              passed as parameters.  each of the condition codes
+              has a number of ways it can be calculated, and the
+              appropriate method of computation is passed as the
+              parameter for that condition code.  The source, dest, and
+              result operands contain the source, destination, and
+              result of the instruction requesting updating the
+              condition codes.  Also, for shift and rotate instructions
+              the shift count needs to be passed.
  
- The details of the different ways to calculate condition
- codes are contained in Appendix A of the 68000
- Programmer's Reference Manual.
+              The details of the different ways to calculate condition
+              codes are contained in Appendix A of the 68000
+              Programmer's Reference Manual.
  
  ****************************************************************************/
 
@@ -786,20 +761,17 @@ int cc_update (int x, int n, int z, int v, int c,
     
 }
 
-
-
-
 /**************************** int check_condition() ************************
  
  name       : int check_condition (condition)
  parameters : int condition : the condition to be checked
  function   : check_condition() checks for the truth of a certain
- condition and returns the result.  The possible conditions
- are encoded in DEF.H and can be seen in the switch()
- statement below.
+              condition and returns the result.  The possible conditions
+              are encoded in DEF.H and can be seen in the switch()
+              statement below.
  
- ck 4-8-2002 fixed bug with COND_HI
- ck 4-26-2002 fixed bug with COND_GT, COND_VS
+              ck 4-8-2002 fixed bug with COND_HI
+              ck 4-26-2002 fixed bug with COND_GT, COND_VS
  ****************************************************************************/
 
 

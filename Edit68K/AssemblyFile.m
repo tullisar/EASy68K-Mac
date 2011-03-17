@@ -107,9 +107,13 @@
     
     if (fileContents) {
         readSuccess = YES;
+        [fileContents setFont:[NSFont fontWithName:@"Courier" size:11]];
         [self setTextStorage:fileContents];
         [fileContents release];
     }
+    
+    savedYet = YES;
+    
     return readSuccess;
 }
 
