@@ -197,7 +197,6 @@ int	STOP()
 {
     long	temp;
     int     tr_on;
-    //AnsiString str;
     
     inc_cyc (4);
     
@@ -899,20 +898,22 @@ int TRAP()
             case 25:                          // scroll text window at Row, Col, Height, Width, Up or Down
                 simIO->scrollRect( (ushort)(D[1]>>16), (ushort)D[1], (ushort)(D[2]>>16), (ushort)D[2], (ushort)D[3] );
                 break;
-                // ------------------SIMULATOR ENVIRONMENT------------------------
-            case 30:                  // - Clear cycle counter
+            */
+            // ------------------SIMULATOR ENVIRONMENT------------------------
+            case 30:                                            // TASK 30: Clear cycle counter
                 cycles = 0;
                 break;
-            case 31:                  // - Return cycle counter in D1.L.
-                if (cycles > 0xFFFFFFFF)        // if cycles > 32 bit
-                    D[1] = 0;             // return 0
+            case 31:                                            // TASK 31: Return cycle counter in D1.L.
+                if (cycles > 0xFFFFFFFF)                        // if cycles > 32 bit
+                    D[1] = 0;                                   // return 0
                 else
-                    D[1] = (uint)cycles;  // return cycles
+                    D[1] = (uint)cycles;                        // return cycles
                 break;
-            case 32:                  // - Hardware
+            /*
+            case 32:                                            // TASK 32: Hardware tasks
                 //AnsiString str = "0x";
-                switch ((char)D[1]) {  // which sub task ?
-                    case 00:              // display hardware window
+                switch ((char)D[1]) {                           // which sub task ?
+                    case 00:                                    // display hardware window
                         Hardware->Show();
                         break;
                     case 01:              // return address of 7-segment display in D1.L
@@ -956,7 +957,7 @@ int TRAP()
                 }
                 break;
                 
-                // ---------------------- SERIAL I/O ----------------------------
+            // ---------------------- SERIAL I/O ----------------------------
             case 40:                  // if Init Serial Port
                 inStr = &memory[A[1] & ADDRMASK];  // address of port name string
                 strncpy(buf,inStr,255); // make copy of string so we can terminate it
@@ -989,7 +990,7 @@ int TRAP()
                 simIO->sendComm(cid, (uchar*)&D[1], &memory[A[1] & ADDRMASK], (short*)&D[0]);
                 break;
                 
-                // ----------------------FILE HANDLING----------------------------
+            // ----------------------FILE HANDLING----------------------------
             case 50:                          // CLOSE ALL FILES
                 closeFiles((short*)&D[0]);
                 break;
@@ -1068,7 +1069,7 @@ int TRAP()
                 fileOp(&D[1], buf, (short*)&D[0]);
                 break;
                 
-                // -------------------- MOUSE -----------------------------
+            // -------------------- MOUSE -----------------------------
             case 60:                  // enable/disable mouse IRQ
                 mouseIRQ = (byte)(D[1] >> 8);
                 if (mouseIRQ > 7)       // if invalid IRQ number
@@ -1133,7 +1134,7 @@ int TRAP()
                 }
                 break;
                 
-                // -------------------- Keyboard IRQ ---------------------------
+            // -------------------- Keyboard IRQ ---------------------------
             case 62:                  // enable/disable Key IRQ
                 keyIRQ = (byte)(D[1] >> 8);
                 if (keyIRQ > 7)         // if invalid IRQ number
@@ -1143,9 +1144,9 @@ int TRAP()
                 if (D[1] & 0x0002)      // if key up IRQ
                     keyUpIRQ = keyIRQ;
                 break;
-                // -------------------- SOUND -----------------------------
-            case 70:                  // if play WAV file
-                inStr = &memory[A[1] & ADDRMASK];  // address of file name string
+            // -------------------- SOUND -----------------------------
+            case 70:                                    // if play WAV file
+                inStr = &memory[A[1] & ADDRMASK];       // address of file name string
                 strncpy(buf,inStr,255); // make copy of string so we can terminate it
                 buf[255] = '\0';        // Terminated!, in case it wasn't already
                 // check memory map
@@ -1197,7 +1198,7 @@ int TRAP()
                 simIO->controlSoundDX((unsigned int) D[2], (unsigned char) D[1], (short*)&D[0]);
                 break;
                 
-                // -------------------- GRAPHICS -----------------------------
+            // -------------------- GRAPHICS -----------------------------
             case 80:                  // if set line color
                 simIO->setLineColor(D[1]);
                 break;
@@ -1252,7 +1253,7 @@ int TRAP()
                 simIO->drawText(inStr, (short)D[1], (short)D[2]); // display string
                 break;
                 
-                // -------------------- NETWORK -----------------------------
+            // -------------------- NETWORK -----------------------------
             case 100:                  // if Create Client
                 simIO->createNetClient(D[1], &memory[A[2] & ADDRMASK], (int*)&D[0]);
                 break;
@@ -1273,7 +1274,7 @@ int TRAP()
                 break;
             */
             default:
-                return NOP();                                           // DEFAULT: Return NOP if not handled
+                return NOP();       // FIXME: Temporarily return NOP if not handled
                 return (TRAP_TRAP);
         } // switch
         return SUCCESS;

@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+#define CLOCKSPEED 0.0000125
+
 @interface Simulator : NSObject {
 
     // Registers
@@ -20,6 +22,7 @@
     unsigned long int GUI_Cycles;
     long  startPC;
     BOOL  simLoaded;
+    BOOL  simStopped;
     
     // Containers
     NSAttributedString *listFile;
@@ -49,6 +52,7 @@
 @property (assign) unsigned long int GUI_Cycles;
 @property (retain) NSAttributedString *listFile;
 @property (assign) long startPC;
+@property (assign) BOOL simStopped;
 
 - (void) initSim;
 - (void) memFormat;

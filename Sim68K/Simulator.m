@@ -13,7 +13,7 @@
 
 @synthesize A0,A1,A2,A3,A4,A5,A6,A7,D0,D1,D2,D3,D4,D5,D6,D7,
             GUI_SR,GUI_US,GUI_SS,GUI_PC,GUI_Cycles,startPC;
-@synthesize listFile;
+@synthesize listFile,simStopped;
 
 
 // -----------------------------------------------------------------
@@ -28,6 +28,7 @@
         GUI_Cycles = 0;
         startPC = 0;
         simLoaded = NO;
+        [self setSimStopped:YES];
         return self;
     } else {
         return nil;
@@ -77,23 +78,22 @@
 // -----------------------------------------------------------------
 - (void) runLoop {
     static BOOL running = NO;
-    
     if (!running) {
         running = YES;
         try {
             while (runMode) {
                 runprog();
-                if (trace || sstep) [self displayReg];
                 // Process messages?
             }
         } catch(...) {
             // Unexpected error
         }
+        [self setSimStopped:YES];
     }
     
-    [self displayReg];
     if (stopInstruction || halt)
-        [self setGUI_PC:startPC];
+        PC = startPC;
+    [self displayReg];
     
     running = NO;
     return;
@@ -171,6 +171,7 @@
 // Updates all the GUI registers to match those of the 68000 simulator
 // -----------------------------------------------------------------
 - (void)displayReg {
+    DISPATCH_MAIN_THREAD
     [self setA0:A[0]];
     [self setA1:A[1]];
     [self setA2:A[2]];
@@ -206,9 +207,21 @@
         runModeSave = runMode;
         // MARK: HARDWARE: Enable Auto-IRQ
         // MARK: I/O: Bring I/O front
-        [self runLoop];
+        // TODO: Run runLoop in a thread so that it doesn't hog the GUI
+        // [self runLoop];
+        // [self performSelectorInBackground:@sel(@"runLoop:") withObject:nil];
+        [self setSimStopped:NO];
+        NSOperationQueue *queue = [[[NSOperationQueue alloc] init] autorelease];
+        NSOperation *simLoop = [[[NSInvocationOperation alloc] 
+                                 initWithTarget:self
+                                 selector:@selector(runLoop)
+                                 object:nil] autorelease];
+        [queue addOperation:simLoop];
     }
 }
+
+
+
 
 // -----------------------------------------------------------------
 // step
@@ -452,8 +465,9 @@
 // setGUI_Cycles
 // -----------------------------------------------------------------
 - (void)setGUI_Cycles:(unsigned long int)value {
+    DISPATCH_MAIN_THREAD
     GUI_Cycles = value;
-    cycles = value;
+    // cycles = value;
 }
 
 

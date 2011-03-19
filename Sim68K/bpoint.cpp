@@ -17,7 +17,7 @@
  ***************************************************************************/
 
 #include "extern.h"
-#include "BPoint.h"
+#include "bpoint.h"
 
 // Default constructor
 BPoint::BPoint() {

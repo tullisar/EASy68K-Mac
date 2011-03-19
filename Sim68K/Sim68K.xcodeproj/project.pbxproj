@@ -65,8 +65,8 @@
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		140089A9131EF4C6009B565A /* BPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPoint.h; sourceTree = "<group>"; };
-		140089AA131EF4C6009B565A /* BPointExpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPointExpr.h; sourceTree = "<group>"; };
+		140089A9131EF4C6009B565A /* bpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bpoint.h; sourceTree = "<group>"; };
+		140089AA131EF4C6009B565A /* bpointexpr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bpointexpr.h; sourceTree = "<group>"; };
 		140089AB131EF4C6009B565A /* def.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = def.h; sourceTree = "<group>"; };
 		140089AC131EF4C6009B565A /* extern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extern.h; sourceTree = "<group>"; };
 		140089AD131EF4C6009B565A /* proto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = proto.h; sourceTree = "<group>"; };
@@ -184,8 +184,8 @@
 			children = (
 				14C17A1D1332B2A300C981F5 /* mac68kutils.h */,
 				14C17A1E1332B2A300C981F5 /* mac68kutils.cpp */,
-				140089A9131EF4C6009B565A /* BPoint.h */,
-				140089AA131EF4C6009B565A /* BPointExpr.h */,
+				140089A9131EF4C6009B565A /* bpoint.h */,
+				140089AA131EF4C6009B565A /* bpointexpr.h */,
 				140089AB131EF4C6009B565A /* def.h */,
 				140089AC131EF4C6009B565A /* extern.h */,
 				140089DB131EF4E5009B565A /* opcodes.h */,
