@@ -819,9 +819,10 @@ int TRAP()
                 if (code == BUS_ERROR)                          // if bus error caused by memory map
                     return code;
                 if ((char)D[0]==14)                             // if D0.B = 14
-                    NSLog(@"\n%s",inStr);
+                    NSLog(@"%s",inStr);
                     // simIO->textOut(inStr);                   // display string without CRLF
                 else
+                    NSLog(@"\n%s\n",inStr);
                     // simIO->textOutCR(inStr);                 // display string with CRLF
                 break;
                 break;

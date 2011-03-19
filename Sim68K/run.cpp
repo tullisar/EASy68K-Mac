@@ -772,7 +772,7 @@ int exec_inst()
                 {
                     if (trace) {
                         sprintf(buffer,"PC=%08X  Code=%04X  %s", (unsigned int)(PC-2), inst, inst_arr[i].name);
-                        NSLog(@"%s",buffer);
+                        NSLog(@"%s\n",buffer);
                         // TODO: Display last instruction executed in window during trace                        
                         if (logging)
                         {
@@ -848,7 +848,7 @@ int exec_inst()
                     // Output the last instruction executed to the console for debugging purposes
                     if (!trace && !sstep) {
                         sprintf(buffer,"PC=%08X  Code=%04X  %s", (unsigned int)(PC-2), inst, inst_arr[i].name);
-                        NSLog(@"%s",buffer);
+                        NSLog(@"%s\n",buffer);
                     }
 #endif
                     
