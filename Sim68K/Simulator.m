@@ -13,7 +13,7 @@
 
 @synthesize A0,A1,A2,A3,A4,A5,A6,A7,D0,D1,D2,D3,D4,D5,D6,D7,
             GUI_SR,GUI_US,GUI_SS,GUI_PC,GUI_Cycles,startPC;
-@synthesize listFile,simStopped;
+@synthesize listFile,simLoaded,simStopped;
 
 
 // -----------------------------------------------------------------
@@ -27,7 +27,7 @@
         GUI_SR = GUI_US = GUI_SS = GUI_PC = 0;
         GUI_Cycles = 0;
         startPC = 0;
-        simLoaded = NO;
+        [self setSimLoaded:NO];
         [self setSimStopped:YES];
         return self;
     } else {
@@ -156,12 +156,12 @@
             NSLog(@"Unable to locate or load associated listfile. Source level debugging will be unavailable.");
         }
         
-        simLoaded = YES;
+        [self setSimLoaded:YES];
         [self displayReg];
         
     } else {
         // TODO: GUI Error
-        simLoaded = NO;
+        [self setSimLoaded:NO];
         NSLog(@"Error loading S-Record file.");
     }
 }
@@ -171,6 +171,7 @@
 // Updates all the GUI registers to match those of the 68000 simulator
 // -----------------------------------------------------------------
 - (void)displayReg {
+    // FIXME: This still isn't thread-safe. The setters could get pre-empted.
     DISPATCH_MAIN_THREAD
     [self setA0:A[0]];
     [self setA1:A[1]];
@@ -219,9 +220,6 @@
         [queue addOperation:simLoop];
     }
 }
-
-
-
 
 // -----------------------------------------------------------------
 // step
@@ -465,7 +463,6 @@
 // setGUI_Cycles
 // -----------------------------------------------------------------
 - (void)setGUI_Cycles:(unsigned long int)value {
-    DISPATCH_MAIN_THREAD
     GUI_Cycles = value;
     // cycles = value;
 }

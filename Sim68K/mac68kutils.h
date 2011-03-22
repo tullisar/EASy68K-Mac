@@ -22,4 +22,9 @@ if (![NSThread isMainThread]) {\
     return;\
 }
 
+#define WORD68K 16
+
 long memDistance(void *max, void *min, long size);
+
+NSString* binaryStringForValue(unsigned short value);
+NSNumber* binaryStringToValue(NSString *input);

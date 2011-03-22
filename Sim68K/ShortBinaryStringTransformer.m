@@ -8,6 +8,8 @@
 
 #import "ShortBinaryStringTransformer.h"
 
+NSString* binaryStringForValue(unsigned short value);
+
 @implementation ShortBinaryStringTransformer
 
 // -----------------------------------------------------------------
@@ -23,41 +25,35 @@
 // Determines whether the transformer allows reverse transformation
 // -----------------------------------------------------------------
 + (BOOL)allowsReverseTransformation {
-    return NO;
+    return YES;
 }
 
 // -----------------------------------------------------------------
 // transformedValue
 // -----------------------------------------------------------------
 - (id)transformedValue:(id)value {
-    return [self binaryStringForValue:(unsigned short)[value shortValue]];
+    return binaryStringForValue([value unsignedShortValue]);
 }
 
 // -----------------------------------------------------------------
-// binaryStringForValue
+// reverseTransformedValue
 // -----------------------------------------------------------------
-- (NSMutableString *)binaryStringForValue:(unsigned short)value {
-    int position = WORD68K;
-    NSMutableString *buffer = [[NSMutableString alloc] init];
-    
-    do {                                            // Check if bit is set
-        if (value & 1) {
-            [buffer insertString:@"1" atIndex:0];   // Yes
-            position--;
-        } else {
-            [buffer insertString:@"0" atIndex:0];   // No
-            position--;
+- (id)reverseTransformedValue:(id)value {
+    if ([value isKindOfClass:[NSString class]]) {
+        char buf[17];
+        sprintf(buf, "%s", [value cStringUsingEncoding:NSUTF8StringEncoding]);
+        int value = 0;
+        for (int i = 0; i < strlen(buf)-1; i++) {
+            if (buf[i] == '1') (value |= 1);
+            value <<= 1;
         }
-        value >>= 1;
-    } while (value > 0);
-    
-    while (position > 0) {                          // Fill remaining length with zeros
-        [buffer insertString:@"0" atIndex:0];
-        position--;
+        return [NSNumber numberWithUnsignedInt:value];
+    } else {
+        if ([value respondsToSelector:@selector(intValue)]) {
+            int test = [value intValue];
+            return [NSNumber numberWithUnsignedInt:test];
+        }
     }
-    
-    return [buffer autorelease];
-    
+    return 0;
 }
-
 @end

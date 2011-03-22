@@ -54,6 +54,8 @@
 // Runs when the NIB file has been loaded.
 // -----------------------------------------------------------------
 - (void)awakeFromNib {
+    const float LargeNumberForText = 1.0e7;
+    
     // Global delegate reference (ick), necessary for simulator functions to reference GUI
     appDelegate = self;
     
@@ -65,6 +67,19 @@
     [scrollView setRulersVisible:YES];
     [scriptView setFont:[NSFont fontWithName:@"Courier" size:11]];
     [scriptView setEditable:NO];
+    
+    // Make the scroll view non-wrapping
+    [scrollView setHasVerticalScroller:YES];
+    [scrollView setHasHorizontalScroller:YES];
+    [scrollView setAutoresizingMask:(NSViewWidthSizable | NSViewHeightSizable)];
+    NSTextContainer *textContainer = [scriptView textContainer];
+    [textContainer setContainerSize:NSMakeSize(LargeNumberForText, LargeNumberForText)];
+    [textContainer setWidthTracksTextView:NO];
+    [textContainer setHeightTracksTextView:NO];
+    [scriptView setMaxSize:NSMakeSize(LargeNumberForText, LargeNumberForText)];
+    [scriptView setHorizontallyResizable:YES];
+    [scriptView setVerticallyResizable:YES];
+    [scriptView setAutoresizingMask:NSViewNotSizable];
     
     // Initialize the simulator
     [simulator initSim];
@@ -81,7 +96,6 @@
     [openPanel setAllowedFileTypes:[NSArray arrayWithObject:@"s68"]];
     [openPanel beginSheetModalForWindow:window 
                       completionHandler:^(NSInteger result) {
-                          
                           if (result == NSFileHandlingPanelOKButton) {
                               [simulator loadProgram:[[openPanel URL] path]];
                               [scriptView setFont:[NSFont fontWithName:@"Courier" size:11]];

@@ -52,6 +52,7 @@
 @property (assign) unsigned long int GUI_Cycles;
 @property (retain) NSAttributedString *listFile;
 @property (assign) long startPC;
+@property (assign) BOOL simLoaded;
 @property (assign) BOOL simStopped;
 
 - (void) initSim;

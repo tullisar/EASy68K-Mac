@@ -30,20 +30,29 @@
 // transformedValue
 // -----------------------------------------------------------------
 - (id)transformedValue:(id)value {
-    return [NSString stringWithFormat:@"%08X",[value intValue]];
+    int result = [value intValue];
+    return [NSString stringWithFormat:@"%08X",result];
 }
 
 // -----------------------------------------------------------------
 // reverseTransformedValue
 // -----------------------------------------------------------------
 - (id)reverseTransformedValue:(id)value {
-    NSScanner *temp = [NSScanner scannerWithString:(NSString *)value];
-    unsigned int result = 0;
-    if ([temp scanHexInt:&result]) {
-        return [NSNumber numberWithUnsignedInt:result];
+    if ([value isKindOfClass:[NSString class]]) {
+        NSScanner *temp = [NSScanner scannerWithString:(NSString *)value];
+        unsigned int result = 0;
+        if ([temp scanHexInt:&result]) {
+            return [NSNumber numberWithUnsignedInt:result];
+        } else {
+            return 0;
+        }
     } else {
-        return 0;
+        if ([value respondsToSelector:@selector(intValue)]) {
+            int test = [value intValue];
+            return [NSNumber numberWithUnsignedInt:test];
+        }
     }
+    return 0;
 }
 
 @end

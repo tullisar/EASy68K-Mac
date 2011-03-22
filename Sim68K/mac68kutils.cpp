@@ -49,3 +49,29 @@ long memDistance(void* max, void* min, long size)
 
     return (distance / factor);
 }
+
+/********************* NSString* binaryStringForValue() **********************
+ 
+ name        : NSString* binaryStringForValue(unsigned short value)
+ parameters  : unsigned short value : the number to be converted to a binary
+               string representation
+ function    : calculates the distance between pointers, with a size specified
+ by size, either BYTE_MASK, WORD_MASK, or LONG_MASK.
+ 
+ ****************************************************************************/
+NSString* binaryStringForValue(unsigned short value) {
+    int position = WORD68K;
+    char buf[WORD68K+1];
+    buf[position--] = '\0';
+    do {
+        if (value & 1) buf[position--] = '1';
+            else buf[position--] = '0';
+                value >>= 1;
+                } while (value > 0);
+    
+    while (position >= 0) {
+        buf[position--] = '0';
+    }
+    
+    return [NSString stringWithFormat:@"%s",buf];
+}

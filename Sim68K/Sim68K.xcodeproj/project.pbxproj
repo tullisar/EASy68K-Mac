@@ -39,6 +39,8 @@
 		14A1884B13306350006E387D /* button-pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A1884A13306350006E387D /* button-pause.png */; };
 		14A1884E1330645A006E387D /* button-rewind.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A1884D1330645A006E387D /* button-rewind.png */; };
 		14C17A1F1332B2A300C981F5 /* mac68kutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14C17A1E1332B2A300C981F5 /* mac68kutils.cpp */; };
+		14C5791A1337F8F800C1E08B /* LongHexFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C579191337F8F800C1E08B /* LongHexFormatter.m */; };
+		14C57A5F13381CB000C1E08B /* ShortBinFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C57A5E13381CB000C1E08B /* ShortBinFormatter.m */; };
 		14CFAD5F131EE717005D7D7A /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CFAD5E131EE717005D7D7A /* BWToolkitFramework.framework */; };
 		14CFAD97131EE739005D7D7A /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14CFAD5E131EE717005D7D7A /* BWToolkitFramework.framework */; };
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
@@ -112,6 +114,10 @@
 		14A1884D1330645A006E387D /* button-rewind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-rewind.png"; sourceTree = "<group>"; };
 		14C17A1D1332B2A300C981F5 /* mac68kutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mac68kutils.h; sourceTree = "<group>"; };
 		14C17A1E1332B2A300C981F5 /* mac68kutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mac68kutils.cpp; sourceTree = "<group>"; };
+		14C579181337F8F800C1E08B /* LongHexFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LongHexFormatter.h; sourceTree = "<group>"; };
+		14C579191337F8F800C1E08B /* LongHexFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LongHexFormatter.m; sourceTree = "<group>"; };
+		14C57A5D13381CB000C1E08B /* ShortBinFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortBinFormatter.h; sourceTree = "<group>"; };
+		14C57A5E13381CB000C1E08B /* ShortBinFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortBinFormatter.m; sourceTree = "<group>"; };
 		14CFAD5E131EE717005D7D7A /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = Library/Frameworks/BWToolkitFramework.framework; sourceTree = SDKROOT; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		256AC3D80F4B6AC300CF3369 /* Sim68KAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sim68KAppDelegate.h; sourceTree = "<group>"; };
@@ -140,6 +146,10 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				14C57A5D13381CB000C1E08B /* ShortBinFormatter.h */,
+				14C57A5E13381CB000C1E08B /* ShortBinFormatter.m */,
+				14C579181337F8F800C1E08B /* LongHexFormatter.h */,
+				14C579191337F8F800C1E08B /* LongHexFormatter.m */,
 				141FDB771325DB0D00A249F3 /* IntHexStringTransformer.h */,
 				141FDB781325DB0D00A249F3 /* IntHexStringTransformer.m */,
 				141FDB241325B8E000A249F3 /* ShortHexStringTransformer.h */,
@@ -364,6 +374,8 @@
 				141FDB351325BA0800A249F3 /* ShortBinaryStringTransformer.m in Sources */,
 				141FDB791325DB0D00A249F3 /* IntHexStringTransformer.m in Sources */,
 				14C17A1F1332B2A300C981F5 /* mac68kutils.cpp in Sources */,
+				14C5791A1337F8F800C1E08B /* LongHexFormatter.m in Sources */,
+				14C57A5F13381CB000C1E08B /* ShortBinFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
