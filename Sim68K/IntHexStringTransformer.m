@@ -28,29 +28,25 @@
 
 // -----------------------------------------------------------------
 // transformedValue
+// Returns the string representation of a 4-byte hex value
 // -----------------------------------------------------------------
 - (id)transformedValue:(id)value {
-    int result = [value intValue];
-    return [NSString stringWithFormat:@"%08X",result];
+    return [NSString stringWithFormat:@"%08X",[value unsignedIntValue]];
 }
 
 // -----------------------------------------------------------------
 // reverseTransformedValue
+// Reverses the transformation to a 4-byte hex string
 // -----------------------------------------------------------------
 - (id)reverseTransformedValue:(id)value {
     if ([value isKindOfClass:[NSString class]]) {
         NSScanner *temp = [NSScanner scannerWithString:(NSString *)value];
         unsigned int result = 0;
-        if ([temp scanHexInt:&result]) {
-            return [NSNumber numberWithUnsignedInt:result];
-        } else {
-            return 0;
-        }
+        if ([temp scanHexInt:&result])
+            return [NSNumber numberWithInt:result];
     } else {
-        if ([value respondsToSelector:@selector(intValue)]) {
-            int test = [value intValue];
-            return [NSNumber numberWithUnsignedInt:test];
-        }
+        if ([value respondsToSelector:@selector(intValue)])
+            return [NSNumber numberWithInt:[value intValue]];
     }
     return 0;
 }

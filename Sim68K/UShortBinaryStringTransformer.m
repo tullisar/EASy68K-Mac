@@ -6,18 +6,18 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "ShortBinaryStringTransformer.h"
+#import "UShortBinaryStringTransformer.h"
 
-NSString* binaryStringForValue(unsigned short value);
+#include "extern.h"
 
-@implementation ShortBinaryStringTransformer
+@implementation UShortBinaryStringTransformer
 
 // -----------------------------------------------------------------
 // transformedValueClass
 // returns the class of the transformed value
 // -----------------------------------------------------------------
 + (Class)transformedValueClass {
-    return [NSMutableString class];
+    return [NSString class];
 }
 
 // -----------------------------------------------------------------
@@ -30,6 +30,7 @@ NSString* binaryStringForValue(unsigned short value);
 
 // -----------------------------------------------------------------
 // transformedValue
+// Returns the string representation of an unsigned 16 bit binary number
 // -----------------------------------------------------------------
 - (id)transformedValue:(id)value {
     return binaryStringForValue([value unsignedShortValue]);
@@ -37,23 +38,15 @@ NSString* binaryStringForValue(unsigned short value);
 
 // -----------------------------------------------------------------
 // reverseTransformedValue
+// Reverses the transform from a number to a string.
 // -----------------------------------------------------------------
 - (id)reverseTransformedValue:(id)value {
-    if ([value isKindOfClass:[NSString class]]) {
-        char buf[17];
-        sprintf(buf, "%s", [value cStringUsingEncoding:NSUTF8StringEncoding]);
-        int value = 0;
-        for (int i = 0; i < strlen(buf)-1; i++) {
-            if (buf[i] == '1') (value |= 1);
-            value <<= 1;
-        }
-        return [NSNumber numberWithUnsignedInt:value];
-    } else {
-        if ([value respondsToSelector:@selector(intValue)]) {
-            int test = [value intValue];
-            return [NSNumber numberWithUnsignedInt:test];
-        }
-    }
+    if ([value isKindOfClass:[NSString class]])
+        return binaryStringToValue(value);
+    else
+        if ([value respondsToSelector:@selector(unsignedShortValue)])
+            return [NSNumber numberWithUnsignedShort:[value unsignedShortValue]];
     return 0;
 }
+
 @end

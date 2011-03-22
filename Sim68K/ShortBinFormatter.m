@@ -8,7 +8,7 @@
 
 #import "ShortBinFormatter.h"
 
-NSString* binaryStringForValue(unsigned short value);
+#include "extern.h"
 
 @implementation ShortBinFormatter
 
@@ -17,21 +17,17 @@ NSString* binaryStringForValue(unsigned short value);
 // Gets the final string that'll be used to represent the formatted
 // number
 // -----------------------------------------------------------------
-- (NSString *)stringForObjectValue:(id)obj { 
+- (NSString *)stringForObjectValue:(id)obj 
+{ 
     NSString *result = @"0000000000000000";
     
     if([obj isKindOfClass:[NSNumber class]]) {
         result = binaryStringForValue([obj unsignedShortValue]);
     } else if ([obj isKindOfClass:[NSString class]]) {
-        NSScanner *temp = [NSScanner scannerWithString:obj];
-        unsigned int value = 0;
-        if ([temp scanHexInt:&value]) {
-            result = [NSString stringWithFormat:@"%08X",value];
-        }
-        if (value == 0x1000000) {
-            int a = 0; // testbreak
-        }
-    }    
+        NSNumber *value = binaryStringToValue(obj);
+        result = binaryStringForValue([value unsignedShortValue]);
+    }   
+    
     return result; 
 } 
 
@@ -42,20 +38,9 @@ NSString* binaryStringForValue(unsigned short value);
 - (BOOL)getObjectValue:(id *)obj forString:(NSString *)string 
       errorDescription:(NSString **)error  
 { 
-    NSNumber *hexValue;
-    BOOL success = NO;
-    
-    NSScanner *temp = [NSScanner scannerWithString:(NSString *)string];
-    unsigned int result = 0;
-    if ([temp scanHexInt:&result]) {
-        hexValue = [NSNumber numberWithUnsignedInt:result];
-        success = YES;
-    } else {
-        hexValue = [NSNumber numberWithUnsignedInt:0];
-    }    
-    
-    *obj = hexValue;
-    
+    BOOL success = YES;
+    NSNumber *binValue = binaryStringToValue(string);
+    *obj = binValue;
     return success; 
 } 
 
@@ -70,8 +55,7 @@ NSString* binaryStringForValue(unsigned short value);
     BOOL result = NO;
     
     NSMutableString *tempString = [NSMutableString stringWithString:partialString];
-    NSCharacterSet *illegalCharacters = 
-    [[NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEFabcdef"] invertedSet];
+    NSCharacterSet *illegalCharacters = CHARSET_BIN;
     NSRange illegalCharacterRange = [tempString rangeOfCharacterFromSet:illegalCharacters];
     
     while (illegalCharacterRange.location != NSNotFound)
@@ -95,11 +79,23 @@ NSString* binaryStringForValue(unsigned short value);
        originalSelectedRange:(NSRange)origSelRange 
             errorDescription:(NSString **)error
 {
+    NSMutableString *tempString = [NSMutableString stringWithString:*partialStringPtr];
     
-    BOOL result = NO;
+    NSCharacterSet *illegalCharacters = CHARSET_BIN;
+    NSRange illegalCharacterRange = [tempString rangeOfCharacterFromSet:illegalCharacters];
+    if (illegalCharacterRange.location != NSNotFound)                                       // Illegal chars
+        return NO;
     
-    return result;
+    if ([*partialStringPtr length] == 0) {                                                  // Empty string
+        *partialStringPtr = @"0000000000000000";
+        return NO;
+    }
     
+    if ([*partialStringPtr length] > 16) {                                                  // Length limit
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end

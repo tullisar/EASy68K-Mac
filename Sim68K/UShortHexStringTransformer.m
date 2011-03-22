@@ -6,9 +6,9 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "ShortHexStringTransformer.h"
+#import "UShortHexStringTransformer.h"
 
-@implementation ShortHexStringTransformer
+@implementation UShortHexStringTransformer
 
 // -----------------------------------------------------------------
 // transformedValueClass
@@ -28,13 +28,16 @@
 
 // -----------------------------------------------------------------
 // transformedValue
+// Returns the string representation of a given number as a hex
+// of 2 bytes in length.
 // -----------------------------------------------------------------
 - (id)transformedValue:(id)value {
-    return [NSString stringWithFormat:@"%04X",[value shortValue]];
+    return [NSString stringWithFormat:@"%04X",[value unsignedShortValue]];
 }
 
 // -----------------------------------------------------------------
 // reverseTransformedValue
+// Reverses the transformation from a 2-byte hex string to a number
 // -----------------------------------------------------------------
 - (id)reverseTransformedValue:(id)value {
     if ([value isKindOfClass:[NSString class]]) {
@@ -46,9 +49,8 @@
             return 0;
         }
     } else {
-        if ([value respondsToSelector:@selector(intValue)]) {
-            int test = [value intValue];
-            return [NSNumber numberWithUnsignedInt:test];
+        if ([value respondsToSelector:@selector(unsignedShortValue)]) {
+            return [NSNumber numberWithUnsignedInt:[value unsignedShortValue]];
         }
     }
     return 0;

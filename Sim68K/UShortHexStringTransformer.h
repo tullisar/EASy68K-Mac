@@ -9,8 +9,5 @@
 #import <Cocoa/Cocoa.h>
 #import <Foundation/Foundation.h>
 
-@interface ShortHexStringTransformer : NSValueTransformer {}
-
-
-
+@interface UShortHexStringTransformer : NSValueTransformer {}
 @end

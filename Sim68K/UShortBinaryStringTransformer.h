@@ -9,10 +9,5 @@
 #import <Cocoa/Cocoa.h>
 #import <Foundation/Foundation.h>
 
-#define WORD68K 16
-
-@interface ShortBinaryStringTransformer : NSValueTransformer {}
-
-- (NSMutableString *)binaryStringForValue:(unsigned short)value;
-
+@interface UShortBinaryStringTransformer : NSValueTransformer {}
 @end

@@ -8,9 +8,5 @@
 
 #import <Cocoa/Cocoa.h>
 
-
-@interface ShortBinFormatter : NSFormatter {
-
-}
-
+@interface ShortBinFormatter : NSFormatter {}
 @end

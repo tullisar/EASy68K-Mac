@@ -11,8 +11,8 @@
 #import "MarkerLineNumberView.h"
 #import "Simulator.h"
 #import "IntHexStringTransformer.h"
-#import "ShortHexStringTransformer.h"
-#import "ShortBinaryStringTransformer.h"
+#import "UShortHexStringTransformer.h"
+#import "UShortBinaryStringTransformer.h"
 
 #include "extern.h"
 
@@ -30,12 +30,12 @@
     NSValueTransformer *intHexStr = [[IntHexStringTransformer alloc] init];
     [NSValueTransformer setValueTransformer:intHexStr
                                     forName:@"IntHexStringTransformer"];
-    NSValueTransformer *shortHexStr = [[ShortHexStringTransformer alloc] init];
+    NSValueTransformer *shortHexStr = [[UShortHexStringTransformer alloc] init];
     [NSValueTransformer setValueTransformer:shortHexStr
-                                    forName:@"ShortHexStringTransfomer"];
-    NSValueTransformer *shortBinStr = [[ShortBinaryStringTransformer alloc] init];
+                                    forName:@"UShortHexStringTransfomer"];
+    NSValueTransformer *shortBinStr = [[UShortBinaryStringTransformer alloc] init];
     [NSValueTransformer setValueTransformer:shortBinStr
-                                    forName:@"ShortBinaryStringTransformer"];
+                                    forName:@"UShortBinaryStringTransformer"];
     [intHexStr autorelease];
     [shortHexStr autorelease];
     [shortBinStr autorelease];
