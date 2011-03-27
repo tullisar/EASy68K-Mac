@@ -5298,7 +5298,7 @@ IEZGIEZGIEZGIEZGIC0tLS0tLS0tLS0tLS0tLS0</bytes>
 						<string key="label">editable: simStopped</string>
 						<reference key="source" ref="363304340"/>
 						<reference key="destination" ref="132415257"/>
-						<object class="NSNibBindingConnector" key="connector">
+						<object class="NSNibBindingConnector" key="connector" id="1510">
 							<reference key="NSSource" ref="363304340"/>
 							<reference key="NSDestination" ref="132415257"/>
 							<string key="NSLabel">editable: simStopped</string>
@@ -5602,7 +5602,7 @@ IEZGIEZGIEZGIEZGIC0tLS0tLS0tLS0tLS0tLS0</bytes>
 						<string key="label">editable: simStopped</string>
 						<reference key="source" ref="48459332"/>
 						<reference key="destination" ref="132415257"/>
-						<object class="NSNibBindingConnector" key="connector">
+						<object class="NSNibBindingConnector" key="connector" id="1642">
 							<reference key="NSSource" ref="48459332"/>
 							<reference key="NSDestination" ref="132415257"/>
 							<string key="NSLabel">editable: simStopped</string>
@@ -6356,6 +6356,40 @@ IEZGIEZGIEZGIEZGIC0tLS0tLS0tLS0tLS0tLS0</bytes>
 						<reference key="destination" ref="373312410"/>
 					</object>
 					<int key="connectionID">1108</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">enabled: simLoaded</string>
+						<reference key="source" ref="363304340"/>
+						<reference key="destination" ref="132415257"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="363304340"/>
+							<reference key="NSDestination" ref="132415257"/>
+							<string key="NSLabel">enabled: simLoaded</string>
+							<string key="NSBinding">enabled</string>
+							<string key="NSKeyPath">simLoaded</string>
+							<reference key="NSPreviousConnector" ref="1510"/>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">1109</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">enabled: simLoaded</string>
+						<reference key="source" ref="48459332"/>
+						<reference key="destination" ref="132415257"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="48459332"/>
+							<reference key="NSDestination" ref="132415257"/>
+							<string key="NSLabel">enabled: simLoaded</string>
+							<string key="NSBinding">enabled</string>
+							<string key="NSKeyPath">simLoaded</string>
+							<reference key="NSPreviousConnector" ref="1642"/>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">1110</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -10154,7 +10188,7 @@ IEZGIEZGIEZGIEZGIC0tLS0tLS0tLS0tLS0tLS0</bytes>
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">1108</int>
+			<int key="maxID">1110</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

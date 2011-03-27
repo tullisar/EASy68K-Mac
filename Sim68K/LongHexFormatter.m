@@ -102,7 +102,6 @@
     
     if (lengthDif == [origString length]) {                                                 // Empty String
         *partialStringPtr = @"00000000";    
-        return NO;        
     } 
     
     else if (lengthDif < 0) {                                                               // Longer String
@@ -124,28 +123,23 @@
                 proposedSelRangePtr->length = 8;
             }
         }
-        
-        return NO;
     }
     
     else if (lengthDif > 0) {                                                               // Shorter String
         int selDif = [origString length]-origSelRange.length+1;
         if (selDif == [*partialStringPtr length]) {
+            NSRange replaceRange = NSMakeRange(0, proposedSelRangePtr->location);
             tempString = [NSMutableString stringWithString:origString];
-            NSString *newStart = [*partialStringPtr substringToIndex:3];
-            
-            int a = 0;
-            //[tempString replaceCharactersInRange:<#(NSRange)range#> withString:<#(NSString *)aString#>
+            NSString *newStart = [*partialStringPtr substringToIndex:proposedSelRangePtr->location];
+            [tempString replaceCharactersInRange:replaceRange withString:newStart];
+            *partialStringPtr = tempString;
+            proposedSelRangePtr->length++;
         }
-        
-        
-        return NO;
     }
     
     if (lengthDif == 0) {                                                                   // Same length
         proposedSelRangePtr->length++;
         *partialStringPtr = tempString;
-        return NO;
     }
     
     return NO;
