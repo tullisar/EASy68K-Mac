@@ -98,16 +98,57 @@
     if (illegalCharacterRange.location != NSNotFound)                                       // Illegal chars
         return NO;
     
-    if ([*partialStringPtr length] == 0) {                                                  // Empty string
-        *partialStringPtr = @"00000000";
-        return NO;
-    }
-
-    if ([*partialStringPtr length] > 8) {                                                   // Length limit
+    int lengthDif = [origString length] - [*partialStringPtr length];
+    
+    if (lengthDif == [origString length]) {                                                 // Empty String
+        *partialStringPtr = @"00000000";    
+        return NO;        
+    } 
+    
+    else if (lengthDif < 0) {                                                               // Longer String
+        if (origSelRange.location == [origString length])
+            return NO;
+        
+        if (lengthDif == -1) {                                                              // Single character
+            NSRange delRange = NSMakeRange(origSelRange.location+1, 1);
+            [tempString deleteCharactersInRange:delRange];
+            *partialStringPtr = tempString;
+            if (delRange.location == [origString length]) delRange.location--;
+            *proposedSelRangePtr = delRange;
+        }
+        
+        if (lengthDif == -8) {                                                              // Pasting full string
+            if (origSelRange.location == 0) {                                               // Only accept at index 0
+                *partialStringPtr = [tempString substringToIndex:8];
+                proposedSelRangePtr->location = 0;
+                proposedSelRangePtr->length = 8;
+            }
+        }
+        
         return NO;
     }
     
-    return YES;
+    else if (lengthDif > 0) {                                                               // Shorter String
+        int selDif = [origString length]-origSelRange.length+1;
+        if (selDif == [*partialStringPtr length]) {
+            tempString = [NSMutableString stringWithString:origString];
+            NSString *newStart = [*partialStringPtr substringToIndex:3];
+            
+            int a = 0;
+            //[tempString replaceCharactersInRange:<#(NSRange)range#> withString:<#(NSString *)aString#>
+        }
+        
+        
+        return NO;
+    }
+    
+    if (lengthDif == 0) {                                                                   // Same length
+        proposedSelRangePtr->length++;
+        *partialStringPtr = tempString;
+        return NO;
+    }
+    
+    return NO;
 }
 
 @end
