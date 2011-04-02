@@ -20,6 +20,10 @@
 #include <stdlib.h>
 
 #include "extern.h"         // contains global "extern" declarations
+#import "ConsoleView.h"
+#import "Sim68KAppDelegate.h"
+#import "Simulator.h"
+
 // #include "simIOu.h"
 // #include "SIM68Ku.h"
 // #include "hardwareu.h"
@@ -717,18 +721,17 @@ int	STOP()
 
 
 int TRAP()
-{
-    // return NOP();                                            // Temporarily call NOP until implemented
-    
+{    
     int vector, cid, code;
     char *inStr;
     char buf[256];                                              // temp buffer
     char mouseIRQ, keyIRQ;
     
+    ConsoleView *simIO = [appDelegate simIOView];
+    
     vector = inst & 0x0F;
     if(vector == 15) {                                          // if display vector
         switch ((char)D[0]) {                                   // which task ?
-            /*
             case 0: case 1:                                     // TASK 0, TASK 1: display D1.W chars
                 inStr = &memory[A[1] & ADDRMASK];               // address of string
                 strncpy(buf,inStr,255);                         // make copy of string so we can terminate it
@@ -742,14 +745,16 @@ int TRAP()
                     return code;
                 
                 if ((char)D[0])                                 // if D0.B = 1
-                    simIO->textOut(buf);                        // display string without CRLF
+                    [simIO textOut:buf];                        // display string without CRLF
                 else
-                    simIO->textOutCR(buf);                      // display string with CRLF
+                    [simIO textOut:buf];                        // display string with CRLF
                 break;
-            case 2:                                             // TASK 2: input
+            case 2:                                             // TASK 2: input string, store at address pointed to by A1
                 inStr = &memory[A[1] & ADDRMASK];               // address of string
-                simIO->textIn(inStr, &D[1], NULL);              // read string into inStr, length in D1
+                [simIO textIn:inStr sizePtr:&D[1] regNum:NULL];  
+                // simIO->textIn(inStr, &D[1], NULL);              // read string into inStr, length in D1
                 break;
+            /*
             case 3:                                             // TASK 3: display number in D1.L
                 itoa(D[1], buf, 10);                            // convert D1.L to string, put in buf
                 simIO->textOut(buf);                            // display number without CRLF
@@ -814,16 +819,16 @@ int TRAP()
             */
             case 13: case 14:                                   // TASK 13, TASK 14: Display NULL terminated string at (A1)
                 inStr = &memory[A[1] & ADDRMASK];               // address of string
+                sprintf(buf, "%s", inStr);
                 // check memory map
                 code = memoryMapCheck(Invalid, (A[1] & ADDRMASK), strlen(inStr));
                 if (code == BUS_ERROR)                          // if bus error caused by memory map
                     return code;
                 if ((char)D[0]==14)                             // if D0.B = 14
-                    NSLog(@"%s",inStr);
-                    // simIO->textOut(inStr);                   // display string without CRLF
+                    [simIO textOut:buf];                        // display string without CRLF
+                 
                 else
-                    NSLog(@"\n%s\n",inStr);
-                    // simIO->textOutCR(inStr);                 // display string with CRLF
+                    [simIO textOutCR:buf];                      // display string with CRLF
                 break;
                 break;
             /*

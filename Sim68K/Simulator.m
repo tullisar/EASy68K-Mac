@@ -157,6 +157,7 @@
         }
         
         [self setSimLoaded:YES];
+        [self setSimStopped:YES];
         [self displayReg];
         
     } else {

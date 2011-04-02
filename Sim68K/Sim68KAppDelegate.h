@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ConsoleView.h"
 
 @class NoodleLineNumberView, Simulator;
 
@@ -17,6 +18,7 @@
     NSPanel  *panelHardware;
     NSPanel  *panelStack;
     NSPanel  *panelMemory;
+    ConsoleView    *simIOView;
     IBOutlet NSScrollView   *scrollView;
     IBOutlet NSTextView     *scriptView;
 	NoodleLineNumberView	*lineNumberView;
@@ -31,6 +33,7 @@
 @property (assign) IBOutlet NSPanel *panelStack;
 @property (assign) IBOutlet NSPanel *panelMemory;
 @property (retain) NSString *file;
+@property (assign) IBOutlet ConsoleView *simIOView;
 
 - (IBAction)openDocument:(id)sender;
 - (IBAction)runProg:(id)sender;

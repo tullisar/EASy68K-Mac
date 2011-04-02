@@ -11,10 +11,19 @@
 
 @interface ConsoleView : NSTextView {
 
-    char *pendingKey;
+    char pendingKeyChar[2];
     BOOL inputEnabled;
+    int  inputIndex;
+    char *inBuf;
+    long *inSize;
+    long *inDest;
     
 }
+
+-(void)textIn:(char *)str sizePtr:(long *)size regNum:(long *)inNum;
+-(void)charIn:(char *)ch;
+-(void)textOut:(char *)str;
+-(void)textOutCR:(char *)str;
 
 // Necessary
 //__fastcall TsimIO(TComponent* Owner);
