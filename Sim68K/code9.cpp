@@ -19,7 +19,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "extern.h"         // contains global "extern" declarations
+#include "extern.h"                 // contains global "extern" declarations
 #import "ConsoleView.h"
 #import "Sim68KAppDelegate.h"
 #import "Simulator.h"
@@ -29,9 +29,9 @@
 // #include "hardwareu.h"
 // #include "logU.h"
 
-extern uchar keyDownCode;       // defined in simIOu, used by Trap #15,19
-extern uchar keyUpCode;         // "
-extern bool disableKeyCommands;  // defined in SIM68Ku
+extern uchar keyDownCode;           // defined in simIOu, used by Trap #15,19
+extern uchar keyUpCode;             // "
+extern bool disableKeyCommands;     // defined in SIM68Ku
 
 // global variables for printing
 // TPrinter *Prntr;
@@ -751,7 +751,8 @@ int TRAP()
                 break;
             case 2:                                             // TASK 2: input string, store at address pointed to by A1
                 inStr = &memory[A[1] & ADDRMASK];               // address of string
-                [simIO textIn:inStr sizePtr:&D[1] regNum:NULL];  
+                [simIO textIn:inStr sizePtr:&D[1] regNum:NULL];
+                trace = true;
                 // simIO->textIn(inStr, &D[1], NULL);              // read string into inStr, length in D1
                 break;
             /*

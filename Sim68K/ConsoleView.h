@@ -8,15 +8,22 @@
 
 #import <Cocoa/Cocoa.h>
 
+#define KEYBUF_SIZE 256;
 
 @interface ConsoleView : NSTextView {
 
-    char pendingKeyChar[2];
-    BOOL inputEnabled;
-    int  inputIndex;
-    char *inBuf;
-    long *inSize;
-    long *inDest;
+    char eventKeyBuffer[KEYBUF_SIZE];
+    int row, col, textX, textY, x, y;
+    char keyBuf[KEYBUF_SIZE];
+    char *userBuf;
+    long *inputLength;
+    long *inputNumber;
+    int  keyI;    
+    
+    BOOL inputMode;
+    BOOL charInput;
+
+    char *inChar;
     
 }
 

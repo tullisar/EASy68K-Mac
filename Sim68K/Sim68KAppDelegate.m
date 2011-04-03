@@ -22,6 +22,7 @@
 
 @synthesize window, panelIO, panelMemory, panelStack, panelHardware, simIOView;
 @synthesize file;
+@synthesize simulator;
 
 // -----------------------------------------------------------------
 // initialize

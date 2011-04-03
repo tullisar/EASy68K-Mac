@@ -34,6 +34,7 @@
 @property (assign) IBOutlet NSPanel *panelMemory;
 @property (retain) NSString *file;
 @property (assign) IBOutlet ConsoleView *simIOView;
+@property (retain) Simulator *simulator;
 
 - (IBAction)openDocument:(id)sender;
 - (IBAction)runProg:(id)sender;

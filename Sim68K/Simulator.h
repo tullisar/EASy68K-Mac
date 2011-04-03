@@ -23,6 +23,7 @@
     long  startPC;
     BOOL  simLoaded;
     BOOL  simStopped;
+    BOOL  simInputMode;
     
     // Containers
     NSAttributedString *listFile;
@@ -54,6 +55,7 @@
 @property (assign) long startPC;
 @property (assign) BOOL simLoaded;
 @property (assign) BOOL simStopped;
+@property (assign) BOOL simInputMode;
 
 - (void) initSim;
 - (void) memFormat;
