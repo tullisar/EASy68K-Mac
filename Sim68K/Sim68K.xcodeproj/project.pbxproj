@@ -29,6 +29,7 @@
 		141FDB261325B8E000A249F3 /* UShortHexStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 141FDB251325B8E000A249F3 /* UShortHexStringTransformer.m */; };
 		141FDB351325BA0800A249F3 /* UShortBinaryStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 141FDB341325BA0800A249F3 /* UShortBinaryStringTransformer.m */; };
 		141FDB791325DB0D00A249F3 /* IntHexStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 141FDB781325DB0D00A249F3 /* IntHexStringTransformer.m */; };
+		142D7FAA134C44AD006E5630 /* NSTextView-TextManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 142D7FA9134C44AD006E5630 /* NSTextView-TextManipulation.m */; };
 		145674D91342D50F00F08A0D /* ConsoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145674D81342D50F00F08A0D /* ConsoleView.m */; };
 		148C96E4131CECE1001CDD1C /* MarkerLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C96DF131CECE1001CDD1C /* MarkerLineNumberView.m */; };
 		148C96E5131CECE1001CDD1C /* NoodleLineNumberMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C96E1131CECE1001CDD1C /* NoodleLineNumberMarker.m */; };
@@ -101,6 +102,8 @@
 		141FDB341325BA0800A249F3 /* UShortBinaryStringTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UShortBinaryStringTransformer.m; sourceTree = "<group>"; };
 		141FDB771325DB0D00A249F3 /* IntHexStringTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntHexStringTransformer.h; sourceTree = "<group>"; };
 		141FDB781325DB0D00A249F3 /* IntHexStringTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntHexStringTransformer.m; sourceTree = "<group>"; };
+		142D7FA8134C44AD006E5630 /* NSTextView-TextManipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextView-TextManipulation.h"; sourceTree = "<group>"; };
+		142D7FA9134C44AD006E5630 /* NSTextView-TextManipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView-TextManipulation.m"; sourceTree = "<group>"; };
 		145674D71342D50F00F08A0D /* ConsoleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleView.h; sourceTree = "<group>"; };
 		145674D81342D50F00F08A0D /* ConsoleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsoleView.m; sourceTree = "<group>"; };
 		148C96DE131CECE1001CDD1C /* MarkerLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerLineNumberView.h; sourceTree = "<group>"; };
@@ -184,6 +187,15 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
+		142D7FA3134C4001006E5630 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				142D7FA8134C44AD006E5630 /* NSTextView-TextManipulation.h */,
+				142D7FA9134C44AD006E5630 /* NSTextView-TextManipulation.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		1461BFAA1338617E002764CC /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +258,7 @@
 		29B97314FDCFA39411CA2CEA /* Sim68K */ = {
 			isa = PBXGroup;
 			children = (
+				142D7FA3134C4001006E5630 /* Categories */,
 				14CFADCD131EEB20005D7D7A /* Sim68K Source */,
 				1461BFAA1338617E002764CC /* Formatters */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -320,6 +333,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Sim68K" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -390,6 +404,7 @@
 				14C5791A1337F8F800C1E08B /* LongHexFormatter.m in Sources */,
 				14C57A5F13381CB000C1E08B /* ShortBinFormatter.m in Sources */,
 				145674D91342D50F00F08A0D /* ConsoleView.m in Sources */,
+				142D7FAA134C44AD006E5630 /* NSTextView-TextManipulation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

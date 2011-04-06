@@ -16,6 +16,8 @@
 
 #include "extern.h"
 
+BOOL trapInput = NO;
+
 /**************************** long memDistance() ****************************
 
  name        : long memDistance(void *max, void *min, long size)

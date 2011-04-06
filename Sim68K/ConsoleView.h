@@ -8,7 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-#define KEYBUF_SIZE 256;
+#define KEYBUF_SIZE 256
+#define kBackspaceKey 127
+#define kDeleteKey '\357'
 
 @interface ConsoleView : NSTextView {
 
@@ -24,6 +26,7 @@
     BOOL charInput;
 
     char *inChar;
+    char *inputCh;
     
 }
 
@@ -31,6 +34,7 @@
 -(void)charIn:(char *)ch;
 -(void)textOut:(char *)str;
 -(void)textOutCR:(char *)str;
+-(void)charOut:(char)ch;
 
 // Necessary
 //__fastcall TsimIO(TComponent* Owner);

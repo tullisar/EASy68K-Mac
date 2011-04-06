@@ -237,35 +237,35 @@ int	STOP()
  
  Trap codes 0 - 12 are designed to be compatible with the Teesside simulator.
  
- 0 - Display string at (A1), D1.W bytes long (max 255) with CRLF.
- 1 - Display string at (A1), D1.W bytes long (max 255) without CRLF.
- 2 - Read keyboard string starting at (A1) length returned in D1.W (max 80)
- 3 - Display number in D1.L in decimal in smallest field.
- 4 - Read a number from keyboard into D1.L.
- 5 - Read single char from keyboard into D1.B.
- 6 - Display single char in D1.B.
- 7 - Set D1.B to 1 if keyboard input is pending, otherwise set to 0.
- Use code 5 to read pending key.
- 8 - Return time in hundredths of a second since midnight in D1.L.
- 9 - Terminate the program.
+ 0  - Display string at (A1), D1.W bytes long (max 255) with CRLF.
+ 1  - Display string at (A1), D1.W bytes long (max 255) without CRLF.
+ 2  - Read keyboard string starting at (A1) length returned in D1.W (max 80)
+ 3  - Display number in D1.L in decimal in smallest field.
+ 4  - Read a number from keyboard into D1.L.
+ 5  - Read single char from keyboard into D1.B.
+ 6  - Display single char in D1.B.
+ 7  - Set D1.B to 1 if keyboard input is pending, otherwise set to 0.
+      Use code 5 to read pending key.
+ 8  - Return time in hundredths of a second since midnight in D1.L.
+ 9  - Terminate the program.
  
  10 - (not Teeside compatible)
- Print null terminated character string at (A1) to default printer.
- D1.B = 00 to print
- D1.B = 01 to end printing and feed form
+      Print null terminated character string at (A1) to default printer.
+      D1.B = 00 to print
+      D1.B = 01 to end printing and feed form
  
  -SCREEN HANDLING-
  11 - Set Cursor Position; Return Cursor Position, Clear Screen.
- Set Cursor Position: The high byte of D1.W holds the COL
- number (0-79), the low byte holds the ROW number (0-24). 0,0 is top
- left 79,24 is the bottom right. Out of range coordinates are ignored.
- Return Cursor Position: Set D1.W to $00FF. Returns COL in high byte of
- D1.W and ROW in low byte of D1.W.
- Clear Screen : Set D1.W to $FF00.
+      Set Cursor Position: The high byte of D1.W holds the COL
+      number (0-79), the low byte holds the ROW number (0-24). 0,0 is top
+      left 79,24 is the bottom right. Out of range coordinates are ignored.
+      Return Cursor Position: Set D1.W to $00FF. Returns COL in high byte of
+      D1.W and ROW in low byte of D1.W.
+      Clear Screen : Set D1.W to $FF00.
  
  12 - Keyboard Echo. Setting D1.B to 0 will turn off keyboard echo, D1.B to
- non zero will enable it (default). Echo is restored on 'Reset' or when
- a new file is loaded.
+      non zero will enable it (default). Echo is restored on 'Reset' or when
+      a new file is loaded.
  
  ***************************************************************
  ***** The following Trap Codes are NOT Teeside compatible *****
@@ -752,8 +752,8 @@ int TRAP()
             case 2:                                             // TASK 2: input string, store at address pointed to by A1
                 inStr = &memory[A[1] & ADDRMASK];               // address of string
                 [simIO textIn:inStr sizePtr:&D[1] regNum:NULL];
-                trace = true;
-                // simIO->textIn(inStr, &D[1], NULL);              // read string into inStr, length in D1
+                [[appDelegate simulator] setSimInputMode:YES];
+                WAIT_FOR_INPUT
                 break;
             /*
             case 3:                                             // TASK 3: display number in D1.L
@@ -811,13 +811,13 @@ int TRAP()
                 else
                     simIO->gotorc((char)D[1],(char)(D[1]>>8));
                 break;
+            */
             case 12:                                            // TASK 12: keyboard echo (on/off)
                 if ((char)D[1]==0)                              // if D1.B = 0
                     keyboardEcho = false;
                 else
                     keyboardEcho = true;
                 break;
-            */
             case 13: case 14:                                   // TASK 13, TASK 14: Display NULL terminated string at (A1)
                 inStr = &memory[A[1] & ADDRMASK];               // address of string
                 sprintf(buf, "%s", inStr);
@@ -827,7 +827,6 @@ int TRAP()
                     return code;
                 if ((char)D[0]==14)                             // if D0.B = 14
                     [simIO textOut:buf];                        // display string without CRLF
-                 
                 else
                     [simIO textOutCR:buf];                      // display string with CRLF
                 break;

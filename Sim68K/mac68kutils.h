@@ -22,10 +22,14 @@ if (![NSThread isMainThread]) {\
     return;\
 }
 
+#define WAIT_FOR_INPUT while([[appDelegate simulator] simInputMode]) {;};
+
 #define WORD68K 16
 
 #define CHARSET_HEX [[NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEFabcdef"] invertedSet]
 #define CHARSET_BIN [[NSCharacterSet characterSetWithCharactersInString:@"01"] invertedSet]
+
+extern BOOL trapInput;
 
 long memDistance(void *max, void *min, long size);
 
