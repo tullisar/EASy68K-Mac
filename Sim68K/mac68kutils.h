@@ -14,6 +14,9 @@
  
  ***************************************************************************/
 
+#import "NSDate-Components.h"
+#import "NSTextView-TextManipulation.h"
+
 #define DISPATCH_MAIN_THREAD \
 if (![NSThread isMainThread]) {\
     [self performSelectorOnMainThread:@selector(displayReg)\
@@ -22,7 +25,7 @@ if (![NSThread isMainThread]) {\
     return;\
 }
 
-#define WAIT_FOR_INPUT while([[appDelegate simulator] simInputMode]) {;};
+#define WAIT_FOR_INPUT while(trapInput) {;};
 
 #define WORD68K 16
 

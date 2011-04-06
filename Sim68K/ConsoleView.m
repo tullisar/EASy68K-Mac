@@ -66,9 +66,9 @@
                 *inChar = key;                                  // get key
                 charInput = NO;
                 if (keyboardEcho) {
-                    // [self charOut:key];
-                    if (key == '\r' && inputLFdisplay) {         // if CR and LF display wanted
-                        // [self charOut:'\n'];                 // do LF
+                    [self charOut:key];
+                    if (key == '\r' && inputLFdisplay) {        // if CR and LF display wanted
+                        [self charOut:'\n'];                    // do LF
                     }
                 }
             }
@@ -87,6 +87,7 @@
                 }
             }
             inputMode = NO;
+            trapInput = NO;
             if (trace && !trapInput) {
                 // TODO: Enable debug
                 // TODO: Enable hardware
@@ -169,6 +170,7 @@
                 [self charOut:'\n'];
         }
         pendingKey = 0;
+        trapInput = NO;
         return;
     }
     inputCh = ch;

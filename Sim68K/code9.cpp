@@ -728,6 +728,8 @@ int TRAP()
     char mouseIRQ, keyIRQ;
     
     ConsoleView *simIO = [appDelegate simIOView];
+    NSDate *now = [NSDate now];
+    NSDateComponents *comp = [now components];
     
     vector = inst & 0x0F;
     if(vector == 15) {                                          // if display vector
@@ -752,22 +754,23 @@ int TRAP()
             case 2:                                             // TASK 2: input string, store at address pointed to by A1
                 inStr = &memory[A[1] & ADDRMASK];               // address of string
                 [simIO textIn:inStr sizePtr:&D[1] regNum:NULL];
-                [[appDelegate simulator] setSimInputMode:YES];
+                trapInput = YES;    
                 WAIT_FOR_INPUT
                 break;
-            /*
             case 3:                                             // TASK 3: display number in D1.L
-                itoa(D[1], buf, 10);                            // convert D1.L to string, put in buf
-                simIO->textOut(buf);                            // display number without CRLF
+                sprintf(buf, "%d", D[1]);                       // convert D1.L to string, put in buf
+                [simIO textOut:buf];                            // display number without CRLF
                 break;
             case 4:                                             // TASK 4: read number to D1.L (inputBuf & inputSize must be global)
-                simIO->textIn(inputBuf, &inputSize, &D[1]);     // read number to D1
+                [simIO textIn:inputBuf                          // read number to D1
+                      sizePtr:&inputSize 
+                       regNum:&D[1]];
                 break;
             case 5:                                             // TASK 5: read char to D1.B
-                simIO->charIn((char*)&D[1]);
+                [simIO charIn:(char*)&D[1]];
                 break;
             case 6:                                             // TASK 6: display char in D1.B
-                simIO->charOut((char)D[1]);
+                [simIO charOut:(char)D[1]];
                 break;
             case 7:                                             // TASK 7: Set D1.B to 1 if keyboard input is pending, otherwise set to 0
                 if(pendingKey) {
@@ -778,14 +781,10 @@ int TRAP()
                 }
                 break;
             case 8:                                             // TASK 8: Return time in hundredths of a second since midnight in D1.L
-                struct  time t;
-                gettime(&t);
-                D[1] = t.ti_hour * 60 * 60 * 100 +
-                t.ti_min  * 60 * 100 +
-                t.ti_sec  * 100 +
-                t.ti_hund;
+                D[1] = [comp hour] * 60 * 60 * 100 +
+                [comp minute] * 60 * 100 +
+                [comp second] * 100;
                 break;
-            */
             case 9:                                             // TASK 9: terminate the program
                 // MARK: HARDWARE: Form1->AutoTraceTimer->Enabled = false;
                 trace = false;
