@@ -728,8 +728,9 @@ int TRAP()
     char mouseIRQ, keyIRQ;
     
     ConsoleView *simIO = [appDelegate simIOView];
-    NSDate *now = [NSDate now];
+    NSDate *now = [NSDate date];
     NSDateComponents *comp = [now components];
+    bool oldLFdisplay;
     
     vector = inst & 0x0F;
     if(vector == 15) {                                          // if display vector
@@ -762,12 +763,19 @@ int TRAP()
                 [simIO textOut:buf];                            // display number without CRLF
                 break;
             case 4:                                             // TASK 4: read number to D1.L (inputBuf & inputSize must be global)
+                oldLFdisplay = inputLFdisplay;
+                inputLFdisplay = true;
                 [simIO textIn:inputBuf                          // read number to D1
                       sizePtr:&inputSize 
                        regNum:&D[1]];
+                trapInput = YES;
+                WAIT_FOR_INPUT
+                inputLFdisplay = oldLFdisplay;
                 break;
             case 5:                                             // TASK 5: read char to D1.B
                 [simIO charIn:(char*)&D[1]];
+                trapInput = YES;
+                WAIT_FOR_INPUT
                 break;
             case 6:                                             // TASK 6: display char in D1.B
                 [simIO charOut:(char)D[1]];
@@ -828,7 +836,7 @@ int TRAP()
                     [simIO textOut:buf];                        // display string without CRLF
                 else
                     [simIO textOutCR:buf];                      // display string with CRLF
-                break;
+
                 break;
             /*
             case 15:                                            // TASK 15: Display D1 converted to radix in D2.B

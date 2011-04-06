@@ -73,7 +73,9 @@
                 }
             }
             else {
-                // TODO: Display CRLF
+                if (inputLFdisplay) {
+                    [self charOut:'\n'];
+                }
                 keyBuf[keyI] = '\0';                            // terminate input buffer
                 if (inputNumber == NULL) {                      // if string input
                     for (int i = 0; i < keyI; i++)              // put string in 68000 memory at userBuf
@@ -88,7 +90,7 @@
             }
             inputMode = NO;
             trapInput = NO;
-            if (trace && !trapInput) {
+            if (trace) {
                 // TODO: Enable debug
                 // TODO: Enable hardware
                 [[appDelegate simulator] displayReg];
@@ -108,7 +110,7 @@
             keyBuf[keyI++] = key;                               // get key
             keyBuf[keyI] = '\0';                                // temporarily terminate input buffer
             if (keyboardEcho) {
-                // TODO: Append character to text view
+                [self charOut:key];
                 if (logging && OlogFlag == TEXTONLY) {
                     // TODO: Print to log file
                     // fprintf(OlogFile,"%c",keybuf[keyI-1];
@@ -189,6 +191,7 @@
     [self appendString:line 
               withFont:[NSFont fontWithName:@"Courier" size:11] 
               andColor:[NSColor whiteColor]];
+    [self setNeedsDisplay:YES];
 }
 
 // -----------------------------------------------------------------
@@ -206,7 +209,51 @@
 // Outputs a single character to the console
 // -----------------------------------------------------------------
 - (void)charOut:(char)ch {
-    
+    switch (ch) {
+        case '\a':                  // if Bell
+            // TODO: Beep
+            break;
+        case '\b':                  // if Backspace
+            [self removeLastChar];
+            break;
+        case '\f':                  // if Formfeed
+            // TODO: Form feed
+            break;
+        case '\n':                  // if LF
+            [self appendString:@"\n" 
+                      withFont:[NSFont fontWithName:@"Courier" size:11]
+                      andColor:[NSColor whiteColor]];
+//            if (logging && OlogFlag == TEXTONLY) { // if logging output
+//                fprintf(OlogFile,"\n");
+//                fflush(OlogFile);         // write all bufferred data to file
+//            }
+            break;
+        case '\r':                  // if CR
+            [self appendString:@"\n" 
+                      withFont:[NSFont fontWithName:@"Courier" size:11]
+                      andColor:[NSColor whiteColor]];
+            break;
+        case '\t':                  // if Tab
+            [self appendString:@"\t" 
+                      withFont:[NSFont fontWithName:@"Courier" size:11]
+                      andColor:[NSColor whiteColor]];            
+            break;
+        case '\v':                  // if Vertical tab
+            // TODO: Vertical tab
+            break;
+        default:
+            if (ch >= ' ') {          // if not control char
+                NSString *strCh = [NSString stringWithFormat:@"%c",ch];
+                [self appendString:strCh
+                          withFont:[NSFont fontWithName:@"Courier" size:11]
+                          andColor:[NSColor whiteColor]];
+//                if (logging && OlogFlag == TEXTONLY) {      // if logging output
+//                    fprintf(OlogFile,"%c",ch);
+//                    fflush(OlogFile);         // write all bufferred data to file
+//                }
+            }
+    }
+    [self setNeedsDisplay:YES];
 }
 
 @end
