@@ -1,3 +1,21 @@
 A Mac OS X port of the popular 68K Assembler/Simulator, EASy68K. Port is being done as my CSS 497 Capstone project as part of my Computing & Software Systems degree at the University of Washington: Bothell campus. 
 
 EASy68K can be downloaded from: http://www.easy68k.com
+
+Some quick notes:
+
+The editor is not fully featured as far as a text editor. There is currently no syntax coloring, or quick comment/uncomment buttons.
+
+The editor assembler options are all implemented, but the template/editor options preference tabs are not. There is little GUI feedback with regard to errors in your assembly sent
+
+The editor has little GUI feedback in the way of errors. For now, you'll have to open Console.app (located in /Applications/Utilities/) to see what kind of errors you have.
+
+Assembling the file will put the listfile and s-record in the same directory and won't give any indication of success. You'll have to manually open Sim68K and open an s-record file.
+
+The simulator buttons are not disabled if a program is not running, but they should disable if you hit "run" and are having a continuously branching program (all except the "pause" button).
+
+The "run to line" button is not implemented.
+
+Source level debugging is not yet implemented, but is the next thing I plan to work on (breakpoints and highlight current line in listfile window). For now, you can open Console.app to witness which instructions are being executed when you hit run/step/trace.
+
+All other features aren't yet implemented either, but are on the list :)
