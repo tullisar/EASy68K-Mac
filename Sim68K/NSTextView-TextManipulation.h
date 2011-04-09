@@ -15,5 +15,7 @@
 - (void)appendString:(NSString *)text withFont:(NSFont *)font andColor:(NSColor *)color;
 - (void)appendString:(NSString *)text withColor:(NSColor *)color;
 - (void)removeLastChar;
+- (NSRange)lastCharRange;
+- (void)invertTextColorForRange:(NSRange)range;
 
 @end

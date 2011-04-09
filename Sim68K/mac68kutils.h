@@ -16,6 +16,7 @@
 
 #import "NSDate-Components.h"
 #import "NSTextView-TextManipulation.h"
+#import "NSColor-Manipulation.h"
 
 #define DISPATCH_MAIN_THREAD \
 if (![NSThread isMainThread]) {\

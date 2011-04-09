@@ -847,8 +847,9 @@ int TRAP()
                     simIO->textOut(hex.c_str());                // display number without CRLF
                 }
                 break;
-            case 16:                    // turn input prompt on/off
-                if ((char)D[1]==0)              // if D1.B = 0
+            */
+            case 16:                                            // TASK 16: turn input prompt on/off
+                if ((char)D[1]==0)                              // if D1.B = 0
                     inputPrompt = false;
                 else if ((char)D[1]==1)
                     inputPrompt = true;
@@ -859,6 +860,7 @@ int TRAP()
                 break;
                 // Displays the NULL terminated string at (A1) without CRLF
                 //  then displays the decimal number in D1.L.
+            /*
             case 17:
                 inStr = &memory[A[1] & ADDRMASK];    // address of string
                 // check memory map

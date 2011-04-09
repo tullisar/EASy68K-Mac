@@ -28,6 +28,8 @@
     char *inChar;
     char *inputCh;
     
+    
+    NSTimer *promptFlash;
 }
 
 -(void)textIn:(char *)str sizePtr:(long *)size regNum:(long *)inNum;

@@ -28,11 +28,24 @@
         keyI = 0;
         inputMode = NO;
         charInput = NO;
+        
+        promptFlash = [NSTimer timerWithTimeInterval:1.0
+                                              target:self
+                                            selector:@selector(promptTimer:)
+                                            userInfo:nil
+                                             repeats:YES];
     }
     return self;
 }
 
 
+// -----------------------------------------------------------------
+// promptTimer
+// Paint method for updating display if necesary
+// -----------------------------------------------------------------
+- (void)promptTimer {
+        
+}
 
 // -----------------------------------------------------------------
 // drawRect
@@ -152,7 +165,8 @@
     }
     
     if (inputPrompt) {
-        // TODO: Flash input prompt with NSTimer
+        [[NSRunLoop currentRunLoop] addTimer:promptFlash 
+                                     forMode:NSRunLoopCommonModes];
     }
 }
 

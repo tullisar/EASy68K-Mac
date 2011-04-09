@@ -79,9 +79,26 @@
 // -----------------------------------------------------------------
 - (void)removeLastChar {
     NSTextStorage *store = [self textStorage];
-    NSMutableString *text = [store mutableString];
-    NSRange lastChar = NSMakeRange([text length]-1,[text length]);
-    [store deleteCharactersInRange:lastChar];
+    [store deleteCharactersInRange:[self lastCharRange]];
 }
 
+// -----------------------------------------------------------------
+// lastCharRange
+// Gets the NSRange represented by the last character in the text
+// storage
+// -----------------------------------------------------------------
+- (NSRange)lastCharRange {
+    NSTextStorage *store = [self textStorage];
+    NSMutableString *text = [store mutableString];
+    return NSMakeRange([text length]-1,[text length]);    
+}
+
+// -----------------------------------------------------------------
+// lastCharRange
+// Gets the NSRange represented by the last character in the text
+// storage
+// -----------------------------------------------------------------
+- (void)invertTextColorForRange:(NSRange)range {
+    
+}
 @end
