@@ -99,6 +99,13 @@
 // storage
 // -----------------------------------------------------------------
 - (void)invertTextColorForRange:(NSRange)range {
+//    NSTextStorage *store = [self textStorage];
+//    NSMutableString *text = [store mutableString];
+//    NSRange rangeTarget = NSMakeRange(0, 0);
+//
+//    
+    // TODO: Implement... going to need to enumerate over attribute for range...
+    // Harder than I thought
     
 }
 @end

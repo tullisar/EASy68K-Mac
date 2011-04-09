@@ -51,7 +51,6 @@
     if ((self = [super initWithScrollView:aScrollView orientation:NSVerticalRuler]) != nil)
     {
 		linesToMarkers = [[NSMutableDictionary alloc] init];
-		
         [self setClientView:[aScrollView documentView]];
     }
     return self;
@@ -144,7 +143,7 @@
 
 - (void)setClientView:(NSView *)aView
 {
-	id		oldClientView;
+	id oldClientView;
 	
 	oldClientView = [self clientView];
 	
@@ -156,7 +155,7 @@
     if ((aView != nil) && [aView isKindOfClass:[NSTextView class]])
     {
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:NSTextStorageDidProcessEditingNotification object:[(NSTextView *)aView textStorage]];
-
+        
 		[self invalidateLineIndices];
     }
 }
@@ -194,12 +193,12 @@
 	NSRange			nullRange;
 	NSMutableArray	*lines;
 	id				view;
-		
+    
 	view = [self clientView];
 	visibleRect = [[[self scrollView] contentView] bounds];
 	
 	lines = [self lineIndices];
-
+    
 	location += NSMinY(visibleRect);
 	
 	if ([view isKindOfClass:[NSTextView class]])
@@ -212,7 +211,7 @@
 		for (line = 0; line < count; line++)
 		{
 			index = [[lines objectAtIndex:line] unsignedIntValue];
-
+            
 			rects = [layoutManager rectArrayForCharacterRange:NSMakeRange(index, 0)
 								 withinSelectedCharacterRange:nullRange
 											  inTextContainer:container
@@ -235,11 +234,10 @@
 	return [linesToMarkers objectForKey:[NSNumber numberWithUnsignedInt:line - 1]];
 }
 
-
 - (void)calculateLines
 {
     id              view;
-
+    
     view = [self clientView];
     
     if ([view isKindOfClass:[NSTextView class]])
@@ -271,7 +269,7 @@
         {
             [lineIndices addObject:[NSNumber numberWithUnsignedInt:index]];
         }
-
+        
         oldThickness = [self ruleThickness];
         newThickness = [self requiredThickness];
         if (fabs(oldThickness - newThickness) > 1)
@@ -294,13 +292,13 @@
 {
     unsigned			left, right, mid, lineStart;
 	NSMutableArray		*lines;
-
+    
 	lines = [self lineIndices];
 	
     // Binary search
     left = 0;
     right = [lines count];
-
+    
     while ((right - left) > 1)
     {
         mid = (right + left) / 2;
@@ -332,10 +330,10 @@
 
 - (NSDictionary *)markerTextAttributes
 {
-	    return [NSDictionary dictionaryWithObjectsAndKeys:
+    return [NSDictionary dictionaryWithObjectsAndKeys:
             [self font], NSFontAttributeName, 
             [self alternateTextColor], NSForegroundColorAttributeName,
-				nil];
+            nil];
 }
 
 - (CGFloat)requiredThickness
@@ -356,7 +354,7 @@
     }
     
     stringSize = [sampleString sizeWithAttributes:[self textAttributes]];
-
+    
 	// Round up the value. There is a bug on 10.4 where the display gets all wonky when scrolling if you don't
 	// return an integral value here.
     return ceilf(MAX(DEFAULT_THICKNESS, stringSize.width + RULER_MARGIN * 2));
@@ -366,9 +364,9 @@
 {
     id			view;
 	NSRect		bounds;
-
+    
 	bounds = [self bounds];
-
+    
 	if (backgroundColor != nil)
 	{
 		[backgroundColor set];
@@ -395,7 +393,7 @@
 		NoodleLineNumberMarker	*marker;
 		NSImage					*markerImage;
 		NSMutableArray			*lines;
-
+        
         layoutManager = [view layoutManager];
         container = [view textContainer];
         text = [view string];
@@ -403,11 +401,11 @@
 		
 		yinset = [view textContainerInset].height;        
         visibleRect = [[[self scrollView] contentView] bounds];
-
+        
         textAttributes = [self textAttributes];
 		
 		lines = [self lineIndices];
-
+        
         // Find the characters that are currently visible
         glyphRange = [layoutManager glyphRangeForBoundingRect:visibleRect inTextContainer:container];
         range = [layoutManager characterRangeForGlyphRange:glyphRange actualGlyphRange:NULL];
@@ -443,11 +441,11 @@
 						markerImage = [marker image];
 						markerSize = [markerImage size];
 						markerRect = NSMakeRect(0.0, 0.0, markerSize.width, markerSize.height);
-
+                        
 						// Marker is flush right and centered vertically within the line.
 						markerRect.origin.x = NSWidth(bounds) - [markerImage size].width - 1.0;
 						markerRect.origin.y = ypos + NSHeight(rects[0]) / 2.0 - [marker imageOrigin].y;
-
+                        
 						[markerImage drawInRect:markerRect fromRect:NSMakeRect(0, 0, markerSize.width, markerSize.height) operation:NSCompositeSourceOver fraction:1.0];
 					}
                     
@@ -455,7 +453,7 @@
                     labelText = [NSString stringWithFormat:@"%d", line + 1];
                     
                     stringSize = [labelText sizeWithAttributes:textAttributes];
-
+                    
 					if (marker == nil)
 					{
 						currentTextAttributes = textAttributes;
@@ -467,9 +465,9 @@
 					
                     // Draw string flush right, centered vertically within the line
                     [labelText drawInRect:
-                       NSMakeRect(NSWidth(bounds) - stringSize.width - RULER_MARGIN,
-                                  ypos + (NSHeight(rects[0]) - stringSize.height) / 2.0,
-                                  NSWidth(bounds) - RULER_MARGIN * 2.0, NSHeight(rects[0]))
+                     NSMakeRect(NSWidth(bounds) - stringSize.width - RULER_MARGIN,
+                                ypos + (NSHeight(rects[0]) - stringSize.height) / 2.0,
+                                NSWidth(bounds) - RULER_MARGIN * 2.0, NSHeight(rects[0]))
                            withAttributes:currentTextAttributes];
                 }
             }
@@ -488,7 +486,7 @@
 	
 	[linesToMarkers removeAllObjects];
 	[super setMarkers:nil];
-
+    
 	enumerator = [markers objectEnumerator];
 	while ((marker = [enumerator nextObject]) != nil)
 	{
@@ -501,7 +499,7 @@
 	if ([aMarker isKindOfClass:[NoodleLineNumberMarker class]])
 	{
 		[linesToMarkers setObject:aMarker
-							forKey:[NSNumber numberWithUnsignedInt:[(NoodleLineNumberMarker *)aMarker lineNumber] - 1]];
+                           forKey:[NSNumber numberWithUnsignedInt:[(NoodleLineNumberMarker *)aMarker lineNumber] - 1]];
 	}
 	else
 	{

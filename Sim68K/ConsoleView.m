@@ -14,8 +14,34 @@
 @implementation ConsoleView
 
 // -----------------------------------------------------------------
-// initWithFrame
+// init
 // Default initialization for the textView
+// -----------------------------------------------------------------
+- (id)init {
+    self = [super init];
+    if (self) {
+        row = col = textX = textY = x = y = 0;
+        for (int i = 0; i < KEYBUF_SIZE; i++) {
+            eventKeyBuffer[i] = '\0';
+            keyBuf[i] = '\0';
+        }
+        keyI = 0;
+        inputMode = NO;
+        charInput = NO;
+        
+        promptFlash = [NSTimer timerWithTimeInterval:1.0
+                                              target:self
+                                            selector:@selector(promptTimer:)
+                                            userInfo:nil
+                                             repeats:YES];
+    }
+    return self;
+}
+
+
+// -----------------------------------------------------------------
+// initWithFrame
+// Default initialization for the textView when initialized with a rect
 // -----------------------------------------------------------------
 - (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
@@ -38,13 +64,33 @@
     return self;
 }
 
+// -----------------------------------------------------------------
+// awakeFromNib
+// Called when loaded from the nib file
+// -----------------------------------------------------------------
+- (void)awakeFromNib {
+    row = col = textX = textY = x = y = 0;
+    for (int i = 0; i < KEYBUF_SIZE; i++) {
+        eventKeyBuffer[i] = '\0';
+        keyBuf[i] = '\0';
+    }
+    keyI = 0;
+    inputMode = NO;
+    charInput = NO;
+    
+    promptFlash = [NSTimer timerWithTimeInterval:1.0
+                                          target:self
+                                        selector:@selector(promptTimer:)
+                                        userInfo:nil
+                                         repeats:YES]; 
+}
 
 // -----------------------------------------------------------------
 // promptTimer
 // Paint method for updating display if necesary
 // -----------------------------------------------------------------
 - (void)promptTimer {
-        
+    [self invertTextColorForRange:[self lastCharRange]];
 }
 
 // -----------------------------------------------------------------
@@ -107,6 +153,10 @@
                 // TODO: Enable debug
                 // TODO: Enable hardware
                 [[appDelegate simulator] displayReg];
+            }
+            
+            if (inputPrompt) {
+                [promptFlash invalidate];
             }
         }
         else if (key == kBackspaceKey || key == kDeleteKey) {   // if backspace or delete key

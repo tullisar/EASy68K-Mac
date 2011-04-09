@@ -253,6 +253,8 @@ int	STOP()
       Print null terminated character string at (A1) to default printer.
       D1.B = 00 to print
       D1.B = 01 to end printing and feed form
+      // MARK: NOTE: Task 10 printing will likely be ignored for a while
+      // Form-feed printing is difficult to simulate under Mac OS X as far as I can tell
  
  -SCREEN HANDLING-
  11 - Set Cursor Position; Return Cursor Position, Clear Screen.
@@ -274,55 +276,55 @@ int	STOP()
  13 - Display the NULL terminated string at (A1) (max 255) with CRLF.
  14 - Display the NULL terminated string at (A1) (max 255) without CRLF.
  15 - Display the contents of D1.L converted to number base (2 to 36) contained
- in D2.B. For example, to display D1.L in base16 put 16 in D2.B
- Values of D2.B outside the range 2 to 36 inclusive are ignored.
+      in D2.B. For example, to display D1.L in base16 put 16 in D2.B
+      Values of D2.B outside the range 2 to 36 inclusive are ignored.
  16 - Turn on/off the display of the input prompt.
- D1.B = 0 to turn off the display of the input prompt.
- D1.B = 1 to turn on the display of the input prompt.(default)
- D1.B = 2 do not display line feed on Enter key during Trap code #2 input
- D1.B = 3 display line feed on Enter key during Trap code #2 input (default)
- Other values of D1 reserved for future use.
- Input prompt display is enabled by default and by 'Reset' or when a
- new file is loaded.
+      D1.B = 0 to turn off the display of the input prompt.
+      D1.B = 1 to turn on the display of the input prompt.(default)
+      D1.B = 2 do not display line feed on Enter key during Trap code #2 input
+      D1.B = 3 display line feed on Enter key during Trap code #2 input (default)
+      Other values of D1 reserved for future use.
+      Input prompt display is enabled by default and by 'Reset' or when a
+      new file is loaded.
  17 - Combination of Trap codes 14 & 3. Displays the NULL terminated string at
- (A1) without CRLF then displays the decimal number in D1.L.
+      (A1) without CRLF then displays the decimal number in D1.L.
  18 - Combination of Trap codes 14 & 4. Displays the NULL terminated string at
- (A1) without CRLF then reads a number from the keyboard into
- D1.L.
+      (A1) without CRLF then reads a number from the keyboard into
+      D1.L.
  19 - Return keypress state for specified keys.
- pre:  D1.L = up to 4 bytes of keycodes to check
- post: D1.L = corresponding byte set to $00 if key up, $FF if key down
- or
- pre:  D1.L = 0
- post: D1.L upper word contains key code of last key up. (Sim68K v4.7.3 and newer)
- D1.L lower word contains key code of last key down.
+      pre:  D1.L = up to 4 bytes of keycodes to check
+      post: D1.L = corresponding byte set to $00 if key up, $FF if key down
+      or
+      pre:  D1.L = 0
+      post: D1.L upper word contains key code of last key up. (Sim68K v4.7.3 and newer)
+      D1.L lower word contains key code of last key down.
  
  20 - Display signed number in D1.L in decimal in field D2.B columns wide.
  21 - Set font properties where
- D1.L is color as 0x00BBGGRR
- BB is amount of blue from 0x00 to 0xFF
- GG is amount of green from 0x00 to 0xFF
-           RR is amount of red from 0x00 to 0xFF
- D2.L
- Low word is style by bits 0 = off, 1 = on
- bit0 is Bold
- bit1 is Italic
- bit2 is Underline
- bit3 is StrikeOut
+      D1.L is color as 0x00BBGGRR
+      BB is amount of blue from 0x00 to 0xFF
+      GG is amount of green from 0x00 to 0xFF
+      RR is amount of red from 0x00 to 0xFF
+      D2.L
+      Low word is style by bits 0 = off, 1 = on
+      bit0 is Bold
+      bit1 is Italic
+      bit2 is Underline
+      bit3 is StrikeOut
  
- High word (low byte) is Size (High word = 0, keep current font)
- 8, 9, 10, 11, 12, 14, 16, 18
- Font sizes in multiples of valid sizes ( size * n) results in a scaled
- appearance. For example: in Fixedsys font sizes of 9*2, 9*3, ..9*n
- will result in larger characters but the characters will have very
- pixelated edges.
+      High word (low byte) is Size (High word = 0, keep current font)
+      8, 9, 10, 11, 12, 14, 16, 18
+      Font sizes in multiples of valid sizes ( size * n) results in a scaled
+      appearance. For example: in Fixedsys font sizes of 9*2, 9*3, ..9*n
+      will result in larger characters but the characters will have very
+      pixelated edges.
  
- High word (high byte) is Font
- 1 is Fixedsys       (valid sizes: 9)
- 2 is Courier        (valid sizes: 10, 12, 15)
- 3 is Courier New    (valid sizes 8,9,10,11,12,14,16,18)
- 4 is Lucida Console (valid sizes 8,9,10,11,12,14,16,18)
- 5 is Lucida Sans Typewriter (valid sizes 8,9,10,11,12,14,16,18)
+      High word (high byte) is Font
+      1 is Fixedsys       (valid sizes: 9)
+      2 is Courier        (valid sizes: 10, 12, 15)
+      3 is Courier New    (valid sizes 8,9,10,11,12,14,16,18)
+      4 is Lucida Console (valid sizes 8,9,10,11,12,14,16,18)
+      5 is Lucida Sans Typewriter (valid sizes 8,9,10,11,12,14,16,18)
  22 - Return character from screen at Row, Col where
  D1.L High 16 bits = Row (max 128)
  Low 16 bits  = Col (max 256)
@@ -730,6 +732,7 @@ int TRAP()
     ConsoleView *simIO = [appDelegate simIOView];
     NSDate *now = [NSDate date];
     NSDateComponents *comp = [now components];
+    [comp retain];
     bool oldLFdisplay;
     
     vector = inst & 0x0F;
@@ -759,7 +762,7 @@ int TRAP()
                 WAIT_FOR_INPUT
                 break;
             case 3:                                             // TASK 3: display number in D1.L
-                sprintf(buf, "%d", D[1]);                       // convert D1.L to string, put in buf
+                sprintf(buf, "%ld", D[1]);                      // convert D1.L to string, put in buf
                 [simIO textOut:buf];                            // display number without CRLF
                 break;
             case 4:                                             // TASK 4: read number to D1.L (inputBuf & inputSize must be global)
@@ -792,6 +795,7 @@ int TRAP()
                 D[1] = [comp hour] * 60 * 60 * 100 +
                 [comp minute] * 60 * 100 +
                 [comp second] * 100;
+                [comp release];
                 break;
             case 9:                                             // TASK 9: terminate the program
                 // MARK: HARDWARE: Form1->AutoTraceTimer->Enabled = false;
