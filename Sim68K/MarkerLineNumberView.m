@@ -52,6 +52,20 @@
 	[markerImage setSize:NSMakeSize(thickness, MARKER_HEIGHT)];	
 }
 
+- (void)setRuleThicknessWithNSNumber:(NSNumber *)num;
+{
+
+    CGFloat thickness = (CGFloat)[num floatValue];
+    
+	[super setRuleThickness:thickness];
+	
+	// Overridden to reset the size of the marker image forcing it to redraw with the new width.
+	// If doing this in a non-subclass of NoodleLineNumberView, you can set it to post frame 
+	// notifications and listen for them.
+	[markerImage setSize:NSMakeSize(thickness, MARKER_HEIGHT)];	
+}
+
+
 - (void)drawMarkerImageIntoRep:(id)rep
 {
 	NSBezierPath	*path;

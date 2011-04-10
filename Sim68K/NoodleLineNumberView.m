@@ -244,7 +244,7 @@
     {
         unsigned        index, numberOfLines, stringLength, lineEnd, contentEnd;
         NSString        *text;
-        float         oldThickness, newThickness;
+        float           oldThickness, newThickness;
         
         text = [view string];
         stringLength = [text length];
@@ -272,18 +272,23 @@
         
         oldThickness = [self ruleThickness];
         newThickness = [self requiredThickness];
+        NSNumber *newThick = [NSNumber numberWithFloat:newThickness];
         if (fabs(oldThickness - newThickness) > 1)
         {
-			NSInvocation			*invocation;
-			
-			// Not a good idea to resize the view during calculations (which can happen during
-			// display). Do a delayed perform (using NSInvocation since arg is a float).
-			invocation = [NSInvocation invocationWithMethodSignature:[self methodSignatureForSelector:@selector(setRuleThickness:)]];
-			[invocation setSelector:@selector(setRuleThickness:)];
-			[invocation setTarget:self];
-			[invocation setArgument:&newThickness atIndex:2];
-			
-			[invocation performSelector:@selector(invoke) withObject:nil afterDelay:0.0];
+            // Workaround to get past issue of the thickness variable going out of scope by the time NSInvocation is invoked and
+            // ends up getting garbage for the new thickness.
+            [self setRuleThickness:newThickness];
+            
+//			NSInvocation			*invocation;
+//			
+//			// Not a good idea to resize the view during calculations (which can happen during
+//			// display). Do a delayed perform (using NSInvocation since arg is a float).
+//			invocation = [NSInvocation invocationWithMethodSignature:[self methodSignatureForSelector:@selector(setRuleThicknessWithNSNumber:)]];
+//			[invocation setSelector:@selector(setRuleThicknessWithNSNumber:)];
+//			[invocation setTarget:self];
+//			[invocation setArgument:newThick atIndex:2];
+//            [invocation retainArguments];
+//			[invocation performSelector:@selector(invoke) withObject:nil afterDelay:1.0];
         }
 	}
 }

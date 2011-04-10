@@ -35,4 +35,6 @@
 	NSImage				*markerImage;
 }
 
+-(void)setRuleThicknessWithNSNumber:(NSNumber *)thickness;
+
 @end
