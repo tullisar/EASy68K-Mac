@@ -7,6 +7,7 @@
 //
 
 #import "Simulator.h"
+#import "BreakpointDelegate.h"
 #include "extern.h"
 
 @implementation Simulator
@@ -138,13 +139,14 @@
                 NSString *line = [lines objectAtIndex:i];
                 NSRange found = [line rangeOfString:@"*[sim68k]break"];
                 if (!NSEqualRanges(found, notFoundRange)) {
-                    // TODO: Set breakpoint at the location found
-                    // if (isInstruction)
-                    //     setBreakPoint;
+                    if (i+1 > 2 && [self isInstruction:line]) {
+                        NSNumber *addrVal  = [line unsignedHexValue];
+                        [BreakpointDelegate sbpoint:[addrVal unsignedIntValue]];
+                    }
                 }
                 found = [line rangeOfString:@"*[sim68k]bitfield"];
                 if (!NSEqualRanges(found, notFoundRange)) {
-                    // TODO: Enable bitfield instructions
+                    bitfield = true;
                 }
             }
             
@@ -290,6 +292,20 @@
     runToAddr = location;
 }
 
+// -----------------------------------------------------------------
+// isInstruction
+// Determines whether the given string contains a 68000 instruction
+// -----------------------------------------------------------------
+- (BOOL)isInstruction:(NSString *)line {
+    const char *cString = [line cStringUsingEncoding:NSASCIIStringEncoding];
+    
+    if ((cString[0]  == '0' && cString[1] == '0') &&
+         cString[10] != ' ' &&
+         cString[8]  != '=' &&
+         cString[10] != '=')
+        return YES;
+    return NO;
+}
 
 // Overridden Setters for Registers. This is so when changing
 // fields that are bound to a particular value, it will also

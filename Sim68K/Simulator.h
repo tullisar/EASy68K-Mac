@@ -68,5 +68,6 @@
 - (void) pause;
 - (void) rewind;
 - (void) runToCursor:(long)location;
+- (BOOL) isInstruction:(NSString *)line;
 
 @end
