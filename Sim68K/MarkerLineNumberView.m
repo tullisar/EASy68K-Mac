@@ -29,6 +29,9 @@
 
 #import "MarkerLineNumberView.h"
 #import "NoodleLineNumberMarker.h"
+#import "BreakpointDelegate.h"
+#import "Simulator.h"
+#include "extern.h"
 
 #define CORNER_RADIUS	3.0
 #define MARKER_HEIGHT	13.0
@@ -109,30 +112,42 @@
 
 - (void)mouseDown:(NSEvent *)theEvent
 {
-	NSPoint					location;
-	long                     line;
-	
+	NSPoint  location;
+	long     line;
+    NSString *lineAddr;
+    
+    if (![[appDelegate simulator] simLoaded]) return;                                       // No breakpoints if no program
+    if (![[appDelegate simulator] listFile]) return;                                        // No breakpoints if no listFile
+    
+    NSArray *lines = [[appDelegate simulator] listFileLines];
+    
 	location = [self convertPoint:[theEvent locationInWindow] fromView:nil];
 	line = [self lineNumberForLocation:location.y];
 	
 	if (line != NSNotFound)
 	{
-		NoodleLineNumberMarker		*marker;
-		
+		NoodleLineNumberMarker *marker;
+		lineAddr = [NSString stringWithFormat:@"0x%@",                                      // Get line address as hex
+                    [[lines objectAtIndex:line-1] substringToIndex:8]];
+        
 		marker = [self markerAtLine:line];
 		
 		if (marker != nil)
 		{
 			[self removeMarker:marker];
+            [BreakpointDelegate cbpoint:[[lineAddr unsignedHexValue] unsignedIntValue]];    // Clear 68K Breakpoint
 		}
 		else
 		{
-			marker = [[NoodleLineNumberMarker alloc] initWithRulerView:self
-															 lineNumber:line
-																  image:[self markerImageWithSize:NSMakeSize([self ruleThickness], MARKER_HEIGHT)]
-														   imageOrigin:NSMakePoint(0, MARKER_HEIGHT / 2)];
-			[self addMarker:marker];
-			[marker release];
+            if ([[appDelegate simulator] isInstruction:[lines objectAtIndex:line-1]]) {
+                [BreakpointDelegate sbpoint:[[lineAddr unsignedHexValue] unsignedIntValue]];
+                marker = [[NoodleLineNumberMarker alloc] initWithRulerView:self
+                                                                lineNumber:line
+                                                                     image:[self markerImageWithSize:NSMakeSize([self ruleThickness], MARKER_HEIGHT)]
+                                                               imageOrigin:NSMakePoint(0, MARKER_HEIGHT / 2)];
+                [self addMarker:marker];
+                [marker release];
+            }
 		}
 		[self setNeedsDisplay:YES];
 	}

@@ -38,11 +38,11 @@ char numBuf[20];        // "
 // check the addresses of these variables to decide if an operation
 // is being performed on a 68000 register or 68000 memory.
 // 68000 registers
-long 	D[D_REGS], A[A_REGS];
-long 	PC;
-short	SR;
+long    D[D_REGS], A[A_REGS];
+long    PC;
+short   SR;
 
-long	global_temp;    // to hold an immediate data operand
+long    global_temp;    // to hold an immediate data operand
 long    OLD_PC;         // previous PC
 long	*EA1, *EA2;
 long	EV1, EV2;
@@ -55,9 +55,9 @@ int 	trace, sstep, old_trace, old_sstep, exceptions, bitfield;
 bool    halt;                   // true, halts running program
 bool    stopInstruction;        // true after running stop instruction
 
-char	lbuf[SREC_MAX], *wordptr[20]; 	// command buffers
+char    lbuf[SREC_MAX], *wordptr[20]; 	// command buffers
 char	bpoints = 0;
-int 	brkpt[100], wcount;
+int 	brkpt[MAX_BPOINTS], wcount;
 int     stepToAddr;             // Step Over stopping address
 int     runToAddr;              // runToCursor stopping address
 

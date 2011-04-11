@@ -14,7 +14,7 @@
 
 @synthesize A0,A1,A2,A3,A4,A5,A6,A7,D0,D1,D2,D3,D4,D5,D6,D7,
             GUI_SR,GUI_US,GUI_SS,GUI_PC,GUI_Cycles,startPC;
-@synthesize listFile,simLoaded,simStopped,simInputMode;
+@synthesize listFile,listFileLines,simLoaded,simStopped,simInputMode;
 
 
 // -----------------------------------------------------------------
@@ -124,10 +124,10 @@
                                              encoding:NSUTF8StringEncoding
                                                 error:NULL];
         if (listFileTemp) {
-            NSArray *lines = [listFileTemp componentsSeparatedByCharactersInSet:
-                              [NSCharacterSet newlineCharacterSet]];
+            listFileLines = [listFileTemp componentsSeparatedByCharactersInSet:             // Load array of lines in listfile
+                             [NSCharacterSet newlineCharacterSet]];
             NSString *lineAddress = [NSString stringWithFormat:@"0x%@",
-                                    [[lines objectAtIndex:0] substringToIndex:8]];
+                                    [[listFileLines objectAtIndex:0] substringToIndex:8]];
             NSScanner *hexScanner = [NSScanner scannerWithString:lineAddress];
 
             unsigned int offsetPC = 0;
@@ -135,12 +135,14 @@
             if ((offsetPC > 0x000000000) && (offsetPC < 0x01000000))
                 startPC = PC = offsetPC;
             
-            for (int i=0; i<[lines count]; i++) {
-                NSString *line = [lines objectAtIndex:i];
+            for (int i=0; i<[listFileLines count]; i++) {
+                NSString *line = [listFileLines objectAtIndex:i];
                 NSRange found = [line rangeOfString:@"*[sim68k]break"];
                 if (!NSEqualRanges(found, notFoundRange)) {
                     if (i+1 > 2 && [self isInstruction:line]) {
-                        NSNumber *addrVal  = [line unsignedHexValue];
+                        lineAddress = [NSString stringWithFormat:@"0x%@",
+                                       [[listFileLines objectAtIndex:i] substringToIndex:8]];
+                        NSNumber *addrVal = [lineAddress unsignedHexValue];
                         [BreakpointDelegate sbpoint:[addrVal unsignedIntValue]];
                     }
                 }
@@ -151,6 +153,7 @@
             }
             
             NSAttributedString *listContainer;
+        
             listContainer = [[[NSAttributedString alloc] initWithString:listFileTemp] autorelease];
             [self setListFile:listContainer];
             
@@ -294,10 +297,12 @@
 
 // -----------------------------------------------------------------
 // isInstruction
-// Determines whether the given string contains a 68000 instruction
+// Determines whether the given listfile line contains a 68000 instruction
 // -----------------------------------------------------------------
 - (BOOL)isInstruction:(NSString *)line {
     const char *cString = [line cStringUsingEncoding:NSASCIIStringEncoding];
+    
+    if (strlen(cString) < 12) return NO;
     
     if ((cString[0]  == '0' && cString[1] == '0') &&
          cString[10] != ' ' &&

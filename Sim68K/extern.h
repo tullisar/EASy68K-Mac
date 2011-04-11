@@ -35,11 +35,11 @@ extern long     D[D_REGS], OLD_D[D_REGS], A[A_REGS], OLD_A[A_REGS];
 extern long     PC, OLD_PC;
 extern short    SR, OLD_SR;
 
-extern char*	memory;
-extern char	bpoints;
-extern char	lbuf[SREC_MAX], *wordptr[20];
+extern char*    memory;
+extern char     bpoints;
+extern char     lbuf[SREC_MAX], *wordptr[20];
 extern unsigned long int cycles;
-extern int	brkpt[100];
+extern int      brkpt[MAX_BPOINTS];
 extern int      stepToAddr;             // Step Over stopping address
 extern int      runToAddr;              // runToCursor stopping address
 

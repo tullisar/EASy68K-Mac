@@ -14,6 +14,7 @@
 // unsignedHexValue
 // returns (as an NSNumber) the number represented by the string
 // containing a formatted hex string.
+// TODO: Implement an error return mechanism
 // -----------------------------------------------------------------
 - (NSNumber *)unsignedHexValue {
 

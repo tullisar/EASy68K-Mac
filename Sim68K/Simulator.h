@@ -27,7 +27,7 @@
     
     // Containers
     NSAttributedString *listFile;
-    
+    NSArray            *listFileLines;
 }
 
 @property (assign) long A0;
@@ -52,6 +52,7 @@
 @property (assign) long GUI_PC;
 @property (assign) unsigned long int GUI_Cycles;
 @property (retain) NSAttributedString *listFile;
+@property (retain) NSArray            *listFileLines;
 @property (assign) long startPC;
 @property (assign) BOOL simLoaded;
 @property (assign) BOOL simStopped;
