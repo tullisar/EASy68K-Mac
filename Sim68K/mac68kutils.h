@@ -14,10 +14,13 @@
  
  ***************************************************************************/
 
+// Categories
 #import "NSDate-Components.h"
 #import "NSTextView-TextManipulation.h"
 #import "NSColor-Manipulation.h"
 #import "NSString-NumUtils.h"
+#import "NSNumber-StrUtils.h"
+// ----------
 
 #define DISPATCH_MAIN_THREAD \
 if (![NSThread isMainThread]) {\
@@ -33,6 +36,9 @@ if (![NSThread isMainThread]) {\
 
 #define CHARSET_HEX [[NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEFabcdef"] invertedSet]
 #define CHARSET_BIN [[NSCharacterSet characterSetWithCharactersInString:@"01"] invertedSet]
+
+#define CONSOLE_FONT       [NSFont fontWithName:@"Courier" size:11]
+#define CONSOLE_FONT_COLOR [NSColor whiteColor]
 
 extern BOOL trapInput;
 

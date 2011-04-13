@@ -201,6 +201,7 @@
     [self setGUI_PC:PC];
     [self setGUI_SR:SR];
     [self setGUI_Cycles:cycles];
+    [self setMemoryContents:[[[NSTextStorage alloc] initWithString:@""] autorelease]];
 }
 
 // -----------------------------------------------------------------
@@ -312,6 +313,51 @@
     return NO;
 }
 
+// -----------------------------------------------------------------
+// memoryContents
+// -----------------------------------------------------------------
+- (NSTextStorage *)memoryContents {
+
+    
+    if (memory && simLoaded && NO) {
+        NSMutableString *text   = [[NSMutableString alloc] initWithString:@""];
+
+        for (int i = 0; i < MEMSIZE; i++) {
+            for (int j = 0; j < 0x10; j++) {
+                unsigned char memByte = memory[i++];
+                [text appendFormat:@"%02X ", memByte];
+            }
+            [text appendFormat:@"%@",@"\n"];
+        }
+        
+        NSTextStorage *contents = [[NSTextStorage alloc] initWithString:text];
+        NSRange memLength = NSMakeRange(0, [text length]);
+        
+        [contents addAttribute:NSFontAttributeName value:CONSOLE_FONT range:memLength];
+        
+        return contents;
+    }
+
+    return [[[NSTextStorage alloc] initWithString:@"Memory not initialized."] autorelease];
+}
+
+// -----------------------------------------------------------------
+// setMemoryContents
+// -----------------------------------------------------------------
+- (void)setMemoryContents:(NSTextStorage *)contents {
+    
+    NSMutableString *memBlock = [contents mutableString];
+    NSString *memBlockTrimmed = [memBlock stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    memBlockTrimmed = [memBlockTrimmed stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    NSArray *components = [memBlockTrimmed componentsSeparatedByCharactersInSet:
+                           [NSCharacterSet whitespaceCharacterSet]];
+    
+    int a = 0;
+    
+}
+
+// ------------------------------------------------------------------------------------------------------------------------------
 // Overridden Setters for Registers. This is so when changing
 // fields that are bound to a particular value, it will also
 // change the corresponding 68000 register in addition to the GUI
@@ -489,6 +535,5 @@
     GUI_Cycles = value;
     // cycles = value;
 }
-
 
 @end

@@ -42,7 +42,6 @@
     [shortBinStr autorelease];
 }
 
-
 // -----------------------------------------------------------------
 // applicationDidFinishLaunching
 // This runs (usually before the NIB loads) but as soon as the 
@@ -54,36 +53,12 @@
 // awakeFromNib
 // Runs when the NIB file has been loaded.
 // -----------------------------------------------------------------
-- (void)awakeFromNib {
-    const float LargeNumberForText = 1.0e7;
-    
+- (void)awakeFromNib {    
     // Global delegate reference (ick), necessary for simulator functions to reference GUI
     appDelegate = self;
     
-    // Initialize the NSTextView with the NoodleLineNumberView
-    lineNumberView = [[[MarkerLineNumberView alloc] initWithScrollView:scrollView] autorelease];
-    [scrollView setVerticalRulerView:lineNumberView];
-    [scrollView setHasHorizontalRuler:NO];
-    [scrollView setHasVerticalRuler:YES];
-    [scrollView setRulersVisible:YES];
-    [scriptView setFont:[NSFont fontWithName:@"Courier" size:11]];
-    [scriptView setEditable:NO];
-    
-    // Make the scroll view non-wrapping
-    [scrollView setHasVerticalScroller:YES];
-    [scrollView setHasHorizontalScroller:YES];
-    [scrollView setAutoresizingMask:(NSViewWidthSizable | NSViewHeightSizable)];
-    NSTextContainer *textContainer = [scriptView textContainer];
-    [textContainer setContainerSize:NSMakeSize(LargeNumberForText, LargeNumberForText)];
-    [textContainer setWidthTracksTextView:NO];
-    [textContainer setHeightTracksTextView:NO];
-    [scriptView setMaxSize:NSMakeSize(LargeNumberForText, LargeNumberForText)];
-    [scriptView setHorizontallyResizable:YES];
-    [scriptView setVerticallyResizable:YES];
-    [scriptView setAutoresizingMask:NSViewNotSizable];
-    
-    // Initialize the simulator
-    [simulator initSim];
+    [self initListfileView];             // Set up listfile view
+    [simulator initSim];                 // Initialize simulator
     
     [window makeKeyAndOrderFront:self];
 }
@@ -99,7 +74,7 @@
                       completionHandler:^(NSInteger result) {
                           if (result == NSFileHandlingPanelOKButton) {
                               [simulator loadProgram:[[openPanel URL] path]];
-                              [scriptView setFont:[NSFont fontWithName:@"Courier" size:11]];
+                              [scriptView setFont:CONSOLE_FONT];
                               [scriptView setEditable:NO];
                               [self setFile:[[openPanel URL] path]];
                               [window setTitleWithRepresentedFilename:file];
@@ -164,6 +139,37 @@
 // -----------------------------------------------------------------
 - (IBAction)reload:(id)sender {
     [simulator loadProgram:[self file]];
+}
+
+// -----------------------------------------------------------------
+// initListFileView
+// initializes the main scroll view with some basic properties
+// for viewing listfiles. sets up the line number/breakpoint view
+// -----------------------------------------------------------------
+- (void)initListfileView {
+    const float LargeNumberForText = 1.0e7;
+
+    // Initialize the NSTextView with the NoodleLineNumberView
+    lineNumberView = [[[MarkerLineNumberView alloc] initWithScrollView:scrollView] autorelease];
+    [scrollView setVerticalRulerView:lineNumberView];
+    [scrollView setHasHorizontalRuler:NO];
+    [scrollView setHasVerticalRuler:YES];
+    [scrollView setRulersVisible:YES];
+    [scriptView setFont:CONSOLE_FONT];
+    [scriptView setEditable:NO];
+    
+    // Make the scroll view non-wrapping
+    [scrollView setHasVerticalScroller:YES];
+    [scrollView setHasHorizontalScroller:YES];
+    [scrollView setAutoresizingMask:(NSViewWidthSizable | NSViewHeightSizable)];
+    NSTextContainer *textContainer = [scriptView textContainer];
+    [textContainer setContainerSize:NSMakeSize(LargeNumberForText, LargeNumberForText)];
+    [textContainer setWidthTracksTextView:NO];
+    [textContainer setHeightTracksTextView:NO];
+    [scriptView setMaxSize:NSMakeSize(LargeNumberForText, LargeNumberForText)];
+    [scriptView setHorizontallyResizable:YES];
+    [scriptView setVerticallyResizable:YES];
+    [scriptView setAutoresizingMask:NSViewNotSizable];
 }
 
 @end

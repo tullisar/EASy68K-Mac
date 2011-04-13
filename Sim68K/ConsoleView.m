@@ -253,8 +253,8 @@
     NSString *line = [NSString stringWithFormat:@"%s",str];
 
     [self appendString:line 
-              withFont:[NSFont fontWithName:@"Courier" size:11] 
-              andColor:[NSColor whiteColor]];
+              withFont:CONSOLE_FONT 
+              andColor:CONSOLE_FONT_COLOR];
     [self setNeedsDisplay:YES];
 }
 
@@ -273,6 +273,7 @@
 // Outputs a single character to the console
 // -----------------------------------------------------------------
 - (void)charOut:(char)ch {
+    NSString *strCh;
     switch (ch) {
         case '\a':                  // if Bell
             // TODO: Beep
@@ -285,8 +286,8 @@
             break;
         case '\n':                  // if LF
             [self appendString:@"\n" 
-                      withFont:[NSFont fontWithName:@"Courier" size:11]
-                      andColor:[NSColor whiteColor]];
+                      withFont:CONSOLE_FONT
+                      andColor:CONSOLE_FONT_COLOR];
 //            if (logging && OlogFlag == TEXTONLY) { // if logging output
 //                fprintf(OlogFile,"\n");
 //                fflush(OlogFile);         // write all bufferred data to file
@@ -294,29 +295,30 @@
             break;
         case '\r':                  // if CR
             [self appendString:@"\n" 
-                      withFont:[NSFont fontWithName:@"Courier" size:11]
-                      andColor:[NSColor whiteColor]];
+                      withFont:CONSOLE_FONT
+                      andColor:CONSOLE_FONT_COLOR];
             break;
         case '\t':                  // if Tab
             [self appendString:@"\t" 
-                      withFont:[NSFont fontWithName:@"Courier" size:11]
-                      andColor:[NSColor whiteColor]];            
+                      withFont:CONSOLE_FONT
+                      andColor:CONSOLE_FONT_COLOR];          
             break;
         case '\v':                  // if Vertical tab
             // TODO: Vertical tab
             break;
         default:
             if (ch >= ' ') {          // if not control char
-                NSString *strCh = [NSString stringWithFormat:@"%c",ch];
+                strCh = [NSString stringWithFormat:@"%c",ch];
                 [self appendString:strCh
-                          withFont:[NSFont fontWithName:@"Courier" size:11]
-                          andColor:[NSColor whiteColor]];
+                          withFont:CONSOLE_FONT
+                          andColor:CONSOLE_FONT_COLOR];
 //                if (logging && OlogFlag == TEXTONLY) {      // if logging output
 //                    fprintf(OlogFile,"%c",ch);
 //                    fflush(OlogFile);         // write all bufferred data to file
 //                }
             }
     }
+    
     [self setNeedsDisplay:YES];
 }
 
