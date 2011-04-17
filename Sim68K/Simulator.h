@@ -70,11 +70,7 @@
 - (void) rewind;
 - (void) runToCursor:(long)location;
 - (BOOL) isInstruction:(NSString *)line;
-- (NSTextStorage *)memoryContents;
-- (void)setMemoryContents:(NSTextStorage *)contents;
-- (NSTextStorage *)memoryAddresses;
-- (void)setMemoryAddresses:(NSTextStorage *)addresses;
-- (NSTextStorage *)memoryASCII;
-- (void)setMemoryASCII:(NSTextStorage *)ascii;
+- (IBAction)updateMemoryContents:(id)sender;
+
 
 @end
