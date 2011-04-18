@@ -165,6 +165,7 @@
         [self setSimLoaded:YES];
         [self setSimStopped:YES];
         [self displayReg];
+        [appDelegate updateMemDisplay];
         
     } else {
         // TODO: GUI Error

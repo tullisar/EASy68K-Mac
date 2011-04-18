@@ -108,4 +108,15 @@
     // Harder than I thought
     
 }
+
+// -----------------------------------------------------------------
+// clearText
+// Clears the contents of this TextView
+// -----------------------------------------------------------------
+- (void)clearText {
+    NSAttributedString *newText = [[NSAttributedString alloc] initWithString:@""];
+    [newText autorelease];
+    [[self textStorage] setAttributedString:newText];
+}
+
 @end

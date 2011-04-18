@@ -17,5 +17,6 @@
 - (void)removeLastChar;
 - (NSRange)lastCharRange;
 - (void)invertTextColorForRange:(NSRange)range;
+- (void)clearText;
 
 @end

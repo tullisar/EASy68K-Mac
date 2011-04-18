@@ -60,6 +60,10 @@
     [self initListfileView];             // Set up listfile view
     [simulator initSim];                 // Initialize simulator
     
+    memDisplayLength = 512;              // Set up memory browser values
+    memDisplayStart  = 0x1000;
+    [self updateMemDisplay];
+    
     [window makeKeyAndOrderFront:self];
 }
 
@@ -170,6 +174,63 @@
     [scriptView setHorizontallyResizable:YES];
     [scriptView setVerticallyResizable:YES];
     [scriptView setAutoresizingMask:NSViewNotSizable];
+    
+    //
 }
+
+// -----------------------------------------------------------------
+// changeMemLength
+// changes the number of bytes the memory display will show
+// -----------------------------------------------------------------
+- (IBAction)changeMemLength:(id)sender {
+    if ([sender isKindOfClass:[NSPopUpButton class]]) {
+        NSString *lengthStr = [sender titleOfSelectedItem];
+        memDisplayLength = [lengthStr intValue];
+    }
+}
+
+// -----------------------------------------------------------------
+// updateMemDisplay
+// Updates the memory display window 
+// -----------------------------------------------------------------
+- (void)updateMemDisplay {
+    if (!memory) return;
+    
+    [memAddressColumn clearText];
+    [memContentsColumn clearText];
+    [memValueColumn clearText];
+    
+    int memLength = memDisplayStart + memDisplayLength;
+    if (memLength > MEMSIZE) 
+        memLength = (MEMSIZE - memDisplayStart);
+    
+    for (int i = memDisplayStart; i < memLength; i+=0x10) {
+        NSString *address = [NSString stringWithFormat:@"%08X\n",i];
+        [memAddressColumn appendString:address
+                              withFont:CONSOLE_FONT];
+        
+        int jMax = 0x10;
+        if (i + jMax >= MEMSIZE) jMax = (MEMSIZE - i);
+        
+        for (int j = 0; j < jMax; j++) {
+            unsigned char memByte = memory[i+j];
+            NSString *byteStr = [NSString stringWithFormat:@"%02X ",(unsigned int)memByte];
+            NSString *charStr = [NSString stringWithFormat:@"%c",memory[i+j]];
+            [memValueColumn appendString:byteStr
+                                withFont:CONSOLE_FONT];
+            [memContentsColumn appendString:charStr
+                                   withFont:CONSOLE_FONT];
+        }
+        
+        [memValueColumn appendString:[NSString stringWithFormat:@"\n"]
+                            withFont:CONSOLE_FONT];
+        [memContentsColumn appendString:[NSString stringWithFormat:@"\n"]
+                               withFont:CONSOLE_FONT];
+    }
+    
+    
+
+}
+
 
 @end

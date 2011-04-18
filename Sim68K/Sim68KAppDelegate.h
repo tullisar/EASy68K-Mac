@@ -13,18 +13,25 @@
 
 @interface Sim68KAppDelegate : NSObject {
 // @interface Sim68KAppDelegate : NSObject <NSApplicationDelegate> {
-    NSWindow *window;
-    NSPanel  *panelIO;
-    NSPanel  *panelHardware;
-    NSPanel  *panelStack;
-    NSPanel  *panelMemory;
-    ConsoleView    *simIOView;
+    NSWindow                *window;
+    NSPanel                 *panelIO;
+    NSPanel                 *panelHardware;
+    NSPanel                 *panelStack;
+    NSPanel                 *panelMemory;
+    ConsoleView             *simIOView;
     IBOutlet NSScrollView   *scrollView;
     IBOutlet NSTextView     *scriptView;
 	NoodleLineNumberView	*lineNumberView;
     
-    NSString *file;
+    IBOutlet NSTextView     *memAddressColumn;
+    IBOutlet NSTextView     *memValueColumn;
+    IBOutlet NSTextView     *memContentsColumn;
+
+    NSString                *file;
     IBOutlet Simulator      *simulator;
+    
+    int                     memDisplayLength;
+    unsigned int            memDisplayStart;
 }
 
 @property (assign) IBOutlet NSWindow *window;
@@ -44,5 +51,8 @@
 - (IBAction)rewindProg:(id)sender;
 - (IBAction)runToCursor:(id)sender;
 - (IBAction)reload:(id)sender;
+- (IBAction)changeMemLength:(id)sender;
+- (void)initListfileView;
+- (void)updateMemDisplay;
 
 @end
