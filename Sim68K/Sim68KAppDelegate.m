@@ -196,32 +196,42 @@
 - (void)updateMemDisplay {
     if (!memory) return;
     
+    // Clear current contents of memory window
     [memAddressColumn clearText];
     [memContentsColumn clearText];
     [memValueColumn clearText];
     
-    int memLength = memDisplayStart + memDisplayLength;
+    // Enforce some bounds
+    int memLength = memDisplayStart + memDisplayLength;             
     if (memLength > MEMSIZE) 
         memLength = (MEMSIZE - memDisplayStart);
     
+    // Loop through requested memory
     for (int i = memDisplayStart; i < memLength; i+=0x10) {
+        
+        // Print out address
         NSString *address = [NSString stringWithFormat:@"%08X\n",i];
         [memAddressColumn appendString:address
                               withFont:CONSOLE_FONT];
         
-        int jMax = 0x10;
+        // More bounds checking
+        int jMax = 0x10;                                            
         if (i + jMax >= MEMSIZE) jMax = (MEMSIZE - i);
         
+        // Loop 16 bytes
         for (int j = 0; j < jMax; j++) {
             unsigned char memByte = memory[i+j];
+            // Print out value and character
             NSString *byteStr = [NSString stringWithFormat:@"%02X ",(unsigned int)memByte];
-            NSString *charStr = [NSString stringWithFormat:@"%c",memory[i+j]];
+            NSString *charStr = [NSString stringWithFormat:@"%c",memByte];
+            if (iscntrl(memByte)) charStr = [NSString stringWithFormat:@"-"];
             [memValueColumn appendString:byteStr
                                 withFont:CONSOLE_FONT];
             [memContentsColumn appendString:charStr
                                    withFont:CONSOLE_FONT];
         }
         
+        // New lines
         [memValueColumn appendString:[NSString stringWithFormat:@"\n"]
                             withFont:CONSOLE_FONT];
         [memContentsColumn appendString:[NSString stringWithFormat:@"\n"]
