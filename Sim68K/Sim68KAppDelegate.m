@@ -13,6 +13,7 @@
 #import "IntHexStringTransformer.h"
 #import "UShortHexStringTransformer.h"
 #import "UShortBinaryStringTransformer.h"
+#import "TripleSynchronizedScrollView.h"
 
 #include "extern.h"
 
@@ -58,10 +59,11 @@
     appDelegate = self;
     
     [self initListfileView];             // Set up listfile view
+    [self initMemoryScrollers];
     [simulator initSim];                 // Initialize simulator
     
-    memDisplayLength = 512;              // Set up memory browser values
-    memDisplayStart  = 0x1000;
+    memDisplayLength = 1024;             // Set up memory browser values
+    [self setMemDisplayStart:0x1000];
     [self updateMemDisplay];
     
     [window makeKeyAndOrderFront:self];
@@ -179,6 +181,22 @@
 }
 
 // -----------------------------------------------------------------
+// initMemoryScrollers
+// initializes the synchronized memory scroll views
+// -----------------------------------------------------------------
+- (void)initMemoryScrollers {
+    [memAddressScroll stopSynchronizing];
+    [memAddressScroll setPartnerA:memValueScroll];
+    [memAddressScroll setPartnerB:memContentsScroll];
+    [memValueScroll stopSynchronizing];
+    [memValueScroll setPartnerA:memAddressScroll];
+    [memValueScroll setPartnerB:memContentsScroll];
+    [memContentsScroll stopSynchronizing];
+    [memContentsScroll setPartnerA:memAddressScroll];
+    [memContentsScroll setPartnerB:memValueScroll];
+}
+
+// -----------------------------------------------------------------
 // changeMemLength
 // changes the number of bytes the memory display will show
 // -----------------------------------------------------------------
@@ -186,8 +204,37 @@
     if ([sender isKindOfClass:[NSPopUpButton class]]) {
         NSString *lengthStr = [sender titleOfSelectedItem];
         memDisplayLength = [lengthStr intValue];
+        [self updateMemDisplay];
     }
 }
+
+// -----------------------------------------------------------------
+// memDisplayStart
+// gets the starting address for memory display
+// -----------------------------------------------------------------
+-(unsigned int)memDisplayStart {
+    return memDisplayStart;
+}
+
+// -----------------------------------------------------------------
+// setMemDisplayStart
+// sets the starting address for memory display and then updates 
+// the memory display
+// -----------------------------------------------------------------
+-(void)setMemDisplayStart:(unsigned int)newStart {
+    if (newStart > 0x00FFFFF0) newStart = 0x00FFFFF1;
+    if ((newStart & 0x0000000F) > 0) {
+        newStart &= (unsigned int)0xFFFFFFF0;
+        [self setMemDisplayStart:newStart];
+    }
+    memDisplayStart = newStart;
+    [self updateMemDisplay];
+}
+
+// -----------------------------------------------------------------
+// memPageChange
+// Changes the currently visible memory page
+// -----------------------------------------------------------------
 
 // -----------------------------------------------------------------
 // updateMemDisplay
@@ -204,7 +251,7 @@
     // Enforce some bounds
     int memLength = memDisplayStart + memDisplayLength;             
     if (memLength > MEMSIZE) 
-        memLength = (MEMSIZE - memDisplayStart);
+        memLength = memDisplayStart + (MEMSIZE - memDisplayStart);
     
     // Loop through requested memory
     for (int i = memDisplayStart; i < memLength; i+=0x10) {

@@ -34,6 +34,7 @@
 		145152431352D819000704C8 /* BreakpointDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 145152421352D819000704C8 /* BreakpointDelegate.m */; };
 		1451526C1352E688000704C8 /* NSString-NumUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1451526B1352E688000704C8 /* NSString-NumUtils.m */; };
 		145674D91342D50F00F08A0D /* ConsoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145674D81342D50F00F08A0D /* ConsoleView.m */; };
+		146B0B04135E5BBC00CFD32F /* TripleSynchronizedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 146B0B03135E5BBC00CFD32F /* TripleSynchronizedScrollView.m */; };
 		148C96E4131CECE1001CDD1C /* MarkerLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C96DF131CECE1001CDD1C /* MarkerLineNumberView.m */; };
 		148C96E5131CECE1001CDD1C /* NoodleLineNumberMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C96E1131CECE1001CDD1C /* NoodleLineNumberMarker.m */; };
 		148C96E6131CECE1001CDD1C /* NoodleLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C96E3131CECE1001CDD1C /* NoodleLineNumberView.m */; };
@@ -117,6 +118,8 @@
 		1451526B1352E688000704C8 /* NSString-NumUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString-NumUtils.m"; sourceTree = "<group>"; };
 		145674D71342D50F00F08A0D /* ConsoleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleView.h; sourceTree = "<group>"; };
 		145674D81342D50F00F08A0D /* ConsoleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsoleView.m; sourceTree = "<group>"; };
+		146B0B02135E5BBC00CFD32F /* TripleSynchronizedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripleSynchronizedScrollView.h; sourceTree = "<group>"; };
+		146B0B03135E5BBC00CFD32F /* TripleSynchronizedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripleSynchronizedScrollView.m; sourceTree = "<group>"; };
 		148C96DE131CECE1001CDD1C /* MarkerLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerLineNumberView.h; sourceTree = "<group>"; };
 		148C96DF131CECE1001CDD1C /* MarkerLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerLineNumberView.m; sourceTree = "<group>"; };
 		148C96E0131CECE1001CDD1C /* NoodleLineNumberMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberMarker.h; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				148C96E3131CECE1001CDD1C /* NoodleLineNumberView.m */,
 				256AC3D80F4B6AC300CF3369 /* Sim68KAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* Sim68KAppDelegate.m */,
+				146B0B02135E5BBC00CFD32F /* TripleSynchronizedScrollView.h */,
+				146B0B03135E5BBC00CFD32F /* TripleSynchronizedScrollView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Sim68K" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -434,6 +440,7 @@
 				145152431352D819000704C8 /* BreakpointDelegate.m in Sources */,
 				1451526C1352E688000704C8 /* NSString-NumUtils.m in Sources */,
 				14D9FA3713554F1A00817B60 /* NSNumber-StrUtils.m in Sources */,
+				146B0B04135E5BBC00CFD32F /* TripleSynchronizedScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

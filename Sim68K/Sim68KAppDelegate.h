@@ -8,11 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import "ConsoleView.h"
+#import "TripleSynchronizedScrollView.h"
 
 @class NoodleLineNumberView, Simulator;
 
 @interface Sim68KAppDelegate : NSObject {
-// @interface Sim68KAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindow                *window;
     NSPanel                 *panelIO;
     NSPanel                 *panelHardware;
@@ -26,6 +26,9 @@
     IBOutlet NSTextView     *memAddressColumn;
     IBOutlet NSTextView     *memValueColumn;
     IBOutlet NSTextView     *memContentsColumn;
+    IBOutlet TripleSynchronizedScrollView   *memAddressScroll;
+    IBOutlet TripleSynchronizedScrollView   *memValueScroll;
+    IBOutlet TripleSynchronizedScrollView   *memContentsScroll;
 
     NSString                *file;
     IBOutlet Simulator      *simulator;
@@ -42,6 +45,7 @@
 @property (retain) NSString *file;
 @property (assign) IBOutlet ConsoleView *simIOView;
 @property (retain) Simulator *simulator;
+@property (assign) unsigned int memDisplayStart;
 
 - (IBAction)openDocument:(id)sender;
 - (IBAction)runProg:(id)sender;
@@ -52,7 +56,11 @@
 - (IBAction)runToCursor:(id)sender;
 - (IBAction)reload:(id)sender;
 - (IBAction)changeMemLength:(id)sender;
+- (IBAction)memPageChange:(id)sender;
 - (void)initListfileView;
+- (void)initMemoryScrollers;
 - (void)updateMemDisplay;
+- (unsigned int)memDisplayStart;
+- (void)setMemDisplayStart:(unsigned int)newStart;
 
 @end
