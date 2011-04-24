@@ -26,6 +26,7 @@
 		140089D1131EF4C6009B565A /* strutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089BF131EF4C6009B565A /* strutils.cpp */; };
 		140089D2131EF4C6009B565A /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 140089C0131EF4C6009B565A /* utils.cpp */; };
 		14008A44131F17BC009B565A /* Simulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 14008A43131F17BC009B565A /* Simulator.m */; };
+		1419D15E1364095E00605932 /* SynchronizedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1491679713610FFB0063D7CD /* SynchronizedScrollView.m */; };
 		141FDB261325B8E000A249F3 /* UShortHexStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 141FDB251325B8E000A249F3 /* UShortHexStringTransformer.m */; };
 		141FDB351325BA0800A249F3 /* UShortBinaryStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 141FDB341325BA0800A249F3 /* UShortBinaryStringTransformer.m */; };
 		141FDB791325DB0D00A249F3 /* IntHexStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 141FDB781325DB0D00A249F3 /* IntHexStringTransformer.m */; };
@@ -34,10 +35,11 @@
 		145152431352D819000704C8 /* BreakpointDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 145152421352D819000704C8 /* BreakpointDelegate.m */; };
 		1451526C1352E688000704C8 /* NSString-NumUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1451526B1352E688000704C8 /* NSString-NumUtils.m */; };
 		145674D91342D50F00F08A0D /* ConsoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145674D81342D50F00F08A0D /* ConsoleView.m */; };
-		146B0B04135E5BBC00CFD32F /* TripleSynchronizedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 146B0B03135E5BBC00CFD32F /* TripleSynchronizedScrollView.m */; };
 		148C96E4131CECE1001CDD1C /* MarkerLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C96DF131CECE1001CDD1C /* MarkerLineNumberView.m */; };
 		148C96E5131CECE1001CDD1C /* NoodleLineNumberMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C96E1131CECE1001CDD1C /* NoodleLineNumberMarker.m */; };
 		148C96E6131CECE1001CDD1C /* NoodleLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C96E3131CECE1001CDD1C /* NoodleLineNumberView.m */; };
+		149167061360F80A0063D7CD /* MemBrowserScrollSynchronizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 149167051360F80A0063D7CD /* MemBrowserScrollSynchronizer.m */; };
+		1491679813610FFB0063D7CD /* SynchronizedScrollView.m in Resources */ = {isa = PBXBuildFile; fileRef = 1491679713610FFB0063D7CD /* SynchronizedScrollView.m */; };
 		14A187E6132FF1D2006E387D /* button-run.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A187E4132FF1D2006E387D /* button-run.png */; };
 		14A187E7132FF1D2006E387D /* button-runtoline.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A187E5132FF1D2006E387D /* button-runtoline.png */; };
 		14A18815133039E0006E387D /* button-stepover.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A18814133039E0006E387D /* button-stepover.png */; };
@@ -118,14 +120,16 @@
 		1451526B1352E688000704C8 /* NSString-NumUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString-NumUtils.m"; sourceTree = "<group>"; };
 		145674D71342D50F00F08A0D /* ConsoleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleView.h; sourceTree = "<group>"; };
 		145674D81342D50F00F08A0D /* ConsoleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsoleView.m; sourceTree = "<group>"; };
-		146B0B02135E5BBC00CFD32F /* TripleSynchronizedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripleSynchronizedScrollView.h; sourceTree = "<group>"; };
-		146B0B03135E5BBC00CFD32F /* TripleSynchronizedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripleSynchronizedScrollView.m; sourceTree = "<group>"; };
 		148C96DE131CECE1001CDD1C /* MarkerLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerLineNumberView.h; sourceTree = "<group>"; };
 		148C96DF131CECE1001CDD1C /* MarkerLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerLineNumberView.m; sourceTree = "<group>"; };
 		148C96E0131CECE1001CDD1C /* NoodleLineNumberMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberMarker.h; sourceTree = "<group>"; };
 		148C96E1131CECE1001CDD1C /* NoodleLineNumberMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleLineNumberMarker.m; sourceTree = "<group>"; };
 		148C96E2131CECE1001CDD1C /* NoodleLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberView.h; sourceTree = "<group>"; };
 		148C96E3131CECE1001CDD1C /* NoodleLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleLineNumberView.m; sourceTree = "<group>"; };
+		149167041360F80A0063D7CD /* MemBrowserScrollSynchronizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemBrowserScrollSynchronizer.h; sourceTree = "<group>"; };
+		149167051360F80A0063D7CD /* MemBrowserScrollSynchronizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemBrowserScrollSynchronizer.m; sourceTree = "<group>"; };
+		1491679613610FFB0063D7CD /* SynchronizedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynchronizedScrollView.h; sourceTree = "<group>"; };
+		1491679713610FFB0063D7CD /* SynchronizedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynchronizedScrollView.m; sourceTree = "<group>"; };
 		14A187E4132FF1D2006E387D /* button-run.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-run.png"; sourceTree = "<group>"; };
 		14A187E5132FF1D2006E387D /* button-runtoline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-runtoline.png"; sourceTree = "<group>"; };
 		14A18814133039E0006E387D /* button-stepover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-stepover.png"; sourceTree = "<group>"; };
@@ -184,8 +188,10 @@
 				148C96E3131CECE1001CDD1C /* NoodleLineNumberView.m */,
 				256AC3D80F4B6AC300CF3369 /* Sim68KAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* Sim68KAppDelegate.m */,
-				146B0B02135E5BBC00CFD32F /* TripleSynchronizedScrollView.h */,
-				146B0B03135E5BBC00CFD32F /* TripleSynchronizedScrollView.m */,
+				149167041360F80A0063D7CD /* MemBrowserScrollSynchronizer.h */,
+				149167051360F80A0063D7CD /* MemBrowserScrollSynchronizer.m */,
+				1491679613610FFB0063D7CD /* SynchronizedScrollView.h */,
+				1491679713610FFB0063D7CD /* SynchronizedScrollView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -393,6 +399,7 @@
 				14A1881713305397006E387D /* button-trace.png in Resources */,
 				14A1884B13306350006E387D /* button-pause.png in Resources */,
 				14A1884E1330645A006E387D /* button-rewind.png in Resources */,
+				1491679813610FFB0063D7CD /* SynchronizedScrollView.m in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1419D15E1364095E00605932 /* SynchronizedScrollView.m in Sources */,
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* Sim68KAppDelegate.m in Sources */,
 				148C96E4131CECE1001CDD1C /* MarkerLineNumberView.m in Sources */,
@@ -440,7 +448,7 @@
 				145152431352D819000704C8 /* BreakpointDelegate.m in Sources */,
 				1451526C1352E688000704C8 /* NSString-NumUtils.m in Sources */,
 				14D9FA3713554F1A00817B60 /* NSNumber-StrUtils.m in Sources */,
-				146B0B04135E5BBC00CFD32F /* TripleSynchronizedScrollView.m in Sources */,
+				149167061360F80A0063D7CD /* MemBrowserScrollSynchronizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

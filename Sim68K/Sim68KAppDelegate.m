@@ -13,7 +13,6 @@
 #import "IntHexStringTransformer.h"
 #import "UShortHexStringTransformer.h"
 #import "UShortBinaryStringTransformer.h"
-#import "TripleSynchronizedScrollView.h"
 
 #include "extern.h"
 
@@ -185,15 +184,16 @@
 // initializes the synchronized memory scroll views
 // -----------------------------------------------------------------
 - (void)initMemoryScrollers {
-    [memAddressScroll stopSynchronizing];
-    [memAddressScroll setPartnerA:memValueScroll];
-    [memAddressScroll setPartnerB:memContentsScroll];
-    [memValueScroll stopSynchronizing];
-    [memValueScroll setPartnerA:memAddressScroll];
-    [memValueScroll setPartnerB:memContentsScroll];
-    [memContentsScroll stopSynchronizing];
-    [memContentsScroll setPartnerA:memAddressScroll];
-    [memContentsScroll setPartnerB:memValueScroll];
+    NSRect addressRect = [[memAddressScroll contentView] documentRect];
+    NSRect valueRect   = [[memValueScroll contentView] documentRect];
+    NSRect contentRect = [[memContentsScroll contentView] documentRect];
+    [memAddressScroll setLastScrollPoint:addressRect.origin];
+    [memValueScroll setLastScrollPoint:valueRect.origin];
+    [memContentsScroll setLastScrollPoint:contentRect.origin];
+    mBrowser = [[MemBrowserScrollSynchronizer alloc] init];
+    [mBrowser registerScrollView:memAddressScroll];
+    [mBrowser registerScrollView:memValueScroll];
+    [mBrowser registerScrollView:memContentsScroll];
 }
 
 // -----------------------------------------------------------------

@@ -4,11 +4,11 @@
 //
 //  Created by Robert Bartlett-Schneider on 2/27/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
 
 #import <Cocoa/Cocoa.h>
 #import "ConsoleView.h"
-#import "TripleSynchronizedScrollView.h"
+#import "SynchronizedScrollView.h"
+#import "MemBrowserScrollSynchronizer.h"
 
 @class NoodleLineNumberView, Simulator;
 
@@ -26,9 +26,12 @@
     IBOutlet NSTextView     *memAddressColumn;
     IBOutlet NSTextView     *memValueColumn;
     IBOutlet NSTextView     *memContentsColumn;
-    IBOutlet TripleSynchronizedScrollView   *memAddressScroll;
-    IBOutlet TripleSynchronizedScrollView   *memValueScroll;
-    IBOutlet TripleSynchronizedScrollView   *memContentsScroll;
+    
+    IBOutlet SynchronizedScrollView   *memAddressScroll;
+    IBOutlet SynchronizedScrollView   *memValueScroll;
+    IBOutlet SynchronizedScrollView   *memContentsScroll;
+    
+    MemBrowserScrollSynchronizer *mBrowser;
 
     NSString                *file;
     IBOutlet Simulator      *simulator;

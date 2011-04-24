@@ -202,7 +202,7 @@
     [self setGUI_PC:PC];
     [self setGUI_SR:SR];
     [self setGUI_Cycles:cycles];
-    [self setMemoryContents:[[[NSTextStorage alloc] initWithString:@""] autorelease]];
+//     [self setMemoryContents:[[[NSTextStorage alloc] initWithString:@""] autorelease]];
 }
 
 // -----------------------------------------------------------------
