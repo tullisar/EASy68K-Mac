@@ -20,7 +20,7 @@
 
 @implementation Sim68KAppDelegate
 
-@synthesize window, panelIO, panelMemory, panelStack, panelHardware, simIOView;
+@synthesize window, panelIO, panelMemory, panelStack, panelHardware, simIOView, errorOutput;
 @synthesize file;
 @synthesize simulator;
 
@@ -64,6 +64,7 @@
     memDisplayLength = 1024;             // Set up memory browser values
     [self setMemDisplayStart:0x1000];
     [self updateMemDisplay];
+    [errorOutput clearText];
     
     [window makeKeyAndOrderFront:self];
 }
@@ -100,7 +101,14 @@
 // Tells the simulator to step through the next instruction
 // -----------------------------------------------------------------
 - (IBAction)step:(id)sender {
-    [simulator step];
+    if (!trapInput) {
+        NSOperationQueue *queue = [[[NSOperationQueue alloc] init] autorelease];
+        NSOperation *simLoop = [[[NSInvocationOperation alloc] 
+                                 initWithTarget:simulator
+                                 selector:@selector(step)
+                                 object:nil] autorelease];
+        [queue addOperation:simLoop];
+    }
 }
 
 // -----------------------------------------------------------------
@@ -108,7 +116,14 @@
 // Tells the simulator to trace into the next instruction
 // -----------------------------------------------------------------
 - (IBAction)trace:(id)sender {
-    [simulator trace];
+    if (!trapInput) {
+        NSOperationQueue *queue = [[[NSOperationQueue alloc] init] autorelease];
+        NSOperation *simLoop = [[[NSInvocationOperation alloc] 
+                                 initWithTarget:simulator
+                                 selector:@selector(trace)
+                                 object:nil] autorelease];
+        [queue addOperation:simLoop];
+    }
 }
 
 // -----------------------------------------------------------------
@@ -222,6 +237,7 @@
 // the memory display
 // -----------------------------------------------------------------
 -(void)setMemDisplayStart:(unsigned int)newStart {
+    if (newStart < 0x0) newStart = 0x00000001;
     if (newStart > 0x00FFFFF0) newStart = 0x00FFFFF1;
     if ((newStart & 0x0000000F) > 0) {
         newStart &= (unsigned int)0xFFFFFFF0;
@@ -235,6 +251,21 @@
 // memPageChange
 // Changes the currently visible memory page
 // -----------------------------------------------------------------
+-(IBAction)memPageChange:(id)sender {
+    NSSegmentedControl *pager = sender;
+    int selection = [pager selectedSegment];
+    switch (selection) {
+        case 0:
+            [self setMemDisplayStart:(memDisplayStart - memDisplayLength)];
+            break;
+        case 1:
+            [self setMemDisplayStart:(memDisplayStart + memDisplayLength)];
+            break;
+        default:
+            break;
+    }
+}
+
 
 // -----------------------------------------------------------------
 // updateMemDisplay
@@ -257,7 +288,7 @@
     for (int i = memDisplayStart; i < memLength; i+=0x10) {
         
         // Print out address
-        NSString *address = [NSString stringWithFormat:@"%08X\n",i];
+        NSString *address = [NSString stringWithFormat:@"%08X",i];
         [memAddressColumn appendString:address
                               withFont:CONSOLE_FONT];
         
@@ -279,14 +310,16 @@
         }
         
         // New lines
-        [memValueColumn appendString:[NSString stringWithFormat:@"\n"]
-                            withFont:CONSOLE_FONT];
-        [memContentsColumn appendString:[NSString stringWithFormat:@"\n"]
-                               withFont:CONSOLE_FONT];
+        if (i+0x10 < memLength) {
+            [memAddressColumn appendString:[NSString stringWithFormat:@"\n"]
+                                  withFont:CONSOLE_FONT];
+            [memValueColumn appendString:[NSString stringWithFormat:@"\n"]
+                                withFont:CONSOLE_FONT];
+            [memContentsColumn appendString:[NSString stringWithFormat:@"\n"]
+                                   withFont:CONSOLE_FONT];
+        }
     }
     
-    
-
 }
 
 

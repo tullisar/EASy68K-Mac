@@ -23,7 +23,7 @@
     if (bpoints < MAX_BPOINTS)
         brkpt[bpoints++] = loc;
     else
-        NSLog(@"Breakpoint limit reached!");
+        [SimErrorManager log:@"Breakpoint limit reached!"];
  
     return SUCCESS;
 }

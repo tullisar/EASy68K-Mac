@@ -655,8 +655,7 @@ int runprog()
     
     if (errflg) {                                           // if illegal opcode in program initiate an exception
         halt = true;                                        // force halt
-        // MARK: ERROR: Notify GUI of Address/Bus error
-        NSLog(@"Address or Bus error during exception processing. Execution halted.");
+        [SimErrorManager log:@"Address or Bus error during exception processing. Execution halted."];
     }
     
     // Simple Breakpoints
@@ -683,8 +682,7 @@ int runprog()
         // Evaluate isBreak() for all expressions
         //if(true) {
         if(bpExpressions[i].isBreak()) {
-            // MARK: ERROR: Notify GUI of Breakpoint
-            NSLog(@"Breakpoint encountered at %04x. Execution halted.",PC);
+            [SimErrorManager log:[NSString stringWithFormat:@"Breakpoint encountered at %04X. Execution halted.",PC]];
             trace = true;                                  // force trace mode
             // ???: Again, what is AutoTraceTimer used for?
             // Form1->AutoTraceTimer->Enabled = false;
@@ -772,7 +770,7 @@ int exec_inst()
                 {
                     if (trace) {
                         sprintf(buffer,"PC=%08X  Code=%04X  %s", (unsigned int)(PC-2), inst, inst_arr[i].name);
-                        NSLog(@"%s\n",buffer);
+                        [SimErrorManager log:[NSString stringWithFormat:@"%s\n",buffer]];
                         // TODO: Display last instruction executed in window during trace                        
                         if (logging)
                         {
@@ -901,9 +899,7 @@ int exec_inst()
                                 halt = true;
                                 if (stopInstruction == false) {
                                     stopInstruction = true;
-                                    // MARK: ERROR: Notify GUI of STOP instruction
-                                    NSLog(@"STOP instruction. Execution halted");
-                                    scrshow();            // update the screen
+                                    [SimErrorManager log:@"STOP instruction. Execution halted"];
                                 }  
                                 break;
                             case TRAP_TRAP : inc_cyc (38);
@@ -942,68 +938,78 @@ int exec_inst()
                         {
                             case SUCCESS  : break;
                             case BAD_INST : halt = true;                        // halt the program
-                                // MARK: ERROR: Notify GUI of ILLEGAL instruction
-                                NSLog(@"Illegal instruction found at location %04x. Execution halted.", OLD_PC);    
+                                [SimErrorManager log:[NSString stringWithFormat:
+                                                      @"Illegal instruction found at location %04X. \
+                                                      Execution halted.", OLD_PC]];    
                                 break;
                             case NO_PRIVILEGE : halt = true;
-                                // MARK: ERROR: Notify GUI of Privelage violation
-                                NSLog(@"Supervisor privilege violation at location %04x. Execution halted.", OLD_PC);
+                                [SimErrorManager log:[NSString stringWithFormat:
+                                                      @"Supervisor privilege violation at location %04X. \
+                                                      Execution halted.", OLD_PC]];
                                 break;
                             case CHK_EXCEPTION : halt = true;
-                                // MARK: GUI: Notify GUI of CHK exception
-                                NSLog(@"CHK exception ocurred at location %04x. Execution halted.", OLD_PC);
+                                [SimErrorManager log:[NSString stringWithFormat:
+                                                      @"CHK exception ocurred at location %04X. \
+                                                      Execution halted.", OLD_PC]];
                                 break;
                             case STOP_TRAP : halt = true;
-                                NSLog(@"STOP instruction executed at location %04x. Execution halted.",OLD_PC);
-                                // MARK: GUI: Notify GUI of STOP instruction
+                                [SimErrorManager log:[NSString stringWithFormat:
+                                                      @"STOP instruction executed at location %04X. \
+                                                      Execution halted.",OLD_PC]];
                                 // Form1->AutoTraceTimer->Enabled = false;
                                 // Log->stopLogWithAnnounce();
                                 // MARK: HARDWARE: Disable hardware
                                 break;
                             case TRAP_TRAP : halt = true;
-                                NSLog(@"TRAP exception occurred at location %04x. Execution halted.", OLD_PC);
-                                // MARK: GUI: Notify GUI of TRAP exception
-                                // Form1->Message->Lines->Add(str.sprintf
-                                //                            ("TRAP exception occurred at location %4x. Execution halted", OLD_PC));
+                                [SimErrorManager log:[NSString stringWithFormat:
+                                                      @"TRAP exception occurred at location %04X. \
+                                                      Execution halted.", OLD_PC]];
                                 break;
                             case TRAPV_TRAP : halt = true;
-                                // MARK: ERROR: Notify GUI of TRAPV exception
-                                NSLog(@"TRAPV exception occurred at location %04x. Execution halted.", OLD_PC);
+                                [SimErrorManager log:[NSString stringWithFormat:
+                                                      @"TRAPV exception occurred at location %04X. \
+                                                      Execution halted.", OLD_PC]];
                                 break;
                             case DIV_BY_ZERO : halt = true;
-                                // MARK: ERROR: Notify GUI of Divide by Zero error
-                                NSLog(@"Divide by zero occurred at location %04x. Execution halted", OLD_PC);
+                                [SimErrorManager log:[NSString stringWithFormat:
+                                                      @"Divide by zero occurred at location %04X. \
+                                                      Execution halted", OLD_PC]];
                                 break;
                             case ADDR_ERROR : halt = true;
-                                // MARK: ERROR: Notify GUI of Address error
-                                NSLog(@"Execution halted, an address error has occurred.");
+                                [SimErrorManager log:[NSString stringWithFormat:
+                                                      @"Execution halted, an address error has occurred."]];
                                 break;
                             case BUS_ERROR : halt = true;
-                                // MARK: ERROR: Notify GUI of Bus error
-                                NSLog(@"Execution halted, a bus error has occurred.");
+                                [SimErrorManager log:[NSString stringWithFormat:
+                                                      @"Execution halted, a bus error has occurred."]];
                                 break;
                             case TRACE_EXCEPTION : halt = true;
-                                // MARK: ERROR: Notify GUI of Trace exception
-                                NSLog(@"Trace exception occurred at location %04x. Execution halted", OLD_PC);
+                                [SimErrorManager log:[NSString stringWithFormat:
+                                                      @"Trace exception occurred at location %04X. \
+                                                      Execution halted", OLD_PC]];
                                 break;
                             case LINE_1010 : halt = true;
-                                // MARK: ERROR: Notify GUI of Line 1010 Emulator exception
-                                NSLog(@"Line 1010 Emulator exception occurred at location %04x. Execution halted", OLD_PC);
+                                [SimErrorManager log:[NSString stringWithFormat:
+                                                      @"Line 1010 Emulator exception occurred at location %04X. \
+                                                      Execution halted", OLD_PC]];
                                 break;
                             case LINE_1111 : halt = true;
-                                // MARK: ERROR: Notify GUI of Line 1111 Emulator exception
-                                NSLog(@"Line 1111 Emulator exception occurred at location %04x. Execution halted", OLD_PC);
+                                [SimErrorManager log:[NSString stringWithFormat:
+                                                      @"Line 1111 Emulator exception occurred at location %04X. \
+                                                      Execution halted", OLD_PC]];
                                 break;
                             default: halt = true;
-                                // MARK: ERROR: Notify GUI of Unkown Execution error
-                                NSLog(@"Unknown execution error %4x occurred at location %04x. Execution halted", exec_result, OLD_PC);
+                                [SimErrorManager log:[NSString stringWithFormat:
+                                                      @"Unknown execution error %4X occurred at location %04X. \
+                                                      Execution halted", exec_result, OLD_PC]];
                         }
                         
                         if (SR & tbit)
                         {
                             halt = true;
-                            // MARK: ERROR: Notify GUI of TRACE exception
-                            NSLog(@"TRACE exception occurred at location %04x. Execution halted", OLD_PC);
+                            [SimErrorManager log:[NSString stringWithFormat:
+                                                  @"TRACE exception occurred at location %04X. \
+                                                  Execution halted", OLD_PC]];
                         }
                     }
                     break; // break out of for loop
@@ -1011,10 +1017,9 @@ int exec_inst()
             } // end for
         } // end if
     } catch( ... ) {
-        // MARK: ERROR: Notify GUI of unhandled exception in program
         // Form1->AutoTraceTimer->Enabled = false;
-        // sprintf(buffer, "ERROR: An exception occurred in routine 'exec_inst'.\nPC=%08X  Code=%04X", PC-2, inst);
-        // Application->MessageBox(buffer, "Error", MB_OK);
+        sprintf(buffer, "ERROR: An exception occurred in routine 'exec_inst'.\nPC=%08X  Code=%04X", PC-2, inst);
+        [SimErrorManager log:[NSString stringWithFormat:@"%s\n",buffer]];
         trace = true;       // stop running programs
         sstep = false;
     }
@@ -1041,11 +1046,10 @@ void exceptionHandler(int clas, long loc, int r_w)
     
     // if SSP on odd address OR outside memory range
     if ( (A[8] % 2) || (A[8] < 0) || ((unsigned int)A[8] > MEMSIZE) ){
-        // MARK: GUI: Notify GUI of error
         // Form1->AutoTraceTimer->Enabled = false;
-        // Form1->Message->Lines->Add(str.sprintf
-        //                             ("Error during Exception Handler: SSP odd or outside memory space "));
-        // Form1->Message->Lines->Add(str.sprintf ("at location %4x", A[8]));
+        [SimErrorManager log:[NSString stringWithFormat:
+                              @"Error during Exception Handler: SSP odd or outside memory space at \
+                              location %04X",A[8]]];
         trace = true;       // stop running programs
         sstep = false;
         return;

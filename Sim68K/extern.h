@@ -26,6 +26,7 @@ using namespace std;
 #include "BPoint.h"
 #include "BPointExpr.h"
 #import "Sim68KAppDelegate.h"
+#import "SimErrorManager.h"
 
 extern char buffer[256];       // used to form messages for display in windows
 extern char numBuf[20];        // "

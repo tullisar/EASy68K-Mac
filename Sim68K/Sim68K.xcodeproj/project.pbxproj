@@ -53,6 +53,7 @@
 		14CFAD97131EE739005D7D7A /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14CFAD5E131EE717005D7D7A /* BWToolkitFramework.framework */; };
 		14D9FA3713554F1A00817B60 /* NSNumber-StrUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D9FA3613554F1A00817B60 /* NSNumber-StrUtils.m */; };
 		14F24D3413504F4700D10451 /* NSColor-Manipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F24D3313504F4700D10451 /* NSColor-Manipulation.m */; };
+		14F69A551364C85B00A2386F /* SimErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F69A541364C85B00A2386F /* SimErrorManager.m */; };
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* Sim68KAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* Sim68KAppDelegate.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -147,6 +148,8 @@
 		14D9FA3613554F1A00817B60 /* NSNumber-StrUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber-StrUtils.m"; sourceTree = "<group>"; };
 		14F24D3213504F4700D10451 /* NSColor-Manipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor-Manipulation.h"; sourceTree = "<group>"; };
 		14F24D3313504F4700D10451 /* NSColor-Manipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor-Manipulation.m"; sourceTree = "<group>"; };
+		14F69A531364C85B00A2386F /* SimErrorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimErrorManager.h; sourceTree = "<group>"; };
+		14F69A541364C85B00A2386F /* SimErrorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimErrorManager.m; sourceTree = "<group>"; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		256AC3D80F4B6AC300CF3369 /* Sim68KAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sim68KAppDelegate.h; sourceTree = "<group>"; };
 		256AC3D90F4B6AC300CF3369 /* Sim68KAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sim68KAppDelegate.m; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 				149167051360F80A0063D7CD /* MemBrowserScrollSynchronizer.m */,
 				1491679613610FFB0063D7CD /* SynchronizedScrollView.h */,
 				1491679713610FFB0063D7CD /* SynchronizedScrollView.m */,
+				14F69A531364C85B00A2386F /* SimErrorManager.h */,
+				14F69A541364C85B00A2386F /* SimErrorManager.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 				1451526C1352E688000704C8 /* NSString-NumUtils.m in Sources */,
 				14D9FA3713554F1A00817B60 /* NSNumber-StrUtils.m in Sources */,
 				149167061360F80A0063D7CD /* MemBrowserScrollSynchronizer.m in Sources */,
+				14F69A551364C85B00A2386F /* SimErrorManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

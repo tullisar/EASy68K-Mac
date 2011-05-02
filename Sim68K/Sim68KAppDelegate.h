@@ -22,6 +22,7 @@
     IBOutlet NSScrollView   *scrollView;
     IBOutlet NSTextView     *scriptView;
 	NoodleLineNumberView	*lineNumberView;
+    IBOutlet NSTextView     *errorOutput;
     
     IBOutlet NSTextView     *memAddressColumn;
     IBOutlet NSTextView     *memValueColumn;
@@ -49,6 +50,7 @@
 @property (assign) IBOutlet ConsoleView *simIOView;
 @property (retain) Simulator *simulator;
 @property (assign) unsigned int memDisplayStart;
+@property (assign) IBOutlet NSTextView *errorOutput;
 
 - (IBAction)openDocument:(id)sender;
 - (IBAction)runProg:(id)sender;

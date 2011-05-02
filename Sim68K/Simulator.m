@@ -61,15 +61,14 @@
 // Formats and initializes the 68000 memory. Clears it if already 
 // initialized.
 // -----------------------------------------------------------------
-- (void) memFormat {
+- (void)memFormat {
     if (memory) delete [] memory;
     try {
         memory = new char[MEMSIZE];
         for (int i=0; i<MEMSIZE; i++)
             memory[i] = 0xFF;
     } catch(...) {
-        // TODO: GUI Error
-        NSLog(@"There was an unexpected error when attempting to format the 68000 memory");
+        [SimErrorManager log:@"There was an unexpected error when attempting to format the 68000 memory"];
         exit(1);    // FAIL
     }
 }
@@ -78,7 +77,7 @@
 // runLoop
 // Runs the 6800 program loaded into memory
 // -----------------------------------------------------------------
-- (void) runLoop {
+- (void)runLoop {
     static BOOL running = NO;
     if (!running) {
         running = YES;
@@ -104,7 +103,7 @@
 // -----------------------------------------------------------------
 // loadProgram
 // -----------------------------------------------------------------
-- (void) loadProgram:(NSString* )name {
+- (void)loadProgram:(NSString* )name {
     
     NSRange notFoundRange = NSMakeRange(NSNotFound, 0);
     char fName[1024];                                   // Temporary buffer for NSString->C String
@@ -158,8 +157,7 @@
             [self setListFile:listContainer];
             
         } else {
-            // TODO: GUI Error
-            NSLog(@"Unable to locate or load associated listfile. Source level debugging will be unavailable.");
+            [SimErrorManager log:@"Unable to locate or load associated listfile. Source level debugging will be unavailable."];
         }
         
         [self setSimLoaded:YES];
@@ -168,9 +166,8 @@
         [appDelegate updateMemDisplay];
         
     } else {
-        // TODO: GUI Error
         [self setSimLoaded:NO];
-        NSLog(@"Error loading S-Record file.");
+        [SimErrorManager log:@"Error loading S-Record file."];
     }
 }
 
@@ -312,50 +309,6 @@
          cString[10] != '=')
         return YES;
     return NO;
-}
-
-// -----------------------------------------------------------------
-// memoryContents
-// -----------------------------------------------------------------
-- (NSTextStorage *)memoryContents {
-//
-//    
-//    if (memory && simLoaded && NO) {
-//        NSMutableString *text   = [[NSMutableString alloc] initWithString:@""];
-//
-//        for (int i = 0; i < MEMSIZE; i++) {
-//            for (int j = 0; j < 0x10; j++) {
-//                unsigned char memByte = memory[i++];
-//                [text appendFormat:@"%02X ", memByte];
-//            }
-//            [text appendFormat:@"%@",@"\n"];
-//        }
-//        
-//        NSTextStorage *contents = [[NSTextStorage alloc] initWithString:text];
-//        NSRange memLength = NSMakeRange(0, [text length]);
-//        
-//        [contents addAttribute:NSFontAttributeName value:CONSOLE_FONT range:memLength];
-//        
-//        return contents;
-//    }
-//
-//    return [[[NSTextStorage alloc] initWithString:@"Memory not initialized."] autorelease];
-}
-
-// -----------------------------------------------------------------
-// setMemoryContents
-// -----------------------------------------------------------------
-- (void)setMemoryContents:(NSTextStorage *)contents {
-//    
-//    NSMutableString *memBlock = [contents mutableString];
-//    NSString *memBlockTrimmed = [memBlock stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-//    memBlockTrimmed = [memBlockTrimmed stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-//    
-//    NSArray *components = [memBlockTrimmed componentsSeparatedByCharactersInSet:
-//                           [NSCharacterSet whitespaceCharacterSet]];
-//    
-//    int a = 0;
-    
 }
 
 // ------------------------------------------------------------------------------------------------------------------------------

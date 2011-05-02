@@ -45,29 +45,31 @@
         CGFloat lastY = changedLastScrollPoint.y;
         CGFloat newY  = changedScrollPoint.y;
         CGFloat scrollDistance = (newY - lastY);
-        
-        for (int i = 0; i < [scrollViews count]; i++) {
-            curView = (SynchronizedScrollView *)[scrollViews objectAtIndex:i];
-            curClip = [curView contentView];
-            
-            if (curClip != changedContentView) {
+
+        if (scrollDistance != 0) {
+            for (int i = 0; i < [scrollViews count]; i++) {
+                curView = (SynchronizedScrollView *)[scrollViews objectAtIndex:i];
+                curClip = [curView contentView];
                 
-                NSRect curRect = [curClip documentRect];
-                
-                NSPoint changedBoundsOrigin = changedDocVisible.origin;
-                NSPoint curOffset = [curClip bounds].origin;
-                NSPoint newOffset = curOffset;
-                
-                NSSize changedViewSize = changedRect.size;
-                NSSize curViewSize = curRect.size;
-                
-                CGFloat offset = (scrollDistance / changedViewSize.height) * curViewSize.height;
-                newOffset.y = newOffset.y + offset;
-                
-                [curView setLastScrollPoint:curOffset];
-                [curClip scrollToPoint:newOffset];
-                [curView reflectScrolledClipView:curClip];
-                [curView setNeedsDisplay:YES];
+                if (curClip != changedContentView) {
+                    
+                    NSRect curRect = [curClip documentRect];
+                    
+                    NSPoint changedBoundsOrigin = changedDocVisible.origin;
+                    NSPoint curOffset = [curClip bounds].origin;
+                    NSPoint newOffset = curOffset;
+                    
+                    NSSize changedViewSize = changedRect.size;
+                    NSSize curViewSize = curRect.size;
+                    
+                    CGFloat offset = (scrollDistance / changedViewSize.height) * curViewSize.height;
+                    newOffset.y = newOffset.y + scrollDistance;
+                    
+                    [curView setLastScrollPoint:curOffset];
+                    [curClip scrollToPoint:newOffset];
+                    [curView reflectScrolledClipView:curClip];
+                    [curView setNeedsDisplay:YES];
+                }
             }
         }
         
