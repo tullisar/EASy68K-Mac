@@ -11,5 +11,7 @@
 @interface NSNumber (StrUtils)
 
 - (NSString *)hexString;
+- (NSString *)hexStringCaps;
+
 
 @end

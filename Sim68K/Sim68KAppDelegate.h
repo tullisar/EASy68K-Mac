@@ -9,6 +9,7 @@
 #import "ConsoleView.h"
 #import "SynchronizedScrollView.h"
 #import "MemBrowserScrollSynchronizer.h"
+#import "ListfileDebugView.h"
 
 @class NoodleLineNumberView, Simulator;
 
@@ -20,7 +21,7 @@
     NSPanel                 *panelMemory;
     ConsoleView             *simIOView;
     IBOutlet NSScrollView   *scrollView;
-    IBOutlet NSTextView     *scriptView;
+    IBOutlet ListfileDebugView *scriptView;
 	NoodleLineNumberView	*lineNumberView;
     IBOutlet NSTextView     *errorOutput;
     
@@ -62,6 +63,8 @@
 - (IBAction)reload:(id)sender;
 - (IBAction)changeMemLength:(id)sender;
 - (IBAction)memPageChange:(id)sender;
+- (void)highlightCurrentInstruction;
+- (BOOL)isInstruction:(NSString *)theLine;
 - (void)initListfileView;
 - (void)initMemoryScrollers;
 - (void)updateMemDisplay;

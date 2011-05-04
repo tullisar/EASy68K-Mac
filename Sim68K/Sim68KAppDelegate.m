@@ -212,6 +212,23 @@
 }
 
 // -----------------------------------------------------------------
+// isInstruction
+// Checks the simulator to see whether a supplied line of text
+// contains a valid instruction
+// -----------------------------------------------------------------
+- (BOOL)isInstruction:(NSString *)line {
+    return [simulator isInstruction:line];
+}
+
+// -----------------------------------------------------------------
+// highlightCurrentInstruction
+// Highlights the current instruction if source debugging is enabled
+// -----------------------------------------------------------------
+- (void)highlightCurrentInstruction {
+    [scriptView highlightCurrentInstruction];
+}
+
+// -----------------------------------------------------------------
 // changeMemLength
 // changes the number of bytes the memory display will show
 // -----------------------------------------------------------------

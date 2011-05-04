@@ -35,6 +35,7 @@
 		145152431352D819000704C8 /* BreakpointDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 145152421352D819000704C8 /* BreakpointDelegate.m */; };
 		1451526C1352E688000704C8 /* NSString-NumUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1451526B1352E688000704C8 /* NSString-NumUtils.m */; };
 		145674D91342D50F00F08A0D /* ConsoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 145674D81342D50F00F08A0D /* ConsoleView.m */; };
+		147DDAE81370DAE400E2F90A /* ListfileDebugView.m in Sources */ = {isa = PBXBuildFile; fileRef = 147DDAE71370DAE400E2F90A /* ListfileDebugView.m */; };
 		148C96E4131CECE1001CDD1C /* MarkerLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C96DF131CECE1001CDD1C /* MarkerLineNumberView.m */; };
 		148C96E5131CECE1001CDD1C /* NoodleLineNumberMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C96E1131CECE1001CDD1C /* NoodleLineNumberMarker.m */; };
 		148C96E6131CECE1001CDD1C /* NoodleLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C96E3131CECE1001CDD1C /* NoodleLineNumberView.m */; };
@@ -121,6 +122,8 @@
 		1451526B1352E688000704C8 /* NSString-NumUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString-NumUtils.m"; sourceTree = "<group>"; };
 		145674D71342D50F00F08A0D /* ConsoleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleView.h; sourceTree = "<group>"; };
 		145674D81342D50F00F08A0D /* ConsoleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsoleView.m; sourceTree = "<group>"; };
+		147DDAE61370DAE400E2F90A /* ListfileDebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListfileDebugView.h; sourceTree = "<group>"; };
+		147DDAE71370DAE400E2F90A /* ListfileDebugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListfileDebugView.m; sourceTree = "<group>"; };
 		148C96DE131CECE1001CDD1C /* MarkerLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerLineNumberView.h; sourceTree = "<group>"; };
 		148C96DF131CECE1001CDD1C /* MarkerLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerLineNumberView.m; sourceTree = "<group>"; };
 		148C96E0131CECE1001CDD1C /* NoodleLineNumberMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberMarker.h; sourceTree = "<group>"; };
@@ -197,6 +200,8 @@
 				1491679713610FFB0063D7CD /* SynchronizedScrollView.m */,
 				14F69A531364C85B00A2386F /* SimErrorManager.h */,
 				14F69A541364C85B00A2386F /* SimErrorManager.m */,
+				147DDAE61370DAE400E2F90A /* ListfileDebugView.h */,
+				147DDAE71370DAE400E2F90A /* ListfileDebugView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -455,6 +460,7 @@
 				14D9FA3713554F1A00817B60 /* NSNumber-StrUtils.m in Sources */,
 				149167061360F80A0063D7CD /* MemBrowserScrollSynchronizer.m in Sources */,
 				14F69A551364C85B00A2386F /* SimErrorManager.m in Sources */,
+				147DDAE81370DAE400E2F90A /* ListfileDebugView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

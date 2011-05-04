@@ -44,35 +44,35 @@ extern int      brkpt[MAX_BPOINTS];
 extern int      stepToAddr;             // Step Over stopping address
 extern int      runToAddr;              // runToCursor stopping address
 
-extern char	p1dif;
-extern char	*gettext();
-extern int	wcount;
+extern char     p1dif;
+extern char     *gettext();
+extern int      wcount;
 extern unsigned	int port1[4];
-extern char	p1dif;
-extern int	errflg;
-extern int	trace, sstep, old_trace, old_sstep, exceptions, bitfield;
+extern char     p1dif;
+extern int      errflg;
+extern int      trace, sstep, old_trace, old_sstep, exceptions, bitfield;
 extern bool     halt;                   // true, halts running program
 extern bool     stopInstruction;        // true after running stop instruction
 
-extern int	inst;
-extern long	*EA1, *EA2;
-extern long	EV1, EV2;
+extern int      inst;
+extern long     *EA1, *EA2;
+extern long     EV1, EV2;
 
-extern long	source, dest, result;
+extern long     source, dest, result;
 
-extern long    	global_temp;		/* to hold an immediate data operand */
+extern long     global_temp;		/* to hold an immediate data operand */
 
 extern bool     runMode;       // true when running 68000 program (not tracing)
 extern bool     runModeSave;
 
-extern bool    keyboardEcho;    // true, 68000 input is echoed (default)
-extern char    pendingKey;      // pending key for char input
-extern bool    inputPrompt;     // true, display prompt during input (default)
-extern bool    inputLFdisplay;         // true, display LF on CR during input (default)
+extern bool     keyboardEcho;    // true, 68000 input is echoed (default)
+extern char     pendingKey;      // pending key for char input
+extern bool     inputPrompt;     // true, display prompt during input (default)
+extern bool     inputLFdisplay;         // true, display LF on CR during input (default)
 
-extern char    inputBuf[256];          // simulator input buffer
-extern long    inputSize;              // number of characters input
-extern bool    inputMode;       // true during 68000 program input
+extern char     inputBuf[256];          // simulator input buffer
+extern long     inputSize;              // number of characters input
+extern bool     inputMode;       // true during 68000 program input
 
 extern FileStruct files[MAXFILES];     // array of file structures
 

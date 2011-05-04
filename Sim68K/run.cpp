@@ -656,6 +656,7 @@ int runprog()
     if (errflg) {                                           // if illegal opcode in program initiate an exception
         halt = true;                                        // force halt
         [SimErrorManager log:@"Address or Bus error during exception processing. Execution halted."];
+        [appDelegate highlightCurrentInstruction];
     }
     
     // Simple Breakpoints
@@ -667,6 +668,7 @@ int runprog()
             // ???: What is this AutoTraceTimer?
             // Form1->AutoTraceTimer->Enabled = false;
         }
+        [appDelegate highlightCurrentInstruction];
     }
     
     // If run to cursor address reached
@@ -687,6 +689,7 @@ int runprog()
             // ???: Again, what is AutoTraceTimer used for?
             // Form1->AutoTraceTimer->Enabled = false;
         }
+        [appDelegate highlightCurrentInstruction];
     }
     
     if (sstep) {                                            // if "Step Over" mode
@@ -694,11 +697,13 @@ int runprog()
             trace = true;                                   // force trace mode
             stepToAddr = 0;                                 // reset for next use
         }
+        [appDelegate highlightCurrentInstruction];
     }
     
     OLD_PC = PC;                                            // update the OLD_PC
     
     if (trace || halt) {
+        [appDelegate highlightCurrentInstruction];
         runMode = false;                                        // stop running if enabled
         // MARK: HARDWARE: Turn off Auto IRQ
         // if (!stopInstruction)

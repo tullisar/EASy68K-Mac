@@ -15,4 +15,9 @@
     return hex;
 }
 
+- (NSString *)hexStringCaps {
+    NSString *hex = [NSString stringWithFormat:@"%X",[self intValue]];
+    return hex;
+}
+
 @end

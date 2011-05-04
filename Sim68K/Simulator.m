@@ -164,6 +164,7 @@
         [self setSimStopped:YES];
         [self displayReg];
         [appDelegate updateMemDisplay];
+        [appDelegate highlightCurrentInstruction];
         
     } else {
         [self setSimLoaded:NO];

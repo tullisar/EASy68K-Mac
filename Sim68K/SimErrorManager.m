@@ -13,6 +13,10 @@
 
 @implementation SimErrorManager
 
+// -----------------------------------------------------------------
+// log
+// Logs output to the application error view
+// -----------------------------------------------------------------
 + (void)log:(NSString *)string {
     [[appDelegate errorOutput] appendString:string
                                    withFont:CONSOLE_FONT];
