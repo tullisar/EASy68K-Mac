@@ -8,7 +8,7 @@
 #import <Cocoa/Cocoa.h>
 #import "ConsoleView.h"
 #import "SynchronizedScrollView.h"
-#import "MemBrowserScrollSynchronizer.h"
+#import "SynchronizedScrollController.h"
 #import "ListfileDebugView.h"
 
 @class NoodleLineNumberView, Simulator;
@@ -28,18 +28,25 @@
     IBOutlet NSTextView     *memAddressColumn;
     IBOutlet NSTextView     *memValueColumn;
     IBOutlet NSTextView     *memContentsColumn;
+    IBOutlet NSTextView     *stackAddressColumn;
+    IBOutlet NSTextView     *stackValueColumn;
+    IBOutlet NSPopUpButton  *stackSelectMenu;
     
     IBOutlet SynchronizedScrollView   *memAddressScroll;
     IBOutlet SynchronizedScrollView   *memValueScroll;
     IBOutlet SynchronizedScrollView   *memContentsScroll;
+    IBOutlet SynchronizedScrollView   *stackAddressScroll;
+    IBOutlet SynchronizedScrollView   *stackValueScroll;
     
-    MemBrowserScrollSynchronizer *mBrowser;
+    SynchronizedScrollController *mBrowser;
+    SynchronizedScrollController *sBrowser;
 
     NSString                *file;
     IBOutlet Simulator      *simulator;
     
     int                     memDisplayLength;
     unsigned int            memDisplayStart;
+    unsigned int            stackDisplayLoc;
 }
 
 @property (assign) IBOutlet NSWindow *window;
@@ -51,6 +58,7 @@
 @property (assign) IBOutlet ConsoleView *simIOView;
 @property (retain) Simulator *simulator;
 @property (assign) unsigned int memDisplayStart;
+@property (assign) unsigned int stackDisplayLoc;
 @property (assign) IBOutlet NSTextView *errorOutput;
 
 - (IBAction)openDocument:(id)sender;
@@ -63,10 +71,14 @@
 - (IBAction)reload:(id)sender;
 - (IBAction)changeMemLength:(id)sender;
 - (IBAction)memPageChange:(id)sender;
+- (IBAction)stackPageChange:(id)sender;
+- (IBAction)stackSelect:(id)sender;
 - (void)highlightCurrentInstruction;
 - (BOOL)isInstruction:(NSString *)theLine;
 - (void)initListfileView;
 - (void)initMemoryScrollers;
+- (void)initStackScrollers;
+- (void)updateStackDisplay;
 - (void)updateMemDisplay;
 - (unsigned int)memDisplayStart;
 - (void)setMemDisplayStart:(unsigned int)newStart;

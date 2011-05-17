@@ -23,6 +23,7 @@
 @synthesize window, panelIO, panelMemory, panelStack, panelHardware, simIOView, errorOutput;
 @synthesize file;
 @synthesize simulator;
+@synthesize stackDisplayLoc;
 
 // -----------------------------------------------------------------
 // initialize
@@ -59,11 +60,15 @@
     
     [self initListfileView];             // Set up listfile view
     [self initMemoryScrollers];
+    [self initStackScrollers];
     [simulator initSim];                 // Initialize simulator
     
     memDisplayLength = 1024;             // Set up memory browser values
     [self setMemDisplayStart:0x1000];
     [self updateMemDisplay];
+    int selStack = [stackSelectMenu indexOfSelectedItem];
+    [self setStackDisplayLoc:A[selStack]];
+    [self updateStackDisplay];
     [errorOutput clearText];
     
     [window makeKeyAndOrderFront:self];
@@ -203,12 +208,34 @@
     NSRect valueRect   = [[memValueScroll contentView] documentRect];
     NSRect contentRect = [[memContentsScroll contentView] documentRect];
     [memAddressScroll setLastScrollPoint:addressRect.origin];
+    [memAddressScroll setAcceptsScrollWheel:NO];
+    [memAddressScroll setName:@"memAddress"];
     [memValueScroll setLastScrollPoint:valueRect.origin];
+    [memValueScroll setAcceptsScrollWheel:YES];
+    [memValueScroll setName:@"memValue"];
     [memContentsScroll setLastScrollPoint:contentRect.origin];
-    mBrowser = [[MemBrowserScrollSynchronizer alloc] init];
+    [memContentsScroll setAcceptsScrollWheel:NO];
+    [memContentsScroll setName:@"memContents"];
+    mBrowser = [[SynchronizedScrollController alloc] init];
     [mBrowser registerScrollView:memAddressScroll];
     [mBrowser registerScrollView:memValueScroll];
     [mBrowser registerScrollView:memContentsScroll];
+}
+
+// -----------------------------------------------------------------
+// initStackScrollers
+// initializes the synchronized stack scroll views
+// -----------------------------------------------------------------
+- (void)initStackScrollers {
+    NSRect addressRect = [[stackAddressScroll contentView] documentRect];
+    NSRect valueRect   = [[stackValueScroll contentView] documentRect];
+    [stackAddressScroll setLastScrollPoint:addressRect.origin];
+    [stackAddressScroll setAcceptsScrollWheel:NO];
+    [stackValueScroll setLastScrollPoint:valueRect.origin];
+    [stackValueScroll setAcceptsScrollWheel:YES];
+    sBrowser = [[SynchronizedScrollController alloc] init];
+    [sBrowser registerScrollView:stackAddressScroll];
+    [sBrowser registerScrollView:stackValueScroll];
 }
 
 // -----------------------------------------------------------------
@@ -283,6 +310,102 @@
     }
 }
 
+// -----------------------------------------------------------------
+// stackPageChange
+// Changes the currently visible memory page
+// -----------------------------------------------------------------
+-(IBAction)stackPageChange:(id)sender {
+    NSStepper *pager = sender;
+    int direction = [pager intValue];
+    int stackDisplayLength = 256;
+    switch (direction) {
+        case 1:
+            [self setStackDisplayLoc:(stackDisplayLoc - stackDisplayLength/2)];
+            break;
+        case -1:
+            [self setStackDisplayLoc:(stackDisplayLoc + stackDisplayLength/2)];
+            break;
+        default:
+            break;
+    }
+    [self updateStackDisplay];
+    [pager setDoubleValue:0.0];
+}
+
+// -----------------------------------------------------------------
+// stackSelect
+// Called when the stack selection dropdown is changed
+// -----------------------------------------------------------------
+- (IBAction)stackSelect:(id)sender {
+    NSPopUpButton *sMenu = (NSPopUpButton *)sender;
+    int selStack = [sMenu indexOfSelectedItem];
+    [self setStackDisplayLoc:A[selStack]];
+    [self updateStackDisplay];
+}
+
+// -----------------------------------------------------------------
+// updateStackDisplay
+// Updates the contents of the stack window
+// -----------------------------------------------------------------
+- (void)updateStackDisplay {
+    // Clear current contents of stack window
+    [stackAddressColumn clearText];
+    [stackValueColumn clearText];
+    
+    if (!memory) return;
+    
+    // Enforce some bounds
+    int selectedStack              = [stackSelectMenu indexOfSelectedItem];
+    unsigned int stackStart        = [self stackDisplayLoc];
+    int stackDisplayLength         = 256;
+    unsigned int stackDisplayStart = (stackStart - stackDisplayLength/2);
+    unsigned int diff;
+    
+    if ((int)stackDisplayStart < 0) {
+        diff = (stackDisplayLength/2) - stackStart;
+        stackDisplayStart = MEMSIZE - diff;
+    }
+    
+    if (stackDisplayStart > MEMSIZE) return;
+    
+    // Loop through memory
+    for (int i=0,j=0; i < stackDisplayLength; i+=0x4,j+=0x4) {
+        
+        // Initial bounds checking
+        unsigned int curAddr = j + stackDisplayStart;
+        if (curAddr >= MEMSIZE ) {
+            stackDisplayStart = 0x0;
+            curAddr = 0x0;
+            j = 0;
+        }
+            
+        // Print out address
+        NSString *address = [NSString stringWithFormat:@"%08X",curAddr];
+        [stackAddressColumn appendString:address
+                                withFont:CONSOLE_FONT];
+        
+        // Loop 4 bytes
+        for (int k = 0; k < 0x4; k++) {
+            if (curAddr >= MEMSIZE) break;
+            unsigned char memByte = memory[curAddr];
+            NSString *byteStr = [NSString stringWithFormat:@"%02X ",(unsigned int)memByte];
+            [stackValueColumn appendString:byteStr
+                                  withFont:CONSOLE_FONT];
+            curAddr++;
+        }
+        
+        // Newline if necessary
+        if ((i + 0x4) < stackDisplayLength) {
+            [stackAddressColumn appendString:@"\n"
+                                    withFont:CONSOLE_FONT];
+            [stackValueColumn appendString:@"\n"
+                                  withFont:CONSOLE_FONT];
+        }
+    }
+
+    
+    
+}
 
 // -----------------------------------------------------------------
 // updateMemDisplay

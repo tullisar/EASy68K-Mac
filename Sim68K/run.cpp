@@ -704,6 +704,7 @@ int runprog()
     
     if (trace || halt) {
         [appDelegate highlightCurrentInstruction];
+        
         runMode = false;                                        // stop running if enabled
         // MARK: HARDWARE: Turn off Auto IRQ
         // if (!stopInstruction)

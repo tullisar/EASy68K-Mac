@@ -79,7 +79,9 @@
 // -----------------------------------------------------------------
 - (void)removeLastChar {
     NSTextStorage *store = [self textStorage];
-    [store deleteCharactersInRange:[self lastCharRange]];
+    NSRange newRange = NSMakeRange(0, [store length]-1);
+    NSAttributedString *trim = [store attributedSubstringFromRange:newRange];
+    [store setAttributedString:trim];
 }
 
 // -----------------------------------------------------------------

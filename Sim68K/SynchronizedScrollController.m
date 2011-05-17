@@ -6,9 +6,11 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "MemBrowserScrollSynchronizer.h"
+#import "SynchronizedScrollController.h"
 
-@implementation MemBrowserScrollSynchronizer
+@implementation SynchronizedScrollController
+
+@synthesize name;
 
 // -----------------------------------------------------------------
 // init

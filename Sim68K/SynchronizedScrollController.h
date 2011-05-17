@@ -9,12 +9,15 @@
 #import <Cocoa/Cocoa.h>
 #import "SynchronizedScrollView.h"
 
-@interface MemBrowserScrollSynchronizer : NSObject {
+@interface SynchronizedScrollController : NSObject {
 
     BOOL scrolling;
     NSMutableArray *scrollViews;
+    NSString *name;
     
 }
+
+@property (retain) NSString *name;
 
 - (void)scrollChildBoundsDidChange:(NSNotification *)notification;
 - (void)registerScrollView:(SynchronizedScrollView *)scrollView;

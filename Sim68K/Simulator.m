@@ -90,13 +90,14 @@
             // Unexpected error
         }
         [self setSimStopped:YES];
+    
+        if (stopInstruction || halt)
+            PC = startPC;
+        [self displayReg];
+        
+        running = NO;
+        
     }
-    
-    if (stopInstruction || halt)
-        PC = startPC;
-    [self displayReg];
-    
-    running = NO;
     return;
 }
 
@@ -164,6 +165,7 @@
         [self setSimStopped:YES];
         [self displayReg];
         [appDelegate updateMemDisplay];
+        [appDelegate updateStackDisplay];
         [appDelegate highlightCurrentInstruction];
         
     } else {
@@ -216,8 +218,6 @@
         // MARK: HARDWARE: Enable Auto-IRQ
         // MARK: I/O: Bring I/O front
         // TODO: Run runLoop in a thread so that it doesn't hog the GUI
-        // [self runLoop];
-        // [self performSelectorInBackground:@sel(@"runLoop:") withObject:nil];
         [self setSimStopped:NO];
         NSOperationQueue *queue = [[[NSOperationQueue alloc] init] autorelease];
         NSOperation *simLoop = [[[NSInvocationOperation alloc] 

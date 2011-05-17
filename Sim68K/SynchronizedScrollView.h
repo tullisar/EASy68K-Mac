@@ -11,9 +11,13 @@
 @interface SynchronizedScrollView : NSScrollView {
     
     NSPoint lastScrollPoint;
+    BOOL    acceptsScrollWheel;
+    NSString *name;
     
 }
 
 @property (assign) NSPoint lastScrollPoint;
+@property (assign) BOOL    acceptsScrollWheel;
+@property (retain) NSString *name;
 
 @end
