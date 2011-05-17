@@ -152,10 +152,7 @@
 // Tells the simulator to rewind the program loaded
 // -----------------------------------------------------------------
 - (IBAction)runToCursor:(id)sender {
-    // TODO: Get cursor location from listFile, then use this as execute location
-    // long runToAddr = [self getAddressFromSelectedLine];
-    // [simulator runToCursor:location];
-    [simulator runToCursor:0x00000000];
+    [simulator runToCursor:[scriptView selectedPC]];
 }
 
 // -----------------------------------------------------------------

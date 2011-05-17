@@ -11,7 +11,11 @@
 
 @interface ListfileDebugView : NSTextView {
 
+    long selectedPC;
+    
 }
+
+@property (assign) long selectedPC;
 
 - (void)highlightCurrentInstruction;
 

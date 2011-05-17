@@ -290,9 +290,8 @@
 // Tells the simulator to rewind the program loaded
 // -----------------------------------------------------------------
 - (void)runToCursor:(long)location {
-    // MARK: DEBUG: Must set during debug, as it'll always be zero for now.
-    location = 0x00000000;
     runToAddr = location;
+    [self runProg];
 }
 
 // -----------------------------------------------------------------

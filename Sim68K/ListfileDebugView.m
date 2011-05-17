@@ -48,6 +48,8 @@
 
 @implementation ListfileDebugView
 
+@synthesize selectedPC;
+
 // -----------------------------------------------------------------
 // mouseDown
 // Intercepts the mouseDown event for the listFile view in order
@@ -88,7 +90,16 @@
         
         // Color the characters using temporary attributes
         [layoutManager addTemporaryAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSColor selectedTextBackgroundColor], NSBackgroundColorAttributeName, nil] forCharacterRange:lineCharRange];
+    
+        // Update selected PC value
+        NSString *lineString = [[[self textStorage] mutableString] substringWithRange:lineCharRange];
+        NSString *pcString = [lineString substringToIndex:8];
+        selectedPC = [[pcString unsignedHexValue] unsignedIntValue];
+        
     }
+    
+    
+    
 }
     
 // -----------------------------------------------------------------
@@ -122,7 +133,6 @@
     NSString *line;
     NSMutableString *listText = [[self textStorage] mutableString];
     
-    
     // Remove any existing coloring.
     [layoutManager removeTemporaryAttribute:NSBackgroundColorAttributeName forCharacterRange:textCharRange];
     
@@ -144,6 +154,9 @@
     
     // Color the characters using temporary attributes
     [layoutManager addTemporaryAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSColor selectedTextBackgroundColor], NSBackgroundColorAttributeName, nil] forCharacterRange:lineRange];
+    
+    // Update internal PC
+    selectedPC = PC;
     
 }
 
