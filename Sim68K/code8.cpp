@@ -202,7 +202,8 @@ int	JSR()
         stepToAddr = PC;
     }
     
-    PC = (EA1 - (long *)&memory[0]);
+    PC = memDistance(EA1, &memory[0], BYTE_MASK);
+    // PC = (EA1 - (long *)&memory[0]);
     
     switch (eff_addr_code (inst, 0)) {
         case 0x02 : inc_cyc (16);

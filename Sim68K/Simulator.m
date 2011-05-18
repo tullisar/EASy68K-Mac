@@ -123,7 +123,10 @@
         listFileTemp = [NSString stringWithContentsOfFile:listFileName
                                              encoding:NSUTF8StringEncoding
                                                 error:NULL];
+        
         if (listFileTemp) {
+            listFileTemp = [listFileTemp stringByReplacingOccurrencesOfString:@"\r" withString:@""];           
+        
             listFileLines = [listFileTemp componentsSeparatedByCharactersInSet:             // Load array of lines in listfile
                              [NSCharacterSet newlineCharacterSet]];
             NSString *lineAddress = [NSString stringWithFormat:@"0x%@",

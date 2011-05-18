@@ -848,13 +848,13 @@ int exec_inst()
                         } // end if logging
                     }
                     
-#ifdef DEBUG_BUILD
-                    // Output the last instruction executed to the console for debugging purposes
-                    if (!trace && !sstep) {
-                        sprintf(buffer,"PC=%08X  Code=%04X  %s", (unsigned int)(PC-2), inst, inst_arr[i].name);
-                        NSLog(@"%s\n",buffer);
-                    }
-#endif
+//#ifdef DEBUG_BUILD
+//                    // Output the last instruction executed to the console for debugging purposes
+//                    if (!trace && !sstep) {
+//                        sprintf(buffer,"PC=%08X  Code=%04X  %s", (unsigned int)(PC-2), inst, inst_arr[i].name);
+//                        NSLog(@"%s\n",buffer);
+//                    }
+//#endif
                     
                     if (SR & tbit)                        // if trace bit set
                         trace_bit = true;
@@ -905,7 +905,7 @@ int exec_inst()
                                 halt = true;
                                 if (stopInstruction == false) {
                                     stopInstruction = true;
-                                    [SimErrorManager log:@"STOP instruction. Execution halted"];
+                                    [SimErrorManager log:@"STOP instruction. Execution halted\n"];
                                 }  
                                 break;
                             case TRAP_TRAP : inc_cyc (38);
