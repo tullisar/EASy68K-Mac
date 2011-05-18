@@ -14,8 +14,6 @@ Assembling the file will put the listfile and s-record in the same directory and
 
 The simulator buttons are not disabled if a program is not running, but they should disable if you hit "run" and are having a continuously branching program (all except the "pause" button).
 
-The "run to line" button is not implemented.
-
-Error output in the Simulator is now output in the window. Memory browser and I/O are now implemented. Only use scrollbar in the active memory window, and editing the memory window does nothing (should be disabled, but i might have forgot). There are scrolling issues if you try to use your scroll wheel or multi-touch scroll to scroll the address or ASCII contents area, so for now, avoid scrolling that way :)
+Error output in the Simulator is now output in the window. Memory browser and I/O are implemented, as is the Stack window. Direct editing of 68K memory is not yet supported.
 
 All other features aren't yet implemented either, but are on the list :)
