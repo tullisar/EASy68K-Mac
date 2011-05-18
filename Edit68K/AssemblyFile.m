@@ -7,6 +7,8 @@
 //
 
 #import "AssemblyFile.h"
+#import "NoodleLineNumberView.h"
+#import "MarkerLineNumberView.h"
 
 @implementation AssemblyFile
 
@@ -26,6 +28,36 @@
     
     return self;
 }
+
+// -----------------------------------------------------------------
+// awakeFromNib
+// Runs when the NIB file has been loaded.
+// -----------------------------------------------------------------
+- (void)awakeFromNib {    
+    const float LargeNumberForText = 1.0e7;
+    
+    // Initialize the NSTextView with the NoodleLineNumberView
+    lineNumberView = [[[MarkerLineNumberView alloc] initWithScrollView:scrollView] autorelease];
+    [scrollView setVerticalRulerView:lineNumberView];
+    [scrollView setHasHorizontalRuler:NO];
+    [scrollView setHasVerticalRuler:YES];
+    [scrollView setRulersVisible:YES];
+    [textView setFont:CONSOLE_FONT];
+    
+    // Make the scroll view non-wrapping
+    [scrollView setHasVerticalScroller:YES];
+    [scrollView setHasHorizontalScroller:YES];
+    [scrollView setAutoresizingMask:(NSViewWidthSizable | NSViewHeightSizable)];
+    NSTextContainer *textContainer = [textView textContainer];
+    [textContainer setContainerSize:NSMakeSize(LargeNumberForText, LargeNumberForText)];
+    [textContainer setWidthTracksTextView:NO];
+    [textContainer setHeightTracksTextView:NO];
+    [textView setMaxSize:NSMakeSize(LargeNumberForText, LargeNumberForText)];
+    [textView setHorizontallyResizable:YES];
+    [textView setVerticallyResizable:YES];
+    [textView setAutoresizingMask:NSViewNotSizable];
+}
+
 
 //--------------------------------------------------------
 // textStorage() getter for textStorage variable

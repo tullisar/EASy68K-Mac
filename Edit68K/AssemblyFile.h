@@ -7,8 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
 #include "asm.h"
+
+#define CONSOLE_FONT       [NSFont fontWithName:@"Courier" size:11]
+#define CONSOLE_FONT_COLOR [NSColor whiteColor]
 
 extern bool listFlag;
 extern bool objFlag;
@@ -23,14 +25,21 @@ extern int warningCount;
 
 extern int assembleFile(char fileName[], char tempName[], char workName[]);
 
+@class NoodleLineNumberView;
+
 @interface AssemblyFile : NSDocument {
     
     IBOutlet NSTextView *textView;
+    IBOutlet NSScrollView *scrollView;
+    NoodleLineNumberView *lineNumberView;
+    
     NSTextStorage *textStorage;
     
     BOOL savedYet;
     BOOL noErrors;
     NSString *errorDisplay;
+    
+
     
 }
 
