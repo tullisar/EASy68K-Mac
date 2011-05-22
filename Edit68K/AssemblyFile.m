@@ -25,7 +25,6 @@
         noErrors = YES;
     }
     
-    
     return self;
 }
 
@@ -56,6 +55,8 @@
     [textView setHorizontallyResizable:YES];
     [textView setVerticallyResizable:YES];
     [textView setAutoresizingMask:NSViewNotSizable];
+    
+    NSParagraphStyle *def = [textView defaultParagraphStyle];
 }
 
 

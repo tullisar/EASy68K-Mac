@@ -95,6 +95,7 @@
         NSString *lineString = [[[self textStorage] mutableString] substringWithRange:lineCharRange];
         NSString *pcString = [lineString substringToIndex:8];
         selectedPC = [[pcString unsignedHexValue] unsignedIntValue];
+        [self setSelectedRange:lineCharRange];
         
     }
     
@@ -157,6 +158,8 @@
     
     // Update internal PC
     selectedPC = PC;
+    [self setSelectedRange:lineRange];    
+    [self centerSelectionInVisibleArea:nil];
     
 }
 

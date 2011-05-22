@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CodeEditor.h"
 #include "asm.h"
 
 #define CONSOLE_FONT       [NSFont fontWithName:@"Courier" size:11]
@@ -29,7 +30,7 @@ extern int assembleFile(char fileName[], char tempName[], char workName[]);
 
 @interface AssemblyFile : NSDocument {
     
-    IBOutlet NSTextView *textView;
+    IBOutlet CodeEditor *textView;
     IBOutlet NSScrollView *scrollView;
     NoodleLineNumberView *lineNumberView;
     

@@ -25,6 +25,7 @@
 		1442018012E7B64E00B0C666 /* list_num.png in Resources */ = {isa = PBXBuildFile; fileRef = 1442017F12E7B64E00B0C666 /* list_num.png */; };
 		1442018212E7B66300B0C666 /* list_num-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 1442018112E7B66300B0C666 /* list_num-small.png */; };
 		14534FF812EFDED10093FC9B /* assemble.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14085DA512DA76120084F11C /* assemble.cpp */; };
+		145A169B1385C5F100884D4F /* CodeEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 145A169A1385C5F100884D4F /* CodeEditor.m */; };
 		1479394413846E9300F8E50C /* NoodleLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1479394313846E9300F8E50C /* NoodleLineNumberView.m */; };
 		1479394B1384701700F8E50C /* NoodleLineNumberMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1479394A1384701700F8E50C /* NoodleLineNumberMarker.m */; };
 		147939541384707200F8E50C /* MarkerLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 147939531384707200F8E50C /* MarkerLineNumberView.m */; };
@@ -80,6 +81,8 @@
 		1442017F12E7B64E00B0C666 /* list_num.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_num.png; sourceTree = "<group>"; };
 		1442018112E7B66300B0C666 /* list_num-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list_num-small.png"; sourceTree = "<group>"; };
 		14534FEF12EFDA650093FC9B /* proto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = proto.h; path = edit68k/proto.h; sourceTree = "<group>"; };
+		145A16991385C5F100884D4F /* CodeEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeEditor.h; sourceTree = "<group>"; };
+		145A169A1385C5F100884D4F /* CodeEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeEditor.m; sourceTree = "<group>"; };
 		1479394213846E9300F8E50C /* NoodleLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberView.h; sourceTree = "<group>"; };
 		1479394313846E9300F8E50C /* NoodleLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleLineNumberView.m; sourceTree = "<group>"; };
 		147939491384701700F8E50C /* NoodleLineNumberMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoodleLineNumberMarker.h; sourceTree = "<group>"; };
@@ -182,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				147939521384707200F8E50C /* MarkerLineNumberView.h */,
+				145A16991385C5F100884D4F /* CodeEditor.h */,
+				145A169A1385C5F100884D4F /* CodeEditor.m */,
 				147939531384707200F8E50C /* MarkerLineNumberView.m */,
 				147939491384701700F8E50C /* NoodleLineNumberMarker.h */,
 				1479394A1384701700F8E50C /* NoodleLineNumberMarker.m */,
@@ -263,6 +268,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "Edit68K" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -332,6 +338,7 @@
 				1479394413846E9300F8E50C /* NoodleLineNumberView.m in Sources */,
 				1479394B1384701700F8E50C /* NoodleLineNumberMarker.m in Sources */,
 				147939541384707200F8E50C /* MarkerLineNumberView.m in Sources */,
+				145A169B1385C5F100884D4F /* CodeEditor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

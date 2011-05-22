@@ -2,16 +2,17 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1060</int>
-		<string key="IBDocument.SystemVersion">10J567</string>
-		<string key="IBDocument.InterfaceBuilderVersion">841</string>
+		<string key="IBDocument.SystemVersion">10J869</string>
+		<string key="IBDocument.InterfaceBuilderVersion">851</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
-		<string key="IBDocument.HIToolboxVersion">462.00</string>
+		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">841</string>
+			<string key="NS.object.0">851</string>
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<integer value="537"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1203,7 +1204,7 @@
 				<nil key="NSViewClass"/>
 				<string key="NSWindowContentMaxSize">{1.79769e+308, 1.79769e+308}</string>
 				<object class="NSView" key="NSWindowView" id="708366677">
-					<nil key="NSNextResponder"/>
+					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<object class="NSMutableArray" key="NSSubviews">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1217,7 +1218,7 @@
 								<object class="NSTabViewItem" id="194703559">
 									<string key="NSIdentifier">1</string>
 									<object class="NSView" key="NSView" id="765237038">
-										<nil key="NSNextResponder"/>
+										<reference key="NSNextResponder" ref="960676508"/>
 										<int key="NSvFlags">256</int>
 										<object class="NSMutableArray" key="NSSubviews">
 											<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1231,7 +1232,7 @@
 												<object class="NSMutableArray" key="NSCells">
 													<bool key="EncodedWithXMLCoder">YES</bool>
 													<object class="NSButtonCell" id="81636244">
-														<int key="NSCellFlags">-1543373312</int>
+														<int key="NSCellFlags">604110336</int>
 														<int key="NSCellFlags2">0</int>
 														<string key="NSContents">Assembly Tabs</string>
 														<object class="NSFont" key="NSSupport" id="97898811">
@@ -1287,8 +1288,7 @@
 													<int key="NSPeriodicDelay">400</int>
 													<int key="NSPeriodicInterval">75</int>
 												</object>
-												<int key="NSSelectedRow">-1</int>
-												<int key="NSSelectedCol">-1</int>
+												<reference key="NSSelectedCell" ref="81636244"/>
 												<object class="NSColor" key="NSBackgroundColor" id="632798383">
 													<int key="NSColorSpace">6</int>
 													<string key="NSCatalogName">System</string>
@@ -1482,6 +1482,7 @@
 											</object>
 										</object>
 										<string key="NSFrame">{{10, 33}, {431, 220}}</string>
+										<reference key="NSSuperview" ref="960676508"/>
 									</object>
 									<string key="NSLabel">Editor Options</string>
 									<reference key="NSColor" ref="632798383"/>
@@ -1490,7 +1491,7 @@
 								<object class="NSTabViewItem" id="549546028">
 									<string key="NSIdentifier">Item 2</string>
 									<object class="NSView" key="NSView" id="332947644">
-										<reference key="NSNextResponder" ref="960676508"/>
+										<nil key="NSNextResponder"/>
 										<int key="NSvFlags">256</int>
 										<object class="NSMutableArray" key="NSSubviews">
 											<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1731,7 +1732,6 @@
 											</object>
 										</object>
 										<string key="NSFrame">{{10, 33}, {431, 220}}</string>
-										<reference key="NSSuperview" ref="960676508"/>
 									</object>
 									<string key="NSLabel">Assembler Options</string>
 									<reference key="NSColor" ref="632798383"/>
@@ -1905,18 +1905,19 @@
 									<reference key="NSTabView" ref="960676508"/>
 								</object>
 							</object>
-							<reference key="NSSelectedTabViewItem" ref="549546028"/>
+							<reference key="NSSelectedTabViewItem" ref="194703559"/>
 							<reference key="NSFont" ref="97898811"/>
 							<int key="NSTvFlags">0</int>
 							<bool key="NSAllowTruncatedLabels">YES</bool>
 							<bool key="NSDrawsBackground">YES</bool>
 							<object class="NSMutableArray" key="NSSubviews">
 								<bool key="EncodedWithXMLCoder">YES</bool>
-								<reference ref="332947644"/>
+								<reference ref="765237038"/>
 							</object>
 						</object>
 					</object>
 					<string key="NSFrameSize">{477, 283}</string>
+					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
 				<string key="NSMaxSize">{1.79769e+308, 1.79769e+308}</string>
@@ -4480,9 +4481,9 @@
 					<string>{{767, 1040}, {203, 23}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{886, 525}, {477, 283}}</string>
+					<string>{{800, 525}, {477, 283}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{886, 525}, {477, 283}}</string>
+					<string>{{800, 525}, {477, 283}}</string>
 					<boolean value="NO"/>
 					<string>{1.79769e+308, 1.79769e+308}</string>
 					<string>{0, 0}</string>
@@ -4610,14 +4611,35 @@
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">textView</string>
-						<string key="NS.object.0">NSTextView</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>scrollView</string>
+							<string>textView</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>NSScrollView</string>
+							<string>NSTextView</string>
+						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">textView</string>
-						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">textView</string>
-							<string key="candidateClassName">NSTextView</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>scrollView</string>
+							<string>textView</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">scrollView</string>
+								<string key="candidateClassName">NSScrollView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">textView</string>
+								<string key="candidateClassName">NSTextView</string>
+							</object>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
