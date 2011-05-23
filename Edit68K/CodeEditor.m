@@ -18,9 +18,6 @@
     self = [super init];
     if (self) {
 
-        // NSMutableParagraphStyle *tabControl = [[NSMutableParagraphStyle alloc] init];
-        NSParagraphStyle *tabControl = [NSParagraphStyle defaultParagraphStyle];
-        // [self setDefaultParagraphStyle:];
         
     }
     return self;
@@ -32,7 +29,6 @@
 // -----------------------------------------------------------------
 -(void)awakeFromNib {
     
-    NSParagraphStyle *def = [NSParagraphStyle defaultParagraphStyle];
 }
 
 @end

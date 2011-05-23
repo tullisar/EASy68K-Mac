@@ -33,6 +33,54 @@
 // Runs when the NIB file has been loaded.
 // -----------------------------------------------------------------
 - (void)awakeFromNib {    
+    [self initCodeEditor];
+    [self initTextStorage];
+}
+
+
+//--------------------------------------------------------
+// textStorage() getter for textStorage variable
+//--------------------------------------------------------
+- (NSTextStorage *)textStorage {
+    return [[textStorage retain] autorelease];
+}
+
+//--------------------------------------------------------
+// setTextStorage() setter for textStorage variable
+//--------------------------------------------------------
+- (void) setTextStorage:(NSTextStorage *)value {
+    if (textStorage != value) {
+        if (textStorage) [textStorage release];
+        textStorage = [value copy];
+    }
+}
+
+//--------------------------------------------------------
+// initTextStorage()
+// initializes the default template
+//--------------------------------------------------------
+- (void)initTextStorage {
+    NSError *error;
+    // For now, the template is stored in a file, may move it into memory.
+    textStorage = [[NSTextStorage alloc] initWithURL:[[NSBundle mainBundle] URLForResource:@"template" withExtension:@"x68"] 
+                                             options:nil 
+                                  documentAttributes:NULL 
+                                               error:&error];
+    
+    // For the moment, terminate if there's an error and the file is not loaded.
+    if (!textStorage) {
+        [NSApp presentError:error];
+        [NSApp terminate:self];
+    }    
+    
+    [textStorage setFont:[NSFont fontWithName:@"Courier" size:11]];
+}
+
+//--------------------------------------------------------
+// initCodeEditor()
+// Initializes the line number view of the code editor
+//--------------------------------------------------------
+- (void)initCodeEditor {
     const float LargeNumberForText = 1.0e7;
     
     // Initialize the NSTextView with the NoodleLineNumberView
@@ -56,45 +104,52 @@
     [textView setVerticallyResizable:YES];
     [textView setAutoresizingMask:NSViewNotSizable];
     
-    NSParagraphStyle *def = [textView defaultParagraphStyle];
-}
-
-
-//--------------------------------------------------------
-// textStorage() getter for textStorage variable
-//--------------------------------------------------------
-- (NSTextStorage *)textStorage {
-    return [[textStorage retain] autorelease];
-}
-
-//--------------------------------------------------------
-// setTextStorage() setter for textStorage variable
-//--------------------------------------------------------
-- (void) setTextStorage:(NSTextStorage *)value {
-    if (textStorage != value) {
-        if (textStorage) [textStorage release];
-        textStorage = [value copy];
+    // Initialize default paragraph style
+    NSMutableParagraphStyle *defStyle;
+    defStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    NSDictionary *attr = [NSDictionary dictionaryWithObjectsAndKeys:
+                          CONSOLE_FONT, NSFontAttributeName,
+                          [NSColor blackColor], NSForegroundColorAttributeName,
+                          nil];
+    NSMutableArray *tabs = [NSMutableArray arrayWithCapacity:20];
+    
+    CGFloat tabSize = [self tabWidthForTextAttributes:attr];
+    for (int i = 0; i < 20; i++) {
+        NSTextTab *tTab = [[NSTextTab alloc] initWithType:NSLeftTabStopType location:((i+1)*tabSize)];
+        [tabs addObject:tTab];
     }
+    
+    [defStyle setTabStops:tabs];
+    [textView setDefaultParagraphStyle:defStyle];
+    
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(codeTextDidChange:) name:NS object:nil]
 }
 
-/* Initializes the textStorage which will be loaded with the template file */
-- (void)initTextStorage {
-    NSError *error;
-    // For now, the template is stored in a file, may move it into memory.
-    textStorage = [[NSTextStorage alloc] initWithURL:[[NSBundle mainBundle] URLForResource:@"template" withExtension:@"x68"] 
-                                             options:nil 
-                                  documentAttributes:NULL 
-                                               error:&error];
+//--------------------------------------------------------
+// tabWidthForTextAttributes
+//--------------------------------------------------------
+- (CGFloat)tabWidthForTextAttributes:(NSDictionary *)attr {
+    int tabSize = 4;
+    NSMutableString *str = [NSMutableString string];
     
-    // For the moment, terminate if there's an error and the file is not loaded.
-    if (!textStorage) {
-        [NSApp presentError:error];
-        [NSApp terminate:self];
-    }    
+    for (int i = 0; i < tabSize; i++)
+        [str appendString:@" "];
     
-    [textStorage setFont:[NSFont fontWithName:@"Courier" size:11]];
+    return ([str sizeWithAttributes:attr]).width;
 }
 
+//--------------------------------------------------------
+// codeTextDidChange
+//--------------------------------------------------------
+- (void)codeTextDidChange:(NSNotification *)notify {
+    
+    
+}
+
+//--------------------------------------------------------
+// windowNibName()
+// Used to define the xib file associated with this document
+//--------------------------------------------------------
 - (NSString *)windowNibName
 {
     // Override returning the nib file name of the document

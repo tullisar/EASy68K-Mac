@@ -40,17 +40,18 @@ extern int assembleFile(char fileName[], char tempName[], char workName[]);
     BOOL noErrors;
     NSString *errorDisplay;
     
-
-    
 }
 
 @property (readwrite, retain) NSTextStorage *textStorage;
 @property (retain) NSString *errorDisplay;
 @property (assign) BOOL noErrors;
 
-- (NSTextStorage *) textStorage;
-- (void) setTextStorage:(NSTextStorage *) value;
-- (void) initTextStorage;
+- (NSTextStorage *)textStorage;
+- (void)setTextStorage:(NSTextStorage *) value;
+- (void)initTextStorage;
+- (void)initCodeEditor;
+- (void)codeTextDidChange:(NSNotification *)notify;
+- (CGFloat)tabWidthForTextAttributes:(NSDictionary *)attr;
 - (IBAction)assemble:(id)sender;
 
 @end
