@@ -23,6 +23,7 @@
         [self initTextStorage];
         savedYet = NO;
         noErrors = YES;
+        fontSize = [CONSOLE_FONT pointSize];
     }
     
     return self;
@@ -73,7 +74,7 @@
         [NSApp terminate:self];
     }    
     
-    [textStorage setFont:[NSFont fontWithName:@"Courier" size:11]];
+    [textStorage setFont:CONSOLE_FONT];
 }
 
 //--------------------------------------------------------
@@ -105,24 +106,25 @@
     [textView setAutoresizingMask:NSViewNotSizable];
     
     // Initialize default paragraph style
-    NSMutableParagraphStyle *defStyle;
-    defStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-    NSDictionary *attr = [NSDictionary dictionaryWithObjectsAndKeys:
-                          CONSOLE_FONT, NSFontAttributeName,
-                          [NSColor blackColor], NSForegroundColorAttributeName,
-                          nil];
-    NSMutableArray *tabs = [NSMutableArray arrayWithCapacity:20];
-    
-    CGFloat tabSize = [self tabWidthForTextAttributes:attr];
-    for (int i = 0; i < 20; i++) {
-        NSTextTab *tTab = [[NSTextTab alloc] initWithType:NSLeftTabStopType location:((i+1)*tabSize)];
-        [tabs addObject:tTab];
-    }
-    
-    [defStyle setTabStops:tabs];
+//    NSMutableParagraphStyle *defStyle;
+//    defStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+//    NSDictionary *attr = [NSDictionary dictionaryWithObjectsAndKeys:
+//                          CONSOLE_FONT, NSFontAttributeName,
+//                          [NSColor blackColor], NSForegroundColorAttributeName,
+//                          nil];
+//    NSMutableArray *tabs = [NSMutableArray arrayWithCapacity:20];
+//    
+//    CGFloat tabSize = [self tabWidthForTextAttributes:attr];
+//    for (int i = 0; i < 20; i++) {
+//        NSTextTab *tTab = [[NSTextTab alloc] initWithType:NSLeftTabStopType location:((i+1)*tabSize)];
+//        [tabs addObject:tTab];
+//    }
+//    
+//    [defStyle setTabStops:tabs];
+    NSParagraphStyle *defStyle = [self paragraphStyleForFont:CONSOLE_FONT];
     [textView setDefaultParagraphStyle:defStyle];
     
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(codeTextDidChange:) name:NS object:nil]
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(codeTextDidChange:) name:NSTextDidChangeNotification object:nil];
 }
 
 //--------------------------------------------------------
@@ -139,11 +141,48 @@
 }
 
 //--------------------------------------------------------
+// paragraphStyleForFont
+//--------------------------------------------------------
+- (NSParagraphStyle *)paragraphStyleForFont:(NSFont *)theFont {
+    NSMutableParagraphStyle *defStyle;
+    defStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    NSDictionary *attr = [NSDictionary dictionaryWithObjectsAndKeys:
+                          theFont, NSFontAttributeName,
+                          [NSColor blackColor], NSForegroundColorAttributeName,
+                          nil];
+    NSMutableArray *tabs = [NSMutableArray arrayWithCapacity:20];
+    
+    CGFloat tabSize = [self tabWidthForTextAttributes:attr];
+    for (int i = 0; i < 20; i++) {
+        NSTextTab *tTab = [[NSTextTab alloc] initWithType:NSLeftTabStopType location:((i+1)*tabSize)];
+        [tabs addObject:tTab];
+    }
+    
+    [defStyle setTabStops:tabs];
+    return defStyle;
+}
+
+//--------------------------------------------------------
 // codeTextDidChange
 //--------------------------------------------------------
 - (void)codeTextDidChange:(NSNotification *)notify {
     
-    
+    NSAttributedString *text = [textView textStorage];
+    NSFont *realFont = [textView font];
+    NSString *name = [realFont fontName];
+    NSFont *theFont = [text attribute:NSFontAttributeName atIndex:0 effectiveRange:nil];
+    CGFloat newSize = [theFont pointSize];
+    if (newSize != fontSize) {
+        
+        NSParagraphStyle *newStyle = [self paragraphStyleForFont:theFont];
+        [textView setDefaultParagraphStyle:newStyle];
+        NSTextStorage *curText = [textView textStorage];
+        NSRange textRange = NSMakeRange(0, [curText length]);
+        [curText removeAttribute:NSParagraphStyleAttributeName range:textRange];
+        [curText addAttribute:NSParagraphStyleAttributeName value:newStyle range:textRange];
+        
+        fontSize = newSize;
+    }
 }
 
 //--------------------------------------------------------

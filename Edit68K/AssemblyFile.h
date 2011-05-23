@@ -40,6 +40,8 @@ extern int assembleFile(char fileName[], char tempName[], char workName[]);
     BOOL noErrors;
     NSString *errorDisplay;
     
+    CGFloat fontSize;
+    
 }
 
 @property (readwrite, retain) NSTextStorage *textStorage;
@@ -50,6 +52,7 @@ extern int assembleFile(char fileName[], char tempName[], char workName[]);
 - (void)setTextStorage:(NSTextStorage *) value;
 - (void)initTextStorage;
 - (void)initCodeEditor;
+- (NSParagraphStyle *)paragraphStyleForFont:(NSFont *)theFont;
 - (void)codeTextDidChange:(NSNotification *)notify;
 - (CGFloat)tabWidthForTextAttributes:(NSDictionary *)attr;
 - (IBAction)assemble:(id)sender;
