@@ -9,9 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "CodeEditor.h"
 #include "asm.h"
-
-#define CONSOLE_FONT       [NSFont fontWithName:@"Courier" size:11]
-#define CONSOLE_FONT_COLOR [NSColor whiteColor]
+#include "Edit68KMac.h"
 
 extern bool listFlag;
 extern bool objFlag;
@@ -41,6 +39,7 @@ extern int assembleFile(char fileName[], char tempName[], char workName[]);
     NSString *errorDisplay;
     
     CGFloat fontSize;
+    NSString *fontName;
     
 }
 

@@ -69,6 +69,7 @@
 		14085DB312DA76120084F11C /* opparse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = opparse.cpp; path = edit68k/opparse.cpp; sourceTree = "<group>"; };
 		14085DB412DA76120084F11C /* structured.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = structured.cpp; path = edit68k/structured.cpp; sourceTree = "<group>"; };
 		14085DB512DA76120084F11C /* symbol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = symbol.cpp; path = edit68k/symbol.cpp; sourceTree = "<group>"; };
+		141652E9138B5F2C00D5AB0E /* Edit68KMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Edit68KMac.h; sourceTree = "<group>"; };
 		142260FB12EE6CE300B9E087 /* asm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = asm.h; path = edit68k/asm.h; sourceTree = "<group>"; };
 		14291E8C12E25565009769CB /* indent_decrease.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indent_decrease.png; sourceTree = "<group>"; };
 		14291E8D12E25565009769CB /* indent_increase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indent_increase.png; sourceTree = "<group>"; };
@@ -184,6 +185,7 @@
 		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				141652E9138B5F2C00D5AB0E /* Edit68KMac.h */,
 				147939521384707200F8E50C /* MarkerLineNumberView.h */,
 				145A16991385C5F100884D4F /* CodeEditor.h */,
 				145A169A1385C5F100884D4F /* CodeEditor.m */,
@@ -268,6 +270,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "Edit68K" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,

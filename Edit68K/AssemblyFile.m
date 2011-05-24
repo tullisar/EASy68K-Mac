@@ -24,6 +24,7 @@
         savedYet = NO;
         noErrors = YES;
         fontSize = [CONSOLE_FONT pointSize];
+        fontName = [CONSOLE_FONT displayName];
     }
     
     return self;
@@ -82,7 +83,14 @@
 // Initializes the line number view of the code editor
 //--------------------------------------------------------
 - (void)initCodeEditor {
+    
     const float LargeNumberForText = 1.0e7;
+    NSLayoutManager     *layout;
+    NSParagraphStyle    *newStyle;
+    NSDictionary        *attributes;
+    NSTextStorage       *curText, *newText;
+    NSString            *rawText;
+    NSRange             textRange;
     
     // Initialize the NSTextView with the NoodleLineNumberView
     lineNumberView = [[[MarkerLineNumberView alloc] initWithScrollView:scrollView] autorelease];
@@ -105,24 +113,32 @@
     [textView setVerticallyResizable:YES];
     [textView setAutoresizingMask:NSViewNotSizable];
     
-    // Initialize default paragraph style
-//    NSMutableParagraphStyle *defStyle;
-//    defStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-//    NSDictionary *attr = [NSDictionary dictionaryWithObjectsAndKeys:
-//                          CONSOLE_FONT, NSFontAttributeName,
-//                          [NSColor blackColor], NSForegroundColorAttributeName,
-//                          nil];
-//    NSMutableArray *tabs = [NSMutableArray arrayWithCapacity:20];
-//    
-//    CGFloat tabSize = [self tabWidthForTextAttributes:attr];
-//    for (int i = 0; i < 20; i++) {
-//        NSTextTab *tTab = [[NSTextTab alloc] initWithType:NSLeftTabStopType location:((i+1)*tabSize)];
-//        [tabs addObject:tTab];
-//    }
-//    
-//    [defStyle setTabStops:tabs];
+    // Update paragraphs tyle
     NSParagraphStyle *defStyle = [self paragraphStyleForFont:CONSOLE_FONT];
     [textView setDefaultParagraphStyle:defStyle];
+    curText  = [textView textStorage];
+
+    // Get the raw text minus the attributes (to avoid attribues covering only partial range bug)
+    textRange = NSMakeRange(0, [curText length]);
+    rawText = [curText string];
+    newText = [[NSTextStorage alloc] initWithString:rawText];
+    
+    // Set up the new attributes and apply
+    attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                  CONSOLE_FONT, NSFontAttributeName,
+                  [NSColor blackColor], NSForegroundColorAttributeName,
+                  defStyle, NSParagraphStyleAttributeName,
+                  nil];
+    [newText addAttributes:attributes range:textRange];
+    [self setTextStorage:newText];
+    [textView setDefaultParagraphStyle:newStyle];
+    [[textView textStorage] fixAttributesInRange:textRange];
+    [textView setTypingAttributes:attributes];
+    
+    // Update layout manager to reflect currently visible text
+    layout = [textView layoutManager];
+    [layout replaceTextStorage:newText];
+    [lineNumberView setClientView:[scrollView documentView]];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(codeTextDidChange:) name:NSTextDidChangeNotification object:nil];
 }
@@ -131,9 +147,17 @@
 // tabWidthForTextAttributes
 //--------------------------------------------------------
 - (CGFloat)tabWidthForTextAttributes:(NSDictionary *)attr {
-    int tabSize = 4;
-    NSMutableString *str = [NSMutableString string];
     
+    NSMutableString *str;
+    NSUserDefaults  *ud;
+    NSNumber        *tabNum;
+    int             tabSize;
+    
+    ud = [NSUserDefaults standardUserDefaults];
+    tabNum = (NSNumber *)[ud objectForKey:@"tabWidthInSpaces"];
+    tabSize = [tabNum intValue];
+    
+    str = [NSMutableString string];
     for (int i = 0; i < tabSize; i++)
         [str appendString:@" "];
     
@@ -167,21 +191,52 @@
 //--------------------------------------------------------
 - (void)codeTextDidChange:(NSNotification *)notify {
     
-    NSAttributedString *text = [textView textStorage];
-    NSFont *realFont = [textView font];
-    NSString *name = [realFont fontName];
-    NSFont *theFont = [text attribute:NSFontAttributeName atIndex:0 effectiveRange:nil];
-    CGFloat newSize = [theFont pointSize];
-    if (newSize != fontSize) {
+    NSLayoutManager     *layout;
+    NSParagraphStyle    *newStyle;
+    NSDictionary        *attributes;
+    NSTextStorage       *curText, *newText;
+    NSString            *newName, *rawText;
+    NSFont              *realFont;
+    CGFloat             newSize;
+    NSRange             textRange;
+    
+    // Get information about the font
+    realFont = [textView font];
+    newName  = [realFont fontName];
+    newSize  = [realFont pointSize];
+    curText  = [textView textStorage];
+
+    // If font size or name changed, do some work on the tabs!
+    if ((newSize != fontSize) || !([newName isEqualToString:fontName])) {
         
-        NSParagraphStyle *newStyle = [self paragraphStyleForFont:theFont];
+        // Get the new paragraph style based on the font
+        newStyle = [self paragraphStyleForFont:realFont];
         [textView setDefaultParagraphStyle:newStyle];
-        NSTextStorage *curText = [textView textStorage];
-        NSRange textRange = NSMakeRange(0, [curText length]);
-        [curText removeAttribute:NSParagraphStyleAttributeName range:textRange];
-        [curText addAttribute:NSParagraphStyleAttributeName value:newStyle range:textRange];
+
+        // Get the raw text minus the attributes (to avoid attribues covering only partial range bug)
+        textRange = NSMakeRange(0, [curText length]);
+        rawText = [curText string];
+        newText = [[NSTextStorage alloc] initWithString:rawText];
+        
+        // Set up the new attributes and apply
+        attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                      realFont, NSFontAttributeName,
+                      [NSColor blackColor], NSForegroundColorAttributeName,
+                      newStyle, NSParagraphStyleAttributeName,
+                      nil];
+        [newText addAttributes:attributes range:textRange];
+        [self setTextStorage:newText];
+        [textView setDefaultParagraphStyle:newStyle];
+        [[textView textStorage] fixAttributesInRange:textRange];
+        [textView setTypingAttributes:attributes];
+        
+        // Update layout manager to reflect currently visible text
+        layout = [textView layoutManager];
+        [layout replaceTextStorage:newText];
+        [lineNumberView setClientView:[scrollView documentView]];
         
         fontSize = newSize;
+        fontName = newName;
     }
 }
 
@@ -248,6 +303,7 @@
 // assemble() assemble's the current document
 //--------------------------------------------------------
 - (IBAction)assemble:(id)sender {
+    
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     
     if (!savedYet) {
@@ -312,6 +368,8 @@
       [NSNumber numberWithBool:NO], @"listFileStructuredExpanded",
       [NSNumber numberWithBool:NO], @"listFileConstantsExpanded",
       [NSNumber numberWithBool:NO], @"listFileMacrosExpanded",
+      [NSNumber numberWithInt:4], @"tabWidthInSpaces",
+      [NSNumber numberWithInt:kTabTypeFixed], @"tabType",
       nil]];
     
     listFlag = true;
