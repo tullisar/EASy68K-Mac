@@ -36,8 +36,16 @@
     int             selRegSize;
     
     // Memory (Address) Breakpoints
+    IBOutlet NSTextView *memBPList;
+    NSMutableArray  *memBreakpoints;
     NSArray         *memOpStrings;
     NSArray         *memRWStrings;
+    int             selMemBP;
+    long            selMemAddr;
+    int             selMemOp;
+    long            selMemValue;
+    int             selMemSize;
+    int             selMemAccess;
     
     // Breakpoint Expressions
     
@@ -59,8 +67,15 @@
 @property (assign) int     selRegSize;
 
 // Memory
+@property (retain) NSMutableArray *memBreakpoints;
 @property (retain) NSArray *memOpStrings;
 @property (retain) NSArray *memRWStrings;
+@property (assign) int     selMemBP;
+@property (assign) long    selMemAddr;
+@property (assign) int     selMemOp;
+@property (assign) long    selMemValue;
+@property (assign) int     selMemSize;
+@property (assign) int     selMemAccess;
 
 // Expressions
 
@@ -71,5 +86,9 @@
 - (IBAction)clearRegBP:(id)sender;
 - (IBAction)clearAllRegBP:(id)sender;
 - (void)updateRegBPList;
+- (IBAction)setMemBP:(id)sender;
+- (IBAction)clearMemBP:(id)sender;
+- (IBAction)clearAllMemBP:(id)sender;
+- (void)updateMemBPList;
 
 @end

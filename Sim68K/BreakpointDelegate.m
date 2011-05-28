@@ -24,7 +24,7 @@
 
 @synthesize sizeStrings, errString, breakError;
 @synthesize regBreakpoints, regOpStrings, validRegList, selRegBP, selReg, selRegOp, selRegValue, selRegSize;
-@synthesize memOpStrings, memRWStrings;
+@synthesize memBreakpoints, memOpStrings, memRWStrings, selMemBP, selMemAddr, selMemOp, selMemValue, selMemSize, selMemAccess;
 
 // -----------------------------------------------------------------
 // sbpoint
@@ -89,10 +89,17 @@
     [self setSelRegSize:0];
     
     // Initialize controls for Address breakpoints
+    [self setMemBreakpoints:[NSMutableArray arrayWithCapacity:(MAX_BPOINTS)/2+1]];
+    [self updateMemBPList];
     [self setMemOpStrings:
      [NSArray arrayWithObjects:@"==", @"!=", @">", @">=", @"<", @"<=", @"N/A", nil]];
     [self setMemRWStrings:
      [NSArray arrayWithObjects:@"R/W", @"R", @"W", @"N/A", nil]];
+    [self setSelMemAddr:0x00000000];
+    [self setSelMemOp:0];
+    [self setSelMemValue:0x00000000];
+    [self setSelMemSize:0];
+    [self setSelMemAccess:0];
     
     // Initialize controls for Breakpoint expressions
     
@@ -147,11 +154,11 @@
 
 // -----------------------------------------------------------------
 // clearAllRegBP
-// Clears a PC / Register breakpoint
+// Clears all pc/register breakpoints
 // -----------------------------------------------------------------
 - (IBAction)clearAllRegBP:(id)sender {
     
-    // Invalidate all PC/Reg breakpoints
+    // Invalidate all memory breakpoints
     for(int cur = 0; cur < regCount; cur++)
         breakPoints[cur].isEnabled(false);
     regCount = 0;
@@ -193,6 +200,135 @@
         [worker addObject:line];
         
         [regBPList appendString:[NSString stringWithFormat:@"(%d) ",i]];
+        if (i < 10) [regBPList appendString:@" "];
+        textLine = [NSString stringWithFormat:@"%@  ",
+                    [[self validRegList] objectAtIndex:(curBPoint->getTypeId())]];
+        [regBPList appendString:textLine];
+        textLine = [NSString stringWithFormat:@"%@ ",
+                    [[self regOpStrings] objectAtIndex:(curBPoint->getOperator())]];
+        [regBPList appendString:textLine];
+        if ([textLine length] < 3) [regBPList appendString:@" "];
+        [regBPList appendString:[NSString stringWithFormat:@"0x%08X (%@)\n",
+                                 (curBPoint->getValue()),
+                                 [[self sizeStrings] objectAtIndex:(curBPoint->getSize())]]];
+    }
+    
+    // Placeholder for new breakpoint
+    if (regCount < (MAX_BPOINTS/2)) {
+        line = [NSString stringWithFormat:@"%d New PC / Register breakpoint...",regCount+1];
+        [worker addObject:line];
+    }
+    
+    // Ensure font & color are correct for HUD window text
+    textStore = [regBPList textStorage];
+    textRange = NSMakeRange(0, [textStore length]);
+    textAttr  = [NSDictionary dictionaryWithObjectsAndKeys:
+                 [NSColor whiteColor], NSForegroundColorAttributeName,
+                 [NSFont fontWithName:@"Courier" size:10], NSFontAttributeName, nil];
+    [textStore setAttributes:textAttr range:textRange];
+    
+    // Update the mutable array binding
+    [self setRegBreakpoints:worker];
+}
+
+// -----------------------------------------------------------------
+// setMemBP
+// Sets a Memory address breakpoint
+// -----------------------------------------------------------------
+- (IBAction)setMemBP:(id)sender {
+    
+    int selection = [self selMemBP];
+    if (selection < 1) return;
+    
+    // Set the register breakpoint using currently selected information
+    BPoint *curBPoint = &breakPoints[selection-1 + ADDR_ID_OFFSET];
+    curBPoint->setId(addrCount);
+    curBPoint->setType(ADDR_TYPE);
+    curBPoint->setTypeId([self selMemAddr]);
+    curBPoint->setOperator([self selMemOp]);
+    curBPoint->setValue([self selMemValue]);
+    curBPoint->setSize([self selMemSize]);
+    curBPoint->setReadWrite([self selMemAccess]);
+    curBPoint->isEnabled(true);
+    
+    if (selection > addrCount) addrCount++;
+    [self updateMemBPList];
+    [self setSelMemBP:selection];
+}
+
+// -----------------------------------------------------------------
+// clearMemBP
+// Clears a Memory address breakpoint
+// -----------------------------------------------------------------
+- (IBAction)clearMemBP:(id)sender {
+    
+    int selection = [self selRegBP];
+    if (selection < 1 || selection > regCount) return;
+    
+    // Shift the elements in the breakPoints array and decrement the count.
+    BPoint *temp = &breakPoints[selection-1 + ADDR_ID_OFFSET];
+    for(int curRow = selection; curRow < addrCount; curRow++) {
+        breakPoints[curRow - 1 + ADDR_ID_OFFSET] = breakPoints[curRow + ADDR_ID_OFFSET];
+    }
+    addrCount--;
+    breakPoints[addrCount + ADDR_ID_OFFSET] = *temp;
+    breakPoints[addrCount + ADDR_ID_OFFSET].isEnabled(false);
+    
+    [self updateMemBPList];
+    if ((selection > addrCount) && (selection > 1)) selection = addrCount;
+    [self setSelMemBP:selection];    
+    
+}
+
+// -----------------------------------------------------------------
+// clearAllMemBP
+// Clears all memory breakpoints
+// -----------------------------------------------------------------
+- (IBAction)clearAllMemBP:(id)sender {
+    
+    // Invalidate all memory breakpoints
+    for(int cur = ADDR_ID_OFFSET; cur < (ADDR_ID_OFFSET+addrCount); cur++)
+        breakPoints[cur].isEnabled(false);
+    addrCount = 0;
+    
+    // Update display
+    [self updateMemBPList];
+    [self setSelMemBP:1];
+    
+}
+
+// -----------------------------------------------------------------
+// updateMemBPList
+// Updates the list of memory address breakpoints
+// -----------------------------------------------------------------
+- (void)updateMemBPList {
+    
+    NSMutableArray  *worker;
+    NSString        *line, *textLine;
+    NSTextStorage   *textStore;
+    BPoint          *curBPoint;
+    NSRange         textRange;
+    NSDictionary    *textAttr;
+    
+    // Reset the list of options and regenerate
+    worker = [self memBreakpoints];
+    [worker removeAllObjects];
+    [memBPList clearText];
+    [memBPList setFont:[NSFont fontWithName:@"Courier" size:10]];
+    [memBPList appendString:@"     Addr       Op Value      Size   Type\n"];
+    [worker addObject:@"Select Memory Address Breakpoint"];
+    for (int i = 1; i <= addrCount; i++) {
+        curBPoint = &breakPoints[i-1+ADDR_ID_OFFSET];
+        line = [NSString stringWithFormat:@"%d 0x%08X %@ 0x%08X (%@) %@",
+                i,
+                curBPoint->getTypeId(),
+                [[self memOpStrings] objectAtIndex:(curBPoint->getOperator())],
+                curBPoint->getValue(),
+                [[self sizeStrings] objectAtIndex:(curBPoint->getSize())],
+                [[self memRWStrings] objectAtIndex:(curBPoint->getReadWrite())]];
+        [worker addObject:line];
+        
+        [memBPList appendString:[NSString stringWithFormat:@"(%d) ",i]];
         if (i < 10) [regBPList appendString:@" "];
         textLine = [NSString stringWithFormat:@"%@  ",
                     [[self validRegList] objectAtIndex:(curBPoint->getTypeId())]];
