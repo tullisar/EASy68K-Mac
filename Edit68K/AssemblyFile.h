@@ -34,6 +34,7 @@ extern int assembleFile(char fileName[], char tempName[], char workName[]);
     
     NSTextStorage *textStorage;
     
+    BOOL diskFile;
     BOOL savedYet;
     BOOL noErrors;
     NSString *errorDisplay;

@@ -22,6 +22,7 @@
     if (self) {
         [self initTextStorage];
         savedYet = NO;
+        diskFile = NO;
         noErrors = YES;
         fontSize = [CONSOLE_FONT pointSize];
         fontName = [CONSOLE_FONT displayName];
@@ -36,7 +37,8 @@
 // -----------------------------------------------------------------
 - (void)awakeFromNib {    
     [self initCodeEditor];
-    [self initTextStorage];
+    if (!diskFile)
+        [self initTextStorage];
 }
 
 
@@ -86,7 +88,7 @@
     
     const float LargeNumberForText = 1.0e7;
     NSLayoutManager     *layout;
-    NSParagraphStyle    *newStyle;
+    NSParagraphStyle    *defStyle;
     NSDictionary        *attributes;
     NSTextStorage       *curText, *newText;
     NSString            *rawText;
@@ -114,9 +116,9 @@
     [textView setAutoresizingMask:NSViewNotSizable];
     
     // Update paragraphs tyle
-    NSParagraphStyle *defStyle = [self paragraphStyleForFont:CONSOLE_FONT];
+    defStyle = [self paragraphStyleForFont:CONSOLE_FONT];
     [textView setDefaultParagraphStyle:defStyle];
-    curText  = [textView textStorage];
+    curText  = [self textStorage];
 
     // Get the raw text minus the attributes (to avoid attribues covering only partial range bug)
     textRange = NSMakeRange(0, [curText length]);
@@ -130,9 +132,8 @@
                   defStyle, NSParagraphStyleAttributeName,
                   nil];
     [newText addAttributes:attributes range:textRange];
+    [newText fixAttributesInRange:textRange];
     [self setTextStorage:newText];
-    [textView setDefaultParagraphStyle:newStyle];
-    [[textView textStorage] fixAttributesInRange:textRange];
     [textView setTypingAttributes:attributes];
     
     // Update layout manager to reflect currently visible text
@@ -283,15 +284,50 @@
 //--------------------------------------------------------
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError
 {
+//    NSLayoutManager     *layout;
+//    NSParagraphStyle    *defStyle;
+//    NSDictionary        *attributes;
+//    NSTextStorage       *curText, *newText;
+//    NSString            *rawText;
+//    NSRange             textRange;
+    
     BOOL readSuccess = NO;
     NSTextStorage* fileContents = [[NSTextStorage alloc]
                                   initWithData:data options:NULL documentAttributes:NULL error:outError];
     
     if (fileContents) {
         readSuccess = YES;
+        NSString *temp = [fileContents string];
         [fileContents setFont:[NSFont fontWithName:@"Courier" size:11]];
         [self setTextStorage:fileContents];
-        [fileContents release];
+        diskFile = YES;
+//        // Update paragraphs tyle
+//        defStyle = [self paragraphStyleForFont:CONSOLE_FONT];
+//        [textView setDefaultParagraphStyle:defStyle];
+//        curText  = fileContents;
+//        
+//        // Get the raw text minus the attributes (to avoid attribues covering only partial range bug)
+//        textRange = NSMakeRange(0, [curText length]);
+//        rawText = [curText string];
+//        newText = [[NSTextStorage alloc] initWithString:rawText];
+//        
+//        // Set up the new attributes and apply
+//        attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+//                      CONSOLE_FONT, NSFontAttributeName,
+//                      [NSColor blackColor], NSForegroundColorAttributeName,
+//                      defStyle, NSParagraphStyleAttributeName,
+//                      nil];
+//        [newText addAttributes:attributes range:textRange];
+//        [self setTextStorage:newText];
+//        [textView setDefaultParagraphStyle:defStyle];
+//        [[textView textStorage] fixAttributesInRange:textRange];
+//        [textView setTypingAttributes:attributes];
+//        
+//        // Update layout manager to reflect currently visible text
+//        layout = [textView layoutManager];
+//        [layout replaceTextStorage:newText];
+//        [lineNumberView setClientView:[scrollView documentView]];
+        
     }
     
     savedYet = YES;

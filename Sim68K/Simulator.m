@@ -1,10 +1,30 @@
-//
-//  Simulator.m
-//  Sim68K
-//
-//  Created by Robert Bartlett-Schneider on 3/2/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
+/***************************** 68000 SIMULATOR ****************************
+ 
+ File Name: Simulator.m
+ Version: 1.0 (Mac OS X)
+ 
+ Implementation file for the class that represents the 68000 simulator. Acts
+ as a bridge between the AppKit and the original source code
+ 
+ The routines are :
+ 
+ initSim
+ memFormat
+ runLoop
+ loadProgram
+ displayReg
+ runProg
+ step
+ trace
+ pause
+ rewind
+ runToCursor
+ isInstruction
+ 
+ Created:  2011-04-15
+ Robert Bartlett-Schneider
+ 
+ ***************************************************************************/
 
 #import "Simulator.h"
 #import "BreakpointDelegate.h"

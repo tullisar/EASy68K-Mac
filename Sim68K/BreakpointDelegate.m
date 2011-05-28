@@ -1,10 +1,21 @@
-//
-//  BreakpointDelegate.m
-//  Sim68K
-//
-//  Created by Robert Bartlett-Schneider on 4/10/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
+/***************************** 68000 SIMULATOR ****************************
+ 
+ File Name: BreakpointDelegate.m
+ Version: 1.0 (Mac OS X)
+ 
+ Implementation file for the breakpoint delegate that handles setting of
+ 68K breakpoints. This will eventually be used to handle advanced breakpoints
+ by being a data source for the table view that handles advanced breakpoints.
+ 
+ The routines are :
+ 
+ sbpoint
+ cbpoint
+ 
+ Created:  2011-04-15
+ Robert Bartlett-Schneider
+ 
+ ***************************************************************************/
 
 #import "BreakpointDelegate.h"
 #include "extern.h"

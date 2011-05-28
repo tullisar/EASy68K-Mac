@@ -63,6 +63,7 @@ int	LEA()
         return (BAD_INST);		// bad instruction format
     
     // perform the LEA operation
+    // TODO: Possible bug resulting from pointer subtaction here
     A[a_reg(reg)] = (long) ((long)EA1 - (long)&memory[0]);
     if ((inst & 0x003F) == 0x0038)  // if Abs.W   ck 2.9.3
         sign_extend ((int)A[a_reg(reg)], WORD_MASK, &A[a_reg(reg)]);
@@ -101,6 +102,7 @@ int	PEA()
     
     A[a_reg(7)] -= 4;
     
+    // TODO: Possible bug resulting from subtraction of signed pointers
     ea = ((long)EA1 - (long)&memory[0]);
     if ((inst & 0x003F) == 0x0038)  // if Abs.W  ck 2.9.3
         sign_extend ((int)ea, WORD_MASK, &ea);

@@ -1,10 +1,25 @@
-//
-//  ConsoleView.m
-//  Sim68K
-//
-//  Created by Robert Bartlett-Schneider on 3/29/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
+/***************************** 68000 SIMULATOR ****************************
+ 
+ File Name: ConsoleView.h
+ Version: 1.0 (Mac OS X)
+ 
+ Implementation file for the NSView sublcass ConsoleView. Used by the simulator
+ IO window to handle I/O from the 68000 program.
+ 
+ The routines are :
+ 
+ textIn
+ charIn
+ textOut
+ textOutCR
+ charOut
+ 
+ Created:  2011-04-15
+           Robert Bartlett-Schneider
+ 
+ TODO: Support paste command when text input is active during program execution
+ 
+ ***************************************************************************/
 
 #import "ConsoleView.h"
 #import "Simulator.h"
@@ -100,15 +115,6 @@
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
 }
-
-// -----------------------------------------------------------------
-// paste
-// Overrides the paste method to disallow pasting of text
-// TODO: Allow pasting during input strings
-// -----------------------------------------------------------------
-//- (void)paste:(id)sender {
-//    [super paste:sender];
-//}
 
 // -----------------------------------------------------------------
 // keyDown

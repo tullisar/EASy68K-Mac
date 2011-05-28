@@ -345,18 +345,27 @@
 // Updates the contents of the stack window
 // -----------------------------------------------------------------
 - (void)updateStackDisplay {
+    
+    int             selectedStack, stackDisplayLength;
+    unsigned int    stackStart, stackDisplayStart, diff, curAddr, stackAddr;
+    NSString        *address;
+    NSLayoutManager *layoutManager;
+    NSTextStorage   *curStore;
+    NSRange         lastRange;
+    
     // Clear current contents of stack window
     [stackAddressColumn clearText];
     [stackValueColumn clearText];
     
+    // Don't do anything if 68K Memory is not initialized
     if (!memory) return;
     
     // Enforce some bounds
-    int selectedStack              = [stackSelectMenu indexOfSelectedItem];
-    unsigned int stackStart        = [self stackDisplayLoc];
-    int stackDisplayLength         = 256;
-    unsigned int stackDisplayStart = (stackStart - stackDisplayLength/2);
-    unsigned int diff;
+    selectedStack       = [stackSelectMenu indexOfSelectedItem];
+    stackAddr           = A[selectedStack];
+    stackStart          = [self stackDisplayLoc];
+    stackDisplayLength  = 256;
+    stackDisplayStart   = (stackStart - stackDisplayLength/2);
     
     if ((int)stackDisplayStart < 0) {
         diff = (stackDisplayLength/2) - stackStart;
@@ -369,7 +378,7 @@
     for (int i=0,j=0; i < stackDisplayLength; i+=0x4,j+=0x4) {
         
         // Initial bounds checking
-        unsigned int curAddr = j + stackDisplayStart;
+        curAddr = j + stackDisplayStart;
         if (curAddr >= MEMSIZE ) {
             stackDisplayStart = 0x0;
             curAddr = 0x0;
@@ -377,9 +386,19 @@
         }
             
         // Print out address
-        NSString *address = [NSString stringWithFormat:@"%08X",curAddr];
+        address = [NSString stringWithFormat:@"%08X",curAddr];
         [stackAddressColumn appendString:address
                                 withFont:CONSOLE_FONT];
+        
+        // Highlight stack pointer address so it stands out
+        if (curAddr == stackAddr) {
+            layoutManager   = [stackAddressColumn layoutManager];
+            curStore        = [stackAddressColumn textStorage];
+            lastRange       = NSMakeRange([curStore length]-8, 8);
+            [layoutManager addTemporaryAttribute:NSBackgroundColorAttributeName 
+                                           value:[NSColor selectedTextBackgroundColor]
+                               forCharacterRange:lastRange];
+        }
         
         // Loop 4 bytes
         for (int k = 0; k < 0x4; k++) {

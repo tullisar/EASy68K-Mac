@@ -274,6 +274,7 @@ int	MOVEM()
     if (error)              // if address error
         return error;         // return error code
     
+    // FIXME: Possible bug resulting from subtraction of signed pointers
     address = (long) ( (long)EA1 - (long)&memory[0]);
     total_displacement = address;
     
