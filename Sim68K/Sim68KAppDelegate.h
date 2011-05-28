@@ -19,6 +19,7 @@
     NSPanel                 *panelHardware;
     NSPanel                 *panelStack;
     NSPanel                 *panelMemory;
+    NSPanel                 *panelBreaks;
     ConsoleView             *simIOView;
     IBOutlet NSScrollView   *scrollView;
     IBOutlet ListfileDebugView *scriptView;
@@ -50,10 +51,11 @@
 }
 
 @property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet NSPanel  *panelIO;
+@property (assign) IBOutlet NSPanel *panelIO;
 @property (assign) IBOutlet NSPanel *panelHardware;
 @property (assign) IBOutlet NSPanel *panelStack;
 @property (assign) IBOutlet NSPanel *panelMemory;
+@property (assign) IBOutlet NSPanel *panelBreaks;
 @property (retain) NSString *file;
 @property (assign) IBOutlet ConsoleView *simIOView;
 @property (retain) Simulator *simulator;

@@ -663,7 +663,7 @@ int runprog()
     for (i = 0; i < bpoints; i++) {
         if (PC == brkpt[i])
         {
-            // Notify GUI of break point
+            [SimErrorManager log:[NSString stringWithFormat:@"Breakpoint encountered at %04X. Execution halted.",PC]];
             trace = true;                                   // force trace mode
             // ???: What is this AutoTraceTimer?
             // Form1->AutoTraceTimer->Enabled = false;

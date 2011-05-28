@@ -20,7 +20,8 @@
 
 @implementation Sim68KAppDelegate
 
-@synthesize window, panelIO, panelMemory, panelStack, panelHardware, simIOView, errorOutput;
+@synthesize window, panelIO, panelMemory, panelStack, panelHardware, panelBreaks;
+@synthesize simIOView, errorOutput;
 @synthesize file;
 @synthesize simulator;
 @synthesize stackDisplayLoc;
