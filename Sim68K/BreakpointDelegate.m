@@ -119,7 +119,37 @@
     [exprBPList setMaxSize:NSMakeSize(LargeNumberForText, LargeNumberForText)];
     [exprBPList setHorizontallyResizable:YES];
     [exprBPList setVerticallyResizable:YES];
-    [exprBPList setAutoresizingMask:NSViewNotSizable];    
+    [exprBPList setAutoresizingMask:NSViewNotSizable]; 
+    [self updateExprButtons];
+}
+
+// -----------------------------------------------------------------
+// changeRegBP
+// Update fields when selection is changed
+// -----------------------------------------------------------------
+- (IBAction)changeRegBP:(id)sender {
+ 
+    int selection;
+    BPoint *curBPoint;
+    
+    if ([sender isKindOfClass:[NSNumber class]]) {
+        selection = [(NSNumber*)sender intValue];
+    } else {
+        selection = [(NSPopUpButton*)sender indexOfSelectedItem];
+    }
+    
+    if (selection <= regCount) {
+        curBPoint = &breakPoints[selection-1];
+        [self setSelReg:curBPoint->getTypeId()];
+        [self setSelRegOp:curBPoint->getOperator()];
+        [self setSelRegValue:curBPoint->getValue()];
+        [self setSelRegSize:curBPoint->getSize()];
+    } else if (selection == 0 || selection > regCount) {
+        [self setSelReg:0];
+        [self setSelRegOp:0];
+        [self setSelRegValue:0x00000000];
+        [self setSelRegSize:0];
+    }
 }
 
 // -----------------------------------------------------------------
@@ -141,7 +171,11 @@
     curBPoint->setSize([self selRegSize]);
     curBPoint->isEnabled(true);
     
-    if (selection > regCount) regCount++;
+    if (selection > regCount) {
+        regCount++;
+        selection++;
+    }
+    
     [self updateRegBPList];
     [self setSelRegBP:selection];
 }
@@ -167,6 +201,7 @@
     [self updateRegBPList];
     if ((selection > regCount) && (selection > 1)) selection = regCount;
     [self setSelRegBP:selection];
+    [self changeRegBP:[NSNumber numberWithInt:selection]];
 }
 
 // -----------------------------------------------------------------
@@ -183,7 +218,7 @@
     // Update display
     [self updateRegBPList];
     [self setSelRegBP:1];
-    
+    [self changeRegBP:[NSNumber numberWithInt:1]];
 }
 
 // -----------------------------------------------------------------
@@ -252,6 +287,39 @@
 }
 
 // -----------------------------------------------------------------
+// changeMemBP
+// Update fields when selection is changed
+// -----------------------------------------------------------------
+- (IBAction)changeMemBP:(id)sender {
+    
+    int selection;
+    BPoint *curBPoint;
+    
+    if ([sender isKindOfClass:[NSNumber class]]) {
+        selection = [(NSNumber*)sender intValue];
+    } else {
+        selection = [(NSPopUpButton*)sender indexOfSelectedItem];
+    }
+    
+    if (selection <= addrCount) {
+        curBPoint = &breakPoints[selection-1+ADDR_ID_OFFSET];
+        [self setSelMemAddr:curBPoint->getTypeId()];
+        [self setSelMemOp:curBPoint->getOperator()];
+        [self setSelMemValue:curBPoint->getValue()];
+        [self setSelMemSize:curBPoint->getSize()];
+        [self setSelMemAccess:curBPoint->getReadWrite()];
+    } else if (selection == 0 || selection > addrCount) {
+        [self setSelMemAddr:0x00000000];
+        [self setSelMemOp:0];
+        [self setSelMemValue:0x00000000];
+        [self setSelMemSize:0];
+        [self setSelMemAccess:0];        
+    }
+    
+}
+
+
+// -----------------------------------------------------------------
 // setMemBP
 // Sets a Memory address breakpoint
 // -----------------------------------------------------------------
@@ -271,7 +339,11 @@
     curBPoint->setReadWrite([self selMemAccess]);
     curBPoint->isEnabled(true);
     
-    if (selection > addrCount) addrCount++;
+    if (selection > addrCount) {
+        addrCount++;
+        selection++;
+    }
+    
     [self updateMemBPList];
     [self setSelMemBP:selection];
 }
@@ -282,8 +354,8 @@
 // -----------------------------------------------------------------
 - (IBAction)clearMemBP:(id)sender {
     
-    int selection = [self selRegBP];
-    if (selection < 1 || selection > regCount) return;
+    int selection = [self selMemBP];
+    if (selection < 1 || selection > addrCount) return;
     
     // Shift the elements in the breakPoints array and decrement the count.
     BPoint *temp = &breakPoints[selection-1 + ADDR_ID_OFFSET];
@@ -296,7 +368,8 @@
     
     [self updateMemBPList];
     if ((selection > addrCount) && (selection > 1)) selection = addrCount;
-    [self setSelMemBP:selection];    
+    [self setSelMemBP:selection];
+    [self changeMemBP:[NSNumber numberWithInt:selection]];
     
 }
 
@@ -314,7 +387,7 @@
     // Update display
     [self updateMemBPList];
     [self setSelMemBP:1];
-    
+    [self changeMemBP:[NSNumber numberWithInt:1]];    
 }
 
 // -----------------------------------------------------------------
@@ -368,7 +441,7 @@
     
     // Placeholder for new breakpoint
     if (addrCount < (MAX_BPOINTS/2)) {
-        line = [NSString stringWithFormat:@"%d New PC / Register breakpoint...",addrCount+1];
+        line = [NSString stringWithFormat:@"%d New Memory address breakpoint...",addrCount+1];
         [worker addObject:line];
     }
     
@@ -383,6 +456,60 @@
     // Update the mutable array binding
     [self setMemBreakpoints:worker];
     [self setMemBPLabels:exprChoices];
+}
+
+// -----------------------------------------------------------------
+// changeExprBP
+// Update fields when selection is changed
+// -----------------------------------------------------------------
+- (IBAction)changeExprBP:(id)sender {
+    
+    int selection;
+    BPointExpr *curBPoint;
+    
+    if ([sender isKindOfClass:[NSNumber class]]) {
+        selection = [(NSNumber*)sender intValue];
+    } else {
+        selection = [(NSPopUpButton*)sender indexOfSelectedItem];
+    }
+    
+    if (selection <= exprCount) {
+        curBPoint = &bpExpressions[selection-1];
+        [self setSelExprString:curBPoint->getExprString()];
+        [self setSelExprBPEnabled:curBPoint->isEnabled()];
+        [self setSelExprCount:curBPoint->getCount()];
+        
+        // Reset the expression array elements, so a new expression can be constructed.
+        for(int i = 0; i < MAX_LB_NODES; i++) {
+            infixExpr[i] = -1;
+        }
+        
+        // Since an expression has already begun to be built,
+        // reload the expression to allow for continued editing options.
+        bpExpressions[selection-1].getInfixExpr(infixExpr, infixCount);
+        parenCount = 0;
+        if(infixExpr[infixCount-1] != RPAREN)
+            mruOperand = true;
+        else
+            mruOperand = false;
+        mruOperator = false;
+        
+    } else if (selection == 0 || selection > exprCount) {
+        [self setSelExprString:@""];
+        [self setSelExprBPEnabled:false];
+        [self setSelExprCount:0];
+        
+        // Reset the expression array elements, so a new expression can be constructed.
+        for(int i = 0; i < MAX_LB_NODES; i++) {
+            infixExpr[i] = -1;
+        }
+        infixCount = 0;
+        parenCount = 0;
+        mruOperand = false;
+        mruOperator = false;
+    }
+    
+    [self updateExprButtons];
 }
 
 // -----------------------------------------------------------------
@@ -441,15 +568,20 @@
         s_operator.pop();
     };
     
-    bpExpressions[selection].setPostfixExpr(postfixExpr, postfixCount);
+    bpExpressions[selection-1].setPostfixExpr(postfixExpr, postfixCount);
     infixCount = 0;
     parenCount = 0;
     mruOperand = false;
     mruOperator = false;
     
-    if (selection > exprCount) exprCount++;
+    if (selection > exprCount) {
+        exprCount++;
+        selection++;
+    }
     
     [self updateExprBPList];
+    [self setSelExprBP:selection];
+    [self changeExprBP:[NSNumber numberWithInt:selection]];
 }
 
 // -----------------------------------------------------------------
@@ -496,6 +628,8 @@
         mruOperand = true;
         mruOperator = false;
     }
+    
+    [self updateExprButtons];
 }
 
 // -----------------------------------------------------------------
@@ -531,6 +665,8 @@
         mruOperand = true;
         mruOperator = false;
     }
+    
+    [self updateExprButtons];
 }
 
 // -----------------------------------------------------------------
@@ -553,6 +689,8 @@
         mruOperand = false;
         mruOperator = true;
     }
+    
+    [self updateExprButtons];
 }
 
 // -----------------------------------------------------------------
@@ -575,6 +713,8 @@
         mruOperand = false;
         mruOperator = true;
     }
+    
+    [self updateExprButtons];
 }
 
 // -----------------------------------------------------------------
@@ -612,6 +752,8 @@
         else
             mruOperator = false;
     }
+    
+    [self updateExprButtons];
 }
 
 // -----------------------------------------------------------------
@@ -634,6 +776,8 @@
         mruOperator = false;
         parenCount++;
     }
+    
+    [self updateExprButtons];
 }
 
 // -----------------------------------------------------------------
@@ -656,6 +800,8 @@
         mruOperator = false;
         parenCount--;
     }
+    
+    [self updateExprButtons];
 }
 
 // -----------------------------------------------------------------
@@ -669,76 +815,77 @@
     [self setExprClear:YES];
     [self setExprClearAll:YES];
     
-//    // Are the editable fields exposed for data entry?
-//    if(selection > 0) {
-//        // Don't allow hanging operators or incomplete expressions
-//        if(parenCount == 0 && (mruOperand || (infixExpr[infixCount-1] == RPAREN)))
-//            [self setExprSet:YES];
-//        else
-//            [self setExprSet:NO];
-//        
-//        int mruElement = 0;
-//        bool startExpr = false;
-//        if(infixCount > 0)
-//            mruElement = infixExpr[infixCount - 1];
-//        else
-//            startExpr = true;
-//        
-//        // Force operands to be separated by operators.
-//        if(mruOperator || (mruElement == LPAREN) || startExpr) {
-//            ExprRegAppendButton->Enabled = true;
-//            ExprAddrAppendButton->Enabled = true;
-//            ExprAndAppendButton->Enabled = false;
-//            ExprOrAppendButton->Enabled = false;
-//        }
-//        else if(mruOperand || (mruElement == RPAREN)) {
-//            ExprRegAppendButton->Enabled = false;
-//            ExprAddrAppendButton->Enabled = false;
-//            ExprAndAppendButton->Enabled = true;
-//            ExprOrAppendButton->Enabled = true;
-//        }
-//        
-//        // Is there an legal element preceding the left paren,
-//        // or is this the first element in the expression?
-//        if(infixCount == 0 || mruOperator ||
-//           (infixExpr[infixCount - 1] == LPAREN))
-//            ExprLParenAppendButton->Enabled = true;
-//        else
-//            ExprLParenAppendButton->Enabled = false;
-//        
-//        // Are there already left parens and not an operator in the last element?
-//        if(parenCount > 0 && !mruOperator && (mruElement != LPAREN))
-//            ExprRParenAppendButton->Enabled = true;
-//        else
-//            ExprRParenAppendButton->Enabled = false;
-//        
-//        // Is there anything available to delete from the expression?
-//        if(infixCount > 0)
-//            ExprBackspaceButton->Enabled = true;
-//        else
-//            ExprBackspaceButton->Enabled = false;
-//        
-//        // Regardless of anything else, if max count has been reached,
-//        // disable all except the backspace key.
-//        if(infixCount >= MAX_LB_NODES) {
-//            ExprRegAppendButton->Enabled = false;
-//            ExprAddrAppendButton->Enabled = false;
-//            ExprAndAppendButton->Enabled = false;
-//            ExprOrAppendButton->Enabled = false;
-//            ExprBackspaceButton->Enabled = true;
-//            ExprLParenAppendButton->Enabled = false;
-//            ExprRParenAppendButton->Enabled = false;
-//        }
-//    }
-//    else {
-//        ExprRegAppendButton->Enabled = false;
-//        ExprAddrAppendButton->Enabled = false;
-//        ExprAndAppendButton->Enabled = false;
-//        ExprOrAppendButton->Enabled = false;
-//        ExprBackspaceButton->Enabled = false;
-//        ExprLParenAppendButton->Enabled = false;
-//        ExprRParenAppendButton->Enabled = false;
-//    }
+    // Are the editable fields exposed for data entry?
+    if(selection > 0) {
+        // Don't allow hanging operators or incomplete expressions
+        if(parenCount == 0 && (mruOperand || (infixExpr[infixCount-1] == RPAREN)))
+            [self setExprSet:YES];
+        else
+            [self setExprSet:NO];
+        
+        int mruElement = 0;
+        bool startExpr = false;
+        if(infixCount > 0)
+            mruElement = infixExpr[infixCount - 1];
+        else
+            startExpr = true;
+        
+        // Force operands to be separated by operators.
+        if(mruOperator || (mruElement == LPAREN) || startExpr) {
+            [self setExprReg:YES];
+            [self setExprMem:YES];
+            [self setExprAnd:NO];
+            [self setExprOr:NO];
+        }
+        else if(mruOperand || (mruElement == RPAREN)) {
+            [self setExprReg:NO];
+            [self setExprMem:NO];
+            [self setExprAnd:YES];
+            [self setExprOr:YES];
+        }
+        
+        // Is there an legal element preceding the left paren,
+        // or is this the first element in the expression?
+        if(infixCount == 0 || mruOperator ||
+           (infixExpr[infixCount - 1] == LPAREN))
+            [self setExprLParen:YES];
+        else
+            [self setExprLParen:NO];
+        
+        // Are there already left parens and not an operator in the last element?
+        if(parenCount > 0 && !mruOperator && (mruElement != LPAREN))
+            [self setExprRParen:YES];
+        else
+            [self setExprRParen:NO];
+        
+        // Is there anything available to delete from the expression?
+        if(infixCount > 0)
+            [self setExprBack:YES];
+        else
+            [self setExprBack:NO];
+        
+        // Regardless of anything else, if max count has been reached,
+        // disable all except the backspace key.
+        if(infixCount >= MAX_LB_NODES) {
+            [self setExprReg:NO];
+            [self setExprMem:NO];
+            [self setExprAnd:NO];
+            [self setExprOr:NO];
+            [self setExprBack:NO];
+            [self setExprLParen:NO];
+            [self setExprRParen:NO];
+        }
+    }
+    
+    else {
+        [self setExprReg:NO];
+        [self setExprMem:NO];
+        [self setExprAnd:NO];
+        [self setExprOr:NO];
+        [self setExprBack:NO];
+        [self setExprLParen:NO];
+        [self setExprRParen:NO];
+    }
 }
 
 // -----------------------------------------------------------------
@@ -758,6 +905,8 @@
     bpExpressions[exprCount].isEnabled(false);
     
     [self updateExprBPList];
+    if ((selection > exprCount) && (selection > 1)) selection = exprCount;
+    [self setSelExprBP:selection];    
 }
 
 // -----------------------------------------------------------------

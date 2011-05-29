@@ -95,14 +95,17 @@
 // Functions
 + (int)sbpoint:(int)loc;
 + (int)cbpoint:(int)loc;
+- (IBAction)changeRegBP:(id)sender;
 - (IBAction)setRegBP:(id)sender;
 - (IBAction)clearRegBP:(id)sender;
 - (IBAction)clearAllRegBP:(id)sender;
 - (void)updateRegBPList;
+- (IBAction)changeMemBP:(id)sender;
 - (IBAction)setMemBP:(id)sender;
 - (IBAction)clearMemBP:(id)sender;
 - (IBAction)clearAllMemBP:(id)sender;
 - (void)updateMemBPList;
+- (IBAction)changeExprBP:(id)sender;
 - (IBAction)setExprBP:(id)sender;
 - (int)precedence:(int)op_prec;
 - (IBAction)exprRegAppend:(id)sender;
