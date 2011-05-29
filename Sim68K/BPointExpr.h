@@ -27,8 +27,8 @@ public:
     void getPostfixExpr(int *, int &);
     void setInfixExpr(int *, int);
     void getInfixExpr(int *, int &);
-    char* getExprString();
-    void setExprString(char *);
+    NSString* getExprString();
+    void setExprString(NSString *);
     int getCount();
     void setCount(int);
     bool isBreak();
@@ -41,7 +41,7 @@ private:
     int infix_expr[MAX_LB_NODES];
     int p_count;                    // Number of valid postfix_expr elements
     int i_count;
-    char* expr;                     // Expression is stored linearly for display.
+    NSString* expr;                 // Expression is stored linearly for display.
     int count;                      // Specifies a count for the number of times the other
                                     // expression conditions must be met before isBrk is true.
     bool isBrk;                     // Flag whether or not the condition to break has been met.

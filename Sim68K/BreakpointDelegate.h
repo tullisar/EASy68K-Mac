@@ -6,11 +6,6 @@
  This is the definition file for the breakpoint delegate to handle setting
  breakpoints.
  
- The routines are :
- 
- sbpoint
- cbpoint
- 
  Created:  2011-04-15
            Robert Bartlett-Schneider
  
@@ -48,7 +43,17 @@
     int             selMemAccess;
     
     // Breakpoint Expressions
-    
+    IBOutlet NSTextView *exprBPList;
+    IBOutlet NSScrollView *exprScroller;
+    NSMutableArray *exprBreakpoints;
+    NSMutableArray *regBPLabels;
+    NSMutableArray *memBPLabels;
+    int            selExprBP;
+    bool           selExprBPEnabled;
+    NSString       *selExprString;
+    int            selExprCount;
+    BOOL           exprSet, exprClear, exprClearAll, exprAnd, exprOr, exprLParen, exprRParen, exprBack, exprReg, exprMem;
+
 }
 
 // Generics
@@ -78,6 +83,14 @@
 @property (assign) int     selMemAccess;
 
 // Expressions
+@property (retain) NSMutableArray *exprBreakpoints;
+@property (retain) NSMutableArray *regBPLabels;
+@property (retain) NSMutableArray *memBPLabels;
+@property (assign) int            selExprBP;
+@property (assign) bool           selExprBPEnabled;
+@property (retain) NSString       *selExprString;
+@property (assign) int            selExprCount;
+@property (assign) BOOL           exprSet, exprClear, exprClearAll, exprAnd, exprOr, exprLParen, exprRParen, exprBack, exprReg, exprMem;
 
 // Functions
 + (int)sbpoint:(int)loc;
@@ -90,5 +103,18 @@
 - (IBAction)clearMemBP:(id)sender;
 - (IBAction)clearAllMemBP:(id)sender;
 - (void)updateMemBPList;
+- (IBAction)setExprBP:(id)sender;
+- (int)precedence:(int)op_prec;
+- (IBAction)exprRegAppend:(id)sender;
+- (IBAction)exprMemAppend:(id)sender;
+- (IBAction)exprAndAppend:(id)sender;
+- (IBAction)exprOrAppend:(id)sender;
+- (IBAction)exprBackspace:(id)sender;
+- (IBAction)exprLParenAppend:(id)sender;
+- (IBAction)exprRParenAppend:(id)sender;
+- (void)updateExprButtons;
+- (IBAction)clearExprBP:(id)sender;
+- (IBAction)clearAllExprBP:(id)sender;
+- (void)updateExprBPList;
 
 @end

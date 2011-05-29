@@ -63,11 +63,11 @@ void BPointExpr::getInfixExpr(int * _infix_expr, int & _i_count) {
         _infix_expr[i] = infix_expr[i];
 }
 
-char* BPointExpr::getExprString() {
+NSString* BPointExpr::getExprString() {
     return expr;
 }
 
-void BPointExpr::setExprString(char* _expr) {
+void BPointExpr::setExprString(NSString *_expr) {
     expr = _expr;
 }
 
