@@ -27,4 +27,4 @@ Icon?
 .Trashes
 
 # Photoshop files
-.psd
+*.psd
