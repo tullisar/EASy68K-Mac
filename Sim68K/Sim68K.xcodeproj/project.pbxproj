@@ -57,6 +57,7 @@
 		14D9FA3713554F1A00817B60 /* NSNumber-StrUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D9FA3613554F1A00817B60 /* NSNumber-StrUtils.m */; };
 		14F24D3413504F4700D10451 /* NSColor-Manipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F24D3313504F4700D10451 /* NSColor-Manipulation.m */; };
 		14F69A551364C85B00A2386F /* SimErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F69A541364C85B00A2386F /* SimErrorManager.m */; };
+		14F7A24713938C9700A875FB /* s68document.icns in Resources */ = {isa = PBXBuildFile; fileRef = 14F7A24613938C9700A875FB /* s68document.icns */; };
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* Sim68KAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* Sim68KAppDelegate.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -157,6 +158,7 @@
 		14F24D3313504F4700D10451 /* NSColor-Manipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor-Manipulation.m"; sourceTree = "<group>"; };
 		14F69A531364C85B00A2386F /* SimErrorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimErrorManager.h; sourceTree = "<group>"; };
 		14F69A541364C85B00A2386F /* SimErrorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimErrorManager.m; sourceTree = "<group>"; };
+		14F7A24613938C9700A875FB /* s68document.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = s68document.icns; path = "Application Icons/s68document.icns"; sourceTree = "<group>"; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		256AC3D80F4B6AC300CF3369 /* Sim68KAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sim68KAppDelegate.h; sourceTree = "<group>"; };
 		256AC3D90F4B6AC300CF3369 /* Sim68KAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sim68KAppDelegate.m; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				14F7A24613938C9700A875FB /* s68document.icns */,
 				146478FF1392FC8C00657B8B /* application.icns */,
 				149972A11390E68A00F6CA73 /* attention-white.png */,
 				14A1884D1330645A006E387D /* button-rewind.png */,
@@ -417,6 +420,7 @@
 				1491679813610FFB0063D7CD /* SynchronizedScrollView.m in Resources */,
 				149972A21390E68A00F6CA73 /* attention-white.png in Resources */,
 				146479001392FC8C00657B8B /* application.icns in Resources */,
+				14F7A24713938C9700A875FB /* s68document.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

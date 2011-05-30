@@ -48,6 +48,9 @@
     int                     memDisplayLength;
     unsigned int            memDisplayStart;
     unsigned int            stackDisplayLoc;
+    
+    BOOL                    appLaunched;
+    BOOL                    delayedOpen;
 }
 
 @property (assign) IBOutlet NSWindow *window;

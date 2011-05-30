@@ -45,11 +45,33 @@
 }
 
 // -----------------------------------------------------------------
+// application
+// -----------------------------------------------------------------
+- (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename {
+    
+    if (appLaunched) {
+        delayedOpen = NO;
+        [simulator loadProgram:filename];
+        [scriptView setFont:CONSOLE_FONT];
+        [scriptView setEditable:NO];
+        [self setFile:filename];
+        [window setTitleWithRepresentedFilename:file];
+    } else {
+        delayedOpen = YES;
+        [self setFile:filename];
+    }
+    
+    return YES;
+}
+
+// -----------------------------------------------------------------
 // applicationDidFinishLaunching
 // This runs (usually before the NIB loads) but as soon as the 
 // application has finished launching.
 // -----------------------------------------------------------------
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {}
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    appLaunched = YES;
+}
 
 // -----------------------------------------------------------------
 // awakeFromNib
@@ -58,6 +80,7 @@
 - (void)awakeFromNib {    
     // Global delegate reference (ick), necessary for simulator functions to reference GUI
     appDelegate = self;
+    appLaunched = YES;
     
     [self initListfileView];             // Set up listfile view
     [self initMemoryScrollers];
@@ -71,6 +94,14 @@
     [self setStackDisplayLoc:A[selStack]];
     [self updateStackDisplay];
     [errorOutput clearText];
+    
+    // Load program if one was queued by launching program
+    if (delayedOpen) {
+        [simulator loadProgram:file];
+        [scriptView setFont:CONSOLE_FONT];
+        [scriptView setEditable:NO];
+        [window setTitleWithRepresentedFilename:file];
+    }
     
     [window makeKeyAndOrderFront:self];
 }

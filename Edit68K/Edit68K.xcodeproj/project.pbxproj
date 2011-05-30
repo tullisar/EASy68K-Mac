@@ -41,6 +41,9 @@
 		14DF9E5A12F0DACD00FA3080 /* error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14085DAA12DA76120084F11C /* error.cpp */; };
 		14DF9E7C12F0E1AF00FA3080 /* eval.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14085DAB12DA76120084F11C /* eval.cpp */; };
 		14DF9E8312F0E30F00FA3080 /* listing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14085DAF12DA76120084F11C /* listing.cpp */; };
+		14F7A1E5139383F500A875FB /* ListFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F7A1E4139383F500A875FB /* ListFile.m */; };
+		14F7A1F21393849C00A875FB /* ListFile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F7A1F01393849C00A875FB /* ListFile.xib */; };
+		14F7A21B13938A3500A875FB /* l68document.icns in Resources */ = {isa = PBXBuildFile; fileRef = 14F7A21A13938A3500A875FB /* l68document.icns */; };
 		1DDD582C0DA1D0D100B32029 /* AssemblyFile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* AssemblyFile.xib */; };
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
@@ -96,6 +99,10 @@
 		147939531384707200F8E50C /* MarkerLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerLineNumberView.m; sourceTree = "<group>"; };
 		14BDECFE130FD0A300C24410 /* attention.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attention.png; sourceTree = "<group>"; };
 		14DDCA5912E7D55100DDD613 /* template.x68 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.x68; sourceTree = "<group>"; };
+		14F7A1E3139383F500A875FB /* ListFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListFile.h; sourceTree = "<group>"; };
+		14F7A1E4139383F500A875FB /* ListFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListFile.m; sourceTree = "<group>"; };
+		14F7A1F11393849C00A875FB /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ListFile.xib; sourceTree = "<group>"; };
+		14F7A21A13938A3500A875FB /* l68document.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = l68document.icns; path = "Application Icons/l68document.icns"; sourceTree = "<group>"; };
 		1DDD58290DA1D0D100B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/AssemblyFile.xib; sourceTree = "<group>"; };
 		1DDD582B0DA1D0D100B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2564AD2C0F5327BB00F57823 /* Edit68K_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Edit68K_Prefix.pch; sourceTree = "<group>"; };
@@ -198,6 +205,8 @@
 				1479394A1384701700F8E50C /* NoodleLineNumberMarker.m */,
 				1479394213846E9300F8E50C /* NoodleLineNumberView.h */,
 				1479394313846E9300F8E50C /* NoodleLineNumberView.m */,
+				14F7A1E3139383F500A875FB /* ListFile.h */,
+				14F7A1E4139383F500A875FB /* ListFile.m */,
 				2A37F4AEFDCFA73011CA2CEA /* AssemblyFile.h */,
 				2A37F4ACFDCFA73011CA2CEA /* AssemblyFile.m */,
 			);
@@ -216,6 +225,7 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				14F7A21A13938A3500A875FB /* l68document.icns */,
 				146478E11392FC7200657B8B /* x68document.icns */,
 				146478DF1392FC6B00657B8B /* application.icns */,
 				14BDECFE130FD0A300C24410 /* attention.png */,
@@ -233,6 +243,7 @@
 				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
 				8D15AC360486D014006FF6A4 /* Edit68K-Info.plist */,
 				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
+				14F7A1F01393849C00A875FB /* ListFile.xib */,
 				1DDD58280DA1D0D100B32029 /* AssemblyFile.xib */,
 				1DDD582A0DA1D0D100B32029 /* MainMenu.xib */,
 			);
@@ -316,6 +327,8 @@
 				14BDECFF130FD0A300C24410 /* attention.png in Resources */,
 				146478E01392FC6B00657B8B /* application.icns in Resources */,
 				146478E21392FC7200657B8B /* x68document.icns in Resources */,
+				14F7A1F21393849C00A875FB /* ListFile.xib in Resources */,
+				14F7A21B13938A3500A875FB /* l68document.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +361,7 @@
 				1479394B1384701700F8E50C /* NoodleLineNumberMarker.m in Sources */,
 				147939541384707200F8E50C /* MarkerLineNumberView.m in Sources */,
 				145A169B1385C5F100884D4F /* CodeEditor.m in Sources */,
+				14F7A1E5139383F500A875FB /* ListFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +374,14 @@
 				089C1660FE840EACC02AAC07 /* English */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		14F7A1F01393849C00A875FB /* ListFile.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14F7A1F11393849C00A875FB /* English */,
+			);
+			name = ListFile.xib;
 			sourceTree = "<group>";
 		};
 		1DDD58280DA1D0D100B32029 /* AssemblyFile.xib */ = {
