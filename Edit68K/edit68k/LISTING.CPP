@@ -130,8 +130,12 @@ int initList(char *name)
 //------------------------------------------------------------
 int listLine(char text[], char lineIdent[])   // ck 4-2006 lineIdent[]
 {
-    // TODO: (WORKAROUND) This is a temporary local variable for fixed tab size
-    int fixedTabSize = 4;
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    
+    // TODO: (WORKAROUND) This is a temporary local variable for fixed tab size, since the simulator doesn't know how to
+    // format tabs like the editor does yet. They'll look wierd if you expect them to be a certain size.
+    int fixedTabSize = [ud integerForKey:@"tabWidthInSpaces"];
     bool fixedTabs = true;
     
     // FixedTabSize->Value

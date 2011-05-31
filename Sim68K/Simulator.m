@@ -111,8 +111,10 @@
         }
         [self setSimStopped:YES];
     
-        if (stopInstruction || halt)
+        if (stopInstruction || halt) {
             PC = startPC;
+            [appDelegate highlightCurrentInstruction];
+        }
         [self displayReg];
         
         running = NO;
@@ -184,6 +186,7 @@
             [SimErrorManager log:@"Unable to locate or load associated listfile. Source level debugging will be unavailable."];
         }
         
+        [[appDelegate simIOView] clearText];
         [self setSimLoaded:YES];
         [self setSimStopped:YES];
         [self displayReg];
@@ -225,7 +228,6 @@
     [self setGUI_PC:PC];
     [self setGUI_SR:SR];
     [self setGUI_Cycles:cycles];
-//     [self setMemoryContents:[[[NSTextStorage alloc] initWithString:@""] autorelease]];
 }
 
 // -----------------------------------------------------------------
@@ -306,6 +308,7 @@
     initSim();
     [self displayReg];
     OLD_PC = PC;
+    [appDelegate highlightCurrentInstruction];
 }
 
 // -----------------------------------------------------------------

@@ -753,7 +753,7 @@ int TRAP()
                 if ((char)D[0])                                 // if D0.B = 1
                     [simIO textOut:buf];                        // display string without CRLF
                 else
-                    [simIO textOut:buf];                        // display string with CRLF
+                    [simIO textOutCR:buf];                        // display string with CRLF
                 break;
             case 2:                                             // TASK 2: input string, store at address pointed to by A1
                 inStr = &memory[A[1] & ADDRMASK];               // address of string

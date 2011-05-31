@@ -18,7 +18,9 @@
 // Logs output to the application error view
 // -----------------------------------------------------------------
 + (void)log:(NSString *)string {
-    [[appDelegate errorOutput] appendString:string
+    NSString *newString = [string stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    newString = [newString stringByAppendingString:@"\n"];
+    [[appDelegate errorOutput] appendString:newString
                                    withFont:CONSOLE_FONT];
 }
 

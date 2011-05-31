@@ -667,8 +667,8 @@ int runprog()
             trace = true;                                   // force trace mode
             // ???: What is this AutoTraceTimer?
             // Form1->AutoTraceTimer->Enabled = false;
+            [appDelegate highlightCurrentInstruction];
         }
-        [appDelegate highlightCurrentInstruction];
     }
     
     // If run to cursor address reached
@@ -688,8 +688,8 @@ int runprog()
             trace = true;                                  // force trace mode
             // ???: Again, what is AutoTraceTimer used for?
             // Form1->AutoTraceTimer->Enabled = false;
+            [appDelegate highlightCurrentInstruction];
         }
-        [appDelegate highlightCurrentInstruction];
     }
     
     if (sstep) {                                            // if "Step Over" mode
@@ -716,7 +716,7 @@ int runprog()
         //     simIO->setupWindow();
         // }
         
-        scrshow();                                          // if trace is on then update the screen
+        // scrshow();                                          // if trace is on then update the screen
         
         // if (halt)
         //     Form1->setMenuTrace();    // set menu and toolbar to disable debug commands
@@ -945,41 +945,35 @@ int exec_inst()
                             case SUCCESS  : break;
                             case BAD_INST : halt = true;                        // halt the program
                                 [SimErrorManager log:[NSString stringWithFormat:
-                                                      @"Illegal instruction found at location %04X. \
-                                                      Execution halted.", OLD_PC]];    
+                                                      @"Illegal instruction found at location %04X. Execution halted.", OLD_PC]];    
                                 break;
                             case NO_PRIVILEGE : halt = true;
                                 [SimErrorManager log:[NSString stringWithFormat:
-                                                      @"Supervisor privilege violation at location %04X. \
-                                                      Execution halted.", OLD_PC]];
+                                                      @"Supervisor privilege violation at location %04X. Execution halted.", OLD_PC]];
                                 break;
                             case CHK_EXCEPTION : halt = true;
                                 [SimErrorManager log:[NSString stringWithFormat:
-                                                      @"CHK exception ocurred at location %04X. \
-                                                      Execution halted.", OLD_PC]];
+                                                      @"CHK exception ocurred at location %04X. Execution halted.", OLD_PC]];
                                 break;
                             case STOP_TRAP : halt = true;
                                 [SimErrorManager log:[NSString stringWithFormat:
-                                                      @"STOP instruction executed at location %04X. \
-                                                      Execution halted.",OLD_PC]];
+                                                      @"STOP instruction executed at location %04X. Execution halted.",OLD_PC]];
+                                [[appDelegate window] makeKeyAndOrderFront:nil];
                                 // Form1->AutoTraceTimer->Enabled = false;
                                 // Log->stopLogWithAnnounce();
                                 // MARK: HARDWARE: Disable hardware
                                 break;
                             case TRAP_TRAP : halt = true;
                                 [SimErrorManager log:[NSString stringWithFormat:
-                                                      @"TRAP exception occurred at location %04X. \
-                                                      Execution halted.", OLD_PC]];
+                                                      @"TRAP exception occurred at location %04X. Execution halted.", OLD_PC]];
                                 break;
                             case TRAPV_TRAP : halt = true;
                                 [SimErrorManager log:[NSString stringWithFormat:
-                                                      @"TRAPV exception occurred at location %04X. \
-                                                      Execution halted.", OLD_PC]];
+                                                      @"TRAPV exception occurred at location %04X. Execution halted.", OLD_PC]];
                                 break;
                             case DIV_BY_ZERO : halt = true;
                                 [SimErrorManager log:[NSString stringWithFormat:
-                                                      @"Divide by zero occurred at location %04X. \
-                                                      Execution halted", OLD_PC]];
+                                                      @"Divide by zero occurred at location %04X. Execution halted", OLD_PC]];
                                 break;
                             case ADDR_ERROR : halt = true;
                                 [SimErrorManager log:[NSString stringWithFormat:
@@ -991,31 +985,26 @@ int exec_inst()
                                 break;
                             case TRACE_EXCEPTION : halt = true;
                                 [SimErrorManager log:[NSString stringWithFormat:
-                                                      @"Trace exception occurred at location %04X. \
-                                                      Execution halted", OLD_PC]];
+                                                      @"Trace exception occurred at location %04X. Execution halted", OLD_PC]];
                                 break;
                             case LINE_1010 : halt = true;
                                 [SimErrorManager log:[NSString stringWithFormat:
-                                                      @"Line 1010 Emulator exception occurred at location %04X. \
-                                                      Execution halted", OLD_PC]];
+                                                      @"Line 1010 Emulator exception occurred at location %04X. Execution halted", OLD_PC]];
                                 break;
                             case LINE_1111 : halt = true;
                                 [SimErrorManager log:[NSString stringWithFormat:
-                                                      @"Line 1111 Emulator exception occurred at location %04X. \
-                                                      Execution halted", OLD_PC]];
+                                                      @"Line 1111 Emulator exception occurred at location %04X. Execution halted", OLD_PC]];
                                 break;
                             default: halt = true;
                                 [SimErrorManager log:[NSString stringWithFormat:
-                                                      @"Unknown execution error %4X occurred at location %04X. \
-                                                      Execution halted", exec_result, OLD_PC]];
+                                                      @"Unknown execution error %4X occurred at location %04X. Execution halted", exec_result, OLD_PC]];
                         }
                         
                         if (SR & tbit)
                         {
                             halt = true;
                             [SimErrorManager log:[NSString stringWithFormat:
-                                                  @"TRACE exception occurred at location %04X. \
-                                                  Execution halted", OLD_PC]];
+                                                  @"TRACE exception occurred at location %04X. Execution halted", OLD_PC]];
                         }
                     }
                     break; // break out of for loop
