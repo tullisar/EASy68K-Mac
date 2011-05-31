@@ -376,12 +376,16 @@
             if ( assembleFile(inputFile, tempFile, inputFile) != NORMAL) {
                 [self setNoErrors:NO];
                 [self setErrorDisplay:[NSString stringWithFormat:@"Errors: %d Warnings: %d",errorCount,warningCount]];
+                [sheetController openSheet:self];
             } else {
                 if (errorCount > 0 || warningCount > 0) {
                     [self setErrorDisplay:[NSString stringWithFormat:@"Errors: %d Warnings: %d",errorCount,warningCount]];
                     [self setNoErrors:NO];
+                    [sheetController openSheet:self];
                 } else {
+                    [self setErrorDisplay:[NSString stringWithFormat:@"Assembly complete. No errors detected"]];
                     [self setNoErrors:YES];
+                    [sheetController openSheet:self];
                 }
             }
         }
@@ -417,6 +421,28 @@
     SEXflag = false;
     WARflag = false;    
 }
+
+//--------------------------------------------------------
+// shouldCloseSheet
+// Called when the sheet window is closed.
+//--------------------------------------------------------
+- (BOOL)shouldCloseSheet:(id)sender {
+ 
+    NSButton *sendingButton = (NSButton *)sender;
+    NSString *label = [sendingButton title];
+    NSString *xFile = [[self fileURL] path];
+    NSString *lFile = [[xFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"L68"];
+    NSString *sFile = [[xFile stringByDeletingPathExtension] stringByAppendingPathExtension:@"X68"];
+    
+    if ([label isEqualToString:@"Execute"])
+        [[NSWorkspace sharedWorkspace] openFile:sFile withApplication:@"Sim68K"];
+    else if ([label isEqualToString:@"Load Listfile"])
+        [[NSWorkspace sharedWorkspace] openFile:lFile];
+    
+    return YES;
+    
+}
+
 
 //--------------------------------------------------------
 // dealloc() 

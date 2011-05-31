@@ -31,6 +31,7 @@
 		1479394413846E9300F8E50C /* NoodleLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1479394313846E9300F8E50C /* NoodleLineNumberView.m */; };
 		1479394B1384701700F8E50C /* NoodleLineNumberMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1479394A1384701700F8E50C /* NoodleLineNumberMarker.m */; };
 		147939541384707200F8E50C /* MarkerLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 147939531384707200F8E50C /* MarkerLineNumberView.m */; };
+		148D5FEF13958C1100C089D8 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 148D5FEE13958C1100C089D8 /* BWToolkitFramework.framework */; };
 		14BDECFF130FD0A300C24410 /* attention.png in Resources */ = {isa = PBXBuildFile; fileRef = 14BDECFE130FD0A300C24410 /* attention.png */; };
 		14DDCA5A12E7D55100DDD613 /* template.x68 in Resources */ = {isa = PBXBuildFile; fileRef = 14DDCA5912E7D55100DDD613 /* template.x68 */; };
 		14DDE81F12F4D956004765D0 /* codegen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14085DA812DA76120084F11C /* codegen.cpp */; };
@@ -97,6 +98,7 @@
 		1479394A1384701700F8E50C /* NoodleLineNumberMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleLineNumberMarker.m; sourceTree = "<group>"; };
 		147939521384707200F8E50C /* MarkerLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerLineNumberView.h; sourceTree = "<group>"; };
 		147939531384707200F8E50C /* MarkerLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerLineNumberView.m; sourceTree = "<group>"; };
+		148D5FEE13958C1100C089D8 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = Library/Frameworks/BWToolkitFramework.framework; sourceTree = SDKROOT; };
 		14BDECFE130FD0A300C24410 /* attention.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attention.png; sourceTree = "<group>"; };
 		14DDCA5912E7D55100DDD613 /* template.x68 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.x68; sourceTree = "<group>"; };
 		14F7A1E3139383F500A875FB /* ListFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListFile.h; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+				148D5FEF13958C1100C089D8 /* BWToolkitFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+				148D5FEE13958C1100C089D8 /* BWToolkitFramework.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -287,6 +291,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "Edit68K" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,

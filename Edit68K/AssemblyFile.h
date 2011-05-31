@@ -10,6 +10,7 @@
 #import "CodeEditor.h"
 #include "asm.h"
 #include "Edit68KMac.h"
+#import <BWToolkitFramework/BWToolkitFramework.h>
 
 extern bool listFlag;
 extern bool objFlag;
@@ -27,6 +28,8 @@ extern int assembleFile(char fileName[], char tempName[], char workName[]);
 @class NoodleLineNumberView;
 
 @interface AssemblyFile : NSDocument {
+    
+    IBOutlet BWSheetController *sheetController;
     
     IBOutlet CodeEditor *textView;
     IBOutlet NSScrollView *scrollView;
@@ -56,5 +59,6 @@ extern int assembleFile(char fileName[], char tempName[], char workName[]);
 - (void)codeTextDidChange:(NSNotification *)notify;
 - (CGFloat)tabWidthForTextAttributes:(NSDictionary *)attr;
 - (IBAction)assemble:(id)sender;
+- (BOOL)shouldCloseSheet:(id)sender;
 
 @end
