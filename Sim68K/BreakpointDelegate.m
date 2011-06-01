@@ -108,6 +108,7 @@
     [self setSelExprBPEnabled:false];
     [self setSelExprString:@""];
     [self setSelExprCount:0];
+    
     // Make expression scroll view non wrapping
     [exprScroller setHasVerticalScroller:YES];
     [exprScroller setHasHorizontalScroller:YES];

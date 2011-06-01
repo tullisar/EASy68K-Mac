@@ -22,7 +22,7 @@
  isInstruction
  
  Created:  2011-04-15
- Robert Bartlett-Schneider
+           Robert Bartlett-Schneider
  
  ***************************************************************************/
 
@@ -278,6 +278,7 @@
         sstep       = false;
         runprog();
         [self displayReg];
+        [appDelegate highlightCurrentInstruction];
     }
 }
 

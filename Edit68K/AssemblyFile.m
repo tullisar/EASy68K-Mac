@@ -423,6 +423,26 @@
 }
 
 //--------------------------------------------------------
+// printShowingPrintPanel
+// Called when the document is printed by the application
+//--------------------------------------------------------
+- (void)printShowingPrintPanel:(BOOL)showPanels {
+    
+    NSPrintOperation *op = [NSPrintOperation printOperationWithView:textView 
+                                                          printInfo:[self printInfo]];
+    
+    [op setShowPanels:showPanels];
+    if (showPanels) {
+        // add accessory view if needed
+    } 
+    
+    [self runModalPrintOperation:op
+                        delegate:nil 
+                  didRunSelector:NULL
+                     contextInfo:NULL];
+}
+
+//--------------------------------------------------------
 // shouldCloseSheet
 // Called when the sheet window is closed.
 //--------------------------------------------------------

@@ -22,7 +22,7 @@
  isInstruction
  
  Created:  2011-04-15
- Robert Bartlett-Schneider
+           Robert Bartlett-Schneider
  
  ***************************************************************************/
 

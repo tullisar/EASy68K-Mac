@@ -1,9 +1,14 @@
-//
-//  Sim68KAppDelegate.h
-//  Sim68K
-//
-//  Created by Robert Bartlett-Schneider on 2/27/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+/***************************** 68000 SIMULATOR ****************************
+ 
+ File Name: Sim68KAppDelegate.m
+ Version: 1.0 (Mac OS X)
+ 
+ Definition file for the application delegate (controller in MVC)
+
+ Created:  2011-04-15
+           Robert Bartlett-Schneider
+ 
+ ***************************************************************************/
 
 #import <Cocoa/Cocoa.h>
 #import "ConsoleView.h"
