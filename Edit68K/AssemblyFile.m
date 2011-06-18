@@ -357,7 +357,7 @@
         const char *cPath = [path cStringUsingEncoding:NSASCIIStringEncoding];
         
         sprintf(inputFile, "%s", cPath);
-        strcpy(tempFile, "edit68k-XXXXXX");
+        strcpy(tempFile, "/tmp/edit68k-XXXXXX");
         
         listFlag = ([ud boolForKey:@"generateListFile"] ? true : false);
         objFlag  = ([ud boolForKey:@"generateSRecord"] ? true : false);
@@ -388,6 +388,8 @@
                     [sheetController openSheet:self];
                 }
             }
+			
+			remove(tempFile);
         }
     }
 }

@@ -380,7 +380,7 @@ int assemble(char *line, int *errorPtr)
 
     strcap(capLine, line);
     p = skipSpace(capLine);               // skip leading white space
-    tokenize(capLine, ", \t\n", token, tokens); // tokenize line
+    tokenize(capLine, ", \t\n\r", token, tokens); // tokenize line
     if (*p == '*' || *p == ';')         // if comment
       comment = true;
     else

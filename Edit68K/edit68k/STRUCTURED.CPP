@@ -321,7 +321,7 @@ int asmStructure(int size, char *label, char *arg, int *errorPtr)
             }
         }
         
-        tokenize(capLine, ". \t\n", token, tokens);         // tokenize statement
+        tokenize(capLine, ". \t\n\r", token, tokens);         // tokenize statement
         
         if (token[n][0] == '.')
             n = 3;

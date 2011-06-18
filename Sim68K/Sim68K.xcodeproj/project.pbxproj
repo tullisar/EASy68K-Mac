@@ -150,7 +150,7 @@
 		14C579191337F8F800C1E08B /* LongHexFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LongHexFormatter.m; sourceTree = "<group>"; };
 		14C57A5D13381CB000C1E08B /* ShortBinFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortBinFormatter.h; sourceTree = "<group>"; };
 		14C57A5E13381CB000C1E08B /* ShortBinFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortBinFormatter.m; sourceTree = "<group>"; };
-		14CFAD5E131EE717005D7D7A /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = Library/Frameworks/BWToolkitFramework.framework; sourceTree = SDKROOT; };
+		14CFAD5E131EE717005D7D7A /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BWToolkitFramework.framework; sourceTree = SOURCE_ROOT; };
 		14D9FA3513554F1A00817B60 /* NSNumber-StrUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber-StrUtils.h"; sourceTree = "<group>"; };
 		14D9FA3613554F1A00817B60 /* NSNumber-StrUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber-StrUtils.m"; sourceTree = "<group>"; };
 		14F24D3213504F4700D10451 /* NSColor-Manipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor-Manipulation.h"; sourceTree = "<group>"; };

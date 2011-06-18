@@ -143,7 +143,7 @@ int macro(int size, char *label, char *op, int *errorPtr)
         if (pass == 0)
             fprintf(tmpFile,"%s",line);           // write macro line to tmpFile
         lineNum++;
-        tokenize(line, " \t\n", token, tokens);
+        tokenize(line, " \t\n\r", token, tokens);
         if(!(stricmp(token[1], "MACRO"))) { // if unexpected MACRO opcode
             NEWERROR(*errorPtr, NO_ENDM);     // no ENDM found
             return NULL;
@@ -315,7 +315,7 @@ int asmMacro(int size, char *label, char *arg, int *errorPtr)
     endmFlag = false;
     while(!endmFlag && fgets(line, 256, tmpFile)) {
         strcap(capLine, line);
-        tokenize(capLine, ", \t\n", token, tokens); // tokenize line
+        tokenize(capLine, ", \t\n\r", token, tokens); // tokenize line
         
         error = OK;
         skipList = false;
