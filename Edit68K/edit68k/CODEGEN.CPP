@@ -128,7 +128,7 @@ int effAddr(opDescriptor *operand)
     
     sprintf(buffer,"INVALID EFFECTIVE ADDRESSING MODE!\n");
     // TODO: (GUI) Send Effective Addressing error to GUI
-    NSLog(@"%s",buffer);
+    errorPrint(buffer);
     exit (0);
     
     return 0;
@@ -215,7 +215,7 @@ int extWords(opDescriptor *op, int size, int *errorPtr)
     } else {
         sprintf(buffer,"INVALID EFFECTIVE ADDRESSING MODE!\n");
         // TODO: (GUI) Send error to GUI
-        NSLog(@"%s",buffer);
+        errorPrint(buffer);
         return MILD_ERROR;
     }
     

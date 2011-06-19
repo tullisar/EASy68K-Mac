@@ -1,13 +1,18 @@
-/*
- *  platform.cpp
- *  Edit68K
+/***********************************************************************
  *
- *  Created by Robert Bartlett-Schneider on 6/18/11.
- *  Copyright 2011 __MyCompanyName__. All rights reserved.
+ *		PLATFORM.CPP
+ *		Platform specific function implementations for things that rely
+ *      on *nix or win libraries. Since POSIX functions aren't guaranteed
+ *      to exist under Windows.
  *
- */
+ *      Author: Robert Bartlett-Schneider
+ *
+ *        Date:	2011-06-18
+ *
+ ************************************************************************/
 
 #include "platform.h"
+#include <stdio.h>
 
 char workPath[MAXPATHLEN];      // absolute reference to directory containing inFile
 char includePath[MAXPATHLEN];   // absolute reference to include file, temp buffer
@@ -21,12 +26,14 @@ void establishPath(char *filePath) {
     char *pathPtr = filePath, *lastPtr;
     int i = 0;
     
+    // Find last path separator
     do {
         lastPtr = pathPtr;
         pathPtr++;
         pathPtr = strchr(pathPtr, '/');
     } while (pathPtr);
     
+    // Generate path string
     pathPtr = filePath;
     while (!(pathPtr == lastPtr))
         workPath[i++] = *(pathPtr++);
@@ -43,3 +50,22 @@ void prependPath(char *filePath) {
     sprintf(buffer, "%s%s", workPath, filePath);
     sprintf(filePath, "%s", buffer);
 }
+
+//------------------------------------------------------------
+// errorPrint()
+// Used for printing an error to a console or a window based
+// on current platform.
+//------------------------------------------------------------
+void errorPrint(char *errMsg) {
+#ifndef __COREFOUNDATION__
+    printf("%s",errMsg);
+#else
+    NSLog(@"s",errMsg);
+#endif
+}
+
+//------------------------------------------------------------
+// getFixedTabSize()
+// Gets the fixed tab size for listfile output depending on
+// current OS implementation.
+//------------------------------------------------------------

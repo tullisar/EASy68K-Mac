@@ -147,7 +147,7 @@ int assembleFile(char fileName[], char tempName[], char workName[])
         if (!tmpFile) {
             sprintf(buffer,"Error creating temp file.");
             // TODO: (GUI) Send error to GUI
-            NSLog(@"%s",buffer); // TEMPORARY
+            errorPrint(buffer); // TEMPORARY
             return SEVERE;
         }
         
@@ -155,7 +155,7 @@ int assembleFile(char fileName[], char tempName[], char workName[])
         if (!inFile) {
             sprintf(buffer,"Error reading source file.");
             // TODO: (GUI) Send error to GUI
-            NSLog(@"%s",buffer); // TEMPORARY
+            errorPrint(buffer); // TEMPORARY
             return SEVERE;
         }
         

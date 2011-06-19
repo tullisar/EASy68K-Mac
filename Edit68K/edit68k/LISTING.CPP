@@ -100,7 +100,7 @@ int initList(char *name)
         if (!listFile) {
             sprintf(buffer,"Unable to create listing file");
             // TODO: (GUI) Send error to GUI
-            NSLog(@"%s",buffer);
+            errorPrint(buffer);
             return MILD_ERROR;
         }
         
@@ -181,7 +181,7 @@ int listLine(char text[], char lineIdent[])   // ck 4-2006 lineIdent[]
         if (ferror(listFile)) {
             sprintf(buffer,"Error writing to listing file\n");
             // TODO: (GUI) Send error to document window
-            NSLog(@"%s",buffer);
+            errorPrint(buffer);
             return MILD_ERROR;
         }
         
@@ -271,7 +271,7 @@ int listObj(int data, int size)
             break;
         default: sprintf(buffer,"LISTOBJ: INVALID SIZE CODE!\n");
             // TODO: (GUI) Send error message to document window
-            NSLog(@"%s",buffer);
+            errorPrint(buffer);
             return MILD_ERROR;
     }
     

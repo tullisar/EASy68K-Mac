@@ -237,7 +237,7 @@ int printError(FILE *outFile, int errorCode, int lineNum)
         
     // TODO: (GUI) Temporarily send error messages to the console.
     // Errors will eventually be displayed in Editor window.
-    NSLog(@"%s",buffer); // TEMPORARY
+    errorPrint(buffer); // TEMPORARY
     
     //  // if include file then display error in proper window
     //  if (includeFile[0]) {         // if not NULL
