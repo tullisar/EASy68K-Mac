@@ -35,6 +35,10 @@
  *    Modified: 2011-01-28
  *              Robert Bartlett-Schneider
  *              Removed includes not relevant to Mac OS X Port
+ *             
+ *    Modified: 2011-06-18
+ *              Robert Bartlett-Schneider
+ *              Modified include file method to use absolute paths
  *              
  ************************************************************************/
 
@@ -634,24 +638,24 @@ int include(int size, char *label, char *fileName, int *errorPtr)
     char incLine[256], capLine[256];
     char *src, *dst;
     int error, i;
-    int tempFP;                          // temporary File Pointer
-    bool comment;                         // true when line is comment
+    int tempFP;                             // temporary File Pointer
+    bool comment;                           // true when line is comment
     int value;
     bool backRef;
     FILE *incFile;
-    FILE *tmpInFile;                      // save current file
+    FILE *tmpInFile;                        // save current file
     char quote;
-    int lineNumInc;                       // line number for include file
+    int lineNumInc;                         // line number for include file
     int lineNumSave;
     char fileNameSave[256];
     
-    if (size) {                                   // if .size code specified
-        NEWERROR(*errorPtr, INV_SIZE_CODE);         // error, invalid size code
+    if (size) {                             // if .size code specified
+        NEWERROR(*errorPtr, INV_SIZE_CODE); // error, invalid size code
         return NORMAL;
     }
     
     if (!*fileName) {
-        NEWERROR(*errorPtr, FILE_ERROR);         // error, invalid syntax
+        NEWERROR(*errorPtr, FILE_ERROR);    // error, invalid syntax
         return NORMAL;
     }
     
@@ -689,6 +693,9 @@ int include(int size, char *label, char *fileName, int *errorPtr)
     if (pass2 && listFlag) {
         listLine(line);
     }
+    
+    prependPath(capLine); // RBS -  establish includefile path
+    
     try {
         incFile = fopen(capLine, "r");     // attempt to open include file
         if (!incFile) {                    // if error opening file
@@ -698,7 +705,7 @@ int include(int size, char *label, char *fileName, int *errorPtr)
         tmpInFile = inFile;                 // save current input file
         inFile = incFile;                   // make include file input file
         strcpy(fileNameSave,includeFile);   // save current include file
-        strcpy(includeFile,capLine);        // save new include file
+        strcpy(includeFile,capLine);    // save new include file
         lineNumSave = lineNum;              // save current line number
         
         // TODO: (GUI) Determine if included file is already open in another editor window
@@ -736,7 +743,7 @@ int include(int size, char *label, char *fileName, int *errorPtr)
         includeNestLevel--;
         
         if (pass2 && listFlag) {
-            skipList = true;      // don't list INCLUDE statement again
+            skipList = true;                // don't list INCLUDE statement again
             listLine("-------------------- end include --------------------\n");
         }
         

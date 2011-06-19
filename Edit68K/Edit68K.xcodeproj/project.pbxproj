@@ -31,6 +31,7 @@
 		1479394413846E9300F8E50C /* NoodleLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1479394313846E9300F8E50C /* NoodleLineNumberView.m */; };
 		1479394B1384701700F8E50C /* NoodleLineNumberMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1479394A1384701700F8E50C /* NoodleLineNumberMarker.m */; };
 		147939541384707200F8E50C /* MarkerLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 147939531384707200F8E50C /* MarkerLineNumberView.m */; };
+		147B12D613ADC5CD0000873B /* platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 147B12D513ADC5CD0000873B /* platform.cpp */; };
 		148D5FEF13958C1100C089D8 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 148D5FEE13958C1100C089D8 /* BWToolkitFramework.framework */; };
 		14BDECFF130FD0A300C24410 /* attention.png in Resources */ = {isa = PBXBuildFile; fileRef = 14BDECFE130FD0A300C24410 /* attention.png */; };
 		14DDCA5A12E7D55100DDD613 /* template.x68 in Resources */ = {isa = PBXBuildFile; fileRef = 14DDCA5912E7D55100DDD613 /* template.x68 */; };
@@ -89,7 +90,7 @@
 		14085DB312DA76120084F11C /* opparse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = opparse.cpp; path = edit68k/opparse.cpp; sourceTree = "<group>"; };
 		14085DB412DA76120084F11C /* structured.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = structured.cpp; path = edit68k/structured.cpp; sourceTree = "<group>"; };
 		14085DB512DA76120084F11C /* symbol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = symbol.cpp; path = edit68k/symbol.cpp; sourceTree = "<group>"; };
-		141652E9138B5F2C00D5AB0E /* Edit68KMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Edit68KMac.h; sourceTree = "<group>"; };
+		141652E9138B5F2C00D5AB0E /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
 		142260FB12EE6CE300B9E087 /* asm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = asm.h; path = edit68k/asm.h; sourceTree = "<group>"; };
 		14291E8C12E25565009769CB /* indent_decrease.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indent_decrease.png; sourceTree = "<group>"; };
 		14291E8D12E25565009769CB /* indent_increase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indent_increase.png; sourceTree = "<group>"; };
@@ -112,6 +113,8 @@
 		1479394A1384701700F8E50C /* NoodleLineNumberMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoodleLineNumberMarker.m; sourceTree = "<group>"; };
 		147939521384707200F8E50C /* MarkerLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerLineNumberView.h; sourceTree = "<group>"; };
 		147939531384707200F8E50C /* MarkerLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerLineNumberView.m; sourceTree = "<group>"; };
+		147B12D513ADC5CD0000873B /* platform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = platform.cpp; sourceTree = "<group>"; };
+		147B12ED13ADC6F20000873B /* Edit68KMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Edit68KMac.h; sourceTree = "<group>"; };
 		148D5FEE13958C1100C089D8 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BWToolkitFramework.framework; sourceTree = SOURCE_ROOT; };
 		14BDECFE130FD0A300C24410 /* attention.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attention.png; sourceTree = "<group>"; };
 		14DDCA5912E7D55100DDD613 /* template.x68 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.x68; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 		14085DA112DA75A40084F11C /* Edit68K Source */ = {
 			isa = PBXGroup;
 			children = (
+				147B12D513ADC5CD0000873B /* platform.cpp */,
+				141652E9138B5F2C00D5AB0E /* platform.h */,
 				142260FB12EE6CE300B9E087 /* asm.h */,
 				14534FEF12EFDA650093FC9B /* proto.h */,
 				14085DA512DA76120084F11C /* assemble.cpp */,
@@ -214,7 +219,7 @@
 		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				141652E9138B5F2C00D5AB0E /* Edit68KMac.h */,
+				147B12ED13ADC6F20000873B /* Edit68KMac.h */,
 				147939521384707200F8E50C /* MarkerLineNumberView.h */,
 				145A16991385C5F100884D4F /* CodeEditor.h */,
 				145A169A1385C5F100884D4F /* CodeEditor.m */,
@@ -382,6 +387,7 @@
 				147939541384707200F8E50C /* MarkerLineNumberView.m in Sources */,
 				145A169B1385C5F100884D4F /* CodeEditor.m in Sources */,
 				14F7A1E5139383F500A875FB /* ListFile.m in Sources */,
+				147B12D613ADC5CD0000873B /* platform.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

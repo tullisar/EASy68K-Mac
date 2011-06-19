@@ -2,7 +2,7 @@
  *  Edit68KMac.h
  *  Edit68K
  *
- *  Created by Robert Bartlett-Schneider on 5/23/11.
+ *  Created by Robert Bartlett-Schneider on 6/18/11.
  *  Copyright 2011 __MyCompanyName__. All rights reserved.
  *
  */

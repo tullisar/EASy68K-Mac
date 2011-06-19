@@ -8,9 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import "CodeEditor.h"
-#include "asm.h"
-#include "Edit68KMac.h"
 #import <BWToolkitFramework/BWToolkitFramework.h>
+#import "Edit68KMac.h"
+
+#include "asm.h"
+#include "platform.h"
 
 extern bool listFlag;
 extern bool objFlag;
@@ -22,7 +24,6 @@ extern bool SEXflag;
 extern bool WARflag;
 extern int errorCount;
 extern int warningCount;
-
 extern int assembleFile(char fileName[], char tempName[], char workName[]);
 
 @class NoodleLineNumberView;

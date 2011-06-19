@@ -47,7 +47,11 @@
  *              Robert Bartlett-Schneider
  *              Modified various routines for Mac OS X Port
  *              Removed references to Windows GUI and used 
- *                alternate implementation of ChangeFileExt
+ *              alternate implementation of ChangeFileExt
+ *              
+ *    Modified: 2011-06-15
+ *              Robert Bartlett-Schneider
+ *              Added code to support absolute path reference for include files
  *
  ************************************************************************/
 
@@ -133,6 +137,8 @@ int assembleFile(char fileName[], char tempName[], char workName[])
     //char outName[];
     char listFileName[256];
     char objFileName[256];
+    
+    establishPath(fileName); // RBS - Used for correct include file referencs
     
     try {
         tmpFile = fopen(tempName, "w+");

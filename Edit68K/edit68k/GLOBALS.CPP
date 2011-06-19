@@ -20,40 +20,40 @@
 
 // General
 
-int loc;		// The assembler's location counter
-int locOffset;         // loc is saved here during processing of Offset directive
-int sectionLoc[16];    // section locations
+int loc;                // The assembler's location counter
+int locOffset;          // loc is saved here during processing of Offset directive
+int sectionLoc[16];     // section locations
 int  sectI;             // current section
 bool offsetMode;        // set true during processing of Offset directive
 bool showEqual;         // true to display '=' after address in listing
 char pass;              // pass counter
-bool pass2;		/* Flag telling whether or not it's the second pass */
-bool endFlag;	        /* Flag set when the END directive is encountered */
+bool pass2;             /* Flag telling whether or not it's the second pass */
+bool endFlag;           /* Flag set when the END directive is encountered */
 int labelNum;           // macro label \@ number (ck)
 char buffer[256];       // used to form messages for display in windows (ck)
 char numBuf[20];        // "
-int errorCount, warningCount;	// Number of errors and warnings
-char empty[] = "";      // empty string, used in conditional assembly
-unsigned int startAddress;     // starting address of program
+int errorCount, warningCount;   // Number of errors and warnings
+char empty[] = "";              // empty string, used in conditional assembly
+unsigned int startAddress;      // starting address of program
 char globalLabel[SIGCHARS+1];   // used to build unique global label from local label
-int includeNestLevel;    // count nested include directives
-char includeFile[256];  // name of current include file
-bool includedFileError; // true if include error message displayed
+int includeNestLevel;           // count nested include directives
+char includeFile[256];          // name of current include file
+bool includedFileError;         // true if include error message displayed
 
 // File pointers
-FILE *inFile;		// Input file
-FILE *listFile;		// Listing file
-FILE *objFile;		// Object file (S-Record)
-FILE *binFile;          //ck Object file (Binary)
-FILE *tmpFile;          //ck temp file
-FILE *errFile;          //ck Error messages file (text)
+FILE *inFile;       // Input file
+FILE *listFile;     // Listing file
+FILE *objFile;      // Object file (S-Record)
+FILE *binFile;      //ck Object file (Binary)
+FILE *tmpFile;      //ck temp file
+FILE *errFile;      //ck Error messages file (text)
 
 // Listing information
-char line[256];		// Source line
-int lineNum;		// source line number
-int lineNumL68;		// listing line number
-char *listPtr;		// Pointer to buffer where a listing line is assembled
-bool continuation;	// TRUE if the listing line is a continuation
+char line[256];     // Source line
+int lineNum;        // source line number
+int lineNumL68;     // listing line number
+char *listPtr;      // Pointer to buffer where a listing line is assembled
+bool continuation;  // TRUE if the listing line is a continuation
 
 // Option flags
 bool listFlag;	        // True if a listing is desired

@@ -20,6 +20,7 @@
  *              to be modified to match.
  *
  ************************************************************************/
+
 #ifndef asmH
 #define asmH
 
@@ -27,6 +28,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "platform.h"
 
 /* Define a couple of useful tests */
 
@@ -76,7 +78,6 @@ const int DBLOOP_EXPECTED       = 0x416;
 const int BAD_BITFIELD          = 0x417;
 
 const int EXCEPTION             = 0x999;
-
 
 /* Errors */
 const int ERRORN                = 0x300;
@@ -139,25 +140,25 @@ const int ARG_SIZE = 256;       // maximum size of each argument
 /* Structure for operand descriptors */
 struct opDescriptor
 {
-  int  mode;    // Mode number (see below)
-  int  data;    // IMMEDIATE value, displacement, or absolute address
-  int  field;   // for bitField instructions
-  char reg;     // Principal register number (0-7)
-  char index;   // Index register number (0-7 = D0-D7, 8-15 = A0-A7)
-  char size;    // Size of index register (WORD or LONG, see below)
-                // or forced size of IMMEDIATE instruction
-                // BYTE_SIZE, WORD_SIZE, LONG_SIZE
-                // Also used to prevent MOVEQ, ADDQ & SUBQ optimizations (see OPPARSE.CPP)
-  bool backRef; // True if data field is known on first pass
+    int  mode;      // Mode number (see below)
+    int  data;      // IMMEDIATE value, displacement, or absolute address
+    int  field;     // for bitField instructions
+    char reg;       // Principal register number (0-7)
+    char index;     // Index register number (0-7 = D0-D7, 8-15 = A0-A7)
+    char size;      // Size of index register (WORD or LONG, see below)
+                    // or forced size of IMMEDIATE instruction
+                    // BYTE_SIZE, WORD_SIZE, LONG_SIZE
+                    // Also used to prevent MOVEQ, ADDQ & SUBQ optimizations (see OPPARSE.CPP)
+    bool backRef;   // True if data field is known on first pass
 };
 
 
 /* Structure for a symbol table entry */
 typedef struct symbolEntry {
-	int value;                  /* 32-bit value of the symbol */
-	struct symbolEntry *next;   /* Pointer to next symbol in linked list */
-	char flags;                 /* Flags (see below) */
-	char name[SIGCHARS+1];      /* Name */
+    int value;                  /* 32-bit value of the symbol */
+    struct symbolEntry *next;   /* Pointer to next symbol in linked list */
+    char flags;                 /* Flags (see below) */
+    char name[SIGCHARS+1];      /* Name */
 } symbolDef;
 
 /* Flag values for the "flags" field of a symbol */
@@ -172,14 +173,14 @@ const int DS_SYM        = 0x10;     // Set for labels defined with DS directive
 /* Structure to describe one "flavor" of an instruction */
 
 typedef struct {
-	int source,		/* Bit masks for the legal source...	*/
-	    dest;		/*  and destination addressing modes	*/
+    int source,		/* Bit masks for the legal source...	*/
+        dest;		/*  and destination addressing modes	*/
 	char sizes;		/* Bit mask for the legal sizes */
 	int (*exec)(int, int, opDescriptor *, opDescriptor *, int *);
-                                /* Pointer to routine to build the instruction */
-	short int bytemask,	/* Skeleton instruction masks for byte size...  */
-		  wordmask,	/*  word size, ...			        */
-		  longmask;	/*  and long sizes of the instruction	        */
+                        /* Pointer to routine to build the instruction */
+    short int bytemask, /* Skeleton instruction masks for byte size...  */
+              wordmask,  /*  word size, ...			        */
+              longmask; /*  and long sizes of the instruction	        */
 	} flavor;
 
 /* Structure for the instruction table */
