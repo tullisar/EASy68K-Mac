@@ -13,6 +13,7 @@
 
 #include "platform.h"
 #include <stdio.h>
+#include <cstring>
 
 char workPath[MAXPATHLEN];      // absolute reference to directory containing inFile
 char includePath[MAXPATHLEN];   // absolute reference to include file, temp buffer
@@ -69,3 +70,11 @@ void errorPrint(char *errMsg) {
 // Gets the fixed tab size for listfile output depending on
 // current OS implementation.
 //------------------------------------------------------------
+int getFixedTabSize() {
+#ifndef __COREFOUNDATION__
+    return 4; // TODO: Temporary for command line, perhaps implement as a parameter
+#else
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    return [ud integerForKey:@"tabWidthInSpaces"];
+#endif
+}

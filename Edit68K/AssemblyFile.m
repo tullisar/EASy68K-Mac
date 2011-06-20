@@ -301,32 +301,6 @@
         [fileContents setFont:[NSFont fontWithName:@"Courier" size:11]];
         [self setTextStorage:fileContents];
         diskFile = YES;
-//        // Update paragraphs tyle
-//        defStyle = [self paragraphStyleForFont:CONSOLE_FONT];
-//        [textView setDefaultParagraphStyle:defStyle];
-//        curText  = fileContents;
-//        
-//        // Get the raw text minus the attributes (to avoid attribues covering only partial range bug)
-//        textRange = NSMakeRange(0, [curText length]);
-//        rawText = [curText string];
-//        newText = [[NSTextStorage alloc] initWithString:rawText];
-//        
-//        // Set up the new attributes and apply
-//        attributes = [NSDictionary dictionaryWithObjectsAndKeys:
-//                      CONSOLE_FONT, NSFontAttributeName,
-//                      [NSColor blackColor], NSForegroundColorAttributeName,
-//                      defStyle, NSParagraphStyleAttributeName,
-//                      nil];
-//        [newText addAttributes:attributes range:textRange];
-//        [self setTextStorage:newText];
-//        [textView setDefaultParagraphStyle:defStyle];
-//        [[textView textStorage] fixAttributesInRange:textRange];
-//        [textView setTypingAttributes:attributes];
-//        
-//        // Update layout manager to reflect currently visible text
-//        layout = [textView layoutManager];
-//        [layout replaceTextStorage:newText];
-//        [lineNumberView setClientView:[scrollView documentView]];
         
     }
     

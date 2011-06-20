@@ -14,7 +14,7 @@
 
 extern bool listFlag;
 extern bool objFlag;
-extern bool binFlag;
+// extern bool binFlag;
 
 int assembleFile(char fileName[], char tempName[], char workName[]);
 
@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 {
 	int c;
 	int digit_optind = 0;
-
+    
 	int verboseArg = false;
 	int listArg = false;
 	int objArg = false;
@@ -36,15 +36,15 @@ int main(int argc, char **argv)
 	while (1)
 	{
 		static char *help = "\
-MC68000 Assembler v1.0, based on code from Easy68k v3.5 by Chuck Kelly/Paul McKee\n \
-                       ported by Mark Wickens 2006 <mark@wickensonline.co.uk>\n \
-Usage: asm68k [-l] [-s] [-b] [-h] [-v] <input>.X68\n \
-Options:	-l --listing	Generate listing file\n \
-			-s --srecord	Generate Motorola S-Record output file,\n \
-			-b --binary		Generate binary output file\n \
-			-h --help		Display this help (doh!)\n \
-			-v --verbose	Maximum verbosity\n";
-			
+        MC68000 Assembler v1.0, based on code from Easy68k v3.5 by Chuck Kelly/Paul McKee\n \
+        ported by Mark Wickens 2006 <mark@wickensonline.co.uk>\n \
+        Usage: asm68k [-l] [-s] [-b] [-h] [-v] <input>.X68\n \
+        Options:	-l --listing	Generate listing file\n \
+        -s --srecord	Generate Motorola S-Record output file,\n \
+        -b --binary		Generate binary output file\n \
+        -h --help		Display this help (doh!)\n \
+        -v --verbose	Maximum verbosity\n";
+        
 		static struct option long_options[] = {
 			{"verbose", no_argument, &verboseArg, 1},
 			{"listing", no_argument, &listArg, 1},
@@ -62,48 +62,48 @@ Options:	-l --listing	Generate listing file\n \
 			break;
 		
 		switch(c) {
-		case 0:
-			/* If this option set a flag, do nothing else now. */
-			if (long_options[option_index].flag != 0)
-				break;
-			if (strcmp(long_options[option_index].name, "help") == 0)
-			{
-				printf(help);
-				return 0;
-			}
-			else
-			{
-				printf ("option %s", long_options[option_index].name);
-				if (optarg)
-					printf (" with arg %s", optarg);
-				printf ("\n");
-			}
-			break;
-		
-		case 'h':
-			printf(help);
-			return 0;
-			break;
-			
-		case 'v':
-			verboseArg = true;
-			break;
-			
-		case 'l':
-			listArg = true;
-			break;
-			
-		case 's':
-			objArg = true;
-			break;
-			
-		case 'b':
-			binArg = true;
-			break;
-		
-		default:
-			printf("?? getopt returned character code 0%o ??\n", c);
-			abort();
+            case 0:
+                /* If this option set a flag, do nothing else now. */
+                if (long_options[option_index].flag != 0)
+                    break;
+                if (strcmp(long_options[option_index].name, "help") == 0)
+                {
+                    printf(help);
+                    return 0;
+                }
+                else
+                {
+                    printf ("option %s", long_options[option_index].name);
+                    if (optarg)
+                        printf (" with arg %s", optarg);
+                    printf ("\n");
+                }
+                break;
+                
+            case 'h':
+                printf(help);
+                return 0;
+                break;
+                
+            case 'v':
+                verboseArg = true;
+                break;
+                
+            case 'l':
+                listArg = true;
+                break;
+                
+            case 's':
+                objArg = true;
+                break;
+                
+            case 'b':
+                binArg = true;
+                break;
+                
+            default:
+                printf("?? getopt returned character code 0%o ??\n", c);
+                abort();
 		}
 	}
 	
@@ -123,7 +123,7 @@ Options:	-l --listing	Generate listing file\n \
 			printf("Binary output on\n");
 		}
 	}
-
+    
 	if (listArg)
 	{
 		listFlag = true;
@@ -134,7 +134,7 @@ Options:	-l --listing	Generate listing file\n \
 	}
 	if (binArg)
 	{
-		binFlag = true;
+		// binFlag = true;
 	}
 	
 	for (int i = optind; i < argc; i++)
@@ -150,7 +150,7 @@ Options:	-l --listing	Generate listing file\n \
 			printf("Error creating temporary file via mkstemp() function\n");
 			abort();
 		}
-			
+        
 		assembleFile(ifile, tfile, ifile);
 		
 		// Remove temporary file
