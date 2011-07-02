@@ -535,6 +535,7 @@
 				INSTALL_PATH = /usr/local/bin;
 				PREBINDING = NO;
 				PRODUCT_NAME = asm68k;
+				WARNING_CFLAGS = "-Wno-write-strings";
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -596,7 +597,7 @@
 					"$(OTHER_CFLAGS)",
 				);
 				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx10.5;
 				WARNING_CFLAGS = "-Wno-write-strings";
 			};
 			name = Debug;
@@ -615,7 +616,7 @@
 					"$(OTHER_CFLAGS)",
 				);
 				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx10.5;
 			};
 			name = Release;
 		};

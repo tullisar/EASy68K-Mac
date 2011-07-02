@@ -42,7 +42,7 @@
 #define strcmpi strcasecmp
 #endif
 
-const char TITLE[] = "EASy68K Editor/Assembler v5.6.1 (Mac OS X)";
+const char TITLE[] = "EASy68K Editor/Assembler v5.9.0 (Mac OS X)";
 
 /* Status values */
 

@@ -30,7 +30,7 @@ BOOL trapInput = NO;
 long memDistance(void* max, void* min, long size)
 {
     long factor = 0;
-    switch (size)        // Determine distance factor (typically bytes)
+    switch (size)   // Determine distance factor (typically bytes)
     {
         case BYTE_MASK:
             factor = 1;

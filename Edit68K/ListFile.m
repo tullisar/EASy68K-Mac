@@ -257,23 +257,6 @@
 }
 
 //--------------------------------------------------------
-// dataOfType() used to write files to disk
-//--------------------------------------------------------
-//- (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError
-//{
-//    NSData *data;
-//    [self setTextStorage:[textView textStorage]];
-//    NSMutableDictionary *dict = [NSDictionary dictionaryWithObject:NSPlainTextDocumentType
-//                                                            forKey:NSDocumentTypeDocumentAttribute];
-//    [textView breakUndoCoalescing];
-//    data = [[self textStorage] dataFromRange:NSMakeRange(0, [[self textStorage] length])
-//                          documentAttributes:dict error:outError];
-//    
-//    
-//    return data;
-//}
-
-//--------------------------------------------------------
 // readFromData() used to open files from disk
 //--------------------------------------------------------
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError

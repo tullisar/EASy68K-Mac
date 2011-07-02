@@ -402,10 +402,33 @@
 // printShowingPrintPanel
 // Called when the document is printed by the application
 //--------------------------------------------------------
+
+
+//--------------------------------------------------------
+// printShowingPrintPanel
+// Called when the document is printed by the application
+//--------------------------------------------------------
 - (void)printShowingPrintPanel:(BOOL)showPanels {
     
+    // Gather page setup information
+    NSPrintInfo *pInfo = [self printInfo];
+    if (!pInfo) [NSPrintInfo sharedPrintInfo];
+    [pInfo setHorizontalPagination:NSFitPagination];
+    [pInfo setHorizontallyCentered:NO];
+    [pInfo setVerticallyCentered:NO];
+    CGFloat leftMargin = [pInfo leftMargin];
+    CGFloat rightMargin = [pInfo rightMargin];
+    if (leftMargin <= 0) leftMargin = 72.0;
+    [pInfo setLeftMargin:leftMargin];
+    
+    // Establish print view
+    NSSize pageSize = [pInfo paperSize];
+    NSTextView *printView = [[NSTextView alloc] initWithFrame:NSMakeRect(0, 0, pageSize.width, pageSize.height)];
+    
+    
+    
     NSPrintOperation *op = [NSPrintOperation printOperationWithView:textView 
-                                                          printInfo:[self printInfo]];
+                                                          printInfo:pInfo];
     
     [op setShowPanels:showPanels];
     if (showPanels) {
