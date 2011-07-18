@@ -49,6 +49,9 @@
                                             selector:@selector(promptTimer:)
                                             userInfo:nil
                                              repeats:YES];
+        
+        pendingKey = '\0';
+        
     }
     return self;
 }
@@ -75,6 +78,7 @@
                                             selector:@selector(promptTimer:)
                                             userInfo:nil
                                              repeats:YES];
+        pendingKey = '\0';
     }
     return self;
 }
@@ -128,7 +132,7 @@
         if (key == '\r' || keyI >= 79 || charInput) {
             // TODO: Erase prompt
             if (charInput) {
-                *inChar = key;                                  // get key
+                *inputCh = key;                                  // get key
                 charInput = NO;
                 if (keyboardEcho) {
                     [self charOut:key];

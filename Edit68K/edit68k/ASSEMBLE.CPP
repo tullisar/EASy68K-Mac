@@ -138,7 +138,7 @@ int assembleFile(char fileName[], char tempName[], char workName[])
     char listFileName[256];
     char objFileName[256];
     
-    establishPath(fileName); // RBS - Used for correct include file referencs
+    // establishPath(fileName); // RBS - Used for correct include file referencs
     
     try {
         tmpFile = fopen(tempName, "w+");

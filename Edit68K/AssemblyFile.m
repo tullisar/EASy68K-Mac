@@ -324,14 +324,16 @@
         [saveFileFirst setAlertStyle:NSWarningAlertStyle];
         [saveFileFirst runModal];
     } else {
-        char inputFile[256];
-        char tempFile[256];
+        char inputFile[MAXPATHLEN];
+        char tempFile[MAXPATHLEN];
         
         NSString *path = [[self fileURL] path];
         const char *cPath = [path cStringUsingEncoding:NSASCIIStringEncoding];
         
         sprintf(inputFile, "%s", cPath);
-        strcpy(tempFile, "/tmp/edit68k-XXXXXX");
+        establishPath(inputFile);
+        sprintf(tempFile, "edit68k-XXXXXX");
+        prependPath(tempFile);
         
         listFlag = ([ud boolForKey:@"generateListFile"] ? true : false);
         objFlag  = ([ud boolForKey:@"generateSRecord"] ? true : false);

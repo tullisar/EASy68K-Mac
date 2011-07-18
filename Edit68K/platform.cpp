@@ -61,7 +61,7 @@ void errorPrint(char *errMsg) {
 #ifndef __COREFOUNDATION__
     printf("%s",errMsg);
 #else
-    NSLog(@"s",errMsg);
+    NSLog(@"%s",errMsg);
 #endif
 }
 
