@@ -1,3 +1,9 @@
+-------- NOTICE ------------  2013-03-13
+Project is temporarily on hold until I can get a newer computer that can run Mountain Lion. Mountain Lion doesn't run on my Mac Pro 1,1 sadly, and I'm still stuck with XCode 3. I can't migrate to XCode 4 on Snow Leopard anymore it seems (since all the newer versions of XCode 4 require Lion or higher).
+
+I need to redo all the portions of the project that involve interface builder plugins, since it truly seems they're dead. *Sigh* I know I've put it off for a while, but I have been working full time and attempting to save up money for a newer computer. I *hope* to have a new computer by May/June.
+-----------------------------
+
 A Mac OS X port of the popular 68K Assembler/Simulator, EASy68K. Port is being done as my CSS 497 Capstone project as part of my Computing & Software Systems degree at the University of Washington: Bothell campus. 
 
 EASy68K can be downloaded from: http://www.easy68k.com
